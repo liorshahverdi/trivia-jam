@@ -1,0 +1,2563 @@
+[
+  {
+    "id": "food-001",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is Gabe Newell's favorite class in Team Fortress 2?",
+    "options": [
+      "Heavy",
+      "Spy",
+      "Medic",
+      "Pyro"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-002",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where is the fast food chain \"Panda Express\" headquartered?",
+    "options": [
+      "Rosemead, California",
+      "Sacramento, California",
+      "San Diego, California",
+      "Fresno, California"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-003",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In what year was Garry's Mod released as a standalone title on Valve's Steam distribution service?",
+    "options": [
+      "2006",
+      "2007",
+      "2003",
+      "2004"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-004",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who is the leader of Team Valor in Pokémon Go?",
+    "options": [
+      "Blanche",
+      "Candela",
+      "Willow",
+      "Spark"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-005",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which one of these Swedish companies was founded in 1943?",
+    "options": [
+      "Clas Ohlson",
+      "H & M",
+      "Lindex",
+      "IKEA"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-006",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these NHL teams have never moved since their inception?",
+    "options": [
+      "Carolina Hurricanes",
+      "New Jersey Devils",
+      "Dallas Stars",
+      "St. Louis Blues"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-007",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the main ingredient in traditional Japanese miso soup?",
+    "options": [
+      "Soy sauce",
+      "Fermented soybean paste",
+      "Rice vinegar",
+      "Seaweed broth"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-008",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What type of pasta is shaped like small tubes?",
+    "options": [
+      "Spaghetti",
+      "Fettuccine",
+      "Penne",
+      "Linguine"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-009",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which spice gives curry its characteristic yellow color?",
+    "options": [
+      "Paprika",
+      "Saffron",
+      "Turmeric",
+      "Cumin"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-010",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What fruit is traditionally used to make guacamole?",
+    "options": [
+      "Mango",
+      "Avocado",
+      "Banana",
+      "Papaya"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-011",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the name of the traditional French method of cooking food slowly in its own fat?",
+    "options": [
+      "Sous vide",
+      "Confit",
+      "Braise",
+      "Flambe"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-012",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which country is the world's largest producer of coffee?",
+    "options": [
+      "Colombia",
+      "Vietnam",
+      "Ethiopia",
+      "Brazil"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-013",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the primary ingredient in hummus?",
+    "options": [
+      "Lentils",
+      "Black beans",
+      "Chickpeas",
+      "Kidney beans"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-014",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which cheese is traditionally used in a classic Italian tiramisu?",
+    "options": [
+      "Ricotta",
+      "Mascarpone",
+      "Cream cheese",
+      "Burrata"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-015",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What type of bread is used to make a traditional Reuben sandwich?",
+    "options": [
+      "Sourdough",
+      "Pumpernickel",
+      "Rye",
+      "Wheat"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-016",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which nut is used to make marzipan?",
+    "options": [
+      "Cashew",
+      "Walnut",
+      "Almond",
+      "Pistachio"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-017",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the Scoville rating range of a Carolina Reaper pepper?",
+    "options": [
+      "500,000-1,000,000 SHU",
+      "1,400,000-2,200,000 SHU",
+      "100,000-500,000 SHU",
+      "2,500,000-3,000,000 SHU"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-018",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which Japanese dish consists of battered and deep-fried vegetables or seafood?",
+    "options": [
+      "Tonkatsu",
+      "Tempura",
+      "Karaage",
+      "Yakitori"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-019",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the most consumed manufactured drink in the world?",
+    "options": [
+      "Coffee",
+      "Beer",
+      "Tea",
+      "Cola"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-020",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the name of the traditional Ethiopian flatbread made from teff flour?",
+    "options": [
+      "Naan",
+      "Injera",
+      "Chapati",
+      "Lavash"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-021",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which country does the dish 'pho' originate from?",
+    "options": [
+      "Thailand",
+      "China",
+      "Japan",
+      "Vietnam"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-022",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is sauerkraut made from?",
+    "options": [
+      "Turnips",
+      "Cabbage",
+      "Radishes",
+      "Carrots"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-023",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the primary flavoring agent in the liqueur Chartreuse?",
+    "options": [
+      "Anise",
+      "A secret blend of 130 herbs",
+      "Juniper berries",
+      "Wormwood"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-024",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which vitamin is abundant in citrus fruits?",
+    "options": [
+      "Vitamin A",
+      "Vitamin B12",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-025",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What type of food is 'brie'?",
+    "options": [
+      "Bread",
+      "Cheese",
+      "Pasta",
+      "Fruit"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-026",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which region of Italy does Parmigiano-Reggiano cheese originate from?",
+    "options": [
+      "Tuscany",
+      "Sicily",
+      "Emilia-Romagna",
+      "Lombardy"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-027",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the main ingredient in falafel?",
+    "options": [
+      "Lentils",
+      "Chickpeas",
+      "Black beans",
+      "Split peas"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-028",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What grain is sake traditionally made from?",
+    "options": [
+      "Wheat",
+      "Barley",
+      "Rice",
+      "Corn"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-029",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the name of the high-temperature Indian clay oven used for baking naan and cooking tandoori dishes?",
+    "options": [
+      "Kamado",
+      "Tandoor",
+      "Hearth",
+      "Hibachi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-030",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which country is the largest producer of olive oil in the world?",
+    "options": [
+      "Italy",
+      "Greece",
+      "Spain",
+      "Turkey"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-031",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the primary ingredient in tofu?",
+    "options": [
+      "Rice",
+      "Wheat",
+      "Soybeans",
+      "Corn"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-032",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In French cuisine, what does the term 'mise en place' refer to?",
+    "options": [
+      "A type of sauce",
+      "Preparing and organizing ingredients before cooking",
+      "A plating technique",
+      "A dessert course"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-033",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the name of the Korean side dish of fermented vegetables, most commonly cabbage?",
+    "options": [
+      "Banchan",
+      "Kimchi",
+      "Japchae",
+      "Bulgogi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-034",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a type of pasta?",
+    "options": [
+      "Rigatoni",
+      "Focaccia",
+      "Farfalle",
+      "Orzo"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-035",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the name of the poisonous substance found in improperly prepared fugu (pufferfish)?",
+    "options": [
+      "Cyanide",
+      "Solanine",
+      "Tetrodotoxin",
+      "Botulinum"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-036",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which spirit is the base of a classic margarita?",
+    "options": [
+      "Rum",
+      "Vodka",
+      "Tequila",
+      "Mezcal"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-037",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the most expensive spice in the world by weight?",
+    "options": [
+      "Vanilla",
+      "Cardamom",
+      "Turmeric",
+      "Saffron"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-038",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which amino acid is responsible for the 'umami' taste?",
+    "options": [
+      "Lysine",
+      "Glutamate",
+      "Tryptophan",
+      "Alanine"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-039",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What type of pastry is used to make baklava?",
+    "options": [
+      "Puff pastry",
+      "Shortcrust pastry",
+      "Choux pastry",
+      "Phyllo (filo) pastry"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-040",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which country is the origin of the croissant as we know it today?",
+    "options": [
+      "Italy",
+      "Austria",
+      "France",
+      "Belgium"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-041",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What percentage of alcohol by volume (ABV) must a spirit have to be legally classified as bourbon in the United States when bottled?",
+    "options": [
+      "At least 30%",
+      "At least 40%",
+      "At least 50%",
+      "At least 35%"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-042",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which fruit is known as the 'king of fruits' in Southeast Asia?",
+    "options": [
+      "Mangosteen",
+      "Jackfruit",
+      "Durian",
+      "Rambutan"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-043",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the main ingredient in a traditional French omelette?",
+    "options": [
+      "Milk",
+      "Flour",
+      "Eggs",
+      "Cheese"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-044",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which Italian city is credited as the birthplace of pizza Margherita?",
+    "options": [
+      "Rome",
+      "Naples",
+      "Florence",
+      "Milan"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-045",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the name of the traditional Spanish cold tomato soup?",
+    "options": [
+      "Minestrone",
+      "Gazpacho",
+      "Bisque",
+      "Bouillabaisse"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-046",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of these foods is naturally gluten-free?",
+    "options": [
+      "Barley",
+      "Couscous",
+      "Rice",
+      "Wheat"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-047",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the term for the chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavor?",
+    "options": [
+      "Caramelization",
+      "Maillard reaction",
+      "Denaturation",
+      "Fermentation"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-048",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which nut is the primary ingredient in pesto alla Genovese?",
+    "options": [
+      "Walnut",
+      "Cashew",
+      "Pine nut",
+      "Almond"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-049",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is wasabi traditionally served with?",
+    "options": [
+      "Pad Thai",
+      "Sushi",
+      "Curry",
+      "Dim sum"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-050",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which country is the world's largest producer of vanilla?",
+    "options": [
+      "Mexico",
+      "Tahiti",
+      "Madagascar",
+      "Indonesia"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-0",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which school in Surrey, England did Steve Backshall attend?",
+    "options": [
+      "Tomlinscote School",
+      "Kings International College",
+      "Collingwood College",
+      "Lyndhurst School"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-1",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "By definition, where does an abyssopelagic animal live?",
+    "options": [
+      "In the desert",
+      "At the bottom of the ocean",
+      "On top of a mountain",
+      "Inside a tree"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-2",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Down Syndrome is usually caused by an extra copy of which chromosome?",
+    "options": [
+      "23",
+      "15",
+      "24",
+      "21"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-3",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What was the name given to Japanese military dictators who ruled the country through the 12th and 19th Century?",
+    "options": [
+      "Ninja",
+      "Shogun",
+      "Samurai",
+      "Shinobi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-4",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following actors has only been in a Quentin Tarantino directed film once?",
+    "options": [
+      "Christoph Waltz",
+      "Harvey Keitel",
+      "Samuel L. Jackson",
+      "John Travolta"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-5",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "How many officially recognized dwarf planets in the solar system are named after Polynesian deities?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "5"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-6",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What was the last Marx Brothers film to feature Zeppo?",
+    "options": [
+      "A Night at the Opera",
+      "A Day at the Races",
+      "Duck Soup",
+      "Monkey Business"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-7",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Where is the \"Sonoran Desert\" located?",
+    "options": [
+      "South America",
+      "Asia",
+      "Africa",
+      "North America"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-8",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the code name of Morgana the cat in Persona 5?",
+    "options": [
+      "Panther",
+      "Mona",
+      "Nightstalker",
+      "Zorro"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What number does the Roman numeral \"D\" stand for?",
+    "options": [
+      "500",
+      "100",
+      "1000",
+      "50"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-10",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the world's most expensive spice by weight?",
+    "options": [
+      "Cinnamon",
+      "Cardamom",
+      "Saffron",
+      "Vanilla"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-11",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following bands is Tom DeLonge not a part of?",
+    "options": [
+      "Box Car Racer",
+      "Blink-182",
+      "Angels & Airwaves",
+      "+44"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-12",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the main ship used by Commander Shepard in the Mass Effect Franchise called?",
+    "options": [
+      "Osiris",
+      "Infinity",
+      "Normandy",
+      "Endeavour"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-13",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the game \"DELTARUNE\", what is Ralsei's special ability?",
+    "options": [
+      "Persuade",
+      "Pacify",
+      "Eliminate",
+      "Hug"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-14",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "\"Rollercoaster Tycoon\" was programmed mostly entirely in...",
+    "options": [
+      "C++",
+      "x86 Assembly",
+      "C",
+      "ALGOL"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-15",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following is not a Flintstones character?",
+    "options": [
+      "Rockhead Slate",
+      "Lord Rockingham IX",
+      "The Great Gazoo",
+      "Barney Rubble"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-16",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What was David Bowie's real surname?",
+    "options": [
+      "Johnson",
+      "Jones",
+      "Edwards",
+      "Carter"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-17",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the Yakuza series who is the Dragon of Dojima?",
+    "options": [
+      "Sohei Dojima",
+      "Kazuma Kiryu",
+      "Ryuji Goda",
+      "Haruka Sawamura"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-18",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "The historical city Timbuktu is located in which West African country?",
+    "options": [
+      "Mali",
+      "Senegal",
+      "Niger",
+      "Burkina Faso"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-19",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following is true when alligators are behaving territorially?",
+    "options": [
+      "Open their jaws while making a clicking noise",
+      "They bellow while showing their tail and neck",
+      "They run full force at the threat",
+      "Slap their tails on the ground"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-20",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which track by \"Massive Attack\" is used for the theme of \"House\"? ",
+    "options": [
+      "Protection",
+      "Angel",
+      "Black Milk",
+      "Teardrop"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-21",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In what year was the Oculus Rift revealed to the public through a Kickstarter campaign?",
+    "options": [
+      "2010",
+      "2011",
+      "2013",
+      "2012"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-22",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "According to Overwatch's lore, who was once a member of the Deadlock Gang?",
+    "options": [
+      "Roadhog",
+      "Soldier 76",
+      "McCree",
+      "Junkrat"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-23",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "From which country does the piano originate?",
+    "options": [
+      "Italy",
+      "Germany",
+      "Austria",
+      "France"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-24",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who wrote and directed the 1986 film 'Platoon'?",
+    "options": [
+      "Francis Ford Coppola",
+      "Stanley Kubrick",
+      "Michael Cimino",
+      "Oliver Stone"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775435101470-25",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the anime \"Gintama\" which accessory/article of clothing is the character Shinpachi commonly referred to as?",
+    "options": [
+      "Glasses",
+      "Nose Ring",
+      "T-Shirt",
+      "Underwear"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-26",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which class of animals are newts members of?",
+    "options": [
+      "Fish",
+      "Amphibian",
+      "Reptiles",
+      "Mammals"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775435101470-27",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What was the name of Captain Nemo's submarine in \"20,000 Leagues Under the Sea\"?",
+    "options": [
+      "The Nautilus",
+      "The Neptune",
+      "The Poseidon  ",
+      "The Atlantis"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775435101470-28",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "When Christopher Columbus sailed to America, what was the first region he arrived in?",
+    "options": [
+      "Florida",
+      "Isthmus of Panama",
+      "The Bahamas Archipelago",
+      "Nicaragua"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775435101470-29",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Who voiced Finn in Adventure Time?",
+    "options": [
+      "Nolan North",
+      "John DiMaggio",
+      "Jeremy Shada",
+      "Tom Kenny"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408114-0",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which islands below have been claimed by both Japan and Russia?",
+    "options": [
+      "Kuril Islands",
+      "Paracel Islands",
+      "Chagos Islands",
+      "Spratly Islands"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775448408114-1",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Before 2011, \"True Capitalist Radio\" was known by a different name. What was that name?",
+    "options": [
+      "True Republican Radio",
+      "Texan Capitalist Radio",
+      "United Capitalists",
+      "True Conservative Radio"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408114-2",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What song by Tina Turner is the theme for Mad Max Beyond Thunderdome?",
+    "options": [
+      "Let's Stay Together",
+      "What's Love Got To Do With It",
+      "We Don't Need Another Hero",
+      "I Don't Wanna Lose You"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408114-3",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In \"SpongeBob SquarePants\", what is the name of Sandy Cheek's place of residence?",
+    "options": [
+      "\"The Dome\"",
+      "Sandy's Bubble",
+      "Auquatic Reseach Centre",
+      "Sandy's Treedome"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408114-4",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "At which bridge does the annual Oxford and Cambridge boat race start?",
+    "options": [
+      "Hammersmith",
+      "Putney",
+      "Vauxhall ",
+      "Battersea"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408114-5",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which one of these films are shot entirely in one-take?",
+    "options": [
+      "Good Will Hunting",
+      "Russian Ark",
+      "Birdman",
+      "Schindler's List"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408114-6",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which is not a type of neuron?",
+    "options": [
+      "Sensory Neuron",
+      "Perceptual Neuron",
+      "Motor Neuron",
+      "Interneuron"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408114-7",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Myopia is the scientific term for which condition?",
+    "options": [
+      "Farsightedness",
+      "Double Vision",
+      "Shortsightedness",
+      "Clouded Vision"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408114-8",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the capital of Spain?",
+    "options": [
+      "Barcelona",
+      "Madrid",
+      "Sevilla",
+      "Toledo"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408114-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which member of \"The Beatles\" narrated episodes of \"Thomas the Tank Engine\"?",
+    "options": [
+      "George Harrison",
+      "John Lennon",
+      "Paul McCartney",
+      "Ringo Starr"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408114-10",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the 2012 film, \"The Lorax\", who is the antagonist?",
+    "options": [
+      "Aloysius O'Hare",
+      "Ted Wiggins",
+      "The Once-Ler",
+      "Grammy Norma"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775448408115-11",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who was \"Kung Fu Fighting\" in 1974?",
+    "options": [
+      "Carl Douglas",
+      "The Bee Gees",
+      "Heatwave",
+      "Kool & the Gang"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775448408115-12",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In World of Warcraft, What was the name of the spell that caused a plague that famously killed millions of players in 2005?",
+    "options": [
+      "Necrotic Plague",
+      "Corrupted Blood",
+      "Unbound Infestation",
+      "Mutated Infection"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-13",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In what year did \"The Big Bang Theory\" debut on CBS?",
+    "options": [
+      "2007",
+      "2008",
+      "2006",
+      "2009"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775448408115-14",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the game Overwatch, which hero out of the following 4 is from Brazil?",
+    "options": [
+      "Sombra",
+      "McCree",
+      "Symmetra",
+      "L&uacute;cio"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408115-15",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "The body of the Egyptian Sphinx was based on which animal?",
+    "options": [
+      "Bull",
+      "Horse",
+      "Lion",
+      "Dog"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408115-16",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What was the first successful and commercially viable photographic technique?",
+    "options": [
+      "Collodion process",
+      "The Turin Shroud",
+      "Kodachrome film",
+      "The Daguerreotype"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408115-17",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which restaurant's mascot is a clown?",
+    "options": [
+      "Whataburger",
+      "McDonald's",
+      "Burger King",
+      "Sonic"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-18",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In what year was the first eSports competition?",
+    "options": [
+      "1989",
+      "1972",
+      "1990",
+      "2000"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-19",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following Argentinian presidents was elected in 2015?",
+    "options": [
+      "Cristina Fernandez de Kirchner",
+      "Mauricio Macri",
+      "Nestor Kirchner",
+      "Juan Domingo Peron"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-20",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What island in the Canary Islands was the scene of one of the worst air disasters in history with the collision of two jumbo jets?",
+    "options": [
+      "Tenerife",
+      "Fuerteventura",
+      "Gran Canaria",
+      "Maui"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775448408115-21",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who made the video game, \"Bendy and the Ink Machine\"?",
+    "options": [
+      "Scott Cawthon",
+      "TheMeatly",
+      " Jeff Kaplan",
+      "Konami"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-22",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following is not the name of a \"Bond Girl\"? ",
+    "options": [
+      "Pam Bouvier",
+      "Vanessa Kensington",
+      "Mary Goodnight",
+      "Wai Lin"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-23",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the 1992 film \"Army of Darkness\", what name does Ash give to his double-barreled shotgun?",
+    "options": [
+      "Bloomstick",
+      "Blastbranch",
+      "Boomstick",
+      "2-Pump Chump"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408115-24",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In what prison was Adolf Hitler held in 1924?",
+    "options": [
+      "Spandau Prison",
+      "Ebrach Abbey",
+      "Hohenasperg",
+      "Landsberg Prison"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408115-25",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What causes the sound of a heartbeat?",
+    "options": [
+      "Contraction of the heart chambers",
+      "Closure of the heart valves",
+      "Blood exiting the heart",
+      "Relaxation of the heart chambers"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-26",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Who wrote and directed the animated movie \"Spirited Away\" (2001)?",
+    "options": [
+      "Isao Takahata",
+      "Mamoru Hosoda",
+      "Hidetaka Miyazaki",
+      "Hayao Miyazaki"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775448408115-27",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What was another suggested name for, the 1985 film, Back to the Future?",
+    "options": [
+      "Hill Valley Time Travelers",
+      "Spaceman From Pluto",
+      "The Time Travelers",
+      "The Lucky Man"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775448408115-28",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What year did the Vietnam War end?",
+    "options": [
+      "1978",
+      "1967",
+      "1975",
+      "1969"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775448408115-29",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "The main antagonist of the second part of JoJo's Bizarre Adventure is which of the following?",
+    "options": [
+      "Kars",
+      "Erina Joestar",
+      "Santana",
+      "Wired Beck"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-0",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "How much money did the 2019 Marvel movie \"Avengers: Endgame\" gross for it's record-breaking worldwide opening weekend?",
+    "options": [
+      "1.2 billion USD",
+      "640 million USD",
+      "456 million USD",
+      "392 million USD"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-1",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which scientific unit is named after an Italian nobleman?",
+    "options": [
+      "Pascal",
+      "Ohm",
+      "Hertz",
+      "Volt"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540549537-2",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of the following are cells of the adaptive immune system?",
+    "options": [
+      "Dendritic cells",
+      "Cytotoxic T cells",
+      "Natural killer cells",
+      "White blood cells"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-3",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which Batman villain is Mark Hamill known for having voiced?",
+    "options": [
+      "Two-Face",
+      "The Joker",
+      "Bane",
+      "Hush"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-4",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What type of animal was Harambe, who was shot after a child fell into it's enclosure at the Cincinnati Zoo?",
+    "options": [
+      "Gorilla",
+      "Tiger",
+      "Panda",
+      "Crocodile"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-6",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which dog breed is named after a region in Croatia",
+    "options": [
+      "Pekingnese",
+      "Chihuahua ",
+      "Dalmatian",
+      "Pomeranian"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-7",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In the book \"The Martian\", how long was Mark Watney trapped on Mars (in Sols)?",
+    "options": [
+      "765 Days",
+      "401 Days",
+      "324 Days",
+      "549 Days"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540549537-8",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which member of the Wu-Tang Clan had only one verse in their debut album Enter the Wu-Tang (36 Chambers)?",
+    "options": [
+      "Method Man",
+      "Inspectah Deck",
+      "Masta Killa",
+      "GZA"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In what sport does Fanny Chmelar compete for Germany?",
+    "options": [
+      "Swimming",
+      "Skiing",
+      "Showjumping",
+      "Gymnastics"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-10",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which NBA player won Most Valuable Player for the 1999-2000 season?",
+    "options": [
+      "Allen Iverson",
+      "Shaquille O'Neal",
+      "Kobe Bryant",
+      "Paul Pierce"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-11",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the game Sonic Forces, which of the following was not from a previous game?",
+    "options": [
+      "Metal Sonic",
+      "Infinite",
+      "Zavoc",
+      "Chaos"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-12",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What was the name of the Wu-Tang Clan album Martin Shkreli bought for $2 million dollars?",
+    "options": [
+      "Once Upon a Time in Shaolin",
+      "A Better Tomorrow",
+      "8 Diagrams",
+      "The Saga Continues"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-13",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the lowest amount of max health you can have in Team Fortress 2?",
+    "options": [
+      "100",
+      "70",
+      "50",
+      "95"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-14",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who rode on horseback to warn the Minutemen that the British were coming during the U.S. Revolutionary War?",
+    "options": [
+      "Thomas Paine",
+      "Paul Revere",
+      "Henry Longfellow",
+      "Nathan Hale"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-15",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the game Paper Mario for the Nintendo 64 the first partner you meet is a Goomba, what is its name?",
+    "options": [
+      "Goombella",
+      "Goombarry",
+      "Goombario",
+      "Goomby"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-16",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the Mario Kart and Smash Bros. Games, Princess Rosalina is considered what weight class?",
+    "options": [
+      "Medium",
+      "Light",
+      "Light-Medium",
+      "Heavy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540549537-17",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "According to the American rapper Nelly, what should you do when its hot in here?",
+    "options": [
+      "Take off all your clothes",
+      "Take a cool shower",
+      "Drink some water",
+      "Go skinny dipping"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-18",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which ocean borders the west coast of the United States?",
+    "options": [
+      "Atlantic",
+      "Pacific",
+      "Indian",
+      "Arctic"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-19",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the name of Joel's daughter in the game, \"The Last of Us\"? ",
+    "options": [
+      "Ellie",
+      "Tess",
+      "Sarah",
+      "Marlene"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-20",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "\"Yes, America Can!\" was this United States politician's de facto campaign slogan in 2004.",
+    "options": [
+      "John Kerry",
+      "George W. Bush",
+      "Barack Obama",
+      "Al Gore"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-21",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In Left 4 Dead, what is the character Bill's last name?",
+    "options": [
+      "Fish",
+      "Overbeck",
+      "Roberts",
+      "Stevenson"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-22",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Who won the 2015 Formula 1 World Championship?",
+    "options": [
+      "Nico Rosberg",
+      "Sebastian Vettel",
+      "Lewis Hamilton",
+      "Jenson Button"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-23",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "When did Spongebob Squarepants first air?",
+    "options": [
+      "July 20, 2000",
+      "May 1, 1999",
+      "February 6, 2003",
+      "June 27, 1997"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-24",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Antibiotics are generally taken to combat what?",
+    "options": [
+      "Viruses",
+      "Migraines",
+      "Bacterial infections",
+      "Muscular pains"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540549537-25",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In \"Magic: The Gathering\", what instant card has the highest converted mana cost?",
+    "options": [
+      "Vitalizing Wind",
+      "Blinkmoth Infusion",
+      " Chant of Vitu-Ghazi",
+      "Assert Authority"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-26",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following is not true about the life of Tiresias?",
+    "options": [
+      "Sailed with the Argonauts to find the golden fleece",
+      "Athena turned him into a woman, and then years later back into a man",
+      "Hera blinded him after he agreed with Zeus in an argument",
+      "Revealed to Oedipus that Oedipus had married his own mother"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-27",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What was the first Android version specifically optimized for tablets?",
+    "options": [
+      "Honeycomb",
+      "Eclair",
+      "Froyo",
+      "Marshmellow"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540549537-28",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Who was the Director of the 1988 Anime film \"Grave of the Fireflies\"?",
+    "options": [
+      "Hayao Miyazaki",
+      "Isao Takahata",
+      "Satoshi Kon",
+      "Sunao Katabuchi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540549537-29",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In which cardinal direction does the Sun rise from?",
+    "options": [
+      "West",
+      "East",
+      "North",
+      "South"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607668-0",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Santorini is an island belonging to what European Country?",
+    "options": [
+      "Italy",
+      "Spain",
+      "Turkey",
+      "Greece"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-1",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In the popular MOBA League of Legends, which of the following champions is nicknamed \"the Virtuoso\"?",
+    "options": [
+      "Jhin",
+      "Kayle",
+      "Ezreal",
+      "Camille"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540607668-2",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the name of the currency used in Ethiopia?",
+    "options": [
+      "Dirham",
+      "U.S. Dollar",
+      "Rand",
+      "Birr"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-3",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the name of the creatures that the protagonists of the webshow RWBY fight against?",
+    "options": [
+      "Reavers",
+      "Heartless",
+      "Dark Ones",
+      "Grimm"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-4",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which poet wrote \"The Ballad of Reading Gaol\" whilst imprisoned for being gay?",
+    "options": [
+      "Lord Byron",
+      "William Blake",
+      "Oscar Wilde",
+      "Wilfred Owen"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607668-5",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What year was Netflix founded?",
+    "options": [
+      "1999",
+      "2004",
+      "1997",
+      "2001"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607668-6",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is NOT one of Donald Trump's children?",
+    "options": [
+      "Donald Jr.",
+      "Ivanka",
+      "Julius",
+      "Eric"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607668-7",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In programming, the ternary operator is mostly defined with what symbol(s)?",
+    "options": [
+      "??",
+      "if then",
+      "?",
+      "?:"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-8",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following is not in the Indo-European language family?",
+    "options": [
+      "English",
+      "Hindi",
+      "Finnish",
+      "Russian"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607668-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a song featured on Green Day's 21st Century Breakdown album?",
+    "options": [
+      "Know Your Enemy",
+      "She's A Rebel",
+      "&iquest;Viva la Gloria? (Little Girl)",
+      "Before The Lobotomy"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607668-10",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In Calvin and Hobbes, what is the name of the babysitter's boyfriend?",
+    "options": [
+      "Dave",
+      "Charles",
+      "Nathaniel",
+      "Charlie"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-11",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What mainly favored rifle is used by the Terrorists in Counter Strike: Global Offensive?",
+    "options": [
+      "AK-74",
+      "M4A4",
+      "CZ-75 AUTO",
+      "AK-47"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607668-12",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of the following is a castle?",
+    "options": [
+      "Frank Castle",
+      "Elizabeth Castle",
+      "Richard Castle",
+      "Olivia Castle"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-13",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In the second-generation Pokémon games, which Pokémon can you start with?",
+    "options": [
+      "Bulbasaur, Charmander, and Squirtle",
+      "Treecko,Torchic, and Mudkip",
+      "Chikorita, Cyndaquil, and Totodile",
+      "Grassy, Firey, and Watery"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607669-14",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of the following games in the The Legend of Zelda franchise was released in North America before Japan?",
+    "options": [
+      "The Legend of Zelda: Twilight Princess",
+      "Zelda II: The Adventure of Link",
+      "The Legend of Zelda: Four Swords Adventures",
+      "The Legend of Zelda: Majora's Mask"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540607669-15",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "How many planets are there in the Solar System?",
+    "options": [
+      "9",
+      "8",
+      "11",
+      "10"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-16",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Where and when was the first cardboard box made for industrial use?",
+    "options": [
+      "United States, 1817",
+      "England, 1817",
+      "England, 1917",
+      "United States, 1917"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-17",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What are rhino's horn made of?",
+    "options": [
+      "Bone",
+      "Keratin",
+      "Ivory",
+      "Skin"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-18",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "When was the top-down online RPG \"Space Station 13\" released?",
+    "options": [
+      "2000",
+      "2003",
+      "2010",
+      "2006"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-19",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Bir Tawil, an uninhabited track of land claimed by no country, is located along the border of which two countries?",
+    "options": [
+      "Egypt and Sudan",
+      "Israel and Jordan",
+      "Chad and Libya",
+      "Iraq and Saudi Arabia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540607669-20",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In \"Call Of Duty: Zombies\", what does the game traditionally reward you for completing a boss round?",
+    "options": [
+      "A Pack-A-Punched gun",
+      "Death Machine",
+      "Monkey Bombs",
+      "Max Ammo"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540607669-22",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "The creeper in Minecraft was the result of a bug while implementing which creature?",
+    "options": [
+      "Zombie",
+      "Pig",
+      "Chicken",
+      "Cow"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-23",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where is the city of Haarlem located?",
+    "options": [
+      "Germany",
+      "United States",
+      "The Netherlands",
+      "Switzerland"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607669-24",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Who is the author of the series \"Malazan Book of the Fallen\"?",
+    "options": [
+      "Ian Cameron Esslemont",
+      "George R. R. Martin",
+      "Steven Erikson",
+      "J. R. R. Tolkien"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607669-25",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What name is the main character Chihiro given in the 2001 movie \"Spirited Away\"?",
+    "options": [
+      "Hyaku (Hundred)",
+      "Sen (Thousand)",
+      "Ichiman (Ten thousand)",
+      "Juu (Ten)"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-26",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "When was the game 'Portal 2' released?",
+    "options": [
+      "2014",
+      "2009",
+      "2011",
+      "2007"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607669-27",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "The song \"Caramelldansen\" is commonly mistaken as a Japanese song, what language is the song actually sung in?",
+    "options": [
+      "Hungarian",
+      "Finnish",
+      "Swedish",
+      "Chinese"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540607669-28",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which song was the callsign for Stefan Verdemann's KWFM radio station in Urasawa Naoki's \"Monster\"?",
+    "options": [
+      "What a Wonderful World",
+      "Over the Rainbow",
+      "When You Wish Upon A Star",
+      "Singing In The Rain"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540607669-29",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the anime, \"Super Sonico\", what is Super Sonico's favorite food?",
+    "options": [
+      "Ice Cream",
+      "Pizza",
+      "Macroons",
+      "Chips"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-0",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "The Italian automaker Lamborghini uses what animal as its logo?",
+    "options": [
+      "Bat",
+      "Horse",
+      "Bull",
+      "Snake"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-1",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which Japanese music group was formed to produce theme music for the anime \"Guilty Crown\"?",
+    "options": [
+      "Goose house",
+      "Babymetal",
+      "Garnidelia",
+      "Egoist"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-2",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following is not a work authored by Fyodor Dostoevsky?",
+    "options": [
+      "Anna Karenina",
+      "Notes from the Underground",
+      "Crime and Punishment",
+      "The Brothers Karamazov"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540764907-3",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In the 2014 Pokemon VGC Finals, which Pokemon was famous for bringing the winner to victory?",
+    "options": [
+      "Garchomp",
+      "Pachirisu",
+      "Lapras",
+      "Primal Groudon"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-4",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In the Kingdom Heart series who provides the english voice for Master Eraqus?",
+    "options": [
+      "Jason Dohring",
+      "Jesse McCartney",
+      "Haley Joel Osment",
+      "Mark Hamill"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-5",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is not a wind instrument?",
+    "options": [
+      "Viola",
+      "Oboe",
+      "Trombone",
+      "Duduk"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540764907-6",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Originally another word for poppy, coquelicot is a shade of what?",
+    "options": [
+      "Green",
+      "Red",
+      "Blue",
+      "Pink"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-7",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "The most graphically violent game to precede the creation of the ESRB (Entertainment Software Rating Board) was...",
+    "options": [
+      "Duke Nukem",
+      "Resident Evil",
+      "Mortal Kombat",
+      "Doom"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-9",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In Super Mario Bros., who informs Mario that the princess is in another castle?",
+    "options": [
+      "Luigi",
+      "Toad",
+      "Yoshi",
+      "Bowser"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-10",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Who was the top scorer of the 2014 FIFA World Cup?",
+    "options": [
+      "James Rodr&iacute;guez",
+      "Thomas Müller",
+      "Lionel Messi",
+      "Neymar"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540764907-11",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these games was the earliest known first-person shooter with a known time of publication?",
+    "options": [
+      "Doom",
+      "Wolfenstein",
+      "Spasim",
+      "Quake"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-12",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "The 'D' in the term \"D-Mail\" from the game \"Steins; Gate\" is short for what?",
+    "options": [
+      "Deep",
+      "DeLorean",
+      "Demo",
+      "Dev"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-13",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which famous New York Yankees outfielder did Marilyn Monroe marry?",
+    "options": [
+      "Tino Martinez",
+      "Babe Ruth",
+      "Joe DiMaggio",
+      "Mason Williams"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-14",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Before getting the shotgun, what did the titular hobo in 'Hobo with a Shotgun' want to purchase?",
+    "options": [
+      "a revolver",
+      "a guitar",
+      "a suit",
+      "a lawnmower"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-15",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a name of an album released by American rapper Pitbull?",
+    "options": [
+      "Welcome to Miami",
+      "Dale",
+      "Global Warming",
+      "Armando"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540764907-16",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "The pantheon in Rome was used to worship what god?",
+    "options": [
+      "Athena",
+      "Zeus",
+      "Any god they wanted",
+      "Both Athena and Zeus"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-17",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is the land connecting North America and South America?",
+    "options": [
+      "Isthmus of Suez",
+      "Isthmus of Panama",
+      "Urals",
+      "Australasia"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-18",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In \"Black Lagoon\", what colour is Rock's tie?",
+    "options": [
+      "Crimson",
+      "Dark Brown",
+      "Black",
+      "Teal"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-19",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Who was the 40th President of the USA?",
+    "options": [
+      "Jimmy Carter",
+      "Ronald Reagan",
+      "Bill Clinton",
+      "Richard Nixon"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-20",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following was a map that was in Team Fortress 2 at launch?",
+    "options": [
+      "Gravel Pit",
+      "Hoodoo",
+      "Gold Rush",
+      "Upward"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-crawl-1775540764907-21",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following battles is often considered as marking the beginning of the fall of the Western Roman Empire?",
+    "options": [
+      "Battle of Thessalonica",
+      "Battle of Pollentia",
+      "Battle of Constantinople",
+      "Battle of Adrianople"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-22",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of the following vehicles from Ford is named after a WW2 Fighter Plane?",
+    "options": [
+      "Explorer",
+      "Ranger",
+      "Galaxy",
+      "Mustang"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-23",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "How much radiation does a banana emit?",
+    "options": [
+      "0.3 Microsievert",
+      "0.5 Microsievert",
+      "0.7 Microsievert",
+      "0.1 Microsievert"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-24",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the area of a circle with a diameter of 20 inches if &pi;= 3.1415?",
+    "options": [
+      "380.1215 Inches",
+      "3141.5 Inches",
+      "1256.6 Inches",
+      "314.15 Inches"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-crawl-1775540764907-25",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a terrorist faction in Counter-Strike (2000)?",
+    "options": [
+      "Phoenix Connection",
+      "Midwest Militia",
+      "Elite Crew",
+      "Guerrilla Warfare"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-26",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of the following Autobot names in Michael Bay's movies was NOT a name for a Transformer in the original 1980's cartoon?",
+    "options": [
+      "Skids",
+      "Mudflap",
+      "Sideswipe",
+      "Ratchet"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-27",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of the following landlocked countries is entirely contained within another country?",
+    "options": [
+      "Burkina Faso",
+      "Mongolia",
+      "Lesotho",
+      "Luxembourg"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-crawl-1775540764907-28",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the fourth book of the Old Testament?",
+    "options": [
+      "Genesis",
+      "Numbers",
+      "Exodus",
+      "Leviticus"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-crawl-1775540764907-29",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "In which English county is the city of Portsmouth?",
+    "options": [
+      "Oxfordshire",
+      "Hampshire",
+      "Buckinghamshire",
+      "Surrey"
+    ],
+    "correctIndex": 1
+  }
+]

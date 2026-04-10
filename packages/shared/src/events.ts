@@ -1,0 +1,30 @@
+export const ClientEvents = {
+  ROOM_CREATE: 'room:create',
+  ROOM_JOIN: 'room:join',
+  ROOM_RECONNECT: 'room:reconnect',
+  GAME_SET_MODE: 'game:setMode',
+  GAME_START: 'game:start',
+  GAME_SELECT_CATEGORIES: 'game:selectCategories',
+  GAME_ANSWER: 'game:answer',
+  GAME_VOTE: 'game:vote',
+  GAME_NEXT_QUESTION: 'game:nextQuestion',
+  GAME_PLAY_AGAIN: 'game:playAgain',
+} as const;
+
+export const ServerEvents = {
+  ROOM_CREATED: 'room:created',
+  ROOM_JOINED: 'room:joined',
+  ROOM_PLAYER_JOINED: 'room:playerJoined',
+  ROOM_PLAYER_LEFT: 'room:playerLeft',
+  ROOM_STATE: 'room:state',
+  ROOM_ERROR: 'room:error',
+  GAME_PHASE: 'game:phase',
+  GAME_MODE_SET: 'game:modeSet',
+  GAME_COUNTDOWN: 'game:countdown',
+  GAME_QUESTION: 'game:question',
+  GAME_VOTE_UPDATE: 'game:voteUpdate',
+  GAME_REVEAL: 'game:reveal',
+  GAME_LEADERBOARD: 'game:leaderboard',
+  GAME_OVER: 'game:over',
+  GAME_CATEGORIES_SET: 'game:categoriesSet',
+} as const;

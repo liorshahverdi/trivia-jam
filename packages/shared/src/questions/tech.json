@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "tech-001",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does 'HTTP' stand for?",
+    "options": [
+      "HyperText Transfer Protocol",
+      "High-Tech Transfer Program",
+      "Hyper Transfer Text Protocol",
+      "Home Tool Transfer Protocol"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-002",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Who co-founded Apple alongside Steve Jobs?",
+    "options": [
+      "Bill Gates",
+      "Steve Wozniak",
+      "Tim Cook",
+      "Larry Page"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-003",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does 'CPU' stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Program Utility",
+      "Core Processing Unit"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-004",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which company created the Android operating system?",
+    "options": [
+      "Apple",
+      "Microsoft",
+      "Google",
+      "Samsung"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-005",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What programming language is known as the 'language of the web'?",
+    "options": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C++"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-006",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In what year was the first iPhone released?",
+    "options": [
+      "2005",
+      "2006",
+      "2007",
+      "2008"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-007",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does 'SQL' stand for?",
+    "options": [
+      "Structured Query Language",
+      "Simple Question Language",
+      "Standard Query Logic",
+      "Sequential Query Language"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-008",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which company developed the TypeScript programming language?",
+    "options": [
+      "Google",
+      "Apple",
+      "Microsoft",
+      "Meta"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-009",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is the name of the Linux kernel creator?",
+    "options": [
+      "Richard Stallman",
+      "Linus Torvalds",
+      "Dennis Ritchie",
+      "Ken Thompson"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-010",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does 'API' stand for?",
+    "options": [
+      "Application Programming Interface",
+      "Advanced Program Integration",
+      "Automated Protocol Interface",
+      "Application Protocol Integration"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-011",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which protocol is used for secure web browsing?",
+    "options": [
+      "FTP",
+      "SMTP",
+      "HTTPS",
+      "SSH"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-012",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What was the original name of the Java programming language?",
+    "options": [
+      "Oak",
+      "Mocha",
+      "Green",
+      "C--"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-013",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "In what year was the World Wide Web invented by Tim Berners-Lee?",
+    "options": [
+      "1985",
+      "1989",
+      "1991",
+      "1993"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-014",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What was the first commercially available personal computer?",
+    "options": [
+      "Apple I",
+      "IBM 5150",
+      "Commodore PET",
+      "Altair 8800"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-015",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which company invented the transistor?",
+    "options": [
+      "IBM",
+      "Intel",
+      "Bell Labs",
+      "Texas Instruments"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-016",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does 'RAM' stand for?",
+    "options": [
+      "Random Access Memory",
+      "Read Access Memory",
+      "Rapid Access Module",
+      "Run Application Memory"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-017",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does 'URL' stand for?",
+    "options": [
+      "Universal Resource Locator",
+      "Uniform Resource Locator",
+      "Universal Reference Link",
+      "Unified Resource Locator"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-018",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which company owns Instagram?",
+    "options": [
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Twitter"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-019",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does 'GPU' stand for?",
+    "options": [
+      "General Processing Unit",
+      "Graphics Processing Unit",
+      "Global Performance Unit",
+      "Graphics Program Utility"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-020",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What was the first search engine on the internet?",
+    "options": [
+      "Google",
+      "Yahoo",
+      "Archie",
+      "AltaVista"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-0",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Released in 2001, the first edition of Apple's Mac OS X operating system (version 10.0) was given what animal code name?",
+    "options": [
+      "Puma",
+      "Tiger",
+      "Cheetah",
+      "Leopard"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-1",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Nvidia's headquarters are based in which Silicon Valley city?",
+    "options": [
+      "Palo Alto",
+      "Cupertino",
+      "Santa Clara",
+      "Mountain View"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-2",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is largely considered the precursor to the USB format?",
+    "options": [
+      "SVGA",
+      "PS/2",
+      "PCIe",
+      "FireWire"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775435107056-3",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does the computer software acronym JVM stand for?",
+    "options": [
+      "Java Virtual Machine",
+      "Java Vendor Machine",
+      "Java Visual Machine",
+      "Just Virtual Machine"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-4",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What was the first Android version specifically optimized for tablets?",
+    "options": [
+      "Eclair",
+      "Honeycomb",
+      "Froyo",
+      "Marshmellow"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775435107056-5",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does the Prt Sc button do?",
+    "options": [
+      "Nothing",
+      "Saves a .png file of what's on the screen in your screenshots folder in photos",
+      "Closes all windows",
+      "Captures what's on the screen and copies it to your clipboard"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-6",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is the name of the default theme that is installed with Windows XP?",
+    "options": [
+      "Neptune",
+      "Whistler",
+      "Bliss",
+      "Luna"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-7",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does CPU stand for?",
+    "options": [
+      "Central Process Unit",
+      "Computer Personal Unit",
+      "Central Processor Unit",
+      "Central Processing Unit"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-8",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Who is the founder of Palantir?",
+    "options": [
+      "Peter Thiel",
+      "Mark Zuckerberg",
+      "Marc Benioff",
+      "Jack Dorsey"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-9",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In \"Hexadecimal\", what color would be displayed from the color code? \"#00FF00\"?",
+    "options": [
+      "Green",
+      "Red",
+      "Blue",
+      "Yellow"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-10",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "The programming language 'Swift' was created to replace what other programming language?",
+    "options": [
+      "C#",
+      "Ruby",
+      "C++",
+      "Objective-C"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-11",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What five letter word is the motto of the IBM Computer company?",
+    "options": [
+      "Click",
+      "Logic",
+      "Think",
+      "Pixel"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-12",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In any programming language, what is the most common way to iterate through an array?",
+    "options": [
+      "'If' Statements",
+      "'Do-while' loops",
+      "'For' loops",
+      "'While' loops"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-13",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "America Online (AOL) started out as which of these online service providers?",
+    "options": [
+      "CompuServe",
+      "Prodigy",
+      "Quantum Link",
+      "GEnie"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-14",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "If you were to code software in this language you'd only be able to type 0's and 1's.",
+    "options": [
+      "Binary",
+      "JavaScript",
+      "C++",
+      "Python"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-15",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which SQL keyword is used to fetch data from a database?",
+    "options": [
+      "INDEX",
+      "VALUES",
+      "SELECT",
+      "EXEC"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-16",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which one of these is not an official development name for a Ubuntu release?",
+    "options": [
+      "Mystic Mansion",
+      "Trusty Tahr",
+      "Utopic Unicorn",
+      "Wily Werewolf"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-17",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Laserjet and inkjet printers are both examples of what type of printer?",
+    "options": [
+      "Impact printer",
+      "Daisywheel printer",
+      "Non-impact printer",
+      "Dot matrix printer"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-18",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What is the commonly used keyboard shortcut for the 'Copy' function on Windows OS?",
+    "options": [
+      "Ctrl + X",
+      "Ctrl + C",
+      "Alt + C",
+      "Alt + X"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775435107056-19",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What kind of memory is used on memory cache?",
+    "options": [
+      "DRAM",
+      "ROM",
+      "SRAM",
+      "Flash"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-20",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": ".at is the top-level domain for what country?",
+    "options": [
+      "Argentina",
+      "Australia",
+      "Angola",
+      "Austria"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-21",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is the correct term for the metal object in between the CPU and the CPU fan within a computer system?",
+    "options": [
+      "CPU Vent",
+      "Temperature Decipator",
+      "Heat Sink",
+      "Heat Vent"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-22",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "The numbering system with a radix of 16 is more commonly referred to as ",
+    "options": [
+      "Binary",
+      "Duodecimal",
+      "Octal",
+      "Hexidecimal"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107056-23",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
+    "options": [
+      "Year",
+      "Four Years",
+      "Two Years",
+      "Eight Years"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-24",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which of these is the name for the failed key escrow device introduced by the National Security Agency in 1993?",
+    "options": [
+      "Enigma Machine",
+      "Skipjack",
+      "Clipper Chip",
+      "Nautilus"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-25",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "How many cores does the Intel i7-6950X have?",
+    "options": [
+      "10",
+      "12",
+      "8",
+      "4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-26",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "How long is an IPv6 address?",
+    "options": [
+      "128 bits",
+      "32 bits",
+      "64 bits",
+      "128 bytes"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775435107056-27",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which data structure does FILO apply to?",
+    "options": [
+      "Queue",
+      "Heap",
+      "Stack",
+      "Tree"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775435107056-28",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "According to DeMorgan's Theorem, the Boolean expression (AB)' is equivalent to:",
+    "options": [
+      "A'B + B'A",
+      "A'B'",
+      "AB' + AB",
+      "A' + B'"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775435107057-29",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which kind of algorithm is Ron Rivest not famous for creating?",
+    "options": [
+      "Hashing algorithm",
+      "Asymmetric encryption",
+      "Secret sharing scheme",
+      "Stream cipher"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-0",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "The teapot often seen in many 3D modeling applications is called what?",
+    "options": [
+      "Pixar Teapot",
+      "3D Teapot",
+      "Tennessee Teapot",
+      "Utah Teapot"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775448413710-1",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In computing, what does MIDI stand for?",
+    "options": [
+      "Musical Interface of Digital Instruments",
+      "Modular Interface of Digital Instruments",
+      "Musical Instrument Data Interface",
+      "Musical Instrument Digital Interface"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775448413710-2",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In the server hosting industry IaaS stands for...",
+    "options": [
+      "Internet as a Service",
+      "Internet and a Server",
+      "Infrastructure as a Server",
+      "Infrastructure as a Service"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775448413710-3",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does the \"MP\" stand for in MP3?",
+    "options": [
+      "Music Player",
+      "Multi Pass",
+      "Moving Picture",
+      "Micro Point"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-5",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which operating system was released first?",
+    "options": [
+      "Windows",
+      "Linux",
+      "Mac OS",
+      "OS/2"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-6",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which of these programming languages is a low-level language?",
+    "options": [
+      "Python",
+      "Assembly",
+      "C#",
+      "Pascal"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775448413710-7",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What is the domain name for the country Tuvalu?",
+    "options": [
+      ".tu",
+      ".tv",
+      ".tt",
+      ".tl"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775448413710-8",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Dutch computer scientist Mark Overmars is known for creating which game development engine?",
+    "options": [
+      "Game Maker",
+      "Stencyl",
+      "Construct",
+      "Torque 2D"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-9",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which internet company began life as an online bookstore called 'Cadabra'?",
+    "options": [
+      "eBay",
+      "Overstock",
+      "Amazon",
+      "Shopify"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-11",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In web design, what does CSS stand for?",
+    "options": [
+      "Cascading Style Sheet",
+      "Counter Strike: Source",
+      "Corrective Style Sheet",
+      "Computer Style Sheet"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-13",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What language does Node.js use?",
+    "options": [
+      "Java",
+      "Java Source",
+      "Joomla Source Code",
+      "JavaScript"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775448413710-14",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which of the following computer components can be built using only NAND gates?",
+    "options": [
+      "CPU",
+      "RAM",
+      "ALU",
+      "Register"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-15",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What was the name given to Android 4.3?",
+    "options": [
+      "Jelly Bean",
+      "Lollipop",
+      "Nutella",
+      "Froyo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-16",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "On Twitter, what was the original character limit for a Tweet?",
+    "options": [
+      "120",
+      "140",
+      "160",
+      "100"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775448413710-18",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Whistler was the codename of this Microsoft Operating System.",
+    "options": [
+      "Windows 2000",
+      "Windows 7",
+      "Windows XP",
+      "Windows 95"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-19",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Approximately how many Apple I personal computers were created?",
+    "options": [
+      "100",
+      "500",
+      "200",
+      "1000"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-20",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is the main CPU is the Sega Mega Drive / Sega Genesis?",
+    "options": [
+      "Motorola 68000",
+      "Zilog Z80",
+      "Yamaha YM2612",
+      "Intel 8088"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-21",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
+    "options": [
+      "Heartbleed",
+      "Shellshock",
+      "Corrupted Blood",
+      "Shellscript"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-23",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which RAID array type is associated with data mirroring?",
+    "options": [
+      "RAID 0",
+      "RAID 10",
+      "RAID 5",
+      "RAID 1"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775448413710-25",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In CSS, which of these values CANNOT be used with the \"position\" property?",
+    "options": [
+      "center",
+      "static",
+      "absolute",
+      "relative"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-26",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
+    "options": [
+      "FM Synthesizer",
+      "Programmable Sound Generator (PSG)",
+      "ADPCM Sampler",
+      "PCM Sampler"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775448413710-27",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Generally, which component of a computer draws the most power?",
+    "options": [
+      "Hard Drive",
+      "Video Card",
+      "Processor",
+      "Power Supply"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775448413710-28",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What is the codename of the eighth generation Intel Core micro-architecture launched in October 2017?",
+    "options": [
+      "Coffee Lake",
+      "Sandy Bridge",
+      "Skylake",
+      "Broadwell"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775448413710-29",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "How many bytes are in a single Kibibyte?",
+    "options": [
+      "2400",
+      "1024",
+      "1000",
+      "1240"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555134-0",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which computer hardware device provides an interface for all other connected devices to communicate?",
+    "options": [
+      "Central Processing Unit",
+      "Hard Disk Drive",
+      "Motherboard",
+      "Random Access Memory"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540555134-2",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+    "options": [
+      "Session",
+      "Transport",
+      "Data link",
+      "Network"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555134-3",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In programming, the ternary operator is mostly defined with what symbol(s)?",
+    "options": [
+      "?:",
+      "??",
+      "if then",
+      "?"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555134-4",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Australia, Japan, and Southeast Asia are in which ITU Region?",
+    "options": [
+      "Region 3",
+      "Region 1",
+      "Region 2",
+      "Region 4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-7",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "While Apple was formed in California, in which western state was Microsoft founded?",
+    "options": [
+      "Washington",
+      "New Mexico",
+      "Colorado",
+      "Arizona"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555135-9",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What internet protocol was documented in RFC 1459?",
+    "options": [
+      "IRC",
+      "HTTP",
+      "HTTPS",
+      "FTP"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-10",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In computing terms, typically what does CLI stand for?",
+    "options": [
+      "Command Line Interface",
+      "Common Language Input",
+      "Control Line Interface",
+      "Common Language Interface"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-11",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "The C programming language was created by this American computer scientist. ",
+    "options": [
+      "Dennis Ritchie",
+      "Tim Berners Lee",
+      "al-Khwārizmī",
+      "Willis Ware"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-14",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "On which day did the World Wide Web go online?",
+    "options": [
+      "December 17, 1996",
+      "November 12, 1990",
+      "December 20, 1990",
+      "November 24, 1995"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540555135-15",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What does the International System of Quantities refer 1024 bytes as?",
+    "options": [
+      "Kylobyte",
+      "Kibibyte",
+      "Kilobyte",
+      "Kelobyte"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555135-16",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "The acronym \"RIP\" stands for which of these?",
+    "options": [
+      "Runtime Instance Processes",
+      "Routing Information Protocol",
+      "Regular Interval Processes",
+      "Routine Inspection Protocol"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555135-17",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which of the following is a personal computer made by the Japanese company Fujitsu?",
+    "options": [
+      "PC-9801",
+      "FM-7",
+      "Xmillennium ",
+      "MSX"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555135-20",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which of these people was NOT a founder of Apple Inc?",
+    "options": [
+      "Steve Jobs",
+      "Ronald Wayne",
+      "Jonathan Ive",
+      "Steve Wozniak"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540555135-22",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What was the name of the first Bulgarian personal computer?",
+    "options": [
+      "IMKO-1",
+      "Pravetz 82",
+      "Pravetz 8D",
+      "IZOT 1030"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-23",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What is the name of Layer 7 of the OSI model?",
+    "options": [
+      "Application",
+      "Session",
+      "Network",
+      "Present"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-24",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "CMOS is tech used for constructing integrated circuits. What does CMOS stand for?",
+    "options": [
+      "Complementary magnetic-ohms-semiconductor",
+      "Computer-made operating system",
+      "Complementary metal–oxide–semiconductor",
+      "Computer-made oscillating static"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540555135-25",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "The Electron computer was released in Britain during 1983 for the home computing market, by which company? ",
+    "options": [
+      "Acorn Computers",
+      "Sinclair Research",
+      "Amstrad PLC",
+      "Commodore Business Machines"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540555135-26",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "The computer OEM manufacturer Clevo, known for its Sager notebook line, is based in which country?",
+    "options": [
+      "United States",
+      "Germany",
+      "China (People's Republic of)",
+      "Taiwan"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540555135-27",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In the programming language \"Python\", which of these statements would display the string \"Hello World\" correctly?",
+    "options": [
+      "console.log(\"Hello World\")",
+      "print(\"Hello World\")",
+      "echo \"Hello World\"",
+      "printf(\"Hello World\")"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540555135-28",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does the acronym CDN stand for in terms of networking?",
+    "options": [
+      "Content Distribution Network",
+      "Computational Data Network",
+      "Compressed Data Network",
+      "Content Delivery Network"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540555135-29",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What port does HTTP run on?",
+    "options": [
+      "53",
+      "443",
+      "80",
+      "23"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540613278-3",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which of these names was an actual codename for a cancelled Microsoft project?",
+    "options": [
+      "Enceladus",
+      "Neptune",
+      "Pollux",
+      "Saturn"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540613278-4",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What amount of bits commonly equals one byte?",
+    "options": [
+      "1",
+      "8",
+      "2",
+      "64"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540613278-6",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "How many values can a single byte represent?",
+    "options": [
+      "256",
+      "8",
+      "1",
+      "1024"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540613278-7",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does the term MIME stand for, in regards to computing?",
+    "options": [
+      "Mail Internet Mail Exchange",
+      "Multipurpose Internet Mail Extensions",
+      "Multipurpose Interleave Mail Exchange",
+      "Mail Interleave Method Exchange"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540613278-14",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which programming language shares its name with an island in Indonesia?",
+    "options": [
+      "Python",
+      "C",
+      "Jakarta",
+      "Java"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540613278-15",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "When Gmail first launched, how much storage did it provide for your email?",
+    "options": [
+      "512MB",
+      "1GB",
+      "5GB",
+      "Unlimited"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540613278-19",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does AD stand for in relation to Windows Operating Systems? ",
+    "options": [
+      "Alternative Drive",
+      "Automated Database",
+      "Active Department",
+      "Active Directory"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540613278-23",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In computing, what does LAN stand for?",
+    "options": [
+      "Long Antenna Node",
+      "Local Area Network",
+      "Light Access Node",
+      "Land Address Navigation"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540613278-24",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What is the name of the process that sends one qubit of information using two bits of classical information?",
+    "options": [
+      "Super Dense Coding",
+      "Quantum Entanglement",
+      "Quantum Programming",
+      "Quantum Teleportation"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540613278-26",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which of these is not a key value of Agile software development?",
+    "options": [
+      "Comprehensive documentation",
+      "Individuals and interactions",
+      "Customer collaboration",
+      "Responding to change"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540613278-28",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What does \"LCD\" stand for?",
+    "options": [
+      "Language Control Design",
+      "Last Common Difference",
+      "Liquid Crystal Display",
+      "Long Continuous Design"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540613278-29",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which company was established on April 1st, 1976 by Steve Jobs, Steve Wozniak and Ronald Wayne?",
+    "options": [
+      "Microsoft",
+      "Atari",
+      "Apple",
+      "Commodore"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540770503-1",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Which of these Cherry MX mechanical keyboard switches is both tactile and clicky?",
+    "options": [
+      "Cherry MX Black",
+      "Cherry MX Red",
+      "Cherry MX Blue",
+      "Cherry MX Brown"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540770503-3",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What was the name of the image that features as the default background wallpaper for Windows XP?",
+    "options": [
+      "Bliss",
+      "Azul",
+      "Red moon desert",
+      "Tulips"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540770503-4",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which of the following languages is used as a scripting language in the Unity 3D game engine?",
+    "options": [
+      "Java",
+      "C++",
+      "Objective-C",
+      "C#"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1775540770503-7",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does the term USB stand for?",
+    "options": [
+      "Universal Serial Bus",
+      "Universal Simtex Blot",
+      "Unified Signal Bus",
+      "Unityped Semtex Backer"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540770503-9",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Originally used in PCM adapters, what frequency is the standard for sampling audio in the Compact Disc Digital Audio format?",
+    "options": [
+      "44.1 kHz",
+      "32.0 kHz",
+      "1.5 MHz",
+      "20.5 kHz"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540770504-11",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "How many Hz does the video standard PAL support?",
+    "options": [
+      "59",
+      "60",
+      "50",
+      "25"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540770504-12",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "Lenovo acquired IBM's personal computer division, including the ThinkPad line of laptops and tablets, in what year?",
+    "options": [
+      "2005",
+      "1999",
+      "2002",
+      "2008"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540770504-13",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is known as \"the brain\" of the Computer?",
+    "options": [
+      "Motherboard",
+      "Graphics Processing Unit",
+      "Central Processing Unit",
+      "Keyboard"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1775540770504-16",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
+    "options": [
+      "<scroll></scroll>",
+      "<marquee></marquee>",
+      "<move></move>",
+      "<slide></slide>"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540770504-19",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which coding language was the #1 programming language in terms of usage on GitHub in 2015?",
+    "options": [
+      "C#",
+      "JavaScript",
+      "Python",
+      "PHP"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540770504-25",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "In networking, what does OSPF stand for?",
+    "options": [
+      "Order State Part First",
+      "Open Shortest Path First",
+      "Order Sense Ping Find",
+      "Open Signal Path Finder"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1775540770504-26",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What is the number of keys on a standard Windows Keyboard?",
+    "options": [
+      "104",
+      "64",
+      "94",
+      "76"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1775540770504-29",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What was the first commerically available computer processor?",
+    "options": [
+      "Intel 486SX",
+      "TMS 1000",
+      "Intel 4004",
+      "AMD AM386"
+    ],
+    "correctIndex": 2
+  }
+]

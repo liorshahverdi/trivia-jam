@@ -1,0 +1,172 @@
+import type { Category, Difficulty, Question } from '@trivia-jam/shared';
+import { CATEGORY_LABELS } from '@trivia-jam/shared';
+import { writeFileSync, readFileSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { clearQuestionCache } from './QuestionPicker.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const questionsDir = join(__dirname, '..', '..', '..', 'shared', 'src', 'questions');
+
+const ALL_CATEGORIES: Category[] = ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech'];
+
+// Open Trivia DB category mapping
+const OPENTDB_CATEGORY_MAP: Partial<Record<Category, number>> = {
+  math: 19,              // Mathematics
+  science: 17,           // Science & Nature
+  history: 23,           // History
+  music: 12,             // Entertainment: Music
+  food: 0,               // No direct match — use general knowledge
+  tech: 18,              // Science: Computers
+  'current-events': 0,   // No direct match — use general knowledge
+};
+
+interface OpenTDBResponse {
+  response_code: number;
+  results: Array<{
+    category: string;
+    type: string;
+    difficulty: string;
+    question: string;
+    correct_answer: string;
+    incorrect_answers: string[];
+  }>;
+}
+
+function decodeHTML(html: string): string {
+  return html
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&eacute;/g, 'é')
+    .replace(/&ouml;/g, 'ö')
+    .replace(/&uuml;/g, 'ü')
+    .replace(/&ntilde;/g, 'ñ')
+    .replace(/&rsquo;/g, "'")
+    .replace(/&lsquo;/g, "'")
+    .replace(/&rdquo;/g, '"')
+    .replace(/&ldquo;/g, '"')
+    .replace(/&hellip;/g, '...')
+    .replace(/&mdash;/g, '—')
+    .replace(/&ndash;/g, '–')
+    .replace(/&shy;/g, '')
+    .replace(/&#\d+;/g, (m) => {
+      const code = parseInt(m.slice(2, -1), 10);
+      return String.fromCharCode(code);
+    });
+}
+
+function mapDifficulty(d: string): Difficulty {
+  if (d === 'easy') return 'easy';
+  if (d === 'medium') return 'medium';
+  return 'hard';
+}
+
+async function fetchFromOpenTDB(category: Category, count: number): Promise<Question[]> {
+  const catId = OPENTDB_CATEGORY_MAP[category];
+  const categoryParam = catId ? `&category=${catId}` : '';
+  const url = `https://opentdb.com/api.php?amount=${count}&type=multiple${categoryParam}`;
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data: OpenTDBResponse = await res.json();
+    if (data.response_code !== 0) return [];
+
+    return data.results.map((item, i) => {
+      const correct = decodeHTML(item.correct_answer);
+      const incorrect = item.incorrect_answers.map(decodeHTML);
+      const options = [...incorrect];
+      const correctIndex = Math.floor(Math.random() * 4);
+      options.splice(correctIndex, 0, correct);
+
+      return {
+        id: `${category}-crawl-${Date.now()}-${i}`,
+        category,
+        difficulty: mapDifficulty(item.difficulty),
+        question: decodeHTML(item.question),
+        options: options.slice(0, 4) as [string, string, string, string],
+        correctIndex,
+      };
+    });
+  } catch (err) {
+    console.warn(`[QuestionCrawler] Failed to fetch from OpenTDB for ${category}:`, err);
+    return [];
+  }
+}
+
+function loadExisting(category: Category): Question[] {
+  try {
+    const filePath = join(questionsDir, `${category}.json`);
+    return JSON.parse(readFileSync(filePath, 'utf-8'));
+  } catch {
+    return [];
+  }
+}
+
+function deduplicateQuestions(questions: Question[]): Question[] {
+  const seen = new Set<string>();
+  return questions.filter((q) => {
+    const key = q.question.toLowerCase().trim();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+async function crawlCategory(category: Category): Promise<number> {
+  const existing = loadExisting(category);
+  const existingQuestions = new Set(existing.map((q) => q.question.toLowerCase().trim()));
+
+  // Fetch 30 questions (across difficulties) to get a good mix
+  const fetched = await fetchFromOpenTDB(category, 30);
+  const newQuestions = fetched.filter(
+    (q) => !existingQuestions.has(q.question.toLowerCase().trim())
+  );
+
+  if (newQuestions.length === 0) {
+    return 0;
+  }
+
+  const merged = deduplicateQuestions([...existing, ...newQuestions]);
+  const filePath = join(questionsDir, `${category}.json`);
+  writeFileSync(filePath, JSON.stringify(merged, null, 2) + '\n');
+
+  return newQuestions.length;
+}
+
+/**
+ * Crawls the Open Trivia Database for fresh questions across all categories.
+ * Merges new questions into existing JSON files, deduplicating by question text.
+ * Rate-limits requests to respect the API (one category at a time with delays).
+ */
+export async function crawlAllQuestions(): Promise<void> {
+  console.log('[QuestionCrawler] Starting question crawl...');
+
+  let totalNew = 0;
+  for (const category of ALL_CATEGORIES) {
+    const label = CATEGORY_LABELS[category] ?? category;
+    try {
+      const count = await crawlCategory(category);
+      if (count > 0) {
+        console.log(`[QuestionCrawler] ${label}: +${count} new questions`);
+        totalNew += count;
+      } else {
+        console.log(`[QuestionCrawler] ${label}: no new questions`);
+      }
+    } catch (err) {
+      console.warn(`[QuestionCrawler] ${label}: error`, err);
+    }
+    // Rate limit: OpenTDB allows ~1 request per 5 seconds
+    await new Promise((r) => setTimeout(r, 5500));
+  }
+
+  if (totalNew > 0) {
+    clearQuestionCache();
+    console.log(`[QuestionCrawler] Question cache cleared — new questions will be used in next game.`);
+  }
+  console.log(`[QuestionCrawler] Done! ${totalNew} new questions added across all categories.`);
+}

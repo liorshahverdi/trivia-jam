@@ -1,0 +1,847 @@
+[
+  {
+    "id": "math-1775426261305-039gcf",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the derivative of Acceleration with respect to time?",
+    "options": [
+      "Bump",
+      "Jerk",
+      "Slide",
+      "Shift"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261305-nxpsaj",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the Roman numeral for 500?",
+    "options": [
+      "L",
+      "D",
+      "X",
+      "C"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261305-tkp9zc",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "At what temperature does temp in °C equal temp in °F?",
+    "options": [
+      "-40",
+      "0",
+      "+100",
+      "+40"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-l40unv",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the only Millennium Prize Problem that has been solved so far?",
+    "options": [
+      "P vs. NP problem",
+      "Riemann Hypothesis",
+      "Poincaré conjecture",
+      "Fermat's conjecture"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-gfxn74",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What prime number comes next after 19?",
+    "options": [
+      "21",
+      "27",
+      "23",
+      "25"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-wwwl6u",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Which of the following famous mathematicians died in a duel at the age of 20?",
+    "options": [
+      "Euler",
+      "Galois",
+      "Abel",
+      "Gauss"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-of851l",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What shape does sin(x) or cos(x) make on a graph?",
+    "options": [
+      "A Parabola",
+      "Zig-Zags",
+      "A Straight Line",
+      "Waves"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-xdenmn",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What are the first 6 digits of the number \"Pi\"?",
+    "options": [
+      "3.25812",
+      "3.12423",
+      "3.14169",
+      "3.14159"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-04zoh2",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many square faces does a cube have?",
+    "options": [
+      "8",
+      "4",
+      "10",
+      "6"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-z6ggv3",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the correct order of operations for solving equations?",
+    "options": [
+      "The order in which the operations are written.",
+      "Parentheses, Exponents, Addition, Substraction, Multiplication, Division",
+      "Addition, Multiplication, Division, Subtraction, Addition, Parentheses",
+      "Parentheses, Exponents, Multiplication, Division, Addition, Subtraction"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-g7f8mk",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What comes after a Million, a Billion, and a Trillion?",
+    "options": [
+      "Quintillion",
+      "Quadrillion",
+      "Septillion",
+      "Sextillion"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-slqdjx",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "Who proved Fermat's Last Theorem?",
+    "options": [
+      "Andrew Wiles",
+      "Srinivasa Ramanujan",
+      "Carl Friedrich Gauss",
+      "Leonhard Euler"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-y8s22y",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many sides does a heptagon have?",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "7"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-zgeavf",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "How many Millibars (mbar) to 1 Inch of Mercury (inHg)",
+    "options": [
+      "33.9",
+      "30.0",
+      "27.4",
+      "10.6"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-8vk5lx",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the alphanumeric representation of the imaginary number?",
+    "options": [
+      "i",
+      "e",
+      "x",
+      "n"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-0rfyao",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "Which two men are credited with independently discovering differential calculus? ",
+    "options": [
+      "Plato and Aristotle",
+      "Dvorak and Smith",
+      "Asiimov and Rutherford",
+      "Newton and Leibnitz"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-vqfxoc",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What type of angle is greater than 90°?",
+    "options": [
+      "Acute",
+      "Right",
+      "Straight",
+      "Obtuse"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-9pf9vv",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the derivative of sin(x)",
+    "options": [
+      "-cos(x)",
+      "cos(x)",
+      "-sin(x)",
+      "csc(x)"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-9vqail",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "In Roman Numerals, what does XL equate to?",
+    "options": [
+      "90",
+      "40",
+      "15",
+      "60"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-69v5go",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "Which mathematician refused the Fields Medal?",
+    "options": [
+      "Terence Tao",
+      "Andrew Wiles",
+      "Edward Witten",
+      "Grigori Perelman"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-tyfrx6",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What type of function is x²+2x+1?",
+    "options": [
+      "Exponential",
+      "Quadratic",
+      "Rational",
+      "Linear"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-kj3sv1",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the first Mersenne prime exponent over 1000?",
+    "options": [
+      "2203",
+      "1279",
+      "1069",
+      "1009"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-0m1aiw",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the smallest number that can be expressed as the sum of two positive cubes in two different ways?",
+    "options": [
+      "561",
+      "91",
+      "1729",
+      "4104"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-eikowc",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Which of the following mathematicians made major contributions to game theory?",
+    "options": [
+      "Stefan Banach",
+      "Leonhard Euler",
+      "John Von Neumann",
+      "Carl Friedrich Gauss"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-ss1oxq",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Which of these did mathematician Leonhard Euler NOT develop?",
+    "options": [
+      "A method of solving first-order differential equations",
+      "A formula linking vertices, edges and faces on a graph",
+      "An improvement to the Fast Fourier Transform",
+      "An identity linking the numbers e, pi and i"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-v2963l",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "Which of the following dice is not a platonic solid?",
+    "options": [
+      "12-sided die",
+      "8-sided die",
+      "10-sided die",
+      "20-sided die"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-ahz4wn",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "In the hexadecimal system, what number comes after 9?",
+    "options": [
+      "The Letter A",
+      "10",
+      "16",
+      "The Number 0"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-krjy6q",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What's the square root of 49?",
+    "options": [
+      "12",
+      "9",
+      "7",
+      "4"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-xf8kh6",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the plane curve proposed by Descartes to challenge Fermat's extremum-finding techniques called?",
+    "options": [
+      "Cartesian Coordinates",
+      "Elliptic Paraboloid of Descartes",
+      "Descarte's Helicoid",
+      "Folium of Descartes"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-hrwi89",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many degrees make a full circle?",
+    "options": [
+      "180",
+      "720",
+      "360",
+      "90"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-q39epy",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Integration is the reverse of what mathematical operation?",
+    "options": [
+      "Multiplication",
+      "Division",
+      "Standard Deviation",
+      "Derivation"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-zby1r3",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "How many zeros are there in a googol?",
+    "options": [
+      "10",
+      "1,000",
+      "1,000,000",
+      "100"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-yeafdt",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "How many books are in Euclid's Elements of Geometry?",
+    "options": [
+      "17",
+      "8",
+      "10",
+      "13"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-8eix71",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the symbol for Displacement?",
+    "options": [
+      "Dp",
+      "r",
+      "dr",
+      "Δr"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-lqj1h6",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "Which of these probability distributions is NOT discrete?",
+    "options": [
+      "Hyper-geometric",
+      "Binomial",
+      "Normal",
+      "Poisson"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-db8x0i",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "Which greek mathematician ran through the streets of Syracuse naked while shouting \"Eureka\" after discovering the principle of displacement?",
+    "options": [
+      "Archimedes",
+      "Eratosthenes",
+      "Euclid",
+      "Homer"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-bzsroj",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "In a normal distribution, 95% of the data lies within how many standard deviations of the mean?",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-1775426261306-2xrccx",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "To the nearest whole number, how many radians are in a whole circle?",
+    "options": [
+      "6",
+      "5",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-20tjjm",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the least number of sides a polygon can have?",
+    "options": [
+      "7",
+      "3",
+      "1",
+      "2"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-p0yuj8",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "The French mathematician Évariste Galois is primarily known for his work in which?",
+    "options": [
+      "Galois Theory",
+      "Abelian Integration",
+      "Galois' Continued Fractions",
+      "Galois' Method for PDE's "
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-o2cid1",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is a polygon with eight sides called?",
+    "options": [
+      "Octagon",
+      "Heptagon",
+      "Nanagon",
+      "Hexagon"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-2rb1x3",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "The notion of a \"set that contains all sets which do not contain themselves\" is a paradoxical idea attributed to which English philosopher?",
+    "options": [
+      "Alfred North Whitehead",
+      "Bertrand Russel",
+      "Francis Bacon",
+      "John Locke"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-dqkno5",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many sides does a Möbius strip have?",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "2"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-1775426261306-ykciqd",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the area of a circle with a diameter of 20 inches if π= 3.1415?",
+    "options": [
+      "380.1215 Inches",
+      "1256.6 Inches",
+      "3141.5 Inches",
+      "314.15 Inches"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-1775426261306-k2ywqt",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "The metric prefix \"atto-\" makes a measurement how much smaller than the base unit?",
+    "options": [
+      "One Quintillionth",
+      "One Septillionth",
+      "One Billionth",
+      "One Quadrillionth"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-akjurg",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What Greek letter is used to signify summation?",
+    "options": [
+      "Sigma",
+      "Alpha",
+      "Omega",
+      "Delta"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1775426261306-ooyj1t",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the name of a nine sided polygon?",
+    "options": [
+      "Octagon",
+      "Nonagon",
+      "Heptagon",
+      "Hexagon"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435002695-3",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many sides does a pentagon have?",
+    "options": [
+      "5",
+      "9",
+      "6",
+      "4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-crawl-1775435002695-5",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the fourth digit of &pi;?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "math-crawl-1775435002695-8",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What numbers are in the 5th row of Pascal's Triangle?",
+    "options": [
+      "1 3 3 1",
+      "1 4 6 4 1",
+      "1 5 10 10 5 1",
+      "1 6 15 20 15 6 1"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435002695-11",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "In the complex plane, multiplying a given function by i rotates it anti-clockwise by how many degrees?",
+    "options": [
+      "180",
+      "90",
+      "270",
+      "0"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435002695-19",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the equation for the area of a sphere?",
+    "options": [
+      "(4/3)&pi;r^3",
+      "4&pi;r^2",
+      "(1/3)&pi;hr^2",
+      "&pi;r^4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-crawl-1775435002695-24",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "Which of the following is not one of the seven Millennium Prize Problems?",
+    "options": [
+      "Birch and Swinnerton-Dyer Conjecture",
+      "Naviér conjecture",
+      "Riemann hypothesis",
+      "Poincaré conjecture"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435002695-27",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "At what temperature does temp in &deg;C equal temp in &deg;F?",
+    "options": [
+      "+40",
+      "0",
+      "-40",
+      "+100"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435002695-29",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "Which of these numbers is closest to the total number of possible states for an army standard Enigma Machine?",
+    "options": [
+      "1.58 x 10^22",
+      "1.58 x  10^18",
+      "1.58 x 10^20",
+      "1.58 x 10^24"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435023864-2",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "The decimal number 31 in hexadecimal would be what?",
+    "options": [
+      "3D",
+      "2E",
+      "1F",
+      "1B"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435023864-7",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "A mathematical constant, known as \"The Golden Ratio\", is most commonly represented by which greek letter?",
+    "options": [
+      "&Phi; (phi)",
+      "&pi; (pi)",
+      "&Psi; (psi)",
+      "&Tau; (tau)"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-crawl-1775435023864-8",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the approximate value of mathematical constant e?",
+    "options": [
+      "3.14",
+      "1.62",
+      "2.72",
+      "1.41"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435023864-11",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What type of function is x&sup2;+2x+1?",
+    "options": [
+      "Rational",
+      "Linear",
+      "Quadratic",
+      "Exponential"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435023864-22",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "The French mathematician &Eacute;variste Galois is primarily known for his work in which?",
+    "options": [
+      "Galois' Continued Fractions",
+      "Galois' Method for PDE's ",
+      "Galois Theory",
+      "Abelian Integration"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435023864-25",
+    "category": "math",
+    "difficulty": "medium",
+    "question": "What is the area of a circle with a diameter of 20 inches if &pi;= 3.1415?",
+    "options": [
+      "380.1215 Inches",
+      "3141.5 Inches",
+      "314.15 Inches",
+      "1256.6 Inches"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775435072442-1",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "How many sides does a trapezium have?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435072442-25",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the mathematician Euler's first name?",
+    "options": [
+      "Lionel",
+      "Leonhard",
+      "Andrin",
+      "Ajan"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "math-crawl-1775435072442-28",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "How many zeptometres are inside one femtometre?",
+    "options": [
+      "10",
+      "1,000,000,000",
+      "1,000,000",
+      "1000"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "math-crawl-1775448380074-21",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What type of angle is greater than 90&deg;?",
+    "options": [
+      "Acute",
+      "Right",
+      "Straight",
+      "Obtuse"
+    ],
+    "correctIndex": 3
+  }
+]
