@@ -42,6 +42,55 @@ const OPENTDB_CATEGORY_MAP: Partial<Record<Category, number>> = {
   cartoons: 32,          // Entertainment: Cartoon & Animations
 };
 
+// The Trivia API (https://the-trivia-api.com) category mapping
+// Used for categories that OpenTDB doesn't cover.
+const TRIVIA_API_CATEGORY_MAP: Partial<Record<Category, string>> = {
+  food: 'food_and_drink',
+  'current-events': 'society_and_culture',
+};
+
+interface TriviaAPIQuestion {
+  id: string;
+  category: string;
+  correctAnswer: string;
+  incorrectAnswers: string[];
+  question: { text: string };
+  difficulty: string;
+}
+
+async function fetchFromTriviaAPI(category: Category, count: number): Promise<Question[]> {
+  const apiCategory = TRIVIA_API_CATEGORY_MAP[category];
+  if (!apiCategory) return [];
+  const url = `https://the-trivia-api.com/v2/questions?categories=${apiCategory}&limit=${count}`;
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const data: TriviaAPIQuestion[] = await res.json();
+
+    return data.map((item, i) => {
+      const correct = item.correctAnswer;
+      const incorrect = item.incorrectAnswers.slice(0, 3);
+      if (incorrect.length < 3) return null;
+      const options = [...incorrect];
+      const correctIndex = Math.floor(Math.random() * 4);
+      options.splice(correctIndex, 0, correct);
+
+      return {
+        id: `${category}-trivia-${Date.now()}-${i}`,
+        category,
+        difficulty: mapDifficulty(item.difficulty),
+        question: item.question.text,
+        options: options.slice(0, 4) as [string, string, string, string],
+        correctIndex,
+      };
+    }).filter((q): q is Question => q !== null);
+  } catch (err) {
+    console.warn(`[QuestionCrawler] Failed to fetch from Trivia API for ${category}:`, err);
+    return [];
+  }
+}
+
 interface OpenTDBResponse {
   response_code: number;
   results: Array<{
@@ -85,9 +134,15 @@ function mapDifficulty(d: string): Difficulty {
   return 'hard';
 }
 
-async function fetchFromOpenTDB(category: Category, count: number): Promise<Question[]> {
+async function fetchQuestions(category: Category, count: number): Promise<Question[]> {
   const catId = OPENTDB_CATEGORY_MAP[category];
-  if (catId === undefined) return []; // No OpenTDB mapping — skip crawling
+  if (catId !== undefined) return fetchFromOpenTDB(category, count);
+  if (TRIVIA_API_CATEGORY_MAP[category]) return fetchFromTriviaAPI(category, count);
+  return [];
+}
+
+async function fetchFromOpenTDB(category: Category, count: number): Promise<Question[]> {
+  const catId = OPENTDB_CATEGORY_MAP[category]!;
   const url = `https://opentdb.com/api.php?amount=${count}&type=multiple&category=${catId}`;
 
   try {
@@ -138,7 +193,7 @@ function deduplicateQuestions(questions: Question[]): Question[] {
 }
 
 async function crawlCategoryToDb(pool: pg.Pool, category: Category): Promise<number> {
-  const fetched = await fetchFromOpenTDB(category, 30);
+  const fetched = await fetchQuestions(category, 30);
   if (fetched.length === 0) return 0;
 
   let inserted = 0;
@@ -159,7 +214,7 @@ async function crawlCategory(category: Category): Promise<number> {
   const existingQuestions = new Set(existing.map((q) => q.question.toLowerCase().trim()));
 
   // Fetch 30 questions (across difficulties) to get a good mix
-  const fetched = await fetchFromOpenTDB(category, 30);
+  const fetched = await fetchQuestions(category, 30);
   const newQuestions = fetched.filter(
     (q) => !existingQuestions.has(q.question.toLowerCase().trim())
   );

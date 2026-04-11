@@ -583,5 +583,655 @@
       "Indonesia"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-0",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which fast food chain advertises with the slogan\"'It's finger lickin' good!\"?",
+    "options": [
+      "Kentucky Fried Chicken",
+      "McDonald's",
+      "Burger King",
+      "Taco Bell"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-1",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What kind of nuts are used in marzipan?",
+    "options": [
+      "Almonds ",
+      "Pistachios",
+      "Hazelnuts",
+      "Walnuts"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-2",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these drinks would you associate with The Czech Republic?",
+    "options": [
+      "Sangria",
+      "Seco Herrerano",
+      "Becherovka",
+      "Koskenkorva Viina"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-3",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What Type Of Fish Is A Kipper",
+    "options": [
+      "Cod",
+      "Tuna",
+      "Salmon",
+      "Herring "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-4",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What term is used to describe a wine that is aged in oak barrels?",
+    "options": [
+      "Furten",
+      "Oaked",
+      "Barrel-aged",
+      "Woody"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-5",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these drinks would you associate with Norway?",
+    "options": [
+      "Slivovitz",
+      "Akevitt",
+      "Mama Juana",
+      "Gin"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-6",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which cocktail shares its name with a tool?",
+    "options": [
+      "Hammer",
+      "Spanner",
+      "Screwdriver ",
+      "Wrench"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-7",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which pasta's name means 'Little twine'?",
+    "options": [
+      "Fettuccine",
+      "Spaghetti",
+      "Ravioli",
+      "Linguine"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-8",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which country is associated with the cocktail Mojito?",
+    "options": [
+      "Brazil",
+      "Cuba",
+      "Zimbabwe",
+      "Finland"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Coquille St Jaques is another name for which seafood?",
+    "options": [
+      "Scallop",
+      "Lobster",
+      "Oyster",
+      "Squid"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-10",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Chives are a member of which family of vegetables?",
+    "options": [
+      "Pepper",
+      "Tomato",
+      "Garlic",
+      "Onion "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-11",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where in the world are lemons originally from?",
+    "options": [
+      "North America",
+      "Southeast Asia",
+      "India",
+      "The Middle East"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-12",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these fruits is a citrus fruit?",
+    "options": [
+      "Strawberry",
+      "Apple",
+      "Blueberry",
+      "Orange"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-13",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these fruits is not a tropical fruit?",
+    "options": [
+      "Mango",
+      "Cherry",
+      "Papaya",
+      "Pineapple"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-14",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Where in the world was Chicken Tikka Masala invented?",
+    "options": [
+      "The United Kingdom",
+      "Cuba",
+      "Indonesia",
+      "India"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-15",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which fruit comes in Tokay and Emperor varieties?",
+    "options": [
+      "Grapes",
+      "Apples",
+      "Oranges",
+      "Bananas"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-16",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What does the abbreviation A.B.V. Stand for in alcoholic drinks?",
+    "options": [
+      "Alcohol Bucahol Variance",
+      "Alcohol By Volume ",
+      "Alcoholic Barrier Vitality",
+      "Alcoholic Barometric Vice"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-17",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "From which part of the world does eggplant originate?",
+    "options": [
+      "India",
+      "Europe",
+      "China",
+      "South America"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-18",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the name of the dish made by dipping bread in a mixture of eggs and milk and frying until golden brown?",
+    "options": [
+      "Melba toast",
+      "French toast",
+      "Flatbread",
+      "Egg bathed toast"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-19",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What spice is used to cover steak in steak au poivre?",
+    "options": [
+      "Pepper",
+      "Chilli Powder",
+      "Cumin",
+      "Paprika"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-20",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Fish & Chips is a dish that is most associated with which part of the world?",
+    "options": [
+      "Mexico",
+      "Philippines",
+      "Spain",
+      "England"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-21",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What name was given to the light, clear wine developed in medieval times along the coastal valleys of the Gironde river in the Bordeaux region?",
+    "options": [
+      "Claret ",
+      "Burgundy",
+      "Shiraz",
+      "Cabernet Sauvignon"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-22",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where in the world are apricots originally from?",
+    "options": [
+      "Central America",
+      "China",
+      "Africa",
+      "South America"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-23",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which herb is used to flavour Pernod?",
+    "options": [
+      "Cinnamon",
+      "Ginger",
+      "Anise",
+      "Rosemary"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-24",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "From which part of the world do limes originally come from?",
+    "options": [
+      "Southeast Asia",
+      "China",
+      "India",
+      "Central Asia"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-25",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What is the main ingredient of a bento box?",
+    "options": [
+      "Flatbread",
+      "Potato",
+      "Mushroom",
+      "Rice"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-26",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which Chef Wrote 'Kitchen Confidential'?",
+    "options": [
+      "Michel Roux Jr",
+      "Gordon Ramsay",
+      "Heston Blumenthal",
+      "Anthony Bourdain "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-27",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Food from which fast food chain is traditionally eaten for Christmas dinner in Japan?",
+    "options": [
+      "McDonald's",
+      "Subway",
+      "KFC",
+      "Domino's"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-28",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which Alcoholic drink is the main ingredient of the cocktail 'Zombie'?",
+    "options": [
+      "Rum ",
+      "Vodka",
+      "Whiskey",
+      "Brandy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-29",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which country is associated with the drink rakı?",
+    "options": [
+      "Turkey",
+      "Spain",
+      "France",
+      "Taiwan"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-30",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "A maître fromager is an expert on what dairy product?",
+    "options": [
+      "Yogurt",
+      "Milk",
+      "Cheese",
+      "Butter"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-31",
+    "category": "food",
+    "difficulty": "medium",
+    "question": " What is the main ingredient of a traditional fondue?",
+    "options": [
+      "Chocolate",
+      "Cheese",
+      "Ice Cream",
+      "Eggs"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-32",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What Does The Term 'A La Carte' Mean?",
+    "options": [
+      "Chef's Specials",
+      "House Favourites",
+      "Set Menu",
+      "From The Menu "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-33",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "From which country does Tabasco sauce originate?",
+    "options": [
+      "USA",
+      "Guatemala",
+      "Costa Rica",
+      "Mexico "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-seed-34",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which pasta's name means 'Large reeds'?",
+    "options": [
+      "Cannelloni",
+      "Garganelli",
+      "Bavette",
+      "Ziti"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-35",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which pasta's name means 'to hollow'?",
+    "options": [
+      "Cavatelli",
+      "Rotelle",
+      "Vermicelli",
+      "Pappardelle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-36",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which pasta's name means 'Little worms'?",
+    "options": [
+      "Penne",
+      "Vermicelli",
+      "Gemelli",
+      "Tagliatelle"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-37",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "From which part of the world does celery originate?",
+    "options": [
+      "The Middle East",
+      "Southeast Asia",
+      "Europe",
+      "North America"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-38",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What type of pasta is calamarata?",
+    "options": [
+      "Ribbon pasta",
+      "Shaped pasta",
+      "Tubular pasta",
+      "Soup pasta"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-39",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is an orange flavoured liqueur?",
+    "options": [
+      "Disaronno",
+      "Limoncello",
+      "Grand Marnier",
+      "Midori"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-40",
+    "category": "food",
+    "difficulty": "medium",
+    "question": " At which stage of a meal would you have an hors d'oeuvre?",
+    "options": [
+      "The End",
+      "The Beginning",
+      "Between Courses",
+      "With A Soup"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-41",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "For which beverage is the Czech town of Budweis famous?",
+    "options": [
+      "Beer",
+      "Wine",
+      "Vodka",
+      "Absinthe"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-42",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What type of cheese is used on a pizza?",
+    "options": [
+      "Mozzarella",
+      "Gouda",
+      "Blue Cheese",
+      "Feta"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-43",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What name is given to the seaweed sheets used to wrap sushi rolls?",
+    "options": [
+      "Wasabi",
+      "Sake",
+      "Nori",
+      "Mirin"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-44",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Pho is a dish that is most associated with which part of the world?",
+    "options": [
+      "Vietnam",
+      "Thailand",
+      "Russia",
+      "Uzbekistan"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-45",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these cheeses has a blue-green vein?",
+    "options": [
+      "Gouda",
+      "Provolone",
+      "Gorgonzola",
+      "Mozzarella"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-46",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which shellfish is said to be an aphrodisiac?",
+    "options": [
+      "Lobsters",
+      "Oysters",
+      "Crabs",
+      "Shrimps"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-seed-47",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which nut is named after a Scottish-born chemist?",
+    "options": [
+      "The cashew nut",
+      "The pecan nut",
+      "The macadamia nut",
+      "The hazelnut"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-seed-48",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these dishes is most associated with Bahrain?",
+    "options": [
+      "Chicken Machboos",
+      "Ambuyat",
+      "Pepperpot",
+      "Pho"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-seed-49",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What is a 'Blenheim Orange'?",
+    "options": [
+      "A type of apple ",
+      "A type of pear",
+      "A type of peach",
+      "A type of apricot"
+    ],
+    "correctIndex": 0
   }
 ]

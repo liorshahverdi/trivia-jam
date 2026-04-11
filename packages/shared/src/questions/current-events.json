@@ -648,5 +648,655 @@
       "Qatar"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-0",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'Metaphysics is a dark ocean without shores or lighthouse, strewn with many a philosophic wreck'?",
+    "options": [
+      "Baruch Spinoza",
+      "Martin Heidegger",
+      "Bertrand Russell",
+      "Immanuel Kant"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-1",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the first name shared by fashion designer Cardin and furniture designer Boulle?",
+    "options": [
+      "Pierre",
+      "Jacques",
+      "Jean",
+      "Francois"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-2",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What has no reflection, no shadow, and can't stand the smell of garlic",
+    "options": [
+      "Ghosts",
+      "Witches",
+      "Vampires",
+      "Werewolves"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-3",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which viral dance was performed by 'Backpack Kid', to Katy Perry's song 'Swish Swish'?",
+    "options": [
+      "The Floss",
+      "The Dab",
+      "The Dougie",
+      "The Whip"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-4",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which motoring brand is associated with the marketing slogan 'The Ultimate Driving Machine'?",
+    "options": [
+      "Harley Davidson",
+      "BMW",
+      "Mercedez-Benz",
+      "Porsche"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-5",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of these is a model of car made by Chevrolet?",
+    "options": [
+      "Cobra",
+      "Civic",
+      "Giulietta",
+      "Silverado"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-6",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "The language 'Sanaani Spoken Arabic' belongs to which language family?",
+    "options": [
+      "Indo-European",
+      "Turkic",
+      "Afroasiatic",
+      "Dravidian"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-7",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "'Think big' is a slogan associated with which technology brand?",
+    "options": [
+      "Motorola",
+      "Nokia",
+      "IMAX",
+      "Sony"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-8",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'If you would be a real seeker after truth, it is necessary that at least once in your life you doubt, as far as possible, all things'?",
+    "options": [
+      "Spinoza",
+      "G. W. F. Hegel",
+      "Immanuel Kant",
+      "René Descartes"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-9",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the name of the afternoon nap popular in Spain, which derives from a word meaning 'sixth hour'?",
+    "options": [
+      "Fiesta",
+      "Siesta",
+      "Naptime",
+      "Asleepta"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-10",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the French word for 'eight'?",
+    "options": [
+      "Huit",
+      "Otto",
+      "Acht",
+      "Six"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-11",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'No man's knowledge here can go beyond his experience'?",
+    "options": [
+      "John Locke",
+      "Thomas Hobbes",
+      "Baruch Spinoza",
+      "Jean-Jacques Rousseau"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-12",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which animal would you associate with the Japan Airlines logo?",
+    "options": [
+      "Butterfly",
+      "Crane",
+      "Moose",
+      "Crocodile"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-13",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What toy was in short supply for the 1983 Chirstmas season?",
+    "options": [
+      "Cabbage Patch Kids",
+      "Pokemon Cards",
+      "Hula Hoops",
+      "Yo-Yos"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-14",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which British city gives its name to a type of laced shoe as well as a shirting fabric?",
+    "options": [
+      "Oxford",
+      "Cambridge",
+      "Bristol",
+      "London"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-15",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The rise in what figure is the best measure of an economy's overall health?",
+    "options": [
+      "Unemployment Rate",
+      "GDP",
+      "Inflation Rate",
+      "Exchange Rate"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-16",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the term meaning to take away someone's license to practice law?",
+    "options": [
+      "Disbar",
+      "Debrief",
+      "Devalue",
+      "Disown"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-17",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What animal's meat can a Hindu not eat?",
+    "options": [
+      "Pig",
+      "Sheep",
+      "Goat",
+      "Cow"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-18",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "In Spanish, what is the meaning of the word 'uno'?",
+    "options": [
+      "Yellow",
+      "Eight",
+      "Ten",
+      "One"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-19",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of the following describes Michael Faraday?",
+    "options": [
+      "Leader of US forces during American Revolution.",
+      "Scientist who contributed in fields of electromagnetism and electrochemistry.",
+      "Inventor of the printing press.",
+      "Philosopher and mathematician who famously said “I think, therefore I am.”"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-20",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these Latin phrases means 'One swallow does not make summer'?",
+    "options": [
+      "Carpe diem",
+      "Dies irae",
+      "Faber est suae quisque fortunae",
+      "Una hirundo non facit ver"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-21",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which F.B.I agent headed the investigation of Al Capone? ",
+    "options": [
+      "Chris Robson",
+      "Elliot Ness",
+      "Dave Bradzinski",
+      "Arthur Montgomery"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-22",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What's the resting place of those buried at sea? ",
+    "options": [
+      "Mark Jacob's Locker",
+      "Davey Jones's Locker",
+      "Bootstrap Bill's Locker",
+      "Harry Logan's Locker"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-23",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the meaning of the Latin phrase 'Bona fide'?",
+    "options": [
+      "The real deal",
+      "True truth",
+      "Overcome evil with good",
+      "In good faith"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-24",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which religious sect living primarily in Ohio and southeast Pennsylvania gets its name from a 17th century Swiss Mennonite bishop?",
+    "options": [
+      "The Shakers",
+      "The Hutterites",
+      "The Mennonites",
+      "The Amish"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-25",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the name of the traditional Japanese art of paper folding?",
+    "options": [
+      "Kabuki",
+      "Kintsugi",
+      "Origami",
+      "Kokeshi"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-26",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Along with English, which other language is an official language of India?",
+    "options": [
+      "Punjabi",
+      "Tamil",
+      "Hindi",
+      "Sanskrit"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-27",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of the following describes James Clerk Maxwell?",
+    "options": [
+      "Greek mathematician",
+      "Composer of music during the classical and romantic period.",
+      "Leader of US forces during the  American Revolution.",
+      "Physicist who made a significant contribution to understanding electromagnetism"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-28",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these Latin phrases means 'Words fly away, writings remain'?",
+    "options": [
+      "Dies irae",
+      "Verba volant, scripta manent",
+      "Incepto ne desistam",
+      "Barba non facit philosophum"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-29",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What are the traditional colors of Mardi Gras?",
+    "options": [
+      "Blue, White, and Red",
+      "Pink, White, and Purple",
+      "Yellow, Green, and Orange",
+      "Purple, Green, and Gold"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-30",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which group is known for living a very simple lifestyle as part of their religious beliefs?",
+    "options": [
+      "Hedonists",
+      "Amish",
+      "Hippies",
+      "Yuppies"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-31",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "According to Arthurian legend, which knight had an affair with Queen Guinevere, the wife of King Arthur?",
+    "options": [
+      "Galahad",
+      "Tristan",
+      "Lancelot",
+      "Percival"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-32",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which of the following describes Adolf Hitler?",
+    "options": [
+      "One of the pioneers of Quantum mechanics",
+      "Roman Emperor who accepted the Christian religion.",
+      "Physicist who discovered X-rays.",
+      "Dictator of Nazi Germany."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-33",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which Greek mountain was known as the home of the gods?",
+    "options": [
+      "Sinai",
+      "Everest",
+      "Marathon",
+      "Olympus"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-34",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The language 'Ukrainian' belongs to which language family?",
+    "options": [
+      "Austronesian",
+      "Indo-European",
+      "Austroasiatic",
+      "Afroasiatic"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-35",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What does the word 'dos' mean in Spanish?",
+    "options": [
+      "Two",
+      "Four",
+      "Yellow",
+      "Red"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-36",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which Ancient Greek creature had snakes for hair?",
+    "options": [
+      "Minotaur",
+      "Medusa",
+      "Harpy",
+      "Siren"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-37",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the name for the quotable, snappy snippets that politicians often use in news broadcasts and speeches?",
+    "options": [
+      "Catch phrases",
+      "Sound bites",
+      "Taglines",
+      "Mottos"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-38",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which animal would you associate with the Qantas logo?",
+    "options": [
+      "Panda",
+      "Eagle",
+      "Kangaroo",
+      "Moose"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-39",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the name of the founder of Tesla Motors?",
+    "options": [
+      "Jeff Bezos",
+      "Elon Musk",
+      "Bill Gates",
+      "Mark Zuckerberg"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-40",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is another name for an informal marriage that often comes with some level of legal recognition?",
+    "options": [
+      "Civil",
+      "Religious",
+      "Common-law",
+      "Arranged"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-41",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which saint is celebrated on February 14th?",
+    "options": [
+      "St. Patrick",
+      "St. Michael",
+      "St. Valentine",
+      "St. Francis"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-seed-42",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What does the word 'rot' mean in German?",
+    "options": [
+      "White",
+      "Red",
+      "Blue",
+      "Nine"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-43",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "On which day of the week does Lent begin?",
+    "options": [
+      "Ash Wednesday",
+      "Palm Sunday",
+      "Good Friday",
+      "Easter Sunday"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-44",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the name of the mythical bird that dies in a fire and is reborn from its own ashes?",
+    "options": [
+      "The Phoenix",
+      "The Roc",
+      "The Harpy",
+      "The Siren"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-45",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Who is the founder of Amazon?",
+    "options": [
+      "Elon Musk",
+      "Jeff Bezos",
+      "Bill Gates",
+      "Mark Zuckerberg"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-seed-46",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "On internet chats, what do the letters 'TIL' mean?",
+    "options": [
+      "Today I Learned",
+      "Total Internet Legend",
+      "Totally In Love",
+      "To Invoke Laughter"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-47",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of the following describes John Locke?",
+    "options": [
+      "Renaissance sculptor, painter and architect",
+      "Explorer who landed in America.",
+      "Biologist who discovered penicillin.",
+      "Political philosopher who promoted a theory of liberal democracy and a social contract."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-seed-48",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'There is only one good, knowledge, and one evil, ignorance'?",
+    "options": [
+      "Socrates",
+      "Thomas Hobbes",
+      "Jean-Paul Sartre",
+      "Ludwig Wittgenstein"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-seed-49",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the marketing slogan of Levis?",
+    "options": [
+      "It's Style",
+      "Between love and madness lies obsession",
+      "Quality never goes out of style",
+      "Maybe she's born with it"
+    ],
+    "correctIndex": 2
   }
 ]
