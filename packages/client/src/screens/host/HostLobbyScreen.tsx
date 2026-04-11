@@ -90,9 +90,9 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
       </div>
 
       {/* Category Selector */}
-      <div className="w-full max-w-3xl mb-10 animate-slide-up">
+      <div className="w-full max-w-4xl mb-10 animate-slide-up">
         <h2 className="text-2xl font-bold text-center mb-4">Categories</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+        <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-10 gap-3">
           {ALL_CATEGORIES.map((cat) => (
             <CategoryCard
               key={cat}
