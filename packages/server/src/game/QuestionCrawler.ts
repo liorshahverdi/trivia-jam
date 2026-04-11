@@ -3,23 +3,43 @@ import { CATEGORY_LABELS } from '@trivia-jam/shared';
 import { writeFileSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import type pg from 'pg';
+import { getPool } from '../db.js';
 import { clearQuestionCache } from './QuestionPicker.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const questionsDir = join(__dirname, '..', '..', '..', 'shared', 'src', 'questions');
 
-const ALL_CATEGORIES: Category[] = ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech'];
+const ALL_CATEGORIES: Category[] = [
+  'math', 'science', 'history', 'current-events', 'music', 'food', 'tech',
+  'geography', 'art', 'entertainment', 'animals', 'general',
+  'musicals', 'television', 'video-games', 'board-games', 'mythology',
+  'gadgets', 'anime', 'cartoons',
+];
 
 // Open Trivia DB category mapping
+// Categories without a direct OpenTDB match are excluded (undefined) so the
+// crawler skips them and we rely on the curated JSON question files instead.
 const OPENTDB_CATEGORY_MAP: Partial<Record<Category, number>> = {
   math: 19,              // Mathematics
   science: 17,           // Science & Nature
   history: 23,           // History
   music: 12,             // Entertainment: Music
-  food: 0,               // No direct match — use general knowledge
   tech: 18,              // Science: Computers
-  'current-events': 0,   // No direct match — use general knowledge
+  geography: 22,         // Geography
+  art: 25,               // Art
+  entertainment: 11,     // Entertainment: Film
+  animals: 27,           // Animals
+  general: 9,            // General Knowledge
+  musicals: 13,          // Entertainment: Musicals & Theatres
+  television: 14,        // Entertainment: Television
+  'video-games': 15,     // Entertainment: Video Games
+  'board-games': 16,     // Entertainment: Board Games
+  mythology: 20,         // Mythology
+  gadgets: 30,           // Science: Gadgets
+  anime: 31,             // Entertainment: Japanese Anime & Manga
+  cartoons: 32,          // Entertainment: Cartoon & Animations
 };
 
 interface OpenTDBResponse {
@@ -67,8 +87,8 @@ function mapDifficulty(d: string): Difficulty {
 
 async function fetchFromOpenTDB(category: Category, count: number): Promise<Question[]> {
   const catId = OPENTDB_CATEGORY_MAP[category];
-  const categoryParam = catId ? `&category=${catId}` : '';
-  const url = `https://opentdb.com/api.php?amount=${count}&type=multiple${categoryParam}`;
+  if (catId === undefined) return []; // No OpenTDB mapping — skip crawling
+  const url = `https://opentdb.com/api.php?amount=${count}&type=multiple&category=${catId}`;
 
   try {
     const res = await fetch(url);
@@ -117,6 +137,23 @@ function deduplicateQuestions(questions: Question[]): Question[] {
   });
 }
 
+async function crawlCategoryToDb(pool: pg.Pool, category: Category): Promise<number> {
+  const fetched = await fetchFromOpenTDB(category, 30);
+  if (fetched.length === 0) return 0;
+
+  let inserted = 0;
+  for (const q of fetched) {
+    const result = await pool.query(
+      `INSERT INTO questions (id, category, difficulty, question, options, correct_index, question_key)
+       VALUES ($1, $2, $3, $4, $5, $6, $7)
+       ON CONFLICT (question_key) DO NOTHING`,
+      [q.id, q.category, q.difficulty, q.question, JSON.stringify(q.options), q.correctIndex, q.question.toLowerCase().trim()]
+    );
+    if (result.rowCount && result.rowCount > 0) inserted++;
+  }
+  return inserted;
+}
+
 async function crawlCategory(category: Category): Promise<number> {
   const existing = loadExisting(category);
   const existingQuestions = new Set(existing.map((q) => q.question.toLowerCase().trim()));
@@ -140,17 +177,20 @@ async function crawlCategory(category: Category): Promise<number> {
 
 /**
  * Crawls the Open Trivia Database for fresh questions across all categories.
- * Merges new questions into existing JSON files, deduplicating by question text.
- * Rate-limits requests to respect the API (one category at a time with delays).
+ * Uses DB if available, falls back to JSON files.
  */
 export async function crawlAllQuestions(): Promise<void> {
   console.log('[QuestionCrawler] Starting question crawl...');
 
+  const pool = getPool();
   let totalNew = 0;
+
   for (const category of ALL_CATEGORIES) {
     const label = CATEGORY_LABELS[category] ?? category;
     try {
-      const count = await crawlCategory(category);
+      const count = pool
+        ? await crawlCategoryToDb(pool, category)
+        : await crawlCategory(category);
       if (count > 0) {
         console.log(`[QuestionCrawler] ${label}: +${count} new questions`);
         totalNew += count;

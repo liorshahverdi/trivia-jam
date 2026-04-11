@@ -11,7 +11,7 @@ export type GamePhase =
   | 'leaderboard'
   | 'game_over';
 
-export type Category = 'math' | 'science' | 'history' | 'current-events' | 'music' | 'food' | 'tech';
+export type Category = 'math' | 'science' | 'history' | 'current-events' | 'music' | 'food' | 'tech' | 'geography' | 'art' | 'entertainment' | 'animals' | 'general' | 'musicals' | 'television' | 'video-games' | 'board-games' | 'mythology' | 'gadgets' | 'anime' | 'cartoons';
 
 export interface Question {
   id: string;

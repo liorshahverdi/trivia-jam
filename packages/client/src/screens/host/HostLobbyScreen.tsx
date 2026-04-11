@@ -5,7 +5,7 @@ import PlayerAvatar from '../../components/PlayerAvatar';
 import CategoryCard from '../../components/CategoryCard';
 import type { Category, GameMode } from '@trivia-jam/shared';
 
-const ALL_CATEGORIES: Category[] = ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech'];
+const ALL_CATEGORIES: Category[] = ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech', 'geography', 'art', 'entertainment', 'animals', 'general', 'musicals', 'television', 'video-games', 'board-games', 'mythology', 'gadgets', 'anime', 'cartoons'];
 
 interface Props {
   setMode: (mode: string) => void;

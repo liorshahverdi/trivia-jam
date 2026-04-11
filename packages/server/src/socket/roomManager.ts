@@ -69,20 +69,23 @@ export function joinRoom(code: string, playerName: string, playerId: string): { 
   return { room, player };
 }
 
-export function reconnectPlayer(code: string, playerId: string): { room: Room; player: Player } | null {
+export function reconnectPlayer(code: string, playerId: string, newSocketId: string): { room: Room; player: Player } | null {
   const room = rooms.get(code.toUpperCase());
   if (!room) return null;
 
   const player = room.players.find(p => p.id === playerId);
   if (!player) return null;
 
+  // Update player ID to new socket so answer lookups match
+  playerToRoom.delete(playerId);
+  player.id = newSocketId;
   player.connected = true;
   const timer = disconnectTimers.get(playerId);
   if (timer) {
     clearTimeout(timer);
     disconnectTimers.delete(playerId);
   }
-  playerToRoom.set(playerId, room.code);
+  playerToRoom.set(newSocketId, room.code);
   return { room, player };
 }
 

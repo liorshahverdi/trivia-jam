@@ -15,6 +15,19 @@ const CATEGORY_EMOJIS: Record<string, string> = {
   music: '🎵',
   food: '🍕',
   tech: '💻',
+  geography: '🌍',
+  art: '🎨',
+  entertainment: '🎬',
+  animals: '🐾',
+  general: '🧠',
+  musicals: '🎭',
+  television: '📺',
+  'video-games': '🎮',
+  'board-games': '🎲',
+  mythology: '⚡',
+  gadgets: '🔧',
+  anime: '🍥',
+  cartoons: '🖍️',
 };
 
 export default function CategoryCard({ category, selected, onToggle }: CategoryCardProps) {

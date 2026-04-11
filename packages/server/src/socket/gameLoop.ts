@@ -43,9 +43,9 @@ export async function startGameLoop(io: Server, room: Room): Promise<void> {
     // Pick questions
     const categories = room.selectedCategories.length > 0
       ? room.selectedCategories
-      : ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech'] as any;
+      : ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech', 'geography', 'art', 'entertainment', 'animals', 'general', 'musicals', 'television', 'video-games', 'board-games', 'mythology', 'gadgets', 'anime', 'cartoons'] as any;
 
-    const questions = selectQuestions(categories, room.questionsPerGame);
+    const questions = await selectQuestions(categories, room.questionsPerGame);
     if (questions.length === 0) {
       activeGames.delete(room.code);
       return;

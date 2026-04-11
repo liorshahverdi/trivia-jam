@@ -53,7 +53,7 @@ export function setupSocketHandlers(io: Server): void {
     socket.on(
       ClientEvents.ROOM_RECONNECT,
       ({ code, playerId }: { code: string; playerId: string }, callback: (data: any) => void) => {
-        const result = reconnectPlayer(code, playerId);
+        const result = reconnectPlayer(code, playerId, socket.id);
         if (!result) {
           callback({ error: 'Could not reconnect' });
           return;
