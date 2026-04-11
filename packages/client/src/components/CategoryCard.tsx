@@ -34,14 +34,14 @@ export default function CategoryCard({ category, selected, onToggle }: CategoryC
   return (
     <button
       onClick={() => onToggle(category)}
-      className={`card cursor-pointer transition-all duration-200 text-center flex flex-col items-center justify-center ${
+      className={`card !p-3 cursor-pointer transition-all duration-200 flex flex-col items-center justify-center ${
         selected
           ? 'border-jam-purple bg-jam-purple/20 ring-2 ring-jam-purple'
           : 'hover:border-white/30'
       }`}
     >
       <div className="text-3xl mb-2">{CATEGORY_EMOJIS[category]}</div>
-      <div className="font-bold text-sm leading-tight w-full text-center">{CATEGORY_LABELS[category]}</div>
+      <div className="font-bold text-xs leading-tight text-center">{CATEGORY_LABELS[category]}</div>
     </button>
   );
 }
