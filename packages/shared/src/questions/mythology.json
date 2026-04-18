@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "mythology-crawl-1776202793864-0",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "Who was the only god from Greece who did not get a name change in Rome?",
+    "options": [
+      "Apollo",
+      "Demeter",
+      "Zeus",
+      "Athena"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-1",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "The Hippogriff, not to be confused with the Griffon, is a magical creature with the front half of an eagle, and the back half of what?",
+    "options": [
+      "A Dragon",
+      "A Horse",
+      "A Tiger",
+      "A Lion"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-2",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "Who was the King of Gods in Ancient Greek mythology?",
+    "options": [
+      "Apollo",
+      "Hermes",
+      "Poseidon",
+      "Zeus"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-3",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "Which Greek & Roman god was known as the god of music, truth and prophecy, healing, the sun and light, plague, poetry, and more?",
+    "options": [
+      "Apollo",
+      "Aphrodite",
+      "Artemis",
+      "Athena"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-4",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "According to Japanese folklore, what is the favorite food of the Kappa.",
+    "options": [
+      "Kabocha",
+      "Nasu",
+      "Cucumbers",
+      "Soba"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-5",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Hera is god of...",
+    "options": [
+      "Agriculture",
+      "Sea",
+      "Marriage",
+      "War"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-6",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "A minotaur is half human half what?",
+    "options": [
+      "Cow",
+      "Bull",
+      "Horse",
+      "Eagle"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-7",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Hel was the daughter of which Norse Mythological figure?",
+    "options": [
+      "Thor",
+      "Odin",
+      "Loki",
+      "Balder"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-8",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "The Maori hold that which island nation was founded by Kupe, who discovered it under a long white cloud?",
+    "options": [
+      "Vanuatu",
+      "Fiji",
+      "Hawaii",
+      "New Zealand"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-9",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "This Greek goddess's name was chosen for the dwarf planet responsible for discord on Pluto's classification amongst astronomers.",
+    "options": [
+      "Charon",
+      "Eris",
+      "Ceres",
+      "Dysnomia"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-10",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "What is the name of the wildman that Gilgamesh befriends and goes on adventures with?",
+    "options": [
+      "Ishtar",
+      "Inanna",
+      "Agga",
+      "Enkidu"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-11",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "An Ankh is the Egyptian Hieroglyph for what?",
+    "options": [
+      "Life",
+      "Love",
+      "Hatred",
+      "Poison"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-12",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "The greek god Poseidon was the god of what?",
+    "options": [
+      "War",
+      "The Sea",
+      "Sun",
+      "Fire"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-13",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "What immense structure is referred to in Norse Mythology as the Yggdrasil.",
+    "options": [
+      "Tree",
+      "Mountain",
+      "Temple",
+      "Castle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-14",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "What weakpoint of Achilles was expoited by the Trojan prince, Paris?",
+    "options": [
+      "Heel",
+      "Neck",
+      "Back",
+      "Calf"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-15",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "Which of these mythological creatures is said to be half-man and half-horse?",
+    "options": [
+      "Centaur",
+      "Minotaur",
+      "Pegasus",
+      "Gorgon"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-16",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Norse Mythology, what is the name of the symbol commonly referred to as the \"Tree of Life\"?",
+    "options": [
+      "Ymir",
+      "Yggdrasil",
+      "Tree of the Earth",
+      "Odin's Roots"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-17",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "According to the Egyptian Myth of Osiris, who murdered Osiris?",
+    "options": [
+      "Horus",
+      "Ra",
+      "Anhur",
+      "Set"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-18",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "In Greek mythology, who is the god of wine?",
+    "options": [
+      "Dionysus",
+      "Hephaestus",
+      "Demeter",
+      "Apollo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-19",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Which of the following is not one of the Greek Fates?",
+    "options": [
+      "Clotho",
+      "Atropos",
+      "Narcissus",
+      "Lachesis"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-20",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "In Norse mythology, what is the name of the serpent which eats the roots of the ash tree Yggdrasil?",
+    "options": [
+      "Bragi",
+      "Odin",
+      "Ymir",
+      "Nidhogg"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-21",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Norse Mythology, Baldr was killed by Loki with a magical spear made from what plant?",
+    "options": [
+      "Wolf's Bane",
+      "Buckthorn",
+      "Mistletoe",
+      "Hemlock"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-22",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In African mythology, Anansi is a trickster and storyteller who takes the shape of which animal?",
+    "options": [
+      "Wild dog",
+      "Monkey",
+      "Crocodile",
+      "Spider"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-crawl-1776202793864-23",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Greek mythology, Persephone must return to the underworld because she had eaten what kind of seeds?",
+    "options": [
+      "Sunflower",
+      "Orange",
+      "Pomegranate",
+      "Fig"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-24",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "Who is the Egyptian god of reproduction and lettuce?",
+    "options": [
+      "Menu",
+      "Mut",
+      "Min",
+      "Meret"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-25",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "In most traditions, who was the wife of Zeus?",
+    "options": [
+      "Aphrodite",
+      "Athena",
+      "Hera",
+      "Hestia"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-crawl-1776202793864-26",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "The Norse god Odin has two pet crows named \"Huginn\" and \"Muninn\".  What do their names mean?",
+    "options": [
+      "Thought & Memory",
+      "Power & Peace",
+      "War & Learning",
+      "Sleeping & Waking"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-27",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "Talos, the mythical giant bronze man, was the protector of which island?",
+    "options": [
+      "Crete",
+      "Sardinia",
+      "Sicily",
+      "Cyprus"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-crawl-1776202793864-28",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Greek Mythology, who killed Achilles?",
+    "options": [
+      "Hector",
+      "Paris",
+      "Helen",
+      "Pericles"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-crawl-1776202793864-29",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "How many heads does Cerberus have?",
+    "options": [
+      "2",
+      "1",
+      "5",
+      "3"
+    ],
+    "correctIndex": 3
+  }
+]

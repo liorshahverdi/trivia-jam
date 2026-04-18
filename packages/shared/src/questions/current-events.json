@@ -1298,5 +1298,538 @@
       "Maybe she's born with it"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721004-0",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the name of Beyoncé's daughter?",
+    "options": [
+      "Red Lily",
+      "Yellow Rose",
+      "Green Lotus",
+      "Blue Ivy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776202721004-1",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which type of tree is known for its association with Canada and its bright red foliage in autumn?",
+    "options": [
+      "Oak Tree",
+      "Birch Tree",
+      "Maple Tree",
+      "Elm Tree"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721004-2",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which party has a majority in Cuba's National Assembly of People's Power?",
+    "options": [
+      "The Castro Party",
+      "The Republican Party",
+      "The Socialist Party",
+      "The Communist Party"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776202721004-3",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of these words describes the Indian state?",
+    "options": [
+      "Secular",
+      "Communist",
+      "Feudal",
+      "Monarchial"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776202721004-4",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the name for the Islamic fasting period?",
+    "options": [
+      "Ramadan",
+      "Passover",
+      "Yom Kippur",
+      "Lent"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776202721004-5",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of these is a type of head covering sometimes worn by Muslim women?",
+    "options": [
+      "Hijab",
+      "Balaclava",
+      "Turbin",
+      "Homburg"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776202721004-6",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the name for a research paper that is written as a final requirement for a doctoral degree?",
+    "options": [
+      "A Writ",
+      "A Dissertation",
+      "A Treatise",
+      "An Epilogue"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721004-7",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'There is but one truly serious philosophical problem, and that is suicide'?",
+    "options": [
+      "Denis Diderot",
+      "Albert Camus",
+      "Ludwig Wittgenstein",
+      "Epictetus"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721004-8",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which virtual assistant is produced by Amazon? ",
+    "options": [
+      "Siri",
+      "Cortana",
+      "Alexa",
+      "Amazon Assistant"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721004-9",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In Western cultures, what is the traditional gift for a 60th wedding anniversary?",
+    "options": [
+      "Gold",
+      "Silver",
+      "Diamond",
+      "Platinum"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-10",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the meaning of the Latin phrase 'Dictum factum'?",
+    "options": [
+      "I came, I saw, I conquered",
+      "What is said is done",
+      "Let them hate so long as they fear",
+      "Honey, I'm home!"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-11",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What term refers to an animalistic spirit who aids a witch?",
+    "options": [
+      "Totem",
+      "Mascot",
+      "Familiar",
+      "Spirit guide"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-12",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Who was the Greek god of prophecy and archery?",
+    "options": [
+      "Orion",
+      "Morpheus",
+      "Prometheus",
+      "Apollo"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776202721005-13",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these items of clothing is traditionally worn in West Africa?",
+    "options": [
+      "Kurta",
+      "Sherwani",
+      "Agbada",
+      "Nehru Jacket"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-14",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Who was the U.S. general in charge in Afghanistan?",
+    "options": [
+      "Stanley McChrystal",
+      "James Mattis",
+      "John Allen",
+      "David Petraeus"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776202721005-15",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these Latin phrases translates to 'I am not led, I lead'?",
+    "options": [
+      "Fons vitae caritas",
+      "Pax vobiscum",
+      "Non ducor, duco",
+      "Sequere pecuniam"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-16",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What was first worn in the 1860's?",
+    "options": [
+      "The Wristwatch",
+      "The Tuxedo",
+      "Sneakers",
+      "Denim Jeans"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-17",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "According to legend, refugees of which 1200 B.C. conflict first fled to Thrace, then north Africa and finally Italy?",
+    "options": [
+      "The Hundred Years' War",
+      "The Trojan War",
+      "The Peloponnesian War",
+      "The Punic Wars"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-18",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of the following was NOT one of the Three Kings in the nativity?",
+    "options": [
+      "Balthazar",
+      "Melchior",
+      "Solomon",
+      "Caspar"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-19",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "If someone typed the letters 'LMAO' in a message, what would they mean?",
+    "options": [
+      "Letting me air out",
+      "Laughing my ass off",
+      "Loving my ambitious outlook",
+      "Leading me and objecting"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-20",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these Indian languages falls into the \"Indo-Aryan\" language family?",
+    "options": [
+      "Tamil",
+      "Gujarati",
+      "Telugu",
+      "Malayalam"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-21",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of these models of car is made by Ford?",
+    "options": [
+      "F-Series",
+      "Accord",
+      "911",
+      "Passat"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776202721005-22",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the last name of the Italian fashion designer Miuccia, who works for her family's fashion house & founded its sister line Miu Miu?",
+    "options": [
+      "Armani",
+      "Gucci",
+      "Prada",
+      "Versace"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-23",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "In Incan mythology, which animal warned about the impending flood?",
+    "options": [
+      "The Panther",
+      "The Iguana",
+      "The Chimpanzee",
+      "The llama"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776202721005-24",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which philosopher famously said 'One cannot conceive anything so strange and so implausible that it has not already been said by one philosopher or another'?",
+    "options": [
+      "Baruch Spinoza",
+      "René Descartes",
+      "Denis Diderot",
+      "Jean-Paul Sartre"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776202721005-25",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the name of the hand gesture, originating in India, where palms are placed together at the heart to show respect and gratitude?",
+    "options": [
+      "Namaste",
+      "Hatha yoga",
+      "Anjali mudra",
+      "Tadasana"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-26",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The language 'Italian' belongs to which language family?",
+    "options": [
+      "Koreanic",
+      "Afroasiatic",
+      "Indo-European",
+      "Sino-Tibetan"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-27",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the name of Russia's main stock market?",
+    "options": [
+      "Wall Street",
+      "Stalinobmen",
+      "Moscow Exchange",
+      "Vladivostock"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-28",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The language 'Nigerian Fulfulde' belongs to which language family?",
+    "options": [
+      "Afroasiatic",
+      "Kra–Dai",
+      "Niger–Congo",
+      "Austroasiatic"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776202721005-29",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "The language 'Chhattisgarhi' belongs to which language family?",
+    "options": [
+      "Austroasiatic",
+      "Uralic",
+      "Indo-European",
+      "Niger–Congo"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776523532686-19",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "In which year did the Volkswagen Beetle make its first appearance?",
+    "options": [
+      "1945",
+      "1935",
+      "1955",
+      "1965"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776523532686-20",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Bengali is a language spoken in which of these countries?",
+    "options": [
+      "Indonesia",
+      "Bangladesh",
+      "South Africa",
+      "Peru"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776523532686-21",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the most popular sport in Mexico?",
+    "options": [
+      "Baseball",
+      "Basketball",
+      "Tennis",
+      "Soccer"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776523532686-22",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the name of the Islamic holy city where the prophet Muhammad was buried?",
+    "options": [
+      "Mecca",
+      "Medina",
+      "Jerusalem",
+      "Baghdad"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776523532686-23",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which of these Latin phrases translates to 'To each his own'?",
+    "options": [
+      "Fons vitae caritas",
+      "Suum cuique",
+      "In absentia lucis, tenebrae vincunt",
+      "Melita, domi adsum"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776523532686-24",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "What is the national bird of Mexico?",
+    "options": [
+      "Golden Eagle",
+      "Red-tailed Hawk",
+      "Barn Owl",
+      "Horned Owl"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "current-events-trivia-1776523532686-25",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which influential historical person was an Egyptian pharaoh who united Upper and Lower Egypt to found the First Dynasty?",
+    "options": [
+      "Rene Descartes",
+      "Imhotep",
+      "Menes",
+      "Diogenes"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776523532686-26",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "Which of these languages would you find spoken in Mozambique?",
+    "options": [
+      "Swahili",
+      "Cantonese",
+      "Telugu",
+      "Portuguese"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "current-events-trivia-1776523532686-27",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Gujarati is a language spoken in which of these countries?",
+    "options": [
+      "Niger",
+      "Rwanda",
+      "India",
+      "Taiwan"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "current-events-trivia-1776523532686-28",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Used by brides in the past to collect their belongings before marriage, bridal, dower, and hope are all types of what piece of furniture?",
+    "options": [
+      "Wardrobes",
+      "Chests",
+      "Chairs",
+      "Tables"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "current-events-trivia-1776523532686-29",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "To where do Muslims make pilgrimage?",
+    "options": [
+      "Mecca",
+      "Tehran",
+      "Dubai",
+      "Riyadh"
+    ],
+    "correctIndex": 0
   }
 ]

@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "animals-crawl-1776202760236-0",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What is the Gray Wolf's scientific name?",
+    "options": [
+      "Canis Aureus",
+      "Canis Latrans",
+      "Canis Lupus",
+      "Canis Lupus Lycaon"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-crawl-1776202760236-1",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Which of these species is not extinct?",
+    "options": [
+      "Japanese sea lion",
+      "Tasmanian tiger",
+      "Saudi gazelle",
+      "Komodo dragon"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-2",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What is the collective noun for vultures?",
+    "options": [
+      "Wake",
+      "Ambush",
+      "Building",
+      "Gaze"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760236-3",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Wombats are native to which Country?",
+    "options": [
+      "New Zealand",
+      "Papua New Guinea",
+      "Palau",
+      "Australia"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-4",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What is the scientific name of the Budgerigar?",
+    "options": [
+      "Melopsittacus undulatus",
+      "Nymphicus hollandicus",
+      "Pyrrhura molinae",
+      "Ara macao"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760236-5",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "What is Grumpy Cat's real name?",
+    "options": [
+      "Sauce",
+      "Minnie",
+      "Broccoli",
+      "Tardar Sauce"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-6",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "How many teeth does an adult rabbit have?",
+    "options": [
+      "30",
+      "26",
+      "24",
+      "28"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-7",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Which species is a \"mountain chicken\"?",
+    "options": [
+      "Chicken",
+      "Horse",
+      "Fly",
+      "Frog"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-8",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What bird is born with claws on its wing digits?",
+    "options": [
+      "Hoatzin",
+      "Cormorant",
+      "Cassowary",
+      "Secretary bird"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760236-9",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What does \"hippopotamus\" mean and in what langauge?",
+    "options": [
+      "River Horse (Latin)",
+      "River Horse (Greek)",
+      "Fat Pig (Greek)",
+      "Fat Pig (Latin)"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760236-10",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What scientific suborder does the family Hyaenidae belong to?",
+    "options": [
+      "Haplorhini",
+      "Caniformia",
+      "Feliformia",
+      "Ciconiiformes"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-crawl-1776202760236-11",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the average lifespan of a domestic rabbit?",
+    "options": [
+      "1-2 years",
+      "4-7 years",
+      "14-20 years",
+      "8-12 years"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-12",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "The now extinct species \"Thylacine\" was native to where?",
+    "options": [
+      "Baluchistan, Pakistan",
+      "Tasmania, Australia",
+      "Wallachia, Romania",
+      "Oregon, United States"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760236-13",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the collective noun for bears?",
+    "options": [
+      "Sloth",
+      "Drove",
+      "Tribe",
+      "Husk"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760236-14",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the national bird of Bahrain?",
+    "options": [
+      "Hummingbird",
+      "Bulbul",
+      "Falcon",
+      "Sparrow"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760236-15",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Which breed of dog is traditionally associated with firefighters?",
+    "options": [
+      "German Shepard",
+      "Great Dane",
+      "Dalmatians",
+      "Mastiff"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-crawl-1776202760236-16",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What was the name of the Ethiopian Wolf before they knew it was related to wolves?",
+    "options": [
+      "Simien Jackel",
+      "Ethiopian Coyote",
+      "Amharic Fox",
+      "Canis Simiensis"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760236-17",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the common term for bovine spongiform encephalopathy (BSE)?",
+    "options": [
+      "Weil's disease",
+      "Mad Cow disease",
+      "Milk fever",
+      "Foot-and-mouth disease"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760236-18",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Which of these animals are not real?",
+    "options": [
+      "Sea Dragon",
+      "Tasmanian Devil",
+      "Giant Squid",
+      "Nemean Lion"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760236-19",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What type of animal is a natterjack?",
+    "options": [
+      "Bird",
+      "Fish",
+      "Insect",
+      "Toad"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760237-20",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Which animal was part of an Russian domestication experiment in 1959?",
+    "options": [
+      "Pigeons",
+      "Bears",
+      "Foxes",
+      "Alligators"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-crawl-1776202760237-21",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Which species of Brown Bear is not extinct?",
+    "options": [
+      "Syrian Brown Bear",
+      "California Grizzly Bear",
+      "Atlas Bear",
+      "Mexican Grizzly Bear"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760237-22",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the name of the family that the domestic cat is a member of?",
+    "options": [
+      "Felinae",
+      "Felis",
+      "Cat",
+      "Felidae"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-crawl-1776202760237-23",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Snakes and lizards are known to flick their tongue, this behavior is to?",
+    "options": [
+      "Capture scent particles",
+      "Taste the sweet air",
+      "Threaten other species",
+      "Attract female mates"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760237-24",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Cashmere is the wool from which kind of animal?",
+    "options": [
+      "Sheep",
+      "Goat",
+      "Camel",
+      "Llama"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760237-25",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "About how much of their body weight in food do sea otters eat every day?",
+    "options": [
+      "25%",
+      "10%",
+      "80%",
+      "45%"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760237-26",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "\"Decapods\" are an order of ten-footed crustaceans.  Which of these are NOT decapods?",
+    "options": [
+      "Krill",
+      "Lobsters",
+      "Shrimp",
+      "Crabs"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "animals-crawl-1776202760237-27",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Which of these is a colony of polyps and not a jellyfish?",
+    "options": [
+      "Sea Wasp",
+      "Portuguese Man-of-War",
+      "Irukandji",
+      "Sea Nettle"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-crawl-1776202760237-28",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Which of the following is another name for the \"Poecilotheria Metallica Tarantula\"?",
+    "options": [
+      "Hopper",
+      "Silver Stripe",
+      "Gooty",
+      "Woebegone"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-crawl-1776202760237-29",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What type of creature is a Bonobo?",
+    "options": [
+      "Lion",
+      "Parrot",
+      "Wildcat",
+      "Ape"
+    ],
+    "correctIndex": 3
+  }
+]

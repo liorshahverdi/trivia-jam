@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "musicals-crawl-1776202771448-0",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Who played \"Charlie Price\" in the musical \"Kinky Boots\" on Broadway in New York from May 26th - Aug 6th 2017?",
+    "options": [
+      "Ed Sheeren",
+      "Tom Cruise",
+      "Dallon Weekes",
+      "Brendon Urie"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-1",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "What play is the quote \"Hell is other people\" from?",
+    "options": [
+      "The Devil and the Good Lord",
+      "The Condemned of Altona",
+      "The Flies",
+      "No Exit"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-2",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Who played Marquis de Lafayette and Thomas Jefferson in the original Broadway run of Hamilton?",
+    "options": [
+      "Daveed Diggs",
+      "Lin-Manuel Miranda",
+      "Javier Muñoz",
+      "Wayne Brady"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-3",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Who wrote the lyrics for Leonard Bernstein's 1957 Brodway musical West Side Story?",
+    "options": [
+      "Stephen Sondheim",
+      "Himself",
+      "Oscar Hammerstein",
+      "Richard Rodgers"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-4",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Who is the musical director for the award winning musical \"Hamilton\"?",
+    "options": [
+      "Alex Lacamoire",
+      "Lin-Manuel Miranda",
+      "Renee Elise-Goldberry",
+      "Leslie Odom Jr."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-5",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "The World Chess Championship in Chess, Act 1 is set in which Italian city?",
+    "options": [
+      "Merano",
+      "Venice",
+      "Milan",
+      "Rome"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-6",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "Who wrote the play 'Angels in America'?",
+    "options": [
+      "Tony Kusher",
+      "Tom Stoppard",
+      "Matthew Lopez",
+      "Anthony Neilson"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-7",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Who serves as the speaker of the prologue in Shakespeare's Romeo and Juliet?",
+    "options": [
+      "Montague",
+      "Chorus",
+      "Refrain",
+      "Capulet"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-8",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "After England, more Shakespeare plays are set in this present day country than in any other.",
+    "options": [
+      "United States",
+      "Greece",
+      "France",
+      "Italy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-9",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "In Shakespeare's play Julius Caesar, Caesar's last words were...",
+    "options": [
+      "Iacta alea est!",
+      "Et tu, Brute? ",
+      "Vidi, vini, vici.",
+      "Aegri somnia vana."
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-10",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "What was George Bizet's last opera?",
+    "options": [
+      "Don Rodrigue",
+      "Carmen",
+      "Grisélidis",
+      "Les p&ecirc;cheurs de perles"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-11",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Which of these musicals won the Tony Award for Best Musical?",
+    "options": [
+      "The Color Purple",
+      "American Idiot",
+      "Rent",
+      "Newsies"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-crawl-1776202771448-12",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Which of the following is not a piece from the 1950's musical West Side Story?",
+    "options": [
+      "Maria",
+      "Tonight",
+      "Mambo",
+      "The Back Alley"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-13",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Which musical has won the most Tony awards?",
+    "options": [
+      "The Producers",
+      "Hamilton",
+      "Chicago",
+      "Phantom of the Opera"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-14",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Which of these plays was famously first performed posthumously after the playwright committed suicide?",
+    "options": [
+      "Hamilton",
+      "Much Ado About Nothing",
+      "The Birthday Party",
+      "4.48 Psychosis"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-15",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "In Macbeth, the eyes of what animals were used in the Witches' cauldron?",
+    "options": [
+      "Newts",
+      "Humans",
+      "Sharks",
+      "Squids"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-16",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Which Shakespeare play features the stage direction \"Enter a messenger, with two heads and a hand\"?",
+    "options": [
+      "Othello",
+      "Titus Andronicus",
+      "Macbeth",
+      "King Lear"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-17",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "What is the name of Broadway's first \"long-run\" musical?",
+    "options": [
+      "Wicked",
+      "The Elves",
+      "Hamilton",
+      "The Book of Mormon"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-18",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "In which Shakespearean play will you find the suicide of Ophelia?",
+    "options": [
+      "Hamlet",
+      "Macbeth",
+      "Othello",
+      "King Lear"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-crawl-1776202771448-19",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "In Jeff Wayne's Musical Version of War of the Worlds, the chances of anything coming from Mars are...",
+    "options": [
+      "A billion to one",
+      "A trillion to one",
+      "A hundred to one",
+      "A million to one"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-20",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "Which Shakespeare play inspired the musical 'West Side Story'?",
+    "options": [
+      "Hamlet",
+      "Macbeth",
+      "Romeo & Juliet",
+      "Othello"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-crawl-1776202771448-21",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "\"Doctor Who\" star David Tennant performed in a rendition of which Shakespearean play?",
+    "options": [
+      "The Tempest",
+      "Hamlet",
+      "Othello",
+      "The Taming of the Shrew"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-22",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "In Les Misérables, who is Prison Code 24601?",
+    "options": [
+      "Marius Pontmercy",
+      "Javert",
+      "Jean Claude Van Damme",
+      "Jean Valjean"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-23",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "How many plays is Shakespeare generally considered to have written?",
+    "options": [
+      "18",
+      "54",
+      "25",
+      "37"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-24",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "Who wrote the award winning musical \"In The Heights\"?",
+    "options": [
+      "Steven Sondheim",
+      "Lin-Manuel Miranda",
+      "Francis Scott Key",
+      "John Phillips Sousa"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-25",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "Who wrote the musical \"Hamilton\"?",
+    "options": [
+      "Andrew Lloyd Webber",
+      "Nell Benjamin",
+      "Tom Kitt",
+      "Lin-Manuel Miranda"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-26",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "The Andrew Lloyd Webber musical \"Cats\" is based off a book of poems written by which author?",
+    "options": [
+      "Andrew Lloyd Webber",
+      "Emily Dickenson",
+      "Robert Frost",
+      "T.S. Elliot"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-crawl-1776202771448-27",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "When was the play \"Macbeth\" written?",
+    "options": [
+      "1605",
+      "1606",
+      "1723",
+      "1628"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-28",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Which actor has NOT portrayed Billy Flynn in the musical \"Chicago\"?",
+    "options": [
+      "David Hasselhoff",
+      "Christopher Walken",
+      "Jerry Springer",
+      "Patrick Swayze"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-crawl-1776202771448-29",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "In which Shakespeare play does the character Marcellus say, \"Something is rotten in the state of Denmark\"?",
+    "options": [
+      "Macbeth",
+      "King Lear",
+      "Twelfth Night",
+      "Hamlet"
+    ],
+    "correctIndex": 3
+  }
+]

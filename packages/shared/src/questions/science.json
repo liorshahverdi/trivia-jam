@@ -2429,5 +2429,200 @@
       "An amoeba"
     ],
     "correctIndex": 0
+  },
+  {
+    "id": "science-crawl-1776202709575-1",
+    "category": "science",
+    "difficulty": "easy",
+    "question": "What is the official name of the star located closest to the North Celestial Pole?",
+    "options": [
+      "Eridanus",
+      "Polaris",
+      "Gamma Cephei",
+      "Iota Cephei"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "science-crawl-1776202709575-3",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "Which part of the body does glaucoma affect?",
+    "options": [
+      "Throat",
+      "Stomach",
+      "Eyes",
+      "Blood"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "science-crawl-1776202709575-4",
+    "category": "science",
+    "difficulty": "easy",
+    "question": "This element, when overcome with extreme heat and pressure, creates diamonds.",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon",
+      "Hydrogen"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "science-crawl-1776202709576-11",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "What is the name of the Supermassive Black Hole in the centre of the Milky Way?",
+    "options": [
+      "Messier 87",
+      "Sagittarius A*",
+      "Alpha Centauri",
+      "Andromeda"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "science-crawl-1776202709576-22",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "In physics, conservation of energy and conservation of momentum are both consequences of which of the following?",
+    "options": [
+      "Bell's Theorem",
+      "Wick's Theorem",
+      "Carnot's Theorem",
+      "Noether's Theorem"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "science-crawl-1776523506396-9",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "What is the colour of unoxidized blood?",
+    "options": [
+      "Blue",
+      "Purple",
+      "Red",
+      "Green"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "science-crawl-1776523506396-11",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a real element?",
+    "options": [
+      "Praseodymium",
+      "Hassium",
+      "Lutetium",
+      "Vitrainium"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "science-crawl-1776523506396-16",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "What is considered the rarest form of color blindness?",
+    "options": [
+      "Blue",
+      "Red",
+      "Green",
+      "Purple"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "science-crawl-1776523506396-17",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "What part of the brain takes its name from the Greek for seahorse?",
+    "options": [
+      "Cerebellum",
+      "Thalamus",
+      "Hippocampus",
+      "Amygdala"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "science-crawl-1776523506396-18",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "Gannymede is the largest moon of which planet?",
+    "options": [
+      "Uranus",
+      "Neptune",
+      "Mars",
+      "Jupiter"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "science-crawl-1776523506396-20",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "What is the standard SI unit for luminous intensity?",
+    "options": [
+      "Lumen",
+      "Candela",
+      "Faraday",
+      "Coulomb"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "science-crawl-1776523506396-22",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "The 'Islets of Langerhans' is found in which human organ?",
+    "options": [
+      "Kidney",
+      "Liver",
+      "Brain",
+      "Pancreas"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "science-crawl-1776523506396-27",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "What are human nails made of?",
+    "options": [
+      "Keratin",
+      "Bone",
+      "Chitin",
+      "Calcium"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "science-crawl-1776523521331-4",
+    "category": "science",
+    "difficulty": "hard",
+    "question": "Folic acid is the synthetic form of which vitamin?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin B",
+      "Vitamin D"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "science-crawl-1776523521331-6",
+    "category": "science",
+    "difficulty": "medium",
+    "question": "Which NASA Space Shuttle broke apart during atmospheric re-entry on February 1, 2003? ",
+    "options": [
+      "Challenger",
+      "Discovery",
+      "Columbia",
+      "Endeavour"
+    ],
+    "correctIndex": 2
   }
 ]

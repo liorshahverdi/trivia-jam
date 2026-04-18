@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "anime-crawl-1776202805048-0",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "Which of the stands from \"JoJo's Bizarre Adventure\" mimics the likeness of a tomato?",
+    "options": [
+      "Red Hot Chili Pepper",
+      "Cream Starter",
+      "Nut King Call",
+      "Pearl Jam"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-1",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "What is the name of Ryūko Matoi's theme song in the anime Kill la Kill?",
+    "options": [
+      "Don't Lose Your Way",
+      "Till I Die",
+      "Before My Body Is Dry",
+      "Suck Your Blood"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "anime-crawl-1776202805048-2",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "In the \"To Love-Ru\" series, how many Trans-weapons were created?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "3"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-3",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "Who is the colossal titan in \"Attack On Titan\"?",
+    "options": [
+      "Bertolt Hoover",
+      "Reiner",
+      "Eren",
+      "Sasha"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-4",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "In \"To Love-Ru: Darkness\", which of the girls attempt making a harem for Rito Yuuki?",
+    "options": [
+      "Yami (Golden Darkness)",
+      "Haruna Sairenji",
+      "Mea Kurosaki",
+      "Momo Deviluke"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-5",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "What is the name of the corgi in Cowboy Bebop?",
+    "options": [
+      "Edward",
+      "Einstein",
+      "Rocket",
+      "Joel"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-6",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "In \"Toriko\", which of the following Heavenly Kings has an enhanced sense of Hearing?",
+    "options": [
+      "Coco",
+      "Sunny",
+      "Zebra",
+      "Toriko"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "anime-crawl-1776202805048-7",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "What's the English Dub Name of \"Smile Precure\"?",
+    "options": [
+      "Sparkle Girls",
+      "Glitter Force",
+      "Fairy Tale Patrol",
+      "Power Princesses"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-8",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "In \"To Love-Ru\", Ren and Run are from what planet?",
+    "options": [
+      "Deviluke",
+      "Memorze",
+      "Mistletoe",
+      "Okiwana"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-9",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "In the anime, \"Super Sonico\", what is Super Sonico's favorite food?",
+    "options": [
+      "Ice Cream",
+      "Pizza",
+      "Macroons",
+      "Chips"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "anime-crawl-1776202805048-10",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "Which of the following originated as a manga?",
+    "options": [
+      "Cowboy Bebop",
+      "Akira",
+      "High School DxD",
+      "Gurren Lagann"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-11",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "Who is the armored titan in \"Attack On Titan\"?",
+    "options": [
+      "Armin Arlelt",
+      "Mikasa Ackermann",
+      "Eren Jaeger",
+      "Reiner Braun"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-12",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "Which part from the JoJo's Bizarre Adventure manga is about a horse race across America?",
+    "options": [
+      "Part 6: Stone Ocean",
+      "Part 3: Stardust Crusaders",
+      "Part 5: Golden Wind",
+      "Part 7: Steel Ball Run"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-13",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "In \"Highschool DxD\", what is the name of the item some humans are born with?",
+    "options": [
+      "Sacred Gear",
+      "Imperial Arm",
+      "Hallowed Relic",
+      "Blessed Artifact"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-14",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "What is the name of the protagonist of the 2017 anime \"Land of the Lustrous\"?",
+    "options": [
+      "Watermelon Tourmaline",
+      "Phosphophyllite",
+      "Cinnabar",
+      "Padparadscha"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-15",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "Who voices the character \"Reigen\"  in the English dub of \"Mob Psycho 100\"?",
+    "options": [
+      "Max Mittelman",
+      "Chris Niosi",
+      "Kyle McCarley",
+      "Casey Mongillo"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-16",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "In the \"Dragon Ball\" franchise, what is the name of Goku's brother?",
+    "options": [
+      "Raditz",
+      "Gohan",
+      "Vegeta",
+      "Bardock"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-17",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "In the Naruto manga, what is the last name of Tsunade?",
+    "options": [
+      "Haruno",
+      "Uzumaki",
+      "Yamanaka",
+      "Senju"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-18",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "What is the last name of Edward and Alphonse in the Fullmetal Alchemist series.",
+    "options": [
+      "Ellis",
+      "Elric",
+      "Eliek",
+      "Elwood"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-19",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "Who was the first Legendary Pokemon to be defeated by Ash Ketchum in the Pokémon anime?",
+    "options": [
+      "Articuno",
+      "Darkrai",
+      "Latios",
+      "Regice"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-20",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "Which studio made Cowboy Bebop?",
+    "options": [
+      "Bones",
+      "Madhouse",
+      "Pierriot",
+      "Sunrise"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "anime-crawl-1776202805048-21",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "In the 9th Pokemon movie, who is the Prince of the Sea?",
+    "options": [
+      "Manaphy",
+      "Ash",
+      "May",
+      "Phantom"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-22",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "On what date did the original \"Fruits Basket\" anime air in Japan?",
+    "options": [
+      "November 1st, 2006",
+      "December 27th, 2001",
+      "July 5th, 2001",
+      "October 11th, 2001"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "anime-crawl-1776202805048-23",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "The \"To Love-Ru\" Manga was started in what year?",
+    "options": [
+      "2006",
+      "2007",
+      "2004",
+      "2005"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-24",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "Which of these names are not a character of JoJo's Bizarre Adventure?",
+    "options": [
+      "Jean-Pierre Polnareff",
+      "George Joestar",
+      "JoJo Kikasu",
+      "Risotto Nero"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "anime-crawl-1776202805048-25",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "What was studio Trigger's first original long-form animated series for television?",
+    "options": [
+      "Kiznaiver",
+      "Kill la Kill",
+      "Inferno Cop",
+      "Gurren Lagann"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-26",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "Akatsuki's subclass in \"Log Horizon\" is what?",
+    "options": [
+      " Tracker",
+      "Assassin",
+      "Scribe",
+      "Apprentice"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-27",
+    "category": "anime",
+    "difficulty": "easy",
+    "question": "In the anime \"My Hero Academia\", which character is shown with the ability to manipulate gravity?",
+    "options": [
+      "Uraraka",
+      "Bakugo",
+      "Deku",
+      "Asui "
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "anime-crawl-1776202805048-28",
+    "category": "anime",
+    "difficulty": "hard",
+    "question": "Which animation studio animated \"Hidamari Sketch\"?",
+    "options": [
+      "Trigger",
+      "Shaft",
+      "Kyoto Animation",
+      "Production I.G"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "anime-crawl-1776202805048-29",
+    "category": "anime",
+    "difficulty": "medium",
+    "question": "What is the name of the final villain in the manga series \"Bleach\"?",
+    "options": [
+      "Juha Bach",
+      "Yuhabah",
+      "Juhabach",
+      "Yhwach"
+    ],
+    "correctIndex": 3
+  }
+]

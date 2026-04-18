@@ -2286,5 +2286,447 @@
       "Jimi Hendrix"
     ],
     "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-0",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "In August 1964, who introduced the Beatles to cannabis?",
+    "options": [
+      "Jim Morrison",
+      "Bob Dylan",
+      "Brian Epstein",
+      "Jerry Garcia"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-1",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "\"Lift Your Spirit\" is an album by which artist?",
+    "options": [
+      "Lena Meyer-Landrut",
+      "Stevie Wonder",
+      "Aloe Blacc",
+      "Taylor Swift"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "music-crawl-1776202726601-7",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Who was walking like an Egyptian in 1981?",
+    "options": [
+      "R.E.M.",
+      "The Bangles",
+      "The Ocean Blue",
+      "The Connells"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-9",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a song on The Beatles' 1968 self titled album, also known as the White album?",
+    "options": [
+      "Why Don't We Do It in the Road?",
+      "Everybody's Got Something to Hide Except Me and My Monkey",
+      "The Continuing Story of Bungalow Bill",
+      "Being For The Benefit Of Mr. Kite!"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776202726601-12",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "In 2006, which band released their debut album \"A Fever You Can't Sweat Out\"?",
+    "options": [
+      "Panic! At the Disco",
+      "Twenty One Pilots",
+      "My Chemical Romance",
+      "Fall Out Boy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-13",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "Which iconic album cover features the pulsar waves of CP 1919 placed in the center of the cover?",
+    "options": [
+      "The Dark Side of the Moon",
+      "London Calling",
+      "The Velvet Underground & Nico",
+      "Unknown Pleasures"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776202726601-14",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which Beatle led the way across the zebra crossing on the Abbey Road album cover?",
+    "options": [
+      "Paul",
+      "George",
+      "Ringo",
+      "John"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776202726601-15",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "The four strings on a violin are the G string, D string, A string, and...",
+    "options": [
+      "C string",
+      "B string",
+      "F string",
+      "E string"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776202726601-16",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which of these is the name of an American psychedelic rock band formed in 2002 by Benjamin Goldwasser and Andrew VanWyngarden?",
+    "options": [
+      "MSTRKRFT",
+      "STRFKR",
+      "SBTRKT",
+      "MGMT"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776202726601-17",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "Which country does the band Rammstein hail from?",
+    "options": [
+      "Germany",
+      "Austria",
+      "Armenia",
+      "Belgium"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-18",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "Which M83 album is the song \"Midnight City\" featured in?",
+    "options": [
+      "Hurry Up, We're Dreaming",
+      "Saturdays = Youth",
+      "Before the Dawn Heals Us",
+      "Junk"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-21",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which of these bands is the oldest?",
+    "options": [
+      "AC/DC",
+      "Pink Floyd",
+      "Metallica",
+      "Red Hot Chili Peppers"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-23",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "Long John Baldry, the voice of Dr. Robotnik in Adventures Of Sonic The Hedgehog, was in a band with which music artist in the 1960s?",
+    "options": [
+      "Elton John",
+      "Freddie Mercury",
+      "Paul McCartney",
+      "Johnny Cash"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-24",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Who released the 1991 album \"Out of Time\"?",
+    "options": [
+      "R.E.M.",
+      "U2",
+      "Coldplay",
+      "The Rolling Stones"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-25",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "The 1952 musical composition 4'33\", composed by prolific American composer John Cage, is mainly comprised of what sound?",
+    "options": [
+      "Silence",
+      "Farts",
+      "People talking",
+      "Cricket chirps"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776202726601-26",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Who is the primary lyricist for Canadian progressive rock band Rush?",
+    "options": [
+      "Geddy Lee",
+      "Neil Peart",
+      "Alex Lifeson",
+      "John Rutsey"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-27",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which member of the British pop group \"The Spice Girls\" was known as Ginger Spice?",
+    "options": [
+      "Melanie Brown",
+      "Geri Halliwell",
+      "Emma Bunton",
+      "Victoria Beckham"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776202726601-28",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "The heavy metal band Black Sabbath hail from which English city?",
+    "options": [
+      "Manchester",
+      "Birmingham",
+      "London",
+      "Newcastle-Upon-Tyne"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776523538297-0",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "What was Bon Iver's debut album released in 2007?",
+    "options": [
+      "Bon Iver, Bon Iver",
+      "22, A Million",
+      "For Emma, Forever Ago",
+      "Blood Bank EP"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "music-crawl-1776523538297-1",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "Which one of these songs did the group \"Men At Work\" NOT make?",
+    "options": [
+      "Down Under",
+      "Who Can It Be Now?",
+      "It's a Mistake",
+      "Safety Dance"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776523538298-2",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "What song by Tina Turner is the theme for Mad Max Beyond Thunderdome?",
+    "options": [
+      "We Don't Need Another Hero",
+      "Let's Stay Together",
+      "What's Love Got To Do With It",
+      "I Don't Wanna Lose You"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776523538298-3",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "A classic 1976 song by Blue Oyster Cult features the advice \"Don't Fear The\" what?",
+    "options": [
+      "Dark",
+      "Silence",
+      "Reaper",
+      "Clowns"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "music-crawl-1776523538298-5",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "What was the name of the hip hop group Kanye West was a member of in the late 90s?",
+    "options": [
+      "The Jumpers",
+      "The Kickstarters",
+      "The Beat-Busters",
+      "The Go-Getters"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776523538298-8",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "What is the stage name of New Zealand singer Phillipa \"Pip\" Brown?",
+    "options": [
+      "Lorde",
+      "Kesha",
+      "Anika Moa",
+      "Ladyhawke"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776523538298-10",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which of these songs is not on the \"untitled\" album by Led Zeppelin?",
+    "options": [
+      "Stairway to Heaven",
+      "Black Dog",
+      "Rock and Roll",
+      "Celebration Day"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776523538298-11",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "How many studio albums have the heavy metal band, 'Metallica' released in the period between 1983 and 2016?",
+    "options": [
+      "7",
+      "10",
+      "9",
+      "12"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776523538298-13",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "Which of Michael Jackson's albums sold the most copies?",
+    "options": [
+      "Dangerous",
+      "Bad",
+      "Thriller",
+      "Off the Wall"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "music-crawl-1776523538298-17",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Which rock band released the album \"The Bends\" in March 1995?",
+    "options": [
+      "Nirvana",
+      "Radiohead",
+      "Coldplay",
+      "U2"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776523538298-21",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "Who wrote the Sinead O`Connor hit 'Nothing Compares 2 U'?",
+    "options": [
+      "Prince",
+      "Michael Jackson",
+      "Cameo",
+      "Rick James"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776523538298-24",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "In the song \"The Ultimate Showdown of Ultimate Destiny,\" who is the only one to survive the battle?",
+    "options": [
+      "Batman",
+      "Mr. Rogers",
+      "Chuck Norris",
+      "Godzilla"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "music-crawl-1776523538298-25",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "Iconic cartoon character Mickey Mouse made his onscreen debut in what year?",
+    "options": [
+      "1928",
+      "1929",
+      "1922",
+      "1932"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776523538298-27",
+    "category": "music",
+    "difficulty": "easy",
+    "question": "Finish these lyrics from the 2016 song \"Panda\" by Desiigner: \"I got broads in _______\".",
+    "options": [
+      "Savannah",
+      "Augusta",
+      "Marietta",
+      "Atlanta"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "music-crawl-1776523538298-28",
+    "category": "music",
+    "difficulty": "hard",
+    "question": "Which song in rapper Kanye West's album \"The Life of Pablo\" features Rihanna?",
+    "options": [
+      "Famous",
+      "Wolves",
+      "Ultralight Beam",
+      "Highlights"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "music-crawl-1776523538298-29",
+    "category": "music",
+    "difficulty": "medium",
+    "question": "What genre of EDM is the Dutch DJ, musician, and remixer Armin van Buuren most well-known for?",
+    "options": [
+      "Trance",
+      "House",
+      "Drum and Bass",
+      "Dubstep"
+    ],
+    "correctIndex": 0
   }
 ]

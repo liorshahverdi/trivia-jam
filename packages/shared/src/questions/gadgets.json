@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "gadgets-crawl-1776202799445-0",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "Which virtual assistant is developed by Amazon?",
+    "options": [
+      "Google Assistant",
+      "Siri",
+      "Cortana",
+      "Alexa"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-1",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What is the SI unit for resistance?",
+    "options": [
+      "Ampheres",
+      "Siemens",
+      "Volts",
+      "Ohms"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-2",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "In what year was the Oculus Rift revealed to the public through a Kickstarter campaign?",
+    "options": [
+      "2010",
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-3",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "Which of the following is not a type of computer mouse?",
+    "options": [
+      "Drum mouse",
+      "Trackball mouse",
+      "Optical mouse",
+      "Smoothie mouse"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-4",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What round is a classic AK-47 chambered in?",
+    "options": [
+      "7.62x39mm",
+      "7.62x51mm",
+      "5.56x45mm",
+      "5.45x39mm"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-5",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What is the name of a simple machine that is made up of a stiff arm that can move freely around a fixed point?",
+    "options": [
+      "Lever",
+      "Wedge",
+      "Screw",
+      "Pulley"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799445-6",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "When did the CD begin to appear on the consumer market?",
+    "options": [
+      "1982",
+      "1992",
+      "1972",
+      "1962"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-7",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "The term \"battery\" to describe an electrical storage device was coined by?",
+    "options": [
+      "Nikola Tesla",
+      "Luigi Galvani",
+      " Alessandro Volta",
+      "Benjamin Franklin"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-8",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Out of all of the NASA Space Shuttles, which 2 have been destroyed in disasters?",
+    "options": [
+      "Enterprise and Atlantis",
+      "Discovery and Endeavour",
+      "Challenger and Columbia",
+      "None of the Above"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-9",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What does GPS stand for?",
+    "options": [
+      "Global Personal System",
+      "General Positioning System",
+      "Global Positioning System",
+      "General Personal Satellite"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-10",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which round does a WW2 M1 Garand fire?",
+    "options": [
+      ".308",
+      ".30-06",
+      "7.62",
+      "7.62x51mm"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-11",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Which company manufactured the iconic TR-808 drum machine?",
+    "options": [
+      "Technics",
+      "Korg",
+      "Roland",
+      "Casio"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-12",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "This former Air Force and NASA engineer is the inventor of the Super Soaker water gun.",
+    "options": [
+      "Bruce D'Andrade",
+      "Lonnie Johnson",
+      "Frances Northcutt",
+      "Ashitey Trebi-Ollennu"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-13",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Which company designed the \"Betamax\" video cassette format?",
+    "options": [
+      "Panasonic",
+      "LG",
+      "Sony",
+      "Fujitsu"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-14",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "How does a centrifuge separate&nbsp;heavy and light particles?",
+    "options": [
+      "Spinning",
+      "Vibrating",
+      "Sifting",
+      "Ionizing"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-15",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which of the following cellular device companies is NOT headquartered in Asia?",
+    "options": [
+      "LG Electronics",
+      "Samsung",
+      "HTC",
+      "Nokia"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-16",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Mobile hardware and software company \"Blackberry Limited\" was founded in which country?",
+    "options": [
+      "Norway",
+      "United States of America",
+      "Canada",
+      "United Kingdom"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-17",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What does SSD stand for in the context of computer storage?",
+    "options": [
+      "Software Storage Device",
+      "Super Speed Data",
+      "Secure System Disk",
+      " Solid State Drive"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-18",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "When was the Tamagotchi digital pet released?",
+    "options": [
+      "1989",
+      "1996",
+      "1992",
+      "1990"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-19",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Apple's Voice Assistant, Siri, debuted on which iPhone?",
+    "options": [
+      "iPhone 6S",
+      "iPhone 4S",
+      "iPhone 3GS",
+      "iPhone 5S"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-20",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Who patented a steam engine that produced continuous rotary motion?",
+    "options": [
+      "Nikola Tesla",
+      "Albert Einstein",
+      "James Watt",
+      "Alessandro Volta"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-21",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Who built the first laser?",
+    "options": [
+      "Nikola Tesla",
+      "Jack Kilby",
+      "Edith Clarke",
+      "Theodore Harold Maiman"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-22",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which of the following is used to measure blood pressure?",
+    "options": [
+      "Barometer",
+      "Sphygmomanometer",
+      "Ruler",
+      "Haemoerythrometer"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-23",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "When was the DVD invented?",
+    "options": [
+      "1995",
+      "2000",
+      "1990",
+      "1980"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-24",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "Which gaming console is developed by Sony?",
+    "options": [
+      "Xbox",
+      "PlayStation",
+      "Atari",
+      "Nintendo Switch"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-25",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "What is the \"Mitsubishi Wakamaru\"?",
+    "options": [
+      "A robot",
+      "A pickup truck",
+      "An motorcycle",
+      "A motorboat"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-26",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "What was the first Infinity Coaster in the world and where is it located?",
+    "options": [
+      "Madagascar Mad Pursuit, Motiongate Dubai, UAE",
+      "The Smiler, Alton Towers, UK",
+      "Gold Rush, Slagharen, Netherlands ",
+      "Monster, Adventureland Altoona, USA"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-27",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "What is the most significant side venture the popular firearms company, Remington, has pursued?",
+    "options": [
+      "Blenders",
+      "Typewriters",
+      "Ceiling Fans",
+      "Door Knobs"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-28",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "When was the iPhone released?",
+    "options": [
+      "2005",
+      "2006",
+      "2004",
+      "2007"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-crawl-1776202799446-29",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "What are the base station trackers used for the HTC Vive called?",
+    "options": [
+      "Lighthouse",
+      "Motion",
+      "Constellation ",
+      "Trackers"
+    ],
+    "correctIndex": 0
+  }
+]

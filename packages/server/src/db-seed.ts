@@ -8,12 +8,31 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const questionsDir = join(__dirname, '..', '..', 'shared', 'src', 'questions');
 
+// Bump this version to force a full re-seed (truncate + re-insert).
+const SEED_VERSION = 2;
+
 export async function seedFromFiles(pool: pg.Pool): Promise<void> {
-  const { rows } = await pool.query('SELECT COUNT(*)::int AS count FROM questions');
-  if (rows[0].count > 0) {
-    console.log(`[DB] Already seeded (${rows[0].count} questions)`);
+  // Track seed version so we can force a re-seed after data fixes
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS seed_meta (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    )
+  `);
+  const { rows: metaRows } = await pool.query(
+    `SELECT value FROM seed_meta WHERE key = 'seed_version'`
+  );
+  const currentVersion = metaRows.length > 0 ? parseInt(metaRows[0].value, 10) : 0;
+
+  if (currentVersion >= SEED_VERSION) {
+    const { rows } = await pool.query('SELECT COUNT(*)::int AS count FROM questions');
+    console.log(`[DB] Already seeded v${SEED_VERSION} (${rows[0].count} questions)`);
     return;
   }
+
+  // Wipe old data and re-seed from clean JSON files
+  console.log(`[DB] Re-seeding: v${currentVersion} -> v${SEED_VERSION}`);
+  await pool.query('TRUNCATE TABLE questions');
 
   let total = 0;
   const files = readdirSync(questionsDir).filter(f => f.endsWith('.json'));
@@ -33,5 +52,12 @@ export async function seedFromFiles(pool: pg.Pool): Promise<void> {
     total += questions.length;
   }
 
-  console.log(`[DB] Seeded ${total} questions from JSON files`);
+  // Record the seed version
+  await pool.query(
+    `INSERT INTO seed_meta (key, value) VALUES ('seed_version', $1)
+     ON CONFLICT (key) DO UPDATE SET value = $1`,
+    [String(SEED_VERSION)]
+  );
+
+  console.log(`[DB] Seeded ${total} questions from JSON files (v${SEED_VERSION})`);
 }

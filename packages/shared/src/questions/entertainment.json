@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "entertainment-crawl-1776202754654-0",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "What is the orange and white bot's name in \"Star Wars: The Force Awakens\"?",
+    "options": [
+      "BB-8",
+      "BB-3",
+      "AA-A",
+      "R2-D2"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-1",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "In the 1979 British film \"Quadrophenia\" what is the name of the seaside city the mods are visiting?",
+    "options": [
+      "Brighton",
+      "Eastbourne",
+      "Mousehole",
+      "Bridlington"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-2",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Who played Batman in the 1997 film \"Batman and Robin\"?",
+    "options": [
+      "George Clooney",
+      "Michael Keaton",
+      "Val Kilmer",
+      "Christian Bale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-3",
+    "category": "entertainment",
+    "difficulty": "hard",
+    "question": "In the \"Jurassic Park\" universe, when did \"Jurassic Park: San Diego\" begin construction?",
+    "options": [
+      "1988",
+      "1986",
+      "1993",
+      "1985"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-4",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "What was Marilyn Monroe`s character's first name in the film \"Some Like It Hot\"?",
+    "options": [
+      "Honey",
+      "Caramel",
+      "Candy",
+      "Sugar"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-5",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Velma Kelly and Roxie Hart are the protagonists of which Oscar winning movie?",
+    "options": [
+      "Dreamgirls",
+      "Chicago",
+      "Cabaret",
+      "All That Jazz"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-6",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "What was the title of the first Bond movie, released in 1962?",
+    "options": [
+      "From Russia with Love",
+      "Goldfinger",
+      "Dr. No",
+      "Thunderball"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-7",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": " In the 1951 movie \"The Day The Earth Stood Still\" which US city did the alien spaceship land in?",
+    "options": [
+      " Los Angeles",
+      "Washington D.C.",
+      "New York",
+      "Philadelphia"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-8",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "What is the name of the queen's pet in A Bug's Life?",
+    "options": [
+      "Flik",
+      "Aphie",
+      "Hopper",
+      "Dot"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-9",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "What was Bruce Campbell's iconic one-liner after getting a chainsaw hand in Evil Dead 2?",
+    "options": [
+      "Gnarly.",
+      "Perfect.",
+      "Nice.",
+      "Groovy."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-10",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "In \"Jurassic World\", which company purchases InGen and creates Jurassic World?",
+    "options": [
+      "Biology Synthetics Technologies",
+      "International Genetics Incorporated",
+      "Masrani Global Corporation ",
+      "International Genetic Technologies"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-11",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "In which 1973 film does Yul Brynner play a robotic cowboy who malfunctions and goes on a killing spree?",
+    "options": [
+      "Runaway",
+      "Westworld",
+      "Android",
+      "The Terminators"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-12",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "In the movie \"Blade Runner\", what is the term used for human-like androids ?",
+    "options": [
+      "Cylons",
+      "Synthetics",
+      "Skinjobs",
+      "Replicants"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-13",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "Which movie released in 2016 features Superman and Batman fighting?",
+    "options": [
+      "Batman v Superman: Dawn of Justice",
+      "Batman v Superman: Superapocalypse",
+      "Batman v Superman: Black of Knight",
+      "Batman v Superman: Knightfall"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-14",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Which one of these action movies are shot entirely in one take?",
+    "options": [
+      "Ip Man 2",
+      "The Bourne Legacy",
+      "Victoria",
+      "Léon: The Professional"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-15",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "The 1996 film 'Fargo' is primarily set in which US state?",
+    "options": [
+      "Minnesota",
+      "North Dakota",
+      "South Dakota",
+      "Wisconsin"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-16",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "Which year was the first official Youtube Rewind released?",
+    "options": [
+      "2012",
+      "2011",
+      "2010",
+      "2013"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-17",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "What city did the monster attack in the film, \"Cloverfield\"?",
+    "options": [
+      "Las Vegas, Nevada",
+      "Chicago, Illinois",
+      "New York, New York",
+      "Orlando, Florida"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-18",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "Who directed \"E.T. the Extra-Terrestrial\" (1982)?",
+    "options": [
+      "Stanley Kubrick",
+      "James Cameron",
+      "Tim Burton",
+      "Steven Spielberg"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-19",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "What is the name of the character Nicolas Cage plays in the movie \"National Treasure?\"",
+    "options": [
+      "Benjamin Franklin Gates",
+      "Thomas Jefferson Walker",
+      "George Washington Swanson",
+      "John Quincy Beckett"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-20",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "In Mulan (1998), who is the leader of the Huns?",
+    "options": [
+      "Shan Yu",
+      "Chien-Po",
+      "Li Shang",
+      "Fa Zhou"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-21",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "In \"The Hobbit,\" who was head of the White Council? ",
+    "options": [
+      "Lady Galadriel ",
+      "Gandalf",
+      "Elrond",
+      "Saruman"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-22",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "Which of these actors does NOT appear in the 1998 movie \"Saving Private Ryan\"?",
+    "options": [
+      "Tom Hanks",
+      "Ralph Fiennes",
+      "Vin Diesel",
+      "Matt Damon"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-23",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Which DC superhero was NOT included in the 2017 movie \"Justice League\"?",
+    "options": [
+      "Batman",
+      "Cyborg",
+      "Wonder Woman",
+      "Green Arrow"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-24",
+    "category": "entertainment",
+    "difficulty": "hard",
+    "question": "Which sci-fi cult films plot concerns aliens attempting to prevent humans from creating a doomsday weapon?",
+    "options": [
+      "Plan 9 from Outer Space",
+      "The Man from Planet X",
+      "It Came from Outer Space",
+      "The Day The Earth Stood Still"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-25",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Which town is the setting for the Disney movie The Love Bug (1968)?",
+    "options": [
+      "Los Angeles",
+      "Sacramento",
+      "San Jose",
+      "San Francisco"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-26",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "What character in the Winnie the Pooh films was added by Disney and does not appear in the original books?",
+    "options": [
+      "Tigger",
+      "Heffalumps",
+      "Rabbit",
+      "Gopher"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-27",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Bela Lugosi was a Hungarian-American actor best known for his starring role of what 1931 horror film?",
+    "options": [
+      "Dr Frankenstein",
+      "Werewolf",
+      "The Creature from the Black Lagoon",
+      "Count Dracula"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-28",
+    "category": "entertainment",
+    "difficulty": "easy",
+    "question": "Which of the following actors has only been in a Quentin Tarantino directed film once?",
+    "options": [
+      "Christoph Waltz",
+      "Harvey Keitel",
+      "John Travolta",
+      "Samuel L. Jackson"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "entertainment-crawl-1776202754654-29",
+    "category": "entertainment",
+    "difficulty": "medium",
+    "question": "Johnny Depp made his big-screen acting debut in which film?",
+    "options": [
+      "My Bloody Valentine",
+      "A Nightmare on Elm Street",
+      "Halloween",
+      "Friday the 13th"
+    ],
+    "correctIndex": 1
+  }
+]

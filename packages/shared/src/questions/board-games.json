@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "board-games-crawl-1776202788280-0",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "In Magic: The Gathering, what card's flavor text is \"Catch!\"?",
+    "options": [
+      "Stone-Throwing Devils",
+      "Ember Shot",
+      "Lava Axe",
+      "Throwing Knife"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-1",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What is the sum of all the tiles in a standard box of Scrabble?",
+    "options": [
+      "207",
+      "197",
+      "187",
+      "177"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-2",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "In Magic: The Gathering, which of the following was the first publicly released foil card?",
+    "options": [
+      "Revenant",
+      "Beast of Burden",
+      "Dirtcowl Wurm",
+      "Lightning Dragon"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788280-3",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "What type is \"Magic Drain\" in Yugioh! Trading Card Game?",
+    "options": [
+      "Counter Trap",
+      "Normal Trap",
+      "Quick-Play Spell",
+      "Field Spell"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788280-4",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What is the most challenging monster in the Dungeons & Dragons 5th Edition Monster Manual?",
+    "options": [
+      "Beholder",
+      "Tarrasque",
+      "Displacer Beast",
+      "Lich"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-crawl-1776202788280-5",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "In chess, which is a characteristic of the King's Gambit?",
+    "options": [
+      "Sacrificing the king for a queen",
+      "Sacrificing a pawn",
+      "Castling kingside",
+      "Moving the king on the 2nd move"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-crawl-1776202788280-6",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Some of the \"Fallen Empires\" cards from \"Magic: The Gathering\" were misprinted on the backs of which other card game?",
+    "options": [
+      "Pokemon",
+      "Dominion",
+      "Yu-Gi-Oh",
+      "Wyvern"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788280-7",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "What special item did the creators of Cards Against Humanity ship for their Black Friday pack?",
+    "options": [
+      "Bull Feces",
+      "A Card Expansion",
+      "A Racist Toy",
+      "Cat Urine"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788280-8",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "In Magic: The Gathering, what was a tribute card to Jamie Wakefield's late wife Marilyn, who loved horses?",
+    "options": [
+      "Loyal Pegasus",
+      "Vryn Wingmare",
+      "Sungrace Pegasus",
+      "Timbermare"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788280-9",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which board game was first released on February 6th, 1935?",
+    "options": [
+      "Risk",
+      "Clue",
+      "Monopoly",
+      "Candy Land"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-10",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which of these cities is NOT featured in the Pandemic board game?",
+    "options": [
+      "Ho Chi Minh City",
+      "Lagos",
+      "Berlin",
+      "Karachi"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-11",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In the Board Game, Settlers of Catan, a die roll of what number causes the Robber to attack? ",
+    "options": [
+      "3",
+      "10",
+      "1",
+      "7"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788280-12",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "Who was world chess champion between 1894 and 1921",
+    "options": [
+      "José Ra&uacute;l Capablanca",
+      "Wilhelm Steinitz",
+      "Emanuel Lasker",
+      "Bobby Fischer"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-13",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "Which of the following characters is not in the board game Clue?",
+    "options": [
+      "Colonel Mustard",
+      "Reverend Green",
+      "Mister Indigo",
+      "Miss Scarlet"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788280-14",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "How many points is the Z tile worth in Scrabble?",
+    "options": [
+      "8",
+      "5",
+      "6",
+      "10"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788280-15",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "Which one of these is not a real game in the Dungeons & Dragons series?",
+    "options": [
+      "Extreme Dungeons & Dragons",
+      "Advanced Dungeons & Dragons",
+      "Dungeons & Dragons 3.5th edition",
+      "Advanced Dungeons & Dragons 2nd edition"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788280-16",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "On a standard Monopoly board, how much do you have to pay for Tennessee Ave?",
+    "options": [
+      "$180",
+      "$200",
+      "$160",
+      "$220"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788280-17",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "The board game, Nightmare was released in what year?",
+    "options": [
+      "1991",
+      "1992",
+      "1989",
+      "1995"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788280-18",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In what year was the card game Magic: the Gathering first introduced?",
+    "options": [
+      "1987",
+      "1998",
+      "1993",
+      "2003"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788281-19",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "Europa Universalis is a strategy video game based on which French board game?",
+    "options": [
+      "Europe and the Universe",
+      "Europa!",
+      "Europa Universalis",
+      "Power in Europe"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788281-20",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which Pokemon is #39 in the National Pokedex?",
+    "options": [
+      "Pikachu",
+      "Jigglypuff",
+      "Psyduck",
+      "Fearow"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-crawl-1776202788281-21",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "On a standard Monopoly board, which square is diagonally opposite 'Go'? ",
+    "options": [
+      "Go to Jail",
+      "Free Parking",
+      "Jail",
+      "The Electric Company"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-crawl-1776202788281-22",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What was the development code name for the \"Weatherlight\" expansion for \"Magic: The Gathering\", released in 1997?",
+    "options": [
+      "Decaf",
+      "Frappuccino",
+      "Mocha Latte",
+      "Macchiato"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788281-23",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "When Magic: The Gathering was first solicited, which of the following was it originally titled?",
+    "options": [
+      "Mana Clash",
+      "Magic",
+      "Magic Clash",
+      "Mana Duels"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-crawl-1776202788281-24",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In \"Magic: The Gathering\", what instant card has the highest converted mana cost?",
+    "options": [
+      "Vitalizing Wind",
+      "Blinkmoth Infusion",
+      " Chant of Vitu-Ghazi",
+      "Assert Authority"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-crawl-1776202788281-25",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What was the development code name for the \"Urza's Destiny\" expansion for \"Magic: The Gathering\", released in 1999?",
+    "options": [
+      "Burrito",
+      "Taquito",
+      "Enchilada",
+      "Chimichanga"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788281-26",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "Which of the following is NOT a class in Dungeons and Dragons 5e?",
+    "options": [
+      "Fighter ",
+      "Paladin ",
+      "Engineer ",
+      "Bard"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-crawl-1776202788281-27",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which of these cards from \"Magic: The Gathering\" has a flavor text that begins with \"Oi oi oi\"?",
+    "options": [
+      "Lotleth Troll",
+      "Albino Troll",
+      "Harvester Troll",
+      "Uthden Troll"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788281-28",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "In Dungeons and Dragons (5th edition), what stat do you normally add onto your initiative die roll?",
+    "options": [
+      "Speed",
+      "Strength",
+      "Wisdom",
+      "Dexterity"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-crawl-1776202788281-29",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In Chess, the Queen has the combined movement of which two pieces?",
+    "options": [
+      "Rook and King",
+      "Knight and Bishop",
+      "King and Knight",
+      "Bishop and Rook"
+    ],
+    "correctIndex": 3
+  }
+]

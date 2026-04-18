@@ -2455,5 +2455,395 @@
       "Great Pyramid of Giza"
     ],
     "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776202715187-0",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which of these founding fathers of the United States of America later became president?",
+    "options": [
+      "Alexander Hamilton",
+      "James Monroe",
+      "Samuel Adams",
+      "Roger Sherman"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776202715187-5",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "The Panama Canal was finished under the administration of which U.S. president?",
+    "options": [
+      "Franklin Delano Roosevelt",
+      "Herbert Hoover",
+      "Theodore Roosevelt",
+      "Woodrow Wilson"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776202715187-10",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which of the following is NOT classified as a Semetic language?",
+    "options": [
+      "Maltese",
+      "Sumerian",
+      "Akkadian",
+      "Mandaic"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776202715187-11",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who crowned Charlemagne as Holy Roman Emperor on Christmas Day in 800?",
+    "options": [
+      "Pope Urban IV",
+      "Pope Stephen V",
+      "Pope Leo III",
+      "Pope Valentine"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776202715188-14",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the first explorer to sail to North America?",
+    "options": [
+      "Christopher Columbus",
+      "Leif Erikson",
+      "Amerigo Vespucci",
+      "Ferdinand Magellan"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776202715188-16",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What year is considered to be the year that the British Empire ended?",
+    "options": [
+      "1986",
+      "1981",
+      "1997",
+      "1971"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776202715188-17",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which of these countries was sea charted in 1500 by the Portuguese maritime explorations?",
+    "options": [
+      "India",
+      "Brazil",
+      "Mozambique",
+      "Madagascar"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776202715188-19",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What is the name given to the series of confrontations between the UK and Iceland over North Atlantic fishing rights?",
+    "options": [
+      "The Lobster Wars",
+      "The Halibut Wars",
+      "The Mackerel Wars",
+      "The Cod Wars"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776202715188-20",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "The idea of Socialism was articulated and advanced by whom?",
+    "options": [
+      "Karl Marx",
+      "Vladimir Lenin",
+      "Joseph Stalin",
+      "Vladimir Putin"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "history-crawl-1776202715188-22",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "The Hagia Sophia was commissioned by which emperor of the Byzantine Empire?",
+    "options": [
+      "Justinian I",
+      "Constantine IV",
+      "Arcadius",
+      "Theodosius the Great"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "history-crawl-1776202715188-24",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What were the first states to break away from Yugoslavia?",
+    "options": [
+      "Macedonia, Montenegro",
+      "Slovenia, Macedonia",
+      "Slovenia, Croatia",
+      "Montenegro, Slovenia"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776202715188-25",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "The Spitfire L.F. Mk IX had what engine?",
+    "options": [
+      "Griffon 65",
+      "Merlin 50",
+      "Merlin 66",
+      "Merlin X"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523511990-5",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "During the Mongolian invasions of Japan, what were the Mongol boats mostly stopped by?",
+    "options": [
+      "Typhoons",
+      "Tornados",
+      "Economic depression",
+      "Samurai"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "history-crawl-1776523511990-7",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "What was the code name for the Allied invasion of Southern France on August 15th, 1944?",
+    "options": [
+      "Operation Overlord",
+      "Operation Dragoon",
+      "Operation Market Garden",
+      "Operation Torch"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776523511990-9",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "What year did the Battle of Agincourt take place?",
+    "options": [
+      "1463",
+      "1401",
+      "1415",
+      "1422"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523511990-15",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Who invented the \"Flying Shuttle\" in 1738; one of the key developments in the industrialization of weaving?",
+    "options": [
+      "James Hargreaves",
+      "Richard Arkwright",
+      "John Deere",
+      "John Kay"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776523511990-16",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Which king was killed at the Battle of Bosworth Field in 1485? ",
+    "options": [
+      "Edward V",
+      "Henry VII",
+      "Richard III",
+      "James I"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523511990-20",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "How was Socrates executed?",
+    "options": [
+      "Poison",
+      "Decapitation",
+      "Firing squad",
+      "Crucifixion "
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "history-crawl-1776523511990-22",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "The Thirty Years War ended with which treaty?",
+    "options": [
+      "Peace of Westphalia",
+      "Treaty of Versailles",
+      "Treaty of Paris",
+      "Peace of Prague"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "history-crawl-1776523511990-23",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "When did Jamaica receive its independence from England? ",
+    "options": [
+      "1492",
+      "1962",
+      "1963",
+      "1987"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776523511990-25",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "In what year did the Berlin Wall fall?",
+    "options": [
+      "1987",
+      "1991",
+      "1989",
+      "1993"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523511990-27",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "When was Adolf Hitler appointed as Chancellor of Germany?",
+    "options": [
+      "September 1, 1939",
+      "February 27, 1933",
+      "October 6, 1939",
+      "January 30, 1933"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776523526940-4",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "How many times was Albert Einstein married in his lifetime?",
+    "options": [
+      "Five",
+      "Thrice",
+      "Once",
+      "Twice"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776523526940-8",
+    "category": "history",
+    "difficulty": "easy",
+    "question": "Which one of these was not a beach landing site in the Invasion of Normandy?",
+    "options": [
+      "Gold",
+      "Juno",
+      "Silver",
+      "Sword"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523526940-10",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "The creator of the Enigma Cypher and Machine was of what nationality?",
+    "options": [
+      "American",
+      "British",
+      "Polish",
+      "German"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "history-crawl-1776523526940-11",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "When Christopher Columbus sailed to America, what was the first region he arrived in?",
+    "options": [
+      "Florida",
+      "The Bahamas Archipelago",
+      "Isthmus of Panama",
+      "Nicaragua"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776523526940-13",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which English king was married to Eleanor of Aquitaine?",
+    "options": [
+      "Richard I",
+      "Henry II",
+      "Henry I",
+      "Henry V"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776523526940-15",
+    "category": "history",
+    "difficulty": "hard",
+    "question": "Which King of England was faced with the Peasants' Revolt in 1381?",
+    "options": [
+      "Edward III",
+      "Edward II",
+      "Richard II",
+      "Henry IV"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "history-crawl-1776523526940-16",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "The crown of the Empire State Building was originally built for what purpose?",
+    "options": [
+      "Lightning Rod",
+      "Airship Dock",
+      "Antennae",
+      "Flag Pole"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "history-crawl-1776523526940-28",
+    "category": "history",
+    "difficulty": "medium",
+    "question": "Who was the first emperor of Rome?",
+    "options": [
+      "Julius Caesar",
+      "Pompey Magnus",
+      "Claudius",
+      "Augustus "
+    ],
+    "correctIndex": 3
   }
 ]

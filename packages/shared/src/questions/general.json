@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "general-crawl-1776202765830-0",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "Red Vines is a brand of what type of candy?",
+    "options": [
+      "Licorice",
+      "Lollipop",
+      "Chocolate",
+      "Bubblegum"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765830-1",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "To which language family does Kazakh belong?",
+    "options": [
+      "Turkic",
+      "Mongolic",
+      "Indo-European",
+      "Uralic"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765830-2",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "What is the German word for \"spoon\"?",
+    "options": [
+      "Gabel",
+      "Messer",
+      "Löffel",
+      "Essst&auml;bchen"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-3",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "Which of these Nicktoons were NOT originally a short on Oh Yeah! Cartoons before becoming their own series?",
+    "options": [
+      "Danny Phantom",
+      "ChalkZone",
+      "My Life as a Teenage Robot",
+      "The Fairly OddParents"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-4",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "The Fields Medal, one of the most sought after awards in mathematics, is awarded every how many years?",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "6"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-5",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "What alcoholic drink is mainly made from juniper berries?",
+    "options": [
+      "Vodka",
+      "Gin",
+      "Rum",
+      "Tequila"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-6",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "Which of the following is not the host of a program on NPR?",
+    "options": [
+      "Ben Shapiro",
+      "Terry Gross",
+      "Ira Glass",
+      "Peter Sagal"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-7",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "Before the 19th Century, the \"Living Room\" was originally called the...",
+    "options": [
+      "Open Room",
+      "Sitting Room",
+      "Loft",
+      "Parlor"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-8",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "Earth is located in which galaxy?",
+    "options": [
+      "The Mars Galaxy",
+      "The Galaxy Note",
+      "The Black Hole",
+      "The Milky Way Galaxy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-9",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "Which of the following is NOT one of Aesop's fables?",
+    "options": [
+      "The Fox and the Hound",
+      "The Fox and the Grapes",
+      "The Tortoise and the Hare",
+      "The Frog and the Ox"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-10",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "What name represents the letter \"M\" in the NATO phonetic alphabet?",
+    "options": [
+      "Matthew",
+      "Mark",
+      "Mike",
+      "Max"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-11",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "Linus Pauling, one of the only winners of multiple Nobel Prizes, earned his Nobel Prizes in Chemistry and what?",
+    "options": [
+      "Physics",
+      "Peace",
+      "Economics",
+      "Physiology/Medicine"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-12",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "Which best selling toy of 1983 caused hysteria, resulting in riots breaking out in stores?",
+    "options": [
+      "Transformers",
+      "Cabbage Patch Kids",
+      "Care Bears",
+      "Rubik's Cube"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-13",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "Scotch whisky and Drambuie make up which cocktail?",
+    "options": [
+      "Screwdriver",
+      "Sex on the Beach",
+      "Rusty Nail",
+      "Manhattan"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-14",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "What planet is not named after a Greek or Roman god?",
+    "options": [
+      "Jupiter",
+      "Mars",
+      "Earth",
+      "Mercury"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-15",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "Where is Apple Inc. headquartered?",
+    "options": [
+      "Redwood City, California",
+      "Redmond, Washington",
+      "Cupertino, California",
+      "Santa Monica, CA"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-16",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "Which mountain has the highest peak in North America?",
+    "options": [
+      "Mount Saint Elias, US/Canada border",
+      "Mount Logan, Canada",
+      "Denali, USA",
+      "Pico de Orizaba, Mexico"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "general-crawl-1776202765831-17",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "What company owns Outlook?",
+    "options": [
+      "Google",
+      "Apple",
+      "Yahoo",
+      "Microsoft"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-18",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "What was the name of Sqiudward's bad painting in the Spongebob episode \"Artist Unknown?\"",
+    "options": [
+      "Squidward en Repose",
+      "Rippy Bits",
+      "Tilted Perspectives",
+      "Bold and Brash"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-19",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "How long did it take the motorized window washers of the original World Trade Center to clean the entire exterior of the building?",
+    "options": [
+      "3 Weeks",
+      "1 Week",
+      "2 Months",
+      "1 Month"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-20",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "What is the romanized Russian word for \"winter\"?",
+    "options": [
+      "Leto",
+      "Zima",
+      "Vesna",
+      "Osen'"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-21",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "In the MMO RPG \"Realm of the Mad God\", what dungeon is widely considered to be the most difficult?",
+    "options": [
+      "Snake Pit",
+      "The Tomb of the Acient's",
+      "The Puppet Master's Theater",
+      "The Shatter's"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "general-crawl-1776202765831-22",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "The American company \"Campbell's\" is most well known for making what food product?",
+    "options": [
+      "Canned soups",
+      "Chocolate",
+      "Soft drinks",
+      "Sausages"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-23",
+    "category": "general",
+    "difficulty": "hard",
+    "question": "Which musician has collaborated with American producer Porter Robinson and released the 2016 song \"Shelter\"?",
+    "options": [
+      "Mat Zo",
+      "Madeon",
+      "deadmau5",
+      "Zedd"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-24",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "Which is the second largest native language spoken in Spain by numbers of speakers?",
+    "options": [
+      "Catalan",
+      "Portuguese",
+      "Spanish",
+      "French"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-25",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "What direction does the Statue of Liberty face?",
+    "options": [
+      "Southeast",
+      "Southwest",
+      "Northwest",
+      "Northeast"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-26",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "What style of beer will typically have a higher than average hop content?",
+    "options": [
+      "India Pale Ale",
+      "Stout",
+      "Extra Special Bitter",
+      "Scotch Ale"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "general-crawl-1776202765831-27",
+    "category": "general",
+    "difficulty": "medium",
+    "question": "\"Gum arabic\" is a natural gum consisting of the hardened sap of which tree species?",
+    "options": [
+      "Palm",
+      "Acacia",
+      "Ficus",
+      "Eucalyptus"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-28",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "What nuts are used in the production of marzipan?",
+    "options": [
+      "Peanuts",
+      "Almonds",
+      "Walnuts",
+      "Pistachios"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "general-crawl-1776202765831-29",
+    "category": "general",
+    "difficulty": "easy",
+    "question": "In which cardinal direction does the Sun rise from?",
+    "options": [
+      "West",
+      "North",
+      "South",
+      "East"
+    ],
+    "correctIndex": 3
+  }
+]

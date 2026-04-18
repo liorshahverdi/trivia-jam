@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "television-crawl-1776202777053-0",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "In \"It's Always Sunny in Philadelphia\" what was the name of Frank's wrestling persona?",
+    "options": [
+      "Bird of War",
+      "Day Man",
+      "The Maniac",
+      "The Trash Man"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777053-1",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "Who was Firestorm's rival during the original run of UK Robot Wars?",
+    "options": [
+      "Razer",
+      "Chaos 2",
+      "Panic Attack",
+      "Hypno Disc"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "television-crawl-1776202777053-2",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "What is the setting of the show \"Parks and Recreation\"?",
+    "options": [
+      "Eagleton, Indiana",
+      "Pasadena, California",
+      "London, England",
+      "Pawnee, Indiana"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-3",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "The 1985 Toyota Corolla \"AE86\" was the hero car for what anime? ",
+    "options": [
+      "Wangan Midnight",
+      "Ghost MF",
+      "Ex Driver",
+      "Initial D"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-4",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "In 2008, British celebrity chef Gordon Ramsay believes he almost died after suffering what accident in Iceland while filming?",
+    "options": [
+      "Crash landing when arriving at Keflav&iacute;k airport",
+      "A minor car accident in a snowstorm",
+      "Being served under-cooked chicken at his hotel",
+      "Slipping off a cliff, and nearly drowning in icy water"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-5",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "In \"Breaking Bad,\" which main character was planned to be killed in Season 1 but wasn't because the show creator liked the actor?",
+    "options": [
+      "Saul Goodman",
+      "Gus Fring",
+      "Hank Schrader",
+      "Jesse Pinkman"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-6",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "When did the TV show Rick and Morty first air on Adult Swim?",
+    "options": [
+      "2013",
+      "2014",
+      "2016",
+      "2015"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-7",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "Which of these Nickelodeon game shows aired first?",
+    "options": [
+      "Double Dare",
+      "Nick Arcade",
+      "Finders Keepers",
+      "Nickelodeon Guts"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-8",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "What's Dr. Doofenshmirtz first name?",
+    "options": [
+      "Hans",
+      "Hank",
+      "Heidi",
+      "Heinz"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-9",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "In AMC's TV Series \"The Walking Dead\" what are \"Zombies\" referred to as?",
+    "options": [
+      "Walkers",
+      "Creepers",
+      "Maggots",
+      "Hell Pigs"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-10",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "Which Star Trek race advances itself through assimilation?",
+    "options": [
+      "Borg",
+      "Vulcan",
+      "Betazoid",
+      "Klingon"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-11",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "What was the UK \"Who Wants to be a Millionaire?\" cheating scandal known as?",
+    "options": [
+      "Major Fraud",
+      "Ingram Cheater",
+      "Coughing Major",
+      "Millionaire Crime"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-12",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "Which WWF wrestler had the nickname \"The Ayatollah of Rock 'N' Rolla\"?",
+    "options": [
+      "Chris Jericho",
+      "Marty Jannetty",
+      "Scott Hall",
+      "Shawn Michaels"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-13",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "Which character does voice actress Tara Strong NOT voice?",
+    "options": [
+      "Twilight Sparkle",
+      "Timmy Turner",
+      "Harley Quinn",
+      "Bubbles (2016)"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-14",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "In \"Star Trek\", what is the Ferengi's First Rule of Acquisition?",
+    "options": [
+      "Never place friendship above profit",
+      "Greed is Eternal",
+      "Never allow family to stand in the way of opportunity",
+      "Once you have their money, you never give it back. "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-15",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "Who won Big Brother 2014 UK?",
+    "options": [
+      "Helen Wood",
+      "Christopher Hall",
+      "Pauline Bennett",
+      "Pavandeep \"Pav\" Paul"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-16",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "Guy's Grocery Games is hosted by which presenter?",
+    "options": [
+      "Guy Martin",
+      "Guy Fieri",
+      "Guy Ritchie",
+      "Ainsley Harriott"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "television-crawl-1776202777054-17",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "In \"Donkey Kong Country\", why does Donkey Kong want to know the secret of the crystal coconut?",
+    "options": [
+      "To find out where all the bananas are.",
+      "Because Diddy Kong forced him.",
+      "He's the big kahuna.",
+      "He wants to punish brutes."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "television-crawl-1776202777054-18",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "What is the name of the \"Flash\" and \"Arrow\" spinoff featuring a team of characters that have appeared on both shows?",
+    "options": [
+      "Heroes of Tomorrow",
+      "The Justice Society of America",
+      "Legends of Tomorrow",
+      "The Justice Society"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "television-crawl-1776202777054-19",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "In the cartoon 'SpongeBob SquarePants', what did the acronym E.V.I.L stand for?",
+    "options": [
+      "Every Villain Is Lemonade",
+      "Every Villain Is Limes",
+      "Every Villain Is Lemons",
+      "Each Villain Is Lemonade"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "television-crawl-1776202777054-20",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "Which track by \"Massive Attack\" is used for the theme of \"House\"? ",
+    "options": [
+      "Teardrop",
+      "Protection",
+      "Angel",
+      "Black Milk"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-21",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "In \"Star Trek\", who was the founder of the Klingon Empire and its philosophy?",
+    "options": [
+      "Kahless the Unforgettable",
+      "Lady Lukara of the Great Hall",
+      "Molor the Unforgiving",
+      "Dahar Master Kor"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-22",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "What was Nickelodeon's original name?",
+    "options": [
+      "MTVKids",
+      "KidsTV",
+      "Splat!",
+      "Pinwheel"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-23",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "Who won the 10th season of Big Brother in the United States?",
+    "options": [
+      "Dan Gheesling",
+      "Adam Jasinski",
+      "Hayden Moss",
+      "Dick Donato"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "television-crawl-1776202777054-24",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "In the Doctor Who universe, how many times can a time lord normally regenerate?",
+    "options": [
+      "11",
+      "13",
+      "15",
+      "12"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-25",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "Which of the following awards do Matt Stone and Trey Parker NOT have?",
+    "options": [
+      "Emmy",
+      "Tony",
+      "Grammy",
+      "Oscar"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777054-26",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "In the episode of SpongeBob SquarePants, \"Survival of the Idiots\", Spongebob called Patrick which nickname?",
+    "options": [
+      "Starfish",
+      "Larry",
+      "Dirty Dan",
+      "Pinhead"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777055-27",
+    "category": "television",
+    "difficulty": "easy",
+    "question": "In which British seaside town was the BBC sitcom \"Fawlty Towers\" set?",
+    "options": [
+      "Blackpool",
+      "Bournemouth",
+      "Great Yarmouth",
+      "Torquay"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "television-crawl-1776202777055-28",
+    "category": "television",
+    "difficulty": "medium",
+    "question": "Who plays the character of Dennis Reynolds on It's Always Sunny in Philadelphia?",
+    "options": [
+      "Rob McElhenney",
+      "Glenn Howerton",
+      "Charlie Day",
+      "Danny DeVito"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "television-crawl-1776202777055-29",
+    "category": "television",
+    "difficulty": "hard",
+    "question": "Prior to working at Wizards of the Coast, \"Mark Rosewater\" was a writer for which show?",
+    "options": [
+      "Roseanne",
+      "Boy Meets World",
+      "The X-Files",
+      "NYPD Blue"
+    ],
+    "correctIndex": 0
+  }
+]

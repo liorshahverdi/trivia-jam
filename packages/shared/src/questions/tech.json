@@ -1558,5 +1558,265 @@
       "AMD AM386"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1776202737849-1",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What major programming language does Unreal Engine 4 use?",
+    "options": [
+      "Assembly",
+      "C#",
+      "ECMAScript",
+      "C++"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776202737849-3",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "This mobile OS held the largest market share in 2012.",
+    "options": [
+      "Android",
+      "BlackBerry",
+      "Symbian",
+      "iOS"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776202737849-5",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "The Harvard architecture for micro-controllers added which additional bus?",
+    "options": [
+      "Address",
+      "Data",
+      "Instruction",
+      "Control"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1776202737849-10",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "How many kilobytes in one gigabyte (in decimal)?",
+    "options": [
+      "1024",
+      "1000000",
+      "1000",
+      "1048576"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1776202737849-11",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Which programming language was developed by Sun Microsystems in 1995?",
+    "options": [
+      "Java",
+      "Python",
+      "Solaris OS",
+      "C++"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1776202737849-17",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "The name of technology company HP stands for what?",
+    "options": [
+      "Howard Packmann",
+      "Husker-Pollosk",
+      "Hellman-Pohl",
+      "Hewlett-Packard"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776202737849-18",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What was the first company to use the term \"Golden Master\"?",
+    "options": [
+      "IBM",
+      "Microsoft",
+      "Google",
+      "Apple"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776202737849-21",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What did the name of the Tor Anonymity Network orignially stand for?",
+    "options": [
+      "The Onion Router",
+      "The Only Router",
+      "The Orange Router",
+      "The Ominous Router"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1776202737849-24",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "On a standard American QWERTY keyboard, what symbol will you enter if you hold the shift key and press 1?",
+    "options": [
+      "Exclamation Mark",
+      "Dollar Sign",
+      "Percent Sign",
+      "Asterisk"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1776202737849-26",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What is the most preferred image format used for logos in the Wikimedia database?",
+    "options": [
+      ".png",
+      ".jpeg",
+      ".svg",
+      ".gif"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1776202737849-27",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What does GHz stand for?",
+    "options": [
+      "Gigahotz",
+      "Gigahetz",
+      "Gigahatz",
+      "Gigahertz"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776202737849-28",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "Unix Time is defined as the number of seconds that have elapsed since when?",
+    "options": [
+      "Midnight, July 4, 1976",
+      "Midnight on the creator of Unix's birthday",
+      "Midnight, July 4, 1980",
+      "Midnight, January 1, 1970"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776523549563-4",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "What is the maximum value of a 32-bit signed binary integer?",
+    "options": [
+      "255",
+      "2,147,483,647",
+      "2048",
+      "9,223,372,036,854,775,807"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1776523549563-6",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "The series of the Intel HD graphics generation succeeding that of the 5000 and 6000 series (Broadwell) is called:",
+    "options": [
+      "HD Graphics 500",
+      "HD Graphics 700 ",
+      "HD Graphics 600",
+      "HD Graphics 7000"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1776523549563-8",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "What was Bitcoin's block size limit in 2010?",
+    "options": [
+      "1GB",
+      "1 KB",
+      "1 MB",
+      "1 TB"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "tech-crawl-1776523549563-9",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "On which computer hardware device is the BIOS chip located?",
+    "options": [
+      "Hard Disk Drive",
+      "Motherboard",
+      "Central Processing Unit",
+      "Graphics Processing Unit"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1776523549563-13",
+    "category": "tech",
+    "difficulty": "medium",
+    "question": "In programming, what do you call functions with the same name but different implementations?",
+    "options": [
+      "Overriding",
+      "Overloading",
+      "Abstracting",
+      "Inheriting"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "tech-crawl-1776523549563-16",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "What programming language was GitHub written in?",
+    "options": [
+      "JavaScript",
+      "Python",
+      "Lua",
+      "Ruby"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "tech-crawl-1776523549563-20",
+    "category": "tech",
+    "difficulty": "easy",
+    "question": "Which computer language would you associate Django framework with?",
+    "options": [
+      "Python",
+      "C#",
+      "C++",
+      "Java"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "tech-crawl-1776523549563-23",
+    "category": "tech",
+    "difficulty": "hard",
+    "question": "The internet domain .fm is the country-code top-level domain for which Pacific Ocean island nation?",
+    "options": [
+      "Fiji",
+      "Tuvalu",
+      "Micronesia",
+      "Marshall Islands"
+    ],
+    "correctIndex": 2
   }
 ]

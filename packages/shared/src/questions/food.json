@@ -1233,5 +1233,395 @@
       "A type of apricot"
     ],
     "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-0",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where in the world would you most expect to be served Dholl Puri?",
+    "options": [
+      "Afghanistan",
+      "Cuba",
+      "Greece",
+      "Mauritius"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-1",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these is a popular drink in Ukraine?",
+    "options": [
+      "Schnapps",
+      "Grappa",
+      "Horilka",
+      "Waragi"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-2",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Popular in the Netherlands, what type of food is a frikandel?",
+    "options": [
+      "Cheese",
+      "Bread",
+      "Sausage ",
+      "Cake"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-3",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Blanche Ames, Lord Lambourne and Willis Williams are all varieties of _________",
+    "options": [
+      "Grape",
+      "Banana",
+      "Cherry",
+      "Apple "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-4",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "In which country is sombai a popular drink?",
+    "options": [
+      "Cambodia",
+      "Taiwan",
+      "Spain",
+      "Belgium"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-5",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which of these fruits does not contain a stone?",
+    "options": [
+      "Nectarine",
+      "Peach",
+      "Strawberry",
+      "Cherry"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-6",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Eggwash is generally used for what purpose?",
+    "options": [
+      "Cleaning vegetables",
+      "Icing cakes",
+      "Glazing pastry",
+      "Cocktail bases"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-7",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Where in the world are peas originally from?",
+    "options": [
+      "Central Asia",
+      "Africa",
+      "The Middle East",
+      "South America"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-8",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What shape is macaroni?",
+    "options": [
+      "Anulus",
+      "Tubular ",
+      "Spiral",
+      "Shell"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-9",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "From what country does Advocaat originate?",
+    "options": [
+      "France",
+      "Poland",
+      "Turkey",
+      "The Netherlands"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-10",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these drinks would you associate with Belgium?",
+    "options": [
+      "Brennivín",
+      "Jenever",
+      "Akevitt",
+      "Gin"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-11",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Tandoori Chicken is a dish that is most associated with which part of the world?",
+    "options": [
+      "Scotland",
+      "Cameroon",
+      "Mauritius",
+      "India"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-12",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Rösti is a dish that is most associated with which part of the world?",
+    "options": [
+      "Vietnam",
+      "Barbados",
+      "Ghana",
+      "Switzerland"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-13",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which country is associated with the drink tuba?",
+    "options": [
+      "The Phillipines",
+      "Romania",
+      "Turkey",
+      "Estonia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-14",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these is a type of Mexican cheese dip?",
+    "options": [
+      "Salsa",
+      "Guacamole",
+      "Hummus",
+      "Queso"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-15",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What breakfast item takes its name from the Yiddish word for 'ring' or 'bracelet'?",
+    "options": [
+      "A bagel",
+      "A croissant",
+      "A muffin",
+      "A doughnut"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-16",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "Which Italian phrase is used to describe pasta cooked only until it offers a slight resistance when bitten?",
+    "options": [
+      "Al dente ",
+      "Tartilli",
+      "Forte Benne",
+      "Parpa Delle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-17",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What Middle Eastern dish is made of spiced, mashed chickpeas which are then deep fried?",
+    "options": [
+      "Hummus",
+      "Baba ganoush",
+      "Falafel",
+      "Tabbouleh"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-18",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which drink, which has been illegal but is being imported once again, is made from the leaves of the wormwood plant?",
+    "options": [
+      "Gin",
+      "Absinthe ",
+      "Port",
+      "Whisky"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-19",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "The Marine Snail Is Better Known As What",
+    "options": [
+      "Escargot",
+      "Mussel",
+      "Whelk ",
+      "Conch"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-20",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What Chinese dish extends Chop suey with the addition of stir-fried noodles?",
+    "options": [
+      "Kung Pao chicken",
+      "Mapo doufu",
+      "Xiao Long Bao",
+      "Chow mein"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-21",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Savoy And Late Flat Dutch Are Both Varieties Of Which Vegetable?",
+    "options": [
+      "Onions",
+      "Cabbage ",
+      "Carrots",
+      "Broccoli"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-22",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "Which of these drinks would you associate with Hungary?",
+    "options": [
+      "Bourbon",
+      "Becherovka",
+      "Unicum",
+      "Pastis"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-23",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which cereal is the only one grown standing in water?",
+    "options": [
+      "Rice ",
+      "Maize",
+      "Wheat",
+      "Barley"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-24",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "What Type Of Vegetable Is A Marrow Fat?",
+    "options": [
+      "A Squash",
+      "A Pea ",
+      "A mushroom",
+      "A root"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-25",
+    "category": "food",
+    "difficulty": "hard",
+    "question": "What Does Demi Sec Mean On A Champagne Bottle?",
+    "options": [
+      "Dry",
+      "Sweet ",
+      "Light",
+      "Crisp"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "food-trivia-1776523543955-26",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which Dish Was Named After A 19th Century Russian Count?",
+    "options": [
+      "Chicken Kiev",
+      "Moussaka",
+      "Goulash",
+      "Beef Stroganoff "
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "food-trivia-1776523543955-27",
+    "category": "food",
+    "difficulty": "medium",
+    "question": "Which of these cheeses would you be most likely to find in a lasagne?",
+    "options": [
+      "Gorgonzola",
+      "Feta",
+      "Mozzarella",
+      "Camembert"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "food-trivia-1776523543955-28",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "What is the name of a long metal or wooden pin used to secure food during barbecuing?",
+    "options": [
+      "Skewer",
+      "Spatula",
+      "Tongs",
+      "Basting brush"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "food-trivia-1776523543955-29",
+    "category": "food",
+    "difficulty": "easy",
+    "question": "In which country is guinness a popular drink?",
+    "options": [
+      "Romania",
+      "Ireland",
+      "Mongolia",
+      "Finland"
+    ],
+    "correctIndex": 1
   }
 ]

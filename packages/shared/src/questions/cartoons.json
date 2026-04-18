@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "cartoons-crawl-1776202810636-0",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of the following did not feature in the cartoon 'Wacky Races'?",
+    "options": [
+      "The Dragon Wagon",
+      "The Bouldermobile",
+      "The Crimson Haybailer",
+      "The Compact Pussycat"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-1",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Wendy O. Koopa appeared in the Super Mario DIC Cartoons, but what was she known as?",
+    "options": [
+      "Sweetie Pie",
+      "Wendy Pie",
+      "Kootie Pie",
+      "Honey Pie"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-2",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is Everest's favorite food in the Nickelodeon/Nick Jr. series \"PAW Patrol\"?",
+    "options": [
+      "Chicken",
+      "Steak",
+      "Caribou",
+      "Liver"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-3",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In \"SpongeBob SquarePants\", what is the name of Sandy Cheek's place of residence?",
+    "options": [
+      "Sandy's Treedome",
+      "\"The Dome\"",
+      "Sandy's Bubble",
+      "Auquatic Reseach Centre"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-4",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "What was Maggie Simpson's first canonical word, not including the Tracey Ullman shorts?",
+    "options": [
+      "Daddy.",
+      "Sequel?",
+      "Ja!",
+      "Rusty!"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-5",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What was the name of the sea witch in the 1989 Disney film \"The Little Mermaid\"?",
+    "options": [
+      "Madam Mim",
+      "Maleficent",
+      "Lady Tremaine",
+      "Ursula"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-6",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "Who voice acted the character Hiccup in the movie \"How to Train Your Dragon\"?",
+    "options": [
+      "Jack Brauchel",
+      "Jay Baruchel",
+      "John Powell",
+      "Gerard Butler"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-7",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "What is Scooby Doo's full name?",
+    "options": [
+      "Scoobert Doo",
+      "Scooter Doo",
+      "Scooby Dooby Doo",
+      "Scoobity Doo"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-8",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who is Winnie the Pooh's gloomy donkey friend?",
+    "options": [
+      "Piglet",
+      "Eeyore",
+      "Tigger",
+      "Kanga"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-9",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In the TV show \"Rick and Morty\", Rick uses the catchphrase \"Wubba Lubba Dub Dub\", which means what in Birdperson?",
+    "options": [
+      "I pray that my life ends soon.",
+      "I am in great pain, please help me.",
+      "Lets get this party started!",
+      "I am suffering, please help me."
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810636-10",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is Scooby-Doo's real name?",
+    "options": [
+      "Scooter",
+      "Scrappy",
+      "Shooby",
+      "Scoobert"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-11",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which city did Anger berate for ruining pizza in \"Inside Out\"?",
+    "options": [
+      "Minnesota",
+      "Washington",
+      "California",
+      "San Francisco"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-12",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In the Dreamworks animated movie \"Madagascar,\" who voices Maurice the lemur?",
+    "options": [
+      "Jack Black",
+      "Sacha Baron Cohen",
+      "Chris Rock",
+      "Cedric the Entertainer"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-13",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is the relationship between Rick and Morty in the show \"Rick and Morty\"?",
+    "options": [
+      "Father and Son",
+      "Grandfather and Grandson",
+      "Best Friends",
+      "Crimefighting Partners"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-14",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In \"Gravity Falls\", the character Bill Cipher remarks that \"the universe is what?\"",
+    "options": [
+      "An illusion ",
+      "A simulation",
+      "A hologram ",
+      "Corrupting"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-15",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In the show \"Steven Universe\", who are the main two employees of The Big Donut?",
+    "options": [
+      "Steven and James",
+      "Erik and Julie",
+      "Bob and May",
+      "Sadie and Lars"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-16",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In \"Avatar: The Last Airbender\", which element does Aang begin to learn after being defrosted?",
+    "options": [
+      "Air",
+      "Water",
+      "Earth",
+      "Fire"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-17",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In the show \"Fat Albert and the Cosby Kids\", what is the name of the characters' fictional gang?",
+    "options": [
+      "The Trash Troupe",
+      "The Junkyard Gang",
+      "The Scrapyard Seven",
+      "The Rotten Posse"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-18",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What was the number on Gerald's shirt in \"Hey Arnold!\"?",
+    "options": [
+      "88",
+      "38",
+      "83",
+      "33"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-19",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What was the first Disney movie to use CGI?",
+    "options": [
+      "The Black Cauldron",
+      "Tron",
+      "Toy Story",
+      "Fantasia"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-20",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "What was the release date of the first episode of \"The Powerpuff Girls\"?",
+    "options": [
+      "June 25, 1999",
+      "July 28, 2000",
+      "November 18, 1998",
+      "April 14, 2001"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-21",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Who voiced Finn in Adventure Time?",
+    "options": [
+      "Nolan North",
+      "Jeremy Shada",
+      "John DiMaggio",
+      "Tom Kenny"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-22",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In the 1993 Disney animated series \"Bonkers\", what is the name of Bonker's second partner?",
+    "options": [
+      "Miranda Wright",
+      "Dick Tracy",
+      "Eddie Valiant",
+      "Dr. Ludwig von Drake"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-23",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In the show \"Foster's Home For Imaginary Friends\", which character had an obsession with basketball?",
+    "options": [
+      "Wilt",
+      "Coco",
+      "Mac",
+      "Cheese"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-24",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Before becoming the Autobot leader, Optimus Prime was known by what name on Cybertron?",
+    "options": [
+      "Long Haul",
+      "P-138",
+      "Teletran-1",
+      "Orion Pax"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-25",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In the \"Star Wars\" universe, what species is Grand Admiral Thrawn?",
+    "options": [
+      "Gungans",
+      "Pantorans",
+      "Twi'lek",
+      "Chiss"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-26",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which Sanrio character was introduced in 1996?",
+    "options": [
+      "My Melody",
+      "Pompompurin",
+      "Badtz-Maru",
+      "Kerropi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-27",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who created the Cartoon Network series \"Regular Show\"?",
+    "options": [
+      "Ben Bocquelet",
+      "J. G. Quintel",
+      "Pendleton Ward",
+      "Rebecca Sugar"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-28",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Adam West was the mayor of which cartoon town?",
+    "options": [
+      "Quahog",
+      "Springfield",
+      "South Park",
+      "Langley Falls"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-crawl-1776202810637-29",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In South Park, what is Stan's surname?",
+    "options": [
+      "Stotch",
+      "Marsh",
+      "Broflovski",
+      "Tweak"
+    ],
+    "correctIndex": 1
+  }
+]

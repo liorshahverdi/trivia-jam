@@ -1,1 +1,392 @@
-[]
+[
+  {
+    "id": "video-games-crawl-1776202782688-0",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which souls game was not directed by Hidetaka Miyazaki?",
+    "options": [
+      "Demon Souls",
+      "Dark Souls",
+      "Dark Souls 2",
+      "Dark Souls 3"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-crawl-1776202782688-1",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What was the world's first video game?",
+    "options": [
+      "Spacewar!",
+      "Pong",
+      "Draughts",
+      "Space Travel"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-crawl-1776202782688-2",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the video game Team Fortress 2, which of these is NOT a primary?",
+    "options": [
+      "Scattergun",
+      "Grenade Launcher",
+      "Rocket Launcher",
+      "Medigun"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-3",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In \"Overwatch\", what is the name of the company that made D.Va's mech?",
+    "options": [
+      "MI8",
+      "KPAMC",
+      "MEKA",
+      "JSAMB"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-crawl-1776202782688-4",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the game Battleblock Theater, what was the name of the voice actor who voiced the narrator?",
+    "options": [
+      "Will Stamper",
+      "Steve Blum",
+      "Richard Epcar",
+      "Yuri Lowenthal"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-5",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "On the 6th of June 2006, what was the name of the infamous glitch that occurred in the MMO RuneScape?",
+    "options": [
+      "Noclip glitch",
+      "Party-hat Duplication Glitch",
+      "TzHaar Massacre",
+      "The Falador Massacre"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-6",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What happened to Half-Life 2 prior to its release, which resulted in Valve starting over the development of the game?",
+    "options": [
+      "They weren't satisfied with the result",
+      "The source code got leaked",
+      "The story was not good enough",
+      "Way too many bugs to be fixed"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-crawl-1776202782688-7",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What's the name of the halloween-related Sims 4 Stuff Pack released September 29th, 2015?",
+    "options": [
+      "Ghosts n' Ghouls",
+      "Nerving Nights",
+      "Fearful Frights",
+      "Spooky Stuff"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-8",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In \"Rainbow Six: Siege\", which of the following operators cannot breach reinforced walls?",
+    "options": [
+      "Thermite",
+      "Buck",
+      "Hibana",
+      "Maverick"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-crawl-1776202782688-9",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the \"Halo\" series, what is the name of the race of aliens humans refer to as \"Grunts\"?",
+    "options": [
+      "Huragok",
+      "Unggoy",
+      "Sangheili",
+      "Yanme'e"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-crawl-1776202782688-10",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In the video game series \"Disgaea\", what word does the character Prinny have to include in all sentences they speak?",
+    "options": [
+      "\"Master\"",
+      "\"Plip\"",
+      "\"Boom\"",
+      "\"Dood\""
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-11",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the video game \"Postal 2\", what is the name of Postal Dude's dog?",
+    "options": [
+      "Snoopy",
+      "Krotchy",
+      "Duke",
+      "Champ"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-12",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What was the name of Sonic the Hedgehog's original human girlfriend?",
+    "options": [
+      "Celeste",
+      "Sierra",
+      "Nina",
+      "Madonna"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-13",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which Game Boy from the Game Boy series of portable video game consoles was released first?",
+    "options": [
+      "Game Boy Color",
+      "Game Boy Advance",
+      "Game Boy Micro",
+      "Game Boy Advance SP"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-14",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which race in Guild Wars 2 believes in the Eternal Alchemy?",
+    "options": [
+      "Asura",
+      "Humans",
+      "Norn",
+      "Charr"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-15",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What is the real name of the Scout in \"Team Fortress 2\"?",
+    "options": [
+      "Lance",
+      "Walter",
+      "John",
+      "Jeremy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-16",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In Slay the Spire, which of the following is NOT a playable character?",
+    "options": [
+      "Silent",
+      "Defect",
+      "Stoneheart",
+      "Ironclad"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-crawl-1776202782688-17",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In Rainbow 6 Siege, what is Ela and Zofia's last name?",
+    "options": [
+      "Bosak",
+      "Kessikbayev",
+      "Zenaviev",
+      "Melnikova"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-18",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In the game \"Undertale\", who was Mettaton's creator?",
+    "options": [
+      "Alphys",
+      "Undyne",
+      "Sans",
+      "Asgore"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-19",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What year was the video game streaming platform TwitchTV founded?",
+    "options": [
+      "2012",
+      "2011",
+      "2010",
+      "2014"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-crawl-1776202782688-20",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What is the full name of the protagonist from the SNES game Clock Tower?",
+    "options": [
+      "Jennifer Simpson",
+      "Jennifer Barrows",
+      "Jennifer Cartwright",
+      "Jennifer Maxwell"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-21",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of these is not a character in the game, \"Lethal League\"?",
+    "options": [
+      "Rex",
+      "Switch",
+      "Candyman",
+      "Sonata"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-22",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of the following was not developed by Bethesda?",
+    "options": [
+      "Fallout: New Vegas",
+      "Fallout 3",
+      "The Elder Scrolls V: Skyrim",
+      "Fallout 4"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-23",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What ingredient is NOT used to craft a cake in Minecraft?",
+    "options": [
+      "Wheat",
+      "Bread",
+      "Milk",
+      "Egg"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-crawl-1776202782688-24",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In the \"Call Of Duty: Zombies\" map \"Moon\", there is a secondary called the QED. What does QED stand for?",
+    "options": [
+      "Quantum Entanglement Device",
+      "Quad Ectoplasmic Driver",
+      "Question Every Dog",
+      "Quality Edward Device"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-25",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Who created the indie adventure game \"Night in the Woods\"?",
+    "options": [
+      "Ron Gilbert",
+      "Tim Schafer",
+      " Tommy Refenes",
+      "Alec Holowka"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-26",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Of the following space shooter games, which came out first?",
+    "options": [
+      "Space Invaders",
+      "Galaxian",
+      "Galaga",
+      "Sinistar"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-27",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What is the name of the talking cat in Persona 5?",
+    "options": [
+      "Morgana",
+      "Teddie",
+      "Marie",
+      "Ryuji"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-crawl-1776202782688-28",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What was the code name given to Sonic the Hedgehog 4 during its development?",
+    "options": [
+      "Project Bluespike",
+      "Project Roboegg",
+      "Project Darksphere",
+      "Project Needlemouse"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-crawl-1776202782688-29",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of these is NOT a name of a playable character in Apex Legends?",
+    "options": [
+      "Revenant",
+      "Crypto",
+      "Viper",
+      "Wattson"
+    ],
+    "correctIndex": 2
+  }
+]

@@ -1,1 +1,522 @@
-[]
+[
+  {
+    "id": "art-crawl-1776202749047-0",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Who painted the painting \"Nighthawks\"?",
+    "options": [
+      "Johannes Vermeer",
+      "Vincent van Gogh",
+      "Edward Hopper",
+      "Salvador Dali"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-1",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "What nationality was the famous artist Van Gogh?",
+    "options": [
+      "French",
+      "Russian",
+      "Polish",
+      "Dutch"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-2",
+    "category": "art",
+    "difficulty": "easy",
+    "question": " What color is produced by mixing black and white?",
+    "options": [
+      "Black",
+      "Grey",
+      "Brown",
+      "White"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776202749047-3",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "The painting \"The Starry Night\" by Vincent van Gogh was part of which art movement?",
+    "options": [
+      "Romanticism",
+      "Neoclassical",
+      "Post-Impressionism",
+      "Impressionism"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-4",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which artist's style was to use small different colored dots to create a picture?",
+    "options": [
+      "Georges Seurat",
+      "Paul Cézanne",
+      "Vincent Van Gogh",
+      "Henri Rousseau"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-5",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which time signature is commonly known as \"Cut Time?\"",
+    "options": [
+      "4/4",
+      "2/2",
+      "6/8",
+      "3/4"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776202749047-6",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "What was the major distinction between the English and French Gothic styles of architecture?",
+    "options": [
+      "Fan vaulting",
+      "Pinnacles",
+      "Gargoyles",
+      "Hemispherical Domes"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-7",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Which Van Gogh painting depicts the view from his asylum in Saint-Rémy-de-Provence in southern France?",
+    "options": [
+      "Wheatfields with Crows",
+      "The Sower with Setting Sun",
+      "The Starry Night",
+      "The Church at Auvers"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-8",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "Albrecht Dürer's birthplace and place of death were in...",
+    "options": [
+      "Augsburg",
+      "Bamberg",
+      "Nürnberg",
+      "Berlin"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-9",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "In \"Last Supper\" by Leonardo Da Vinci, what two colors were the robes worn by Jesus?",
+    "options": [
+      "Red and Blue",
+      "Red and White",
+      "Red and Yellow",
+      "Red and Black"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-10",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who painted the Sistine Chapel?",
+    "options": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Pablo Picasso",
+      "Raphael"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776202749047-11",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which of these are the name of a famous marker brand?",
+    "options": [
+      "Copic",
+      "Dopix",
+      "Cofix",
+      "Marx"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-12",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which artist painted \"The Treachery of Images,\" a painting of a pipe with the description \"this is not a pipe\"?",
+    "options": [
+      "Matisse",
+      "Modigliani",
+      "Munch ",
+      "Magritte"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-13",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "What is the world's oldest known piece of fiction?",
+    "options": [
+      "Papyrus of Ani",
+      "Epic of Gilgamesh",
+      "Code of Hammurabi",
+      "Rosetta Stone"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776202749047-14",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "What was the first successful and commercially viable photographic technique?",
+    "options": [
+      "Collodion process",
+      "The Turin Shroud",
+      "Kodachrome film",
+      "The Daguerreotype"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-15",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "The painting \"Guernica\" by Pablo Picasso expressed emotions of dread in response to which war?",
+    "options": [
+      "World War I",
+      "The Crimean War",
+      "Spanish-American War",
+      "Spanish Civil War"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-16",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who sculpted the statue of David?",
+    "options": [
+      "Michelangelo",
+      "Gian Lorenzo Bernini",
+      "Auguste Rodin",
+      "Donatello"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-17",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "What were Marcel Duchamp's readymades?",
+    "options": [
+      "a series focused on color and light as opposed to line and shape",
+      "paintings with a barely visible outlined square",
+      "utilitarian objects elevated to the status of art",
+      "a group of identical steel boxes jutting from the wall "
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-18",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "Which art movement was Pablo Picasso known for co-founding?",
+    "options": [
+      "Futurism",
+      "Expressionism",
+      "Cubism",
+      "Impressionism"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-19",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "How many paint and pastel versions of \"The Scream\" is Norwegian painter Edvard Munch believed to have produced?",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "2"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-20",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which one of these colors are not featured in Mondrian's Broadway Boogie-Woogie?",
+    "options": [
+      "Blue",
+      "Yellow",
+      "Green",
+      "Red"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-21",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Who painted \"The Scream\"?",
+    "options": [
+      "Vincent Van Gogh",
+      "Picasso",
+      "Henri Matisse",
+      "Edvard Munch"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-22",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "What French sculptor designed the Statue of Liberty? ",
+    "options": [
+      "Jean-Léon Gér&ocirc;me",
+      "Auguste Rodin",
+      "Henri Matisse",
+      "Frédéric Auguste Bartholdi"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-23",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "Paul Gauguin moved to which country in 1895?",
+    "options": [
+      "Tahiti",
+      "France",
+      "Atuona",
+      "Lithuania"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-24",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which of these paintings did Johannes Vermeer not paint?",
+    "options": [
+      "Girl with a Pearl Earring",
+      "The Milkmaid",
+      "Bacchus",
+      "The Lacemaker"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-25",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who painted The Starry Night?",
+    "options": [
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Michelangelo"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776202749047-26",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which one of these paintings is not by Caspar David Friedrich?",
+    "options": [
+      "The Sea of Ice",
+      "Wanderer above the Sea of Fog",
+      "The Monk by the Sea",
+      "The Black Sea"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776202749047-27",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "Who painted \"American Gothic\"?",
+    "options": [
+      "Anita Malfatti",
+      "Grant Wood",
+      "Pablo Picasso",
+      "Marc Chagall"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776202749047-28",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who painted \"Swans Reflecting Elephants\", \"Sleep\", and \"The Persistence of Memory\"?",
+    "options": [
+      "Salvador Dali",
+      "Jackson Pollock",
+      "Vincent van Gogh",
+      "Edgar Degas"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776202749047-29",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "What is the name of the Japanese art of folding paper into decorative shapes and figures?",
+    "options": [
+      "Sumi-e",
+      "Origami",
+      "Ukiyo-e",
+      "Haiku"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776523560766-0",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Who designed the Chupa Chups logo?",
+    "options": [
+      "Salvador Dali",
+      "Pablo Picasso",
+      "Andy Warhol",
+      "Vincent van Gogh"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "art-crawl-1776523560766-1",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who painted the Mona Lisa?",
+    "options": [
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet",
+      "Vincent van Gogh"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776523560766-2",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "What is another name for La Gioconda / La Joconde?",
+    "options": [
+      "The Girl with a Pearl Earring",
+      "The Starry Night",
+      "The Mona Lisa",
+      "Sunflowers"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776523560766-9",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Who painted the epic mural Guernica?",
+    "options": [
+      "Francisco Goya",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Henri Matisse"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776523560766-12",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Who painted \"The Starry Night\"?",
+    "options": [
+      "Edvard Munch",
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Claude Monet"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776523560766-16",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which Greek sculptor designed the Athena Parthenos statue inside the Parthenon?",
+    "options": [
+      "Scopas",
+      "Hesiod",
+      "Praxiteles",
+      "Phidias"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776523560766-18",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "Which painting was not made by Vincent Van Gogh?",
+    "options": [
+      "Café Terrace at Night",
+      "Bedroom In Arles",
+      "The Ninth Wave",
+      "Starry Night"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "art-crawl-1776523560766-20",
+    "category": "art",
+    "difficulty": "medium",
+    "question": "Which artist's studio was known as 'The Factory'?",
+    "options": [
+      "Roy Lichtenstein",
+      "David Hockney",
+      "Peter Blake",
+      "Andy Warhol"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "art-crawl-1776523560766-22",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "What year did Albrecht Dürer create the painting \"The Young Hare\"?",
+    "options": [
+      "1702",
+      "1502",
+      "1402",
+      "1602"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-crawl-1776523560766-23",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "When was Salvador Dali's painting, \"The Persistence of Memory,\" completed?",
+    "options": [
+      "1932",
+      "1929",
+      "1931",
+      "1934"
+    ],
+    "correctIndex": 2
+  }
+]
