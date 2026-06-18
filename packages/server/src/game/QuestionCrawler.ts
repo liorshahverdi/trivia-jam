@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import type pg from 'pg';
 import { getPool } from '../db.js';
 import { clearQuestionCache } from './QuestionPicker.js';
+import { refreshCurrentEventsQuestions } from './CurrentEventsSource.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -195,6 +196,10 @@ function deduplicateQuestions(questions: Question[]): Question[] {
 }
 
 async function crawlCategoryToDb(pool: pg.Pool, category: Category): Promise<number> {
+  if (category === 'current-events') {
+    return refreshCurrentEventsQuestions(pool);
+  }
+
   const fetched = await fetchQuestions(category, 30);
   if (fetched.length === 0) return 0;
 
