@@ -1,6 +1,7 @@
 import { useGameStore } from '../../stores/gameStore';
 import Timer from '../../components/Timer';
 import ProgressBar from '../../components/ProgressBar';
+import { decodeHtmlEntities } from '../../utils/html';
 
 const ANSWER_COLORS = [
   'border-jam-red bg-jam-red/20',
@@ -56,7 +57,7 @@ export default function PlayerAnswerScreen({ submitAnswer }: PlayerAnswerScreenP
       {/* Question */}
       <div className="flex-1 flex flex-col">
         <h2 className="text-xl font-bold text-center mb-6 leading-relaxed">
-          {currentQuestion.question}
+          {decodeHtmlEntities(currentQuestion.question)}
         </h2>
 
         {/* Answer buttons */}
@@ -75,7 +76,7 @@ export default function PlayerAnswerScreen({ submitAnswer }: PlayerAnswerScreenP
                     : 'active:scale-95'
                 }`}
               >
-                {option}
+                {decodeHtmlEntities(option)}
               </button>
             );
           })}

@@ -50,7 +50,7 @@ export function useSocket() {
     s.on(ServerEvents.ROOM_PLAYER_JOINED, (player) => storeRef.current.addPlayer(player));
     s.on(ServerEvents.ROOM_PLAYER_LEFT, ({ playerId }) => storeRef.current.removePlayer(playerId));
     s.on(ServerEvents.ROOM_STATE, (state) => storeRef.current.restoreState(state));
-    s.on(ServerEvents.ROOM_ERROR, ({ message }) => console.error('Room error:', message));
+    s.on(ServerEvents.ROOM_ERROR, ({ message }) => storeRef.current.setRoomError(message));
 
     s.on(ServerEvents.GAME_PHASE, (phase) => storeRef.current.setPhase(phase));
     s.on(ServerEvents.GAME_MODE_SET, ({ mode }) => storeRef.current.setMode(mode));
@@ -88,9 +88,10 @@ export function useSocket() {
       const s = getSocket();
       s.emit(ClientEvents.ROOM_JOIN, { code, name }, (data: any) => {
         if (data.error) {
-          alert(data.error);
+          store.setRoomError(data.error);
           return;
         }
+        store.setRoomError(null);
         store.setRole('player');
         store.setRoomCode(data.room.code);
         store.setPlayerId(s.id!);

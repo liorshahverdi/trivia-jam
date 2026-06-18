@@ -14,7 +14,7 @@ interface Props {
 }
 
 export default function HostLobbyScreen({ setMode, selectCategories, startGame }: Props) {
-  const { roomCode, players, mode, selectedCategories } = useGameStore();
+  const { roomCode, players, mode, selectedCategories, roomError } = useGameStore();
   const [localCategories, setLocalCategories] = useState<Category[]>(selectedCategories);
 
   const toggleCategory = (cat: Category) => {
@@ -39,8 +39,14 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
       </div>
 
       <p className="text-white/50 text-lg mb-10 animate-slide-up">
-        Go to <span className="text-jam-yellow font-bold">{window.location.origin}</span> on your phone to join!
+        Go to <span className="text-jam-yellow font-bold">{`${window.location.origin}/trivia-jam/`}</span> on your phone to join!
       </p>
+
+      {roomError && (
+        <p role="alert" className="mb-8 w-full max-w-2xl rounded-xl border border-jam-red/40 bg-jam-red/15 px-4 py-3 text-center text-sm font-semibold text-jam-red animate-slide-up">
+          {roomError}
+        </p>
+      )}
 
       {/* Connected Players */}
       <div className="w-full max-w-4xl mb-10 animate-slide-up">
@@ -116,6 +122,13 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
       >
         Start Game
       </button>
+      {!canStart && (
+        <p className="mt-3 text-white/50 text-sm text-center">
+          {players.length === 0
+            ? 'Waiting for at least one player to join.'
+            : 'Select at least one category to start.'}
+        </p>
+      )}
     </div>
   );
 }

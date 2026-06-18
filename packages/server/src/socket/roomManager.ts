@@ -56,9 +56,14 @@ export function joinRoom(code: string, playerName: string, playerId: string): { 
   if (room.players.length >= MAX_PLAYERS) return null;
   if (room.phase !== 'lobby') return null;
 
+  const trimmedName = playerName.trim();
+  const normalizedName = trimmedName.toLocaleLowerCase();
+  if (!trimmedName) return null;
+  if (room.players.some(p => p.name.trim().toLocaleLowerCase() === normalizedName)) return null;
+
   const player: Player = {
     id: playerId,
-    name: playerName,
+    name: trimmedName,
     avatar: pickAvatar(room),
     connected: true,
     score: 0,
@@ -132,6 +137,25 @@ export function setCategories(code: string, categories: Category[]): Room | unde
   const room = rooms.get(code);
   if (room) room.selectedCategories = categories;
   return room;
+}
+
+export function canStartGame(room: Room): { ok: true } | { ok: false; message: string } {
+  if (room.phase !== 'lobby') {
+    return { ok: false, message: 'Game has already started.' };
+  }
+  if (room.players.filter(p => p.connected).length === 0) {
+    return { ok: false, message: 'At least one player must join before starting.' };
+  }
+  if (room.selectedCategories.length === 0) {
+    return { ok: false, message: 'Select at least one category to start.' };
+  }
+  if (room.mode === 'teams' && room.players.filter(p => p.connected).length % 2 !== 0) {
+    return {
+      ok: false,
+      message: 'Teams mode needs an even number of players. Add or remove one player before starting.',
+    };
+  }
+  return { ok: true };
 }
 
 export function assignTeams(room: Room): void {
