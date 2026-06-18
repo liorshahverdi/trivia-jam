@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useGameStore } from '../../stores/gameStore';
 
 interface PlayerJoinScreenProps {
   createRoom: () => void;
@@ -8,12 +9,15 @@ interface PlayerJoinScreenProps {
 export default function PlayerJoinScreen({ createRoom, joinRoom }: PlayerJoinScreenProps) {
   const [code, setCode] = useState('');
   const [name, setName] = useState('');
+  const roomError = useGameStore((state) => state.roomError);
+  const setRoomError = useGameStore((state) => state.setRoomError);
 
   const handleJoin = () => {
     const trimmedCode = code.trim().toUpperCase();
     const trimmedName = name.trim();
     if (trimmedCode.length !== 4) return;
     if (!trimmedName) return;
+    setRoomError(null);
     joinRoom(trimmedCode, trimmedName);
   };
 
@@ -42,6 +46,12 @@ export default function PlayerJoinScreen({ createRoom, joinRoom }: PlayerJoinScr
         {/* Join section */}
         <div className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-center">Join a Game</h2>
+
+          {roomError && (
+            <p role="alert" className="rounded-xl border border-jam-red/40 bg-jam-red/15 px-4 py-3 text-center text-sm font-semibold text-jam-red">
+              {roomError}
+            </p>
+          )}
 
           <input
             type="text"

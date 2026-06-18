@@ -21,6 +21,7 @@ interface GameState {
   playerId: string | null;
   myPlayer: Player | null;
   connected: boolean;
+  roomError: string | null;
 
   // Room
   players: Player[];
@@ -54,6 +55,7 @@ interface GameState {
   setPlayerId: (id: string) => void;
   setMyPlayer: (player: Player) => void;
   setConnected: (connected: boolean) => void;
+  setRoomError: (message: string | null) => void;
   setPlayers: (players: Player[]) => void;
   addPlayer: (player: Player) => void;
   removePlayer: (playerId: string) => void;
@@ -79,6 +81,7 @@ const initialState = {
   playerId: null as string | null,
   myPlayer: null as Player | null,
   connected: false,
+  roomError: null as string | null,
   players: [] as Player[],
   phase: 'lobby' as GamePhase,
   mode: 'coop' as GameMode,
@@ -105,6 +108,7 @@ export const useGameStore = create<GameState>((set) => ({
   setPlayerId: (id) => set({ playerId: id }),
   setMyPlayer: (player) => set({ myPlayer: player }),
   setConnected: (connected) => set({ connected }),
+  setRoomError: (message) => set({ roomError: message }),
   setPlayers: (players) => set({ players }),
   addPlayer: (player) =>
     set((s) => ({
@@ -140,15 +144,23 @@ export const useGameStore = create<GameState>((set) => ({
   setCoopScore: (score) => set({ coopScore: score }),
   setTeamScores: (scores) => set({ teamScores: scores }),
   restoreState: (state) =>
-    set({
-      players: state.players,
-      phase: state.phase,
-      mode: state.mode,
-      selectedCategories: state.selectedCategories,
-      currentQuestion: state.currentQuestion,
-      questionIndex: state.questionIndex,
-      coopScore: state.coopScore,
-      teamScores: state.teamScores,
+    set((current) => {
+      const players = state.players;
+      const updatedMyPlayer = current.playerId
+        ? players.find((p: Player) => p.id === current.playerId) ?? current.myPlayer
+        : current.myPlayer;
+
+      return {
+        players,
+        myPlayer: updatedMyPlayer,
+        phase: state.phase,
+        mode: state.mode,
+        selectedCategories: state.selectedCategories,
+        currentQuestion: state.currentQuestion,
+        questionIndex: state.questionIndex,
+        coopScore: state.coopScore,
+        teamScores: state.teamScores,
+      };
     }),
   reset: () => set(initialState),
 }));

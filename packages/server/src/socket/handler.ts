@@ -11,6 +11,7 @@ import {
   setCategories,
   resetGame,
   removeHost,
+  canStartGame,
 } from './roomManager.js';
 import { startGameLoop } from './gameLoop.js';
 
@@ -87,7 +88,12 @@ export function setupSocketHandlers(io: Server): void {
     socket.on(ClientEvents.GAME_START, () => {
       if (!currentRoomCode || !isHost) return;
       const room = getRoom(currentRoomCode);
-      if (!room || room.phase !== 'lobby') return;
+      if (!room) return;
+      const validation = canStartGame(room);
+      if (!validation.ok) {
+        socket.emit(ServerEvents.ROOM_ERROR, { message: validation.message });
+        return;
+      }
       startGameLoop(io, room);
     });
 

@@ -1,6 +1,7 @@
 import { useGameStore } from '../../stores/gameStore';
 import ProgressBar from '../../components/ProgressBar';
 import Timer from '../../components/Timer';
+import { decodeHtmlEntities } from '../../utils/html';
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D'];
 const OPTION_COLORS = [
@@ -61,7 +62,7 @@ export default function HostQuestionScreen() {
       {/* Question */}
       <div className="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full">
         <h1 className="text-4xl md:text-5xl font-black text-center mb-12 animate-bounce-in leading-tight">
-          {currentQuestion.question}
+          {decodeHtmlEntities(currentQuestion.question)}
         </h1>
 
         {/* Answer options */}
@@ -72,7 +73,7 @@ export default function HostQuestionScreen() {
               className={`p-6 rounded-2xl border-2 ${OPTION_COLORS[i]} flex items-center gap-4`}
             >
               <span className="text-3xl font-black opacity-60">{OPTION_LABELS[i]}</span>
-              <span className="text-xl font-bold flex-1">{option}</span>
+              <span className="text-xl font-bold flex-1">{decodeHtmlEntities(option)}</span>
 
               {/* Co-op: live vote bar */}
               {mode === 'coop' && totalVotes > 0 && (
