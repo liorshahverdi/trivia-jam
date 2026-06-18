@@ -16,6 +16,26 @@ export interface NewsArticle {
   publishedAt: string;
 }
 
+export interface RssFeed {
+  name: string;
+  url: string;
+}
+
+const DEFAULT_RSS_FEEDS: RssFeed[] = [
+  { name: 'NPR News', url: 'https://feeds.npr.org/1001/rss.xml' },
+  { name: 'BBC World', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+  { name: 'NASA Breaking News', url: 'https://www.nasa.gov/news-release/feed/' },
+  { name: 'Hacker News', url: 'https://hnrss.org/frontpage' },
+];
+
+type FetchLike = (url: string, init?: RequestInit) => Promise<{
+  ok: boolean;
+  status?: number;
+  statusText?: string;
+  text?: () => Promise<string>;
+  json?: () => Promise<any>;
+}>;
+
 export interface StaticCurrentEventQuestion extends Question {
   category: typeof CURRENT_EVENTS_CATEGORY;
   sourceUrl: string;
@@ -134,100 +154,197 @@ function isExpired(question: StaticCurrentEventQuestion, now: Date): boolean {
   return !Number.isNaN(expiresAt.getTime()) && expiresAt.getTime() <= now.getTime();
 }
 
-export async function fetchNewsApiArticles(): Promise<NewsArticle[]> {
-  const apiKey = process.env.NEWS_API_KEY;
-  if (!apiKey) {
-    console.warn('[current-events-static] NEWS_API_KEY is not configured; skipping refresh.');
-    return [];
-  }
-
-  const url = new URL('https://newsapi.org/v2/top-headlines');
-  url.searchParams.set('country', process.env.CURRENT_EVENTS_NEWS_COUNTRY ?? 'us');
-  url.searchParams.set('pageSize', process.env.CURRENT_EVENTS_NEWS_PAGE_SIZE ?? '30');
-  if (process.env.CURRENT_EVENTS_NEWS_CATEGORY) {
-    url.searchParams.set('category', process.env.CURRENT_EVENTS_NEWS_CATEGORY);
-  }
-
-  const res = await fetch(url, {
-    headers: {
-      'X-Api-Key': apiKey,
-      'User-Agent': 'trivia-jam-current-events-static/1.0',
-    },
-  });
-  if (!res.ok) {
-    console.warn(`[current-events-static] NewsAPI request failed: ${res.status} ${res.statusText}`);
-    return [];
-  }
-
-  const data = await res.json() as {
-    articles?: Array<{
-      title?: string;
-      description?: string | null;
-      url?: string;
-      source?: { name?: string | null };
-      publishedAt?: string;
-    }>;
-  };
-
-  return (data.articles ?? [])
-    .filter((article) => article.title && article.url && article.publishedAt)
-    .map((article) => ({
-      title: article.title!,
-      description: article.description ?? null,
-      url: article.url!,
-      sourceName: article.source?.name ?? null,
-      publishedAt: article.publishedAt!,
-    }));
+function normalizeTextForSupport(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function parseQuestionsFromOpenAIResponse(data: any): StaticCurrentEventQuestion[] {
-  const outputText = data.output_text
-    ?? data.output?.flatMap((item: any) => item.content ?? [])
-      .find((content: any) => content.type === 'output_text' || content.text)?.text;
-  if (!outputText) return [];
+function isQuestionSupportedBySource(question: StaticCurrentEventQuestion, articles: NewsArticle[]): boolean {
+  const sourceArticle = articles.find((article) => article.url === question.sourceUrl);
+  if (!sourceArticle) return false;
 
-  const parsed = JSON.parse(outputText);
+  const correctAnswer = normalizeTextForSupport(question.options[question.correctIndex] ?? '');
+  if (!correctAnswer) return false;
+
+  const sourceText = normalizeTextForSupport([
+    sourceArticle.title,
+    sourceArticle.description ?? '',
+    sourceArticle.sourceName ?? '',
+  ].join(' '));
+
+  return sourceText.includes(correctAnswer);
+}
+
+function hasUniqueQuestionText(question: StaticCurrentEventQuestion, accepted: StaticCurrentEventQuestion[]): boolean {
+  const text = normalizeTextForSupport(question.question);
+  return !accepted.some((existing) => normalizeTextForSupport(existing.question) === text);
+}
+
+function decodeXml(text: string): string {
+  return text
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&#039;/g, "'")
+    .replace(/<[^>]+>/g, '')
+    .trim();
+}
+
+function tagValue(xml: string, tag: string): string | null {
+  const match = xml.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, 'i'));
+  return match ? decodeXml(match[1]) : null;
+}
+
+function entryBlocks(xml: string): string[] {
+  const itemMatches = [...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map((match) => match[1]);
+  if (itemMatches.length > 0) return itemMatches;
+  return [...xml.matchAll(/<entry(?:\s[^>]*)?>([\s\S]*?)<\/entry>/gi)].map((match) => match[1]);
+}
+
+function atomLink(entry: string): string | null {
+  const href = entry.match(/<link[^>]+href=["']([^"']+)["'][^>]*>/i)?.[1];
+  return href ? decodeXml(href) : null;
+}
+
+export async function fetchRssArticles({
+  feeds = DEFAULT_RSS_FEEDS,
+  fetchImpl = fetch as FetchLike,
+  now = new Date(),
+  maxArticleAgeDays = DEFAULT_MAX_ARTICLE_AGE_DAYS,
+}: {
+  feeds?: RssFeed[];
+  fetchImpl?: FetchLike;
+  now?: Date;
+  maxArticleAgeDays?: number;
+} = {}): Promise<NewsArticle[]> {
+  const articles: NewsArticle[] = [];
+  const oldestAllowed = addDays(now, -maxArticleAgeDays).getTime();
+
+  for (const feed of feeds) {
+    try {
+      const res = await fetchImpl(feed.url, {
+        headers: { 'User-Agent': 'trivia-jam-current-events-rss/1.0' },
+      });
+      if (!res.ok || !res.text) {
+        console.warn(`[current-events-static] RSS request failed for ${feed.name}: ${res.status} ${res.statusText ?? ''}`);
+        continue;
+      }
+
+      const xml = await res.text();
+      for (const entry of entryBlocks(xml)) {
+        const title = tagValue(entry, 'title');
+        const url = tagValue(entry, 'link') ?? atomLink(entry);
+        const publishedRaw = tagValue(entry, 'pubDate') ?? tagValue(entry, 'published') ?? tagValue(entry, 'updated');
+        if (!title || !url || !publishedRaw) continue;
+
+        const publishedAt = new Date(publishedRaw);
+        if (Number.isNaN(publishedAt.getTime())) continue;
+        if (publishedAt.getTime() < oldestAllowed || publishedAt.getTime() > addDays(now, 1).getTime()) continue;
+
+        articles.push({
+          title,
+          description: tagValue(entry, 'description') ?? tagValue(entry, 'summary') ?? null,
+          url,
+          sourceName: feed.name,
+          publishedAt: publishedAt.toISOString(),
+        });
+      }
+    } catch (err) {
+      console.warn(`[current-events-static] RSS fetch failed for ${feed.name}:`, err);
+    }
+  }
+
+  const seen = new Set<string>();
+  return articles.filter((article) => {
+    const key = article.url || article.title.toLowerCase().trim();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function buildGenerationPrompt(articles: NewsArticle[], now: Date, articleLimit = 4): string {
+  const today = now.toISOString().slice(0, 10);
+  const questionLimit = Math.max(1, Math.min(articleLimit, 8));
+  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
+}
+
+function parseQuestionsFromJsonText(text: string): StaticCurrentEventQuestion[] {
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1];
+  const candidateText = fenced ?? text;
+  const start = candidateText.indexOf('{');
+  const end = candidateText.lastIndexOf('}');
+  if (start === -1 || end === -1 || end <= start) return [];
+
+  const parsed = JSON.parse(candidateText.slice(start, end + 1));
   const questions = Array.isArray(parsed) ? parsed : parsed.questions;
   return Array.isArray(questions) ? questions : [];
 }
 
-export async function generateQuestionsWithOpenAI(articles: NewsArticle[]): Promise<StaticCurrentEventQuestion[]> {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    console.warn('[current-events-static] OPENAI_API_KEY is not configured; skipping generation.');
-    return [];
-  }
+export async function generateQuestionsWithOllama(
+  articles: NewsArticle[],
+  {
+    fetchImpl = fetch as FetchLike,
+    model = process.env.CURRENT_EVENTS_OLLAMA_MODEL ?? 'qwen2.5-coder:3b',
+    ollamaUrl = process.env.OLLAMA_HOST ?? 'http://localhost:11434',
+    now = new Date(),
+    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
+  }: {
+    fetchImpl?: FetchLike;
+    model?: string;
+    ollamaUrl?: string;
+    now?: Date;
+    articleLimit?: number;
+  } = {},
+): Promise<StaticCurrentEventQuestion[]> {
   if (articles.length === 0) return [];
 
-  const today = new Date().toISOString().slice(0, 10);
-  const prompt = `Create up to 20 multiple-choice current-events trivia questions from these recent news articles.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The correct answer must be directly supported by the source article title/description.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, 30))}`;
-
-  const res = await fetch('https://api.openai.com/v1/responses', {
+  const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
     method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: process.env.CURRENT_EVENTS_OPENAI_MODEL ?? process.env.OPENAI_MODEL ?? 'gpt-4o-mini',
-      input: prompt,
-      temperature: 0.2,
+      model,
+      prompt: buildGenerationPrompt(articles, now, articleLimit),
+      stream: true,
+      options: { temperature: 0.2 },
     }),
   });
-  if (!res.ok) {
-    console.warn(`[current-events-static] OpenAI generation failed: ${res.status} ${res.statusText}`);
+  if (!res.ok || !res.json) {
+    console.warn(`[current-events-static] Ollama generation failed: ${res.status} ${res.statusText ?? ''}`);
     return [];
   }
 
-  return parseQuestionsFromOpenAIResponse(await res.json());
+  let responseText = '';
+  if (res.text) {
+    const body = await res.text();
+    for (const line of body.split('\n')) {
+      if (!line.trim()) continue;
+      try {
+        const chunk = JSON.parse(line) as { response?: string };
+        responseText += chunk.response ?? '';
+      } catch {
+        // Some tests/fallbacks may provide a non-stream JSON string directly.
+        responseText += line;
+      }
+    }
+  } else if (res.json) {
+    const data = await res.json() as { response?: string };
+    responseText = data.response ?? '';
+  }
+
+  if (!responseText) return [];
+  return parseQuestionsFromJsonText(responseText);
 }
 
 export async function refreshCurrentEventsJson(
   deps: RefreshCurrentEventsJsonDeps = {},
 ): Promise<RefreshCurrentEventsJsonResult> {
   const now = deps.now ?? new Date();
-  const fetchArticles = deps.fetchArticles ?? fetchNewsApiArticles;
-  const generateQuestions = deps.generateQuestions ?? generateQuestionsWithOpenAI;
+  const fetchArticles = deps.fetchArticles ?? fetchRssArticles;
+  const generateQuestions = deps.generateQuestions ?? ((articles) => generateQuestionsWithOllama(articles, { now }));
   const read = deps.readExisting ?? (() => readExisting(CURRENT_EVENTS_CATEGORY));
   const write = deps.writeQuestions ?? ((questions) => writeCategoryQuestions(CURRENT_EVENTS_CATEGORY, questions as Question[]));
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
@@ -238,12 +355,16 @@ export async function refreshCurrentEventsJson(
 
   const articles = await fetchArticles();
   const generated = articles.length > 0 ? await generateQuestions(articles) : [];
-  const validGenerated = generated
-    .filter((question) => validateStaticCurrentEventQuestion(question, now).valid)
-    .map((question) => toStoredQuestion(question, now));
+  const acceptedGenerated: StoredStaticCurrentEventQuestion[] = [];
+  for (const question of generated) {
+    if (!validateStaticCurrentEventQuestion(question, now).valid) continue;
+    if (!isQuestionSupportedBySource(question, articles)) continue;
+    if (!hasUniqueQuestionText(question, acceptedGenerated)) continue;
+    acceptedGenerated.push(toStoredQuestion(question, now));
+  }
 
   const existingDynamic = keptExisting.filter(isDynamicQuestion);
-  const { unique } = deduplicate(validGenerated, keptExisting as Question[]);
+  const { unique } = deduplicate(acceptedGenerated, keptExisting as Question[]);
   const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions - existingDynamic.length));
   const merged = [...keptExisting, ...newDynamic];
 
