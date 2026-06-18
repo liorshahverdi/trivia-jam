@@ -4,17 +4,63 @@ Trivia Jam treats `current-events` differently from evergreen trivia categories.
 
 ## GitHub Pages behavior
 
-GitHub Pages cannot run the Node crawler, database, or secret-backed question generation at request time. To keep the static demo fresh, the repository includes `.github/workflows/refresh-current-events.yml`.
+GitHub Pages cannot run a Node crawler, database, local LLM, or secret-backed generation at request time. For a zero-cost static demo, the refresh happens on an always-on local machine and pushes an updated static question pack to GitHub.
 
-That workflow:
+Local refresh flow:
 
-- runs daily and on manual dispatch
-- fetches current news headlines
-- asks OpenAI to generate candidate multiple-choice questions
-- validates the generated questions deterministically
-- writes accepted questions into `packages/shared/src/questions/current-events.json`
-- commits the refreshed JSON file
-- deploys a refreshed GitHub Pages build from the same workflow when the JSON changes
+1. Pull latest `main`.
+2. Fetch recent articles from free public RSS feeds.
+3. Generate candidate questions with local Ollama.
+4. Validate, dedupe, and expire generated questions deterministically.
+5. Write accepted questions into `packages/shared/src/questions/current-events.json`.
+6. Commit and push the changed JSON file.
+7. The existing GitHub Pages deploy workflow rebuilds the static site from the push.
+
+## Local always-on refresh
+
+Run this on the always-on machine:
+
+```bash
+scripts/refresh-current-events-local.sh
+```
+
+The script checks that Ollama and the selected model are installed, pulls the latest repo state, refreshes questions, runs the tools tests, builds the static client, commits changed questions, and pushes to `main`.
+
+Default local model:
+
+```text
+qwen2.5-coder:3b
+```
+
+Override it with:
+
+```bash
+CURRENT_EVENTS_OLLAMA_MODEL=qwen2.5:7b scripts/refresh-current-events-local.sh
+```
+
+Useful optional environment variables:
+
+- `TRIVIA_JAM_REPO_DIR`: repo path. Defaults to `/home/lior/projects/trivia-jam`.
+- `TRIVIA_JAM_BRANCH`: branch to refresh/push. Defaults to `main`.
+- `TRIVIA_JAM_REMOTE`: git remote. Defaults to `origin`.
+- `CURRENT_EVENTS_OLLAMA_MODEL`: Ollama model. Defaults to `qwen2.5-coder:3b`.
+- `CURRENT_EVENTS_ARTICLE_LIMIT`: max articles sent to Ollama per run. Defaults to `4`.
+- `OLLAMA_HOST`: Ollama host URL. Defaults to `http://localhost:11434`.
+
+## Static refresh command
+
+The lower-level tool command is:
+
+```bash
+npm run refresh-current-events -w packages/tools
+```
+
+By default it uses:
+
+- free RSS feeds for article input
+- local Ollama for question generation
+- no NewsAPI key
+- no OpenAI key
 
 ## Optional server runtime behavior
 
@@ -22,25 +68,7 @@ If the full server is deployed with a database, `crawlAllQuestions()` can also r
 
 - Dynamic Current Events questions are sourced from current news articles, converted into multiple-choice questions with an LLM, validated, and cached in the `questions` table.
 - The game picker excludes expired dynamic DB questions with `expires_at <= NOW()`.
-- Static `packages/shared/src/questions/current-events.json` remains the GitHub Pages/static fallback and is refreshed by GitHub Actions.
-
-## Required secrets / environment variables
-
-For the GitHub Actions static refresh, configure these repository secrets:
-
-- `NEWS_API_KEY`: fetches current headlines from NewsAPI.
-- `OPENAI_API_KEY`: generates multiple-choice questions from selected headlines.
-
-For optional server-side DB refresh, also configure:
-
-- `DATABASE_URL`: enables database-backed question storage.
-
-## Optional environment variables
-
-- `CURRENT_EVENTS_NEWS_COUNTRY`: NewsAPI top-headlines country. Defaults to `us`.
-- `CURRENT_EVENTS_NEWS_PAGE_SIZE`: NewsAPI page size. Defaults to `30`.
-- `CURRENT_EVENTS_NEWS_CATEGORY`: optional NewsAPI category filter.
-- `CURRENT_EVENTS_OPENAI_MODEL`: model for question generation. Falls back to `OPENAI_MODEL`, then `gpt-4o-mini`.
+- Static `packages/shared/src/questions/current-events.json` remains the GitHub Pages/static fallback and is refreshed by the local always-on worker.
 
 ## Freshness rules
 
@@ -54,6 +82,7 @@ Generated Current Events questions are accepted only when they have:
 
 - category exactly `current-events`
 - `easy`, `medium`, or `hard` difficulty
+- an id starting with `current-events-dynamic-`
 - a real question string
 - exactly four unique non-empty options
 - a valid `correctIndex`
