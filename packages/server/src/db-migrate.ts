@@ -14,10 +14,22 @@ export async function runMigrations(pool: pg.Pool): Promise<void> {
   `);
 
   await pool.query(`
+    ALTER TABLE questions
+      ADD COLUMN IF NOT EXISTS source_type TEXT,
+      ADD COLUMN IF NOT EXISTS source_url TEXT,
+      ADD COLUMN IF NOT EXISTS published_at TIMESTAMPTZ,
+      ADD COLUMN IF NOT EXISTS expires_at TIMESTAMPTZ,
+      ADD COLUMN IF NOT EXISTS generated_at TIMESTAMPTZ
+  `);
+
+  await pool.query(`
     CREATE INDEX IF NOT EXISTS idx_questions_category ON questions (category)
   `);
   await pool.query(`
     CREATE INDEX IF NOT EXISTS idx_questions_category_difficulty ON questions (category, difficulty)
+  `);
+  await pool.query(`
+    CREATE INDEX IF NOT EXISTS idx_questions_category_expires ON questions (category, expires_at)
   `);
   await pool.query(`
     CREATE UNIQUE INDEX IF NOT EXISTS idx_questions_question_key ON questions (question_key)

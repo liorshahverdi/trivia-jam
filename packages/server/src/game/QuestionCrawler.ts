@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import type pg from 'pg';
 import { getPool } from '../db.js';
 import { clearQuestionCache } from './QuestionPicker.js';
+import { refreshCurrentEventsQuestions } from './CurrentEventsSource.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -42,11 +43,13 @@ const OPENTDB_CATEGORY_MAP: Partial<Record<Category, number>> = {
   cartoons: 32,          // Entertainment: Cartoon & Animations
 };
 
-// The Trivia API (https://the-trivia-api.com) category mapping
-// Used for categories that OpenTDB doesn't cover.
+// The Trivia API (https://the-trivia-api.com) category mapping.
+// Do not map current-events here: the closest Trivia API bucket is
+// society_and_culture, which produces religion, mythology, language, and other
+// evergreen culture questions rather than news/current-event trivia. Keep
+// current-events curated unless/until a true news/current-events source is added.
 const TRIVIA_API_CATEGORY_MAP: Partial<Record<Category, string>> = {
   food: 'food_and_drink',
-  'current-events': 'society_and_culture',
 };
 
 interface TriviaAPIQuestion {
@@ -134,7 +137,7 @@ function mapDifficulty(d: string): Difficulty {
   return 'hard';
 }
 
-async function fetchQuestions(category: Category, count: number): Promise<Question[]> {
+export async function fetchQuestions(category: Category, count: number): Promise<Question[]> {
   const catId = OPENTDB_CATEGORY_MAP[category];
   if (catId !== undefined) return fetchFromOpenTDB(category, count);
   if (TRIVIA_API_CATEGORY_MAP[category]) return fetchFromTriviaAPI(category, count);
@@ -193,6 +196,10 @@ function deduplicateQuestions(questions: Question[]): Question[] {
 }
 
 async function crawlCategoryToDb(pool: pg.Pool, category: Category): Promise<number> {
+  if (category === 'current-events') {
+    return refreshCurrentEventsQuestions(pool);
+  }
+
   const fetched = await fetchQuestions(category, 30);
   if (fetched.length === 0) return 0;
 

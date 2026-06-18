@@ -24,17 +24,23 @@ async function loadQuestions(category: Category): Promise<Question[]> {
   if (pool) {
     try {
       const { rows } = await pool.query(
-        'SELECT id, category, difficulty, question, options, correct_index FROM questions WHERE category = $1',
+        `SELECT id, category, difficulty, question, options, correct_index, expires_at
+         FROM questions
+         WHERE category = $1
+           AND (expires_at IS NULL OR expires_at > NOW())`,
         [category]
       );
-      const questions: Question[] = rows.map(r => ({
-        id: r.id,
-        category: r.category as Category,
-        difficulty: r.difficulty as Difficulty,
-        question: r.question,
-        options: r.options as [string, string, string, string],
-        correctIndex: r.correct_index,
-      }));
+      const now = Date.now();
+      const questions: Question[] = rows
+        .filter(r => !r.expires_at || new Date(r.expires_at).getTime() > now)
+        .map(r => ({
+          id: r.id,
+          category: r.category as Category,
+          difficulty: r.difficulty as Difficulty,
+          question: r.question,
+          options: r.options as [string, string, string, string],
+          correctIndex: r.correct_index,
+        }));
       questionCache.set(category, questions);
       return questions;
     } catch (err) {
