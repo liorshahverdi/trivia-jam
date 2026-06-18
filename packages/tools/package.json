@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "crawl": "tsx crawl-questions.ts"
+    "crawl": "tsx crawl-questions.ts",
+    "refresh-current-events": "tsx refresh-current-events.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@trivia-jam/shared": "*",

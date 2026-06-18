@@ -2,18 +2,38 @@
 
 Trivia Jam treats `current-events` differently from evergreen trivia categories.
 
-## Runtime behavior
+## GitHub Pages behavior
 
-- On startup and every 6 hours, `crawlAllQuestions()` refreshes dynamic Current Events questions when a database is configured.
+GitHub Pages cannot run the Node crawler, database, or secret-backed question generation at request time. To keep the static demo fresh, the repository includes `.github/workflows/refresh-current-events.yml`.
+
+That workflow:
+
+- runs daily and on manual dispatch
+- fetches current news headlines
+- asks OpenAI to generate candidate multiple-choice questions
+- validates the generated questions deterministically
+- writes accepted questions into `packages/shared/src/questions/current-events.json`
+- commits the refreshed JSON file
+- deploys a refreshed GitHub Pages build from the same workflow when the JSON changes
+
+## Optional server runtime behavior
+
+If the full server is deployed with a database, `crawlAllQuestions()` can also refresh dynamic Current Events questions on startup and every 6 hours.
+
 - Dynamic Current Events questions are sourced from current news articles, converted into multiple-choice questions with an LLM, validated, and cached in the `questions` table.
-- The game picker excludes expired dynamic questions with `expires_at <= NOW()`.
-- Static `packages/shared/src/questions/current-events.json` remains the fallback when no database or API keys are configured.
+- The game picker excludes expired dynamic DB questions with `expires_at <= NOW()`.
+- Static `packages/shared/src/questions/current-events.json` remains the GitHub Pages/static fallback and is refreshed by GitHub Actions.
 
-## Required environment variables
+## Required secrets / environment variables
+
+For the GitHub Actions static refresh, configure these repository secrets:
+
+- `NEWS_API_KEY`: fetches current headlines from NewsAPI.
+- `OPENAI_API_KEY`: generates multiple-choice questions from selected headlines.
+
+For optional server-side DB refresh, also configure:
 
 - `DATABASE_URL`: enables database-backed question storage.
-- `NEWS_API_KEY`: enables fetching current headlines from NewsAPI.
-- `OPENAI_API_KEY`: enables LLM generation of multiple-choice questions.
 
 ## Optional environment variables
 
