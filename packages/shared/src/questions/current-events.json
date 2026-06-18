@@ -648,5 +648,22 @@
       "Qatar"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "current-events-dynamic-2026-06-18-1",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the current interest rate for federal student loan borrowers if they sign up for auto pay?",
+    "options": [
+      "1%",
+      "2%",
+      "3%",
+      "4%"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/06/18/nx-s1-5863085/student-loan-auto-pay-discount",
+    "publishedAt": "2026-06-18T17:28:44.000Z",
+    "expiresAt": "2026-07-09T17:28:44.000Z",
+    "generatedAt": "2026-06-18T21:09:14.367Z"
   }
 ]
