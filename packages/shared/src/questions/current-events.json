@@ -665,5 +665,39 @@
     "publishedAt": "2026-06-18T17:28:44.000Z",
     "expiresAt": "2026-07-09T17:28:44.000Z",
     "generatedAt": "2026-06-18T21:09:14.367Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-19-1",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which country has won the World Cup for the first time?",
+    "options": [
+      "Mexico",
+      "France",
+      "Brazil",
+      "Germany"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/19/g-s1-129056/mexico-becomes-first-country-to-reach-knockout-stage-of-world-cup",
+    "publishedAt": "2026-06-19T07:08:27.000Z",
+    "expiresAt": "2026-07-10T07:08:27.000Z",
+    "generatedAt": "2026-06-19T09:00:38.078Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-19-2",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the name of the current mayor of Greater Manchester, who won a special election for a seat in Parliament?",
+    "options": [
+      "Andy Burnham",
+      "Jeremy Corbyn",
+      "Rishi Sunak",
+      "Theresa May"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/19/nx-s1-5864087/labour-andy-burnham-wins-special-election",
+    "publishedAt": "2026-06-19T07:48:19.000Z",
+    "expiresAt": "2026-07-10T07:48:19.000Z",
+    "generatedAt": "2026-06-19T09:00:38.078Z"
   }
 ]
