@@ -57,7 +57,17 @@ npm run refresh-current-events -w packages/tools
 
 By default it uses:
 
-- free RSS feeds for article input
+- free RSS feeds for article input:
+  - NPR News
+  - BBC World
+  - PBS NewsHour
+  - NASA Breaking News
+  - ScienceDaily Top News
+  - Space.com
+  - Smithsonian Smart News
+  - The Verge
+  - Ars Technica
+  - Hacker News
 - local Ollama for question generation
 - no NewsAPI key
 - no OpenAI key
