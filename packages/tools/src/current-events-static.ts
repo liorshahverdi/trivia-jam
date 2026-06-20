@@ -350,8 +350,9 @@ export async function refreshCurrentEventsJson(
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
 
   const existing = read();
-  const keptExisting = existing.filter((question) => !isDynamicQuestion(question) || !isExpired(question, now));
-  const removedExpired = existing.length - keptExisting.length;
+  const existingDynamic = existing.filter(isDynamicQuestion);
+  const freshExistingDynamic = existingDynamic.filter((question) => !isExpired(question, now));
+  const legacyStaticQuestions = existing.filter((question) => !isDynamicQuestion(question));
 
   const articles = await fetchArticles();
   const generated = articles.length > 0 ? await generateQuestions(articles) : [];
@@ -363,10 +364,12 @@ export async function refreshCurrentEventsJson(
     acceptedGenerated.push(toStoredQuestion(question, now));
   }
 
-  const existingDynamic = keptExisting.filter(isDynamicQuestion);
-  const { unique } = deduplicate(acceptedGenerated, keptExisting as Question[]);
-  const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions - existingDynamic.length));
-  const merged = [...keptExisting, ...newDynamic];
+  const { unique } = deduplicate(acceptedGenerated, freshExistingDynamic as Question[]);
+  const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions - freshExistingDynamic.length));
+  const dynamicQuestions = [...freshExistingDynamic, ...newDynamic];
+  const keptExisting = dynamicQuestions.length > 0 ? freshExistingDynamic : legacyStaticQuestions;
+  const merged = dynamicQuestions.length > 0 ? dynamicQuestions : legacyStaticQuestions;
+  const removedExpired = existing.length - keptExisting.length;
 
   if (removedExpired > 0 || newDynamic.length > 0) {
     write(merged);

@@ -10,6 +10,44 @@ import {
 const NOW = new Date('2026-06-18T12:00:00.000Z');
 
 describe('static Current Events JSON refresh', () => {
+  it('prunes legacy static current-events questions when fresh dynamic questions exist', async () => {
+    const legacyStatic: Question = {
+      id: 'current-events-001',
+      category: 'current-events',
+      difficulty: 'easy',
+      question: 'Which global health crisis was declared a pandemic by the WHO in March 2020?',
+      options: ['Ebola', 'COVID-19', 'Zika', 'SARS'],
+      correctIndex: 1,
+    };
+    const freshDynamic = {
+      id: 'current-events-dynamic-2026-06-18-space',
+      category: 'current-events' as const,
+      difficulty: 'medium' as const,
+      question: 'Which company announced a reusable satellite bus this week?',
+      options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+      correctIndex: 1,
+      sourceUrl: 'https://example.com/space-announcement',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+      expiresAt: '2026-07-09T09:00:00.000Z',
+      generatedAt: NOW.toISOString(),
+    };
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [legacyStatic, freshDynamic],
+      writeQuestions,
+      fetchArticles: async () => [],
+      generateQuestions: async () => [],
+    });
+
+    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 1, total: 1 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    expect(writeQuestions.mock.calls[0][0].map((q: Question) => q.id)).toEqual([
+      'current-events-dynamic-2026-06-18-space',
+    ]);
+  });
+
   it('validates generated questions before writing them to the static pack', () => {
     const valid = validateStaticCurrentEventQuestion({
       id: 'current-events-dynamic-2026-06-18-space',
@@ -49,7 +87,7 @@ describe('static Current Events JSON refresh', () => {
     expect(stale.valid).toBe(false);
   });
 
-  it('replaces expired generated questions, keeps curated fallback questions, and writes fresh generated questions', async () => {
+  it('replaces expired generated questions, prunes legacy fallback questions, and writes fresh generated questions', async () => {
     const curatedFallback: Question = {
       id: 'current-events-manual-fallback',
       category: 'current-events',
@@ -94,14 +132,13 @@ describe('static Current Events JSON refresh', () => {
       }],
     });
 
-    expect(result).toEqual({ added: 1, kept: 1, removedExpired: 1, total: 2 });
+    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 2, total: 1 });
     expect(writeQuestions).toHaveBeenCalledTimes(1);
     const written = writeQuestions.mock.calls[0][0];
     expect(written.map((q: Question) => q.id)).toEqual([
-      'current-events-manual-fallback',
       'current-events-dynamic-2026-06-18-space',
     ]);
-    expect(written[1]).toMatchObject({
+    expect(written[0]).toMatchObject({
       sourceUrl: 'https://example.com/space-announcement',
       publishedAt: '2026-06-18T09:00:00.000Z',
       expiresAt: '2026-07-09T09:00:00.000Z',

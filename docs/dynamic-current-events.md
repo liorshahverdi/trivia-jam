@@ -75,6 +75,7 @@ If the full server is deployed with a database, `crawlAllQuestions()` can also r
 - Generated candidates older than 45 days are rejected.
 - Accepted questions expire 21 days after the article `publishedAt` date.
 - Expired questions are pruned during refresh and excluded by the question picker.
+- Legacy static Current Events fallback questions are removed once fresh generated questions exist, so multi-year-old “current events” do not stay in rotation.
 
 ## Validation rules
 
