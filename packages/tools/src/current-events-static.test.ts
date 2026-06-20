@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import type { Question } from '@trivia-jam/shared';
 import {
+  DEFAULT_RSS_FEEDS,
   fetchRssArticles,
   generateQuestionsWithOllama,
   refreshCurrentEventsJson,
@@ -10,6 +11,21 @@ import {
 const NOW = new Date('2026-06-18T12:00:00.000Z');
 
 describe('static Current Events JSON refresh', () => {
+  it('uses a broad default RSS source mix for current events', () => {
+    expect(DEFAULT_RSS_FEEDS.map((feed) => feed.name)).toEqual([
+      'NPR News',
+      'BBC World',
+      'PBS NewsHour',
+      'NASA Breaking News',
+      'ScienceDaily Top News',
+      'Space.com',
+      'Smithsonian Smart News',
+      'The Verge',
+      'Ars Technica',
+      'Hacker News',
+    ]);
+  });
+
   it('prunes legacy static current-events questions when fresh dynamic questions exist', async () => {
     const legacyStatic: Question = {
       id: 'current-events-001',

@@ -21,10 +21,16 @@ export interface RssFeed {
   url: string;
 }
 
-const DEFAULT_RSS_FEEDS: RssFeed[] = [
+export const DEFAULT_RSS_FEEDS: RssFeed[] = [
   { name: 'NPR News', url: 'https://feeds.npr.org/1001/rss.xml' },
   { name: 'BBC World', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+  { name: 'PBS NewsHour', url: 'https://www.pbs.org/newshour/feeds/rss/headlines' },
   { name: 'NASA Breaking News', url: 'https://www.nasa.gov/news-release/feed/' },
+  { name: 'ScienceDaily Top News', url: 'https://www.sciencedaily.com/rss/top.xml' },
+  { name: 'Space.com', url: 'https://www.space.com/feeds/all' },
+  { name: 'Smithsonian Smart News', url: 'https://www.smithsonianmag.com/rss/smart-news/' },
+  { name: 'The Verge', url: 'https://www.theverge.com/rss/index.xml' },
+  { name: 'Ars Technica', url: 'https://feeds.arstechnica.com/arstechnica/index' },
   { name: 'Hacker News', url: 'https://hnrss.org/frontpage' },
 ];
 
