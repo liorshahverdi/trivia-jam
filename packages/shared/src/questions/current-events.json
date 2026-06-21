@@ -83,5 +83,39 @@
     "publishedAt": "2026-06-19T15:43:05.000Z",
     "expiresAt": "2026-07-10T15:43:05.000Z",
     "generatedAt": "2026-06-20T09:02:41.042Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-21-2",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What color is the coating on the Lincoln Memorial Reflecting Pool that President Trump's beautification project has added?",
+    "options": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/06/20/nx-s1-5854977/opinion-algae-doesnt-care-about-our-party-lines",
+    "publishedAt": "2026-06-20T12:00:00.000Z",
+    "expiresAt": "2026-07-11T12:00:00.000Z",
+    "generatedAt": "2026-06-21T09:01:06.820Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-21-4",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What is the main reason for the closure of the Strait of Hormuz?",
+    "options": [
+      "Fighting in Lebanon",
+      "Claims over the Strait of Hormuz",
+      "U.S.-Iran talks",
+      "President Trump's beautification project"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/20/nx-s1-5865006/fighting-lebanon-despite-ceasefire",
+    "publishedAt": "2026-06-20T10:02:05.000Z",
+    "expiresAt": "2026-07-11T10:02:05.000Z",
+    "generatedAt": "2026-06-21T09:01:06.820Z"
   }
 ]
