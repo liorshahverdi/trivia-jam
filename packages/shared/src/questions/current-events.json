@@ -117,5 +117,22 @@
     "publishedAt": "2026-06-20T10:02:05.000Z",
     "expiresAt": "2026-07-11T10:02:05.000Z",
     "generatedAt": "2026-06-21T09:01:06.820Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-22-1",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which Supreme Court ruling allows a tool to protect minority voters in 7 states?",
+    "options": [
+      "Supreme Court allows a ruling that ends a tool to protect minority voters in 7 states",
+      "Supreme Court allows a ruling that ends a tool to protect majority voters in 7 states",
+      "Supreme Court allows a ruling that ends a tool to protect women voters in 7 states",
+      "Supreme Court allows a ruling that ends a tool to protect LGBTQ+ voters in 7 states"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/22/nx-s1-5863532/supreme-court-voting-rights-act-private-right-arkansas",
+    "publishedAt": "2026-06-22T13:32:09.000Z",
+    "expiresAt": "2026-07-13T13:32:09.000Z",
+    "generatedAt": "2026-06-22T14:04:02.328Z"
   }
 ]
