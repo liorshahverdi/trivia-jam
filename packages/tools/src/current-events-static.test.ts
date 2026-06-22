@@ -301,6 +301,51 @@ describe('static Current Events JSON refresh', () => {
     expect(questions).toEqual([]);
   });
 
+  it('aborts each slow local Ollama attempt after the configured per-attempt timeout', async () => {
+    vi.useFakeTimers();
+    try {
+      const signals: AbortSignal[] = [];
+      const fetchImpl = vi.fn((_url: string, init?: RequestInit) => {
+        if (!init?.signal) {
+          throw new Error('missing abort signal');
+        }
+        signals.push(init.signal);
+        return new Promise((_resolve, reject) => {
+          init.signal?.addEventListener('abort', () => {
+            reject(new DOMException('The operation was aborted.', 'AbortError'));
+          });
+        });
+      });
+
+      const promise = generateQuestionsWithOllama([{ 
+        title: 'Acme Space announces reusable satellite bus',
+        description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+        url: 'https://example.com/space-announcement',
+        sourceName: 'Example News',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }], {
+        fetchImpl: fetchImpl as any,
+        model: 'qwen2.5-coder:3b',
+        ollamaUrl: 'http://localhost:11434',
+        now: NOW,
+        maxAttempts: 2,
+        retryDelayMs: 0,
+        attemptTimeoutMs: 10,
+      });
+
+      await vi.advanceTimersByTimeAsync(10);
+      await vi.advanceTimersByTimeAsync(10);
+      const questions = await promise;
+
+      expect(fetchImpl).toHaveBeenCalledTimes(2);
+      expect(signals).toHaveLength(2);
+      expect(signals.every((signal) => signal.aborted)).toBe(true);
+      expect(questions).toEqual([]);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it('generates questions with a local Ollama model and parses strict JSON from the response', async () => {
     const fetchImpl = vi.fn(async () => ({
       ok: true,

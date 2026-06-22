@@ -9,6 +9,7 @@ const DEFAULT_MAX_ARTICLE_AGE_DAYS = 45;
 const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
 const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
 const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
+const DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS = 10 * 60 * 1_000;
 
 export interface NewsArticle {
   title: string;
@@ -312,6 +313,7 @@ export async function generateQuestionsWithOllama(
     articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
     maxAttempts = parseInt(process.env.CURRENT_EVENTS_OLLAMA_MAX_ATTEMPTS ?? `${DEFAULT_OLLAMA_MAX_ATTEMPTS}`, 10),
     retryDelayMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_RETRY_DELAY_MS ?? `${DEFAULT_OLLAMA_RETRY_DELAY_MS}`, 10),
+    attemptTimeoutMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_ATTEMPT_TIMEOUT_MS ?? `${DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS}`, 10),
     sleep = sleepMs,
   }: {
     fetchImpl?: FetchLike;
@@ -321,6 +323,7 @@ export async function generateQuestionsWithOllama(
     articleLimit?: number;
     maxAttempts?: number;
     retryDelayMs?: number;
+    attemptTimeoutMs?: number;
     sleep?: (ms: number) => Promise<void>;
   } = {},
 ): Promise<StaticCurrentEventQuestion[]> {
@@ -328,12 +331,19 @@ export async function generateQuestionsWithOllama(
 
   const attempts = Math.max(1, Number.isFinite(maxAttempts) ? Math.floor(maxAttempts) : DEFAULT_OLLAMA_MAX_ATTEMPTS);
   const delayMs = Math.max(0, Number.isFinite(retryDelayMs) ? Math.floor(retryDelayMs) : DEFAULT_OLLAMA_RETRY_DELAY_MS);
+  const timeoutMs = Math.max(0, Number.isFinite(attemptTimeoutMs) ? Math.floor(attemptTimeoutMs) : DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS);
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = timeoutMs > 0
+      ? setTimeout(() => controller.abort(new DOMException(`Ollama generation timed out after ${timeoutMs}ms`, 'TimeoutError')), timeoutMs)
+      : null;
+
     try {
       const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({
           model,
           prompt: buildGenerationPrompt(articles, now, articleLimit),
@@ -383,6 +393,8 @@ export async function generateQuestionsWithOllama(
         continue;
       }
       return [];
+    } finally {
+      if (timeout) clearTimeout(timeout);
     }
   }
 
