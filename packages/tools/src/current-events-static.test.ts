@@ -222,6 +222,29 @@ describe('static Current Events JSON refresh', () => {
     }]);
   });
 
+  it('returns no generated questions when the local Ollama request times out', async () => {
+    const fetchImpl = vi.fn(async () => {
+      throw new TypeError('fetch failed', {
+        cause: Object.assign(new Error('Headers Timeout Error'), { code: 'UND_ERR_HEADERS_TIMEOUT' }),
+      });
+    });
+
+    const questions = await generateQuestionsWithOllama([{ 
+      title: 'Acme Space announces reusable satellite bus',
+      description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+      url: 'https://example.com/space-announcement',
+      sourceName: 'Example News',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+    }], {
+      fetchImpl: fetchImpl as any,
+      model: 'qwen2.5-coder:3b',
+      ollamaUrl: 'http://localhost:11434',
+      now: NOW,
+    });
+
+    expect(questions).toEqual([]);
+  });
+
   it('generates questions with a local Ollama model and parses strict JSON from the response', async () => {
     const fetchImpl = vi.fn(async () => ({
       ok: true,

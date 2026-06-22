@@ -308,41 +308,48 @@ export async function generateQuestionsWithOllama(
 ): Promise<StaticCurrentEventQuestion[]> {
   if (articles.length === 0) return [];
 
-  const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model,
-      prompt: buildGenerationPrompt(articles, now, articleLimit),
-      stream: true,
-      options: { temperature: 0.2 },
-    }),
-  });
-  if (!res.ok || !res.json) {
-    console.warn(`[current-events-static] Ollama generation failed: ${res.status} ${res.statusText ?? ''}`);
+  try {
+    const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model,
+        prompt: buildGenerationPrompt(articles, now, articleLimit),
+        stream: true,
+        options: { temperature: 0.2 },
+      }),
+    });
+    if (!res.ok || !res.json) {
+      console.warn(`[current-events-static] Ollama generation failed: ${res.status} ${res.statusText ?? ''}`);
+      return [];
+    }
+
+    let responseText = '';
+    if (res.text) {
+      const body = await res.text();
+      for (const line of body.split('\n')) {
+        if (!line.trim()) continue;
+        try {
+          const chunk = JSON.parse(line) as { response?: string };
+          responseText += chunk.response ?? '';
+        } catch {
+          // Some tests/fallbacks may provide a non-stream JSON string directly.
+          responseText += line;
+        }
+      }
+    } else if (res.json) {
+      const data = await res.json() as { response?: string };
+      responseText = data.response ?? '';
+    }
+
+    if (!responseText) return [];
+    return parseQuestionsFromJsonText(responseText);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    const cause = error instanceof Error && error.cause instanceof Error ? `: ${error.cause.message}` : '';
+    console.warn(`[current-events-static] Ollama generation request failed: ${message}${cause}`);
     return [];
   }
-
-  let responseText = '';
-  if (res.text) {
-    const body = await res.text();
-    for (const line of body.split('\n')) {
-      if (!line.trim()) continue;
-      try {
-        const chunk = JSON.parse(line) as { response?: string };
-        responseText += chunk.response ?? '';
-      } catch {
-        // Some tests/fallbacks may provide a non-stream JSON string directly.
-        responseText += line;
-      }
-    }
-  } else if (res.json) {
-    const data = await res.json() as { response?: string };
-    responseText = data.response ?? '';
-  }
-
-  if (!responseText) return [];
-  return parseQuestionsFromJsonText(responseText);
 }
 
 export async function refreshCurrentEventsJson(
