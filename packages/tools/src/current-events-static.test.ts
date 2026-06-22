@@ -222,12 +222,29 @@ describe('static Current Events JSON refresh', () => {
     }]);
   });
 
-  it('returns no generated questions when the local Ollama request times out', async () => {
-    const fetchImpl = vi.fn(async () => {
-      throw new TypeError('fetch failed', {
+  it('retries a transient local Ollama timeout and returns generated questions when a later attempt succeeds', async () => {
+    const fetchImpl = vi.fn()
+      .mockRejectedValueOnce(new TypeError('fetch failed', {
         cause: Object.assign(new Error('Headers Timeout Error'), { code: 'UND_ERR_HEADERS_TIMEOUT' }),
+      }))
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          response: JSON.stringify({
+            questions: [{
+              id: 'current-events-dynamic-2026-06-18-space',
+              category: 'current-events',
+              difficulty: 'medium',
+              question: 'Which company announced a reusable satellite bus this week?',
+              options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'],
+              correctIndex: 1,
+              sourceUrl: 'https://example.com/space-announcement',
+              publishedAt: '2026-06-18T09:00:00.000Z',
+            }],
+          }),
+        }),
       });
-    });
+    const sleep = vi.fn(async () => undefined);
 
     const questions = await generateQuestionsWithOllama([{ 
       title: 'Acme Space announces reusable satellite bus',
@@ -240,8 +257,47 @@ describe('static Current Events JSON refresh', () => {
       model: 'qwen2.5-coder:3b',
       ollamaUrl: 'http://localhost:11434',
       now: NOW,
+      maxAttempts: 3,
+      retryDelayMs: 5000,
+      sleep,
     });
 
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(sleep).toHaveBeenCalledWith(5000);
+    expect(questions).toHaveLength(1);
+    expect(questions[0]).toMatchObject({
+      id: 'current-events-dynamic-2026-06-18-space',
+      category: 'current-events',
+      sourceUrl: 'https://example.com/space-announcement',
+    });
+  });
+
+  it('returns no generated questions after exhausting bounded local Ollama retries', async () => {
+    const fetchImpl = vi.fn(async () => {
+      throw new TypeError('fetch failed', {
+        cause: Object.assign(new Error('Headers Timeout Error'), { code: 'UND_ERR_HEADERS_TIMEOUT' }),
+      });
+    });
+    const sleep = vi.fn(async () => undefined);
+
+    const questions = await generateQuestionsWithOllama([{ 
+      title: 'Acme Space announces reusable satellite bus',
+      description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+      url: 'https://example.com/space-announcement',
+      sourceName: 'Example News',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+    }], {
+      fetchImpl: fetchImpl as any,
+      model: 'qwen2.5-coder:3b',
+      ollamaUrl: 'http://localhost:11434',
+      now: NOW,
+      maxAttempts: 3,
+      retryDelayMs: 5000,
+      sleep,
+    });
+
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
+    expect(sleep).toHaveBeenCalledTimes(2);
     expect(questions).toEqual([]);
   });
 

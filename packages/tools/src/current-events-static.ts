@@ -7,6 +7,8 @@ const DYNAMIC_ID_PREFIX = 'current-events-dynamic-';
 const DEFAULT_EXPIRATION_DAYS = 21;
 const DEFAULT_MAX_ARTICLE_AGE_DAYS = 45;
 const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
+const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
+const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
 
 export interface NewsArticle {
   title: string;
@@ -290,6 +292,16 @@ function parseQuestionsFromJsonText(text: string): StaticCurrentEventQuestion[] 
   return Array.isArray(questions) ? questions : [];
 }
 
+function sleepMs(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function describeError(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+  const cause = error instanceof Error && error.cause instanceof Error ? `: ${error.cause.message}` : '';
+  return `${message}${cause}`;
+}
+
 export async function generateQuestionsWithOllama(
   articles: NewsArticle[],
   {
@@ -298,58 +310,83 @@ export async function generateQuestionsWithOllama(
     ollamaUrl = process.env.OLLAMA_HOST ?? 'http://localhost:11434',
     now = new Date(),
     articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
+    maxAttempts = parseInt(process.env.CURRENT_EVENTS_OLLAMA_MAX_ATTEMPTS ?? `${DEFAULT_OLLAMA_MAX_ATTEMPTS}`, 10),
+    retryDelayMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_RETRY_DELAY_MS ?? `${DEFAULT_OLLAMA_RETRY_DELAY_MS}`, 10),
+    sleep = sleepMs,
   }: {
     fetchImpl?: FetchLike;
     model?: string;
     ollamaUrl?: string;
     now?: Date;
     articleLimit?: number;
+    maxAttempts?: number;
+    retryDelayMs?: number;
+    sleep?: (ms: number) => Promise<void>;
   } = {},
 ): Promise<StaticCurrentEventQuestion[]> {
   if (articles.length === 0) return [];
 
-  try {
-    const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model,
-        prompt: buildGenerationPrompt(articles, now, articleLimit),
-        stream: true,
-        options: { temperature: 0.2 },
-      }),
-    });
-    if (!res.ok || !res.json) {
-      console.warn(`[current-events-static] Ollama generation failed: ${res.status} ${res.statusText ?? ''}`);
+  const attempts = Math.max(1, Number.isFinite(maxAttempts) ? Math.floor(maxAttempts) : DEFAULT_OLLAMA_MAX_ATTEMPTS);
+  const delayMs = Math.max(0, Number.isFinite(retryDelayMs) ? Math.floor(retryDelayMs) : DEFAULT_OLLAMA_RETRY_DELAY_MS);
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const res = await fetchImpl(`${ollamaUrl.replace(/\/$/, '')}/api/generate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model,
+          prompt: buildGenerationPrompt(articles, now, articleLimit),
+          stream: true,
+          options: { temperature: 0.2 },
+        }),
+      });
+      if (!res.ok || !res.json) {
+        console.warn(`[current-events-static] Ollama generation attempt ${attempt}/${attempts} failed: ${res.status} ${res.statusText ?? ''}`);
+        if (attempt < attempts && (!res.status || res.status >= 500)) {
+          if (delayMs > 0) {
+            console.warn(`[current-events-static] Retrying Ollama generation in ${delayMs}ms`);
+            await sleep(delayMs);
+          }
+          continue;
+        }
+        return [];
+      }
+
+      let responseText = '';
+      if (res.text) {
+        const body = await res.text();
+        for (const line of body.split('\n')) {
+          if (!line.trim()) continue;
+          try {
+            const chunk = JSON.parse(line) as { response?: string };
+            responseText += chunk.response ?? '';
+          } catch {
+            // Some tests/fallbacks may provide a non-stream JSON string directly.
+            responseText += line;
+          }
+        }
+      } else if (res.json) {
+        const data = await res.json() as { response?: string };
+        responseText = data.response ?? '';
+      }
+
+      if (!responseText) return [];
+      return parseQuestionsFromJsonText(responseText);
+    } catch (error) {
+      console.warn(`[current-events-static] Ollama generation attempt ${attempt}/${attempts} failed: ${describeError(error)}`);
+      if (attempt < attempts) {
+        if (delayMs > 0) {
+          console.warn(`[current-events-static] Retrying Ollama generation in ${delayMs}ms`);
+          await sleep(delayMs);
+        }
+        continue;
+      }
       return [];
     }
-
-    let responseText = '';
-    if (res.text) {
-      const body = await res.text();
-      for (const line of body.split('\n')) {
-        if (!line.trim()) continue;
-        try {
-          const chunk = JSON.parse(line) as { response?: string };
-          responseText += chunk.response ?? '';
-        } catch {
-          // Some tests/fallbacks may provide a non-stream JSON string directly.
-          responseText += line;
-        }
-      }
-    } else if (res.json) {
-      const data = await res.json() as { response?: string };
-      responseText = data.response ?? '';
-    }
-
-    if (!responseText) return [];
-    return parseQuestionsFromJsonText(responseText);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    const cause = error instanceof Error && error.cause instanceof Error ? `: ${error.cause.message}` : '';
-    console.warn(`[current-events-static] Ollama generation request failed: ${message}${cause}`);
-    return [];
   }
+
+  return [];
 }
 
 export async function refreshCurrentEventsJson(
