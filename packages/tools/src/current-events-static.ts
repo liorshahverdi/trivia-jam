@@ -10,6 +10,7 @@ const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
 const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
 const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
 const DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS = 10 * 60 * 1_000;
+const FALLBACK_SOURCE_DISTRACTORS = ['NPR News', 'BBC World', 'NASA Breaking News', 'The Verge', 'Ars Technica', 'PBS NewsHour'];
 
 export interface NewsArticle {
   title: string;
@@ -188,6 +189,72 @@ function hasUniqueQuestionText(question: StaticCurrentEventQuestion, accepted: S
   return !accepted.some((existing) => normalizeTextForSupport(existing.question) === text);
 }
 
+function slugifyTitle(title: string): string {
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 72)
+    .replace(/-+$/g, '');
+  return slug || 'story';
+}
+
+function sourceDistractors(correctSource: string): [string, string, string, string] | null {
+  const options = [correctSource];
+  for (const source of FALLBACK_SOURCE_DISTRACTORS) {
+    if (options.map((option) => option.toLowerCase()).includes(source.toLowerCase())) continue;
+    options.push(source);
+    if (options.length === 4) break;
+  }
+
+  return options.length === 4 ? options as [string, string, string, string] : null;
+}
+
+function deterministicFallbackQuestions(articles: NewsArticle[], now: Date, limit = 4): StaticCurrentEventQuestion[] {
+  const today = now.toISOString().slice(0, 10);
+  const accepted: StaticCurrentEventQuestion[] = [];
+  const seenIds = new Set<string>();
+  const seenSources = new Set<string>();
+  const skippedHeadlinePattern = /\b(review|opinion|editorial|recap|rumor|rumour|ranked|ranking|blog|career spotlight|masculinism|bankruptcy|camp mystic|detention|immigrant|federal officials|war|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|dead|killed|shooting|crime)\b/i;
+
+  for (const article of articles) {
+    if (accepted.length >= Math.max(1, limit)) break;
+    if (skippedHeadlinePattern.test(`${article.title} ${article.description ?? ''}`)) continue;
+
+    const sourceName = article.sourceName?.trim();
+    if (!sourceName) continue;
+
+    const normalizedSource = sourceName.toLowerCase();
+    if (seenSources.has(normalizedSource)) continue;
+
+    const options = sourceDistractors(sourceName);
+    if (!options) continue;
+
+    const baseId = `${DYNAMIC_ID_PREFIX}${today}-${slugifyTitle(article.title)}`;
+    let id = baseId;
+    let suffix = 2;
+    while (seenIds.has(id)) {
+      id = `${baseId}-${suffix}`;
+      suffix += 1;
+    }
+    seenIds.add(id);
+    seenSources.add(normalizedSource);
+
+    accepted.push({
+      id,
+      category: CURRENT_EVENTS_CATEGORY,
+      difficulty: 'easy',
+      question: `Which news source reported: “${article.title}”?`,
+      options,
+      correctIndex: 0,
+      sourceUrl: article.url,
+      publishedAt: article.publishedAt,
+    });
+  }
+
+  return accepted;
+}
+
 function decodeXml(text: string): string {
   return text
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
@@ -347,8 +414,9 @@ export async function generateQuestionsWithOllama(
         body: JSON.stringify({
           model,
           prompt: buildGenerationPrompt(articles, now, articleLimit),
-          stream: true,
-          options: { temperature: 0.2 },
+          stream: false,
+          format: 'json',
+          options: { temperature: 0.1, num_predict: 1200 },
         }),
       });
       if (!res.ok || !res.json) {
@@ -418,12 +486,25 @@ export async function refreshCurrentEventsJson(
 
   const articles = await fetchArticles();
   const generated = articles.length > 0 ? await generateQuestions(articles) : [];
-  const acceptedGenerated: StoredStaticCurrentEventQuestion[] = [];
-  for (const question of generated) {
-    if (!validateStaticCurrentEventQuestion(question, now).valid) continue;
-    if (!isQuestionSupportedBySource(question, articles)) continue;
-    if (!hasUniqueQuestionText(question, acceptedGenerated)) continue;
-    acceptedGenerated.push(toStoredQuestion(question, now));
+  let acceptedGenerated: StoredStaticCurrentEventQuestion[] = [];
+  const acceptCandidates = (candidates: StaticCurrentEventQuestion[]) => {
+    const accepted: StoredStaticCurrentEventQuestion[] = [];
+    for (const question of candidates) {
+      if (!validateStaticCurrentEventQuestion(question, now).valid) continue;
+      if (!isQuestionSupportedBySource(question, articles)) continue;
+      if (!hasUniqueQuestionText(question, accepted)) continue;
+      accepted.push(toStoredQuestion(question, now));
+    }
+    return accepted;
+  };
+
+  acceptedGenerated = acceptCandidates(generated);
+  if (acceptedGenerated.length === 0 && articles.length > 0) {
+    const fallback = deterministicFallbackQuestions(articles, now);
+    acceptedGenerated = acceptCandidates(fallback);
+    if (acceptedGenerated.length > 0) {
+      console.warn(`[current-events-static] Using ${acceptedGenerated.length} deterministic fallback Current Events question(s) after local Ollama produced no usable questions.`);
+    }
   }
 
   const { unique } = deduplicate(acceptedGenerated, freshExistingDynamic as Question[]);

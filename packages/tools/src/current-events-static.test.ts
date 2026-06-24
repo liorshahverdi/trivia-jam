@@ -162,7 +162,7 @@ describe('static Current Events JSON refresh', () => {
     });
   });
 
-  it('filters generated questions whose correct answer is not supported by the source article text', async () => {
+  it('filters generated questions whose correct answer is not supported by the source article text and falls back to a source-backed question', async () => {
     const writeQuestions = vi.fn();
 
     const result = await refreshCurrentEventsJson({
@@ -188,8 +188,11 @@ describe('static Current Events JSON refresh', () => {
       }],
     });
 
-    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 0, total: 0 });
-    expect(writeQuestions).not.toHaveBeenCalled();
+    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    const written = writeQuestions.mock.calls[0][0];
+    expect(written[0].question).toBe('Which news source reported: “Skin care experts recommend 3 essentials”?');
+    expect(written[0].options[written[0].correctIndex]).toBe('Example News');
   });
 
   it('fetches recent articles from free RSS feeds without API keys', async () => {
@@ -346,7 +349,7 @@ describe('static Current Events JSON refresh', () => {
     }
   });
 
-  it('generates questions with a local Ollama model and parses strict JSON from the response', async () => {
+  it('generates questions with a local Ollama model and requests non-streaming JSON mode', async () => {
     const fetchImpl = vi.fn(async () => ({
       ok: true,
       json: async () => ({
@@ -382,11 +385,101 @@ describe('static Current Events JSON refresh', () => {
       method: 'POST',
       body: expect.stringContaining('qwen2.5-coder:3b'),
     }));
+    const requestInit = fetchImpl.mock.calls[0]?.[1] as RequestInit;
+    const body = JSON.parse(requestInit.body as string);
+    expect(body).toMatchObject({
+      model: 'qwen2.5-coder:3b',
+      stream: false,
+      format: 'json',
+    });
+    expect(body.options).toMatchObject({ temperature: 0.1 });
     expect(questions).toHaveLength(1);
     expect(questions[0]).toMatchObject({
       id: 'current-events-dynamic-2026-06-18-space',
       category: 'current-events',
       sourceUrl: 'https://example.com/space-announcement',
     });
+  });
+
+  it('creates deterministic source-backed fallback questions when local Ollama returns no usable questions', async () => {
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [],
+      writeQuestions,
+      fetchArticles: async () => [{
+        title: 'Acme Space announces reusable satellite bus',
+        description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+        url: 'https://example.com/space-announcement',
+        sourceName: 'Example News',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+      generateQuestions: async () => [],
+    });
+
+    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    const written = writeQuestions.mock.calls[0][0];
+    expect(written[0]).toMatchObject({
+      id: 'current-events-dynamic-2026-06-18-acme-space-announces-reusable-satellite-bus',
+      category: 'current-events',
+      difficulty: 'easy',
+      question: 'Which news source reported: “Acme Space announces reusable satellite bus”?',
+      options: ['Example News', 'NPR News', 'BBC World', 'NASA Breaking News'],
+      correctIndex: 0,
+      sourceUrl: 'https://example.com/space-announcement',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+      expiresAt: '2026-07-09T09:00:00.000Z',
+      generatedAt: NOW.toISOString(),
+    });
+  });
+
+  it('keeps deterministic fallback questions source-diverse and skips review/opinion headlines', async () => {
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [],
+      writeQuestions,
+      fetchArticles: async () => [
+        {
+          title: 'First NPR headline about a science mission',
+          description: 'NPR reported on the science mission.',
+          url: 'https://example.com/npr-first',
+          sourceName: 'NPR News',
+          publishedAt: '2026-06-18T09:00:00.000Z',
+        },
+        {
+          title: 'Second NPR headline about a market update',
+          description: 'NPR reported on the market update.',
+          url: 'https://example.com/npr-second',
+          sourceName: 'NPR News',
+          publishedAt: '2026-06-18T10:00:00.000Z',
+        },
+        {
+          title: 'Star Fox review: old tricks return',
+          description: 'A review of a video game release.',
+          url: 'https://example.com/review',
+          sourceName: 'Ars Technica',
+          publishedAt: '2026-06-18T11:00:00.000Z',
+        },
+        {
+          title: 'NASA announces telescope milestone',
+          description: 'NASA announced a telescope milestone.',
+          url: 'https://example.com/nasa',
+          sourceName: 'NASA Breaking News',
+          publishedAt: '2026-06-18T12:00:00.000Z',
+        },
+      ],
+      generateQuestions: async () => [],
+    });
+
+    expect(result).toEqual({ added: 2, kept: 0, removedExpired: 0, total: 2 });
+    const written = writeQuestions.mock.calls[0][0];
+    expect(written.map((question: Question) => question.sourceUrl)).toEqual([
+      'https://example.com/npr-first',
+      'https://example.com/nasa',
+    ]);
   });
 });

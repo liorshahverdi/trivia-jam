@@ -134,5 +134,73 @@
     "publishedAt": "2026-06-22T13:32:09.000Z",
     "expiresAt": "2026-07-13T13:32:09.000Z",
     "generatedAt": "2026-06-22T14:04:02.328Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-24-greetings-from-sweltering-switzerland",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “Greetings from sweltering Switzerland”?",
+    "options": [
+      "NPR News",
+      "BBC World",
+      "NASA Breaking News",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/24/nx-s1-5867606/lucerne-switzerland-world-cup-heat",
+    "publishedAt": "2026-06-24T11:55:49.000Z",
+    "expiresAt": "2026-07-15T11:55:49.000Z",
+    "generatedAt": "2026-06-24T15:32:39.982Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-24-power-outages-hit-france-as-record-heatwave-set-to-peak",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “Power outages hit France as record heatwave set to peak”?",
+    "options": [
+      "BBC World",
+      "NPR News",
+      "NASA Breaking News",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c78y4102n1zo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-24T13:44:08.000Z",
+    "expiresAt": "2026-07-15T13:44:08.000Z",
+    "generatedAt": "2026-06-24T15:32:39.982Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-24-house-gives-final-approval-to-landmark-housing-bill-aimed-at-lowering-co",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “House gives final approval to landmark housing bill aimed at lowering costs”?",
+    "options": [
+      "PBS NewsHour",
+      "NPR News",
+      "BBC World",
+      "NASA Breaking News"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/politics/house-gives-final-approval-to-landmark-housing-bill-aimed-at-lowering-costs",
+    "publishedAt": "2026-06-24T12:00:16.000Z",
+    "expiresAt": "2026-07-15T12:00:16.000Z",
+    "generatedAt": "2026-06-24T15:32:39.982Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-24-playing-the-moon-game",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “Playing the Moon Game”?",
+    "options": [
+      "NASA Breaking News",
+      "NPR News",
+      "BBC World",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/playing-the-moon-game/",
+    "publishedAt": "2026-06-24T04:01:00.000Z",
+    "expiresAt": "2026-07-15T04:01:00.000Z",
+    "generatedAt": "2026-06-24T15:32:39.982Z"
   }
 ]
