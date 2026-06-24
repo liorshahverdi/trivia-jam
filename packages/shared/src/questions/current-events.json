@@ -202,5 +202,22 @@
     "publishedAt": "2026-06-24T04:01:00.000Z",
     "expiresAt": "2026-07-15T04:01:00.000Z",
     "generatedAt": "2026-06-24T15:32:39.982Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-24-will-texas-new-top-voting-official-be-a-disruptor-locals-are-preparing-f",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “Will Texas' new top voting official be a 'disruptor'? Locals are preparing for it”?",
+    "options": [
+      "NPR News",
+      "BBC World",
+      "NASA Breaking News",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/24/nx-s1-5866554/texas-secretary-of-state-schatzline",
+    "publishedAt": "2026-06-24T15:32:06.000Z",
+    "expiresAt": "2026-07-15T15:32:06.000Z",
+    "generatedAt": "2026-06-24T15:44:53.629Z"
   }
 ]
