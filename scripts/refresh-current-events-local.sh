@@ -12,11 +12,15 @@ if ! command -v ollama >/dev/null 2>&1; then
   exit 1
 fi
 
-MODEL="${CURRENT_EVENTS_OLLAMA_MODEL:-qwen2.5-coder:3b}"
+# Keep the default model small enough for this always-on machine's 8GB RAM
+# baseline. qwen2.5-coder:3b has repeatedly failed at cron time with
+# "model requires more system memory" when other services consume memory.
+MODEL="${CURRENT_EVENTS_OLLAMA_MODEL:-qwen2.5:0.5b}"
 if ! ollama list | awk 'NR > 1 {print $1}' | grep -Fxq "$MODEL"; then
   echo "Ollama model $MODEL is not installed. Run: ollama pull $MODEL" >&2
   exit 1
 fi
+export CURRENT_EVENTS_OLLAMA_MODEL="$MODEL"
 
 # Keep this worker on the latest deployed source before refreshing static data.
 git fetch "$REMOTE" "$BRANCH"

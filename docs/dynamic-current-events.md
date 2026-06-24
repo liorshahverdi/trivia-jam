@@ -26,13 +26,13 @@ scripts/refresh-current-events-local.sh
 
 The script checks that Ollama and the selected model are installed, pulls the latest repo state, refreshes questions, runs the tools tests, builds the static client, commits changed questions, and pushes to `main`.
 
-Default local model:
+Default local wrapper model:
 
 ```text
-qwen2.5-coder:3b
+qwen2.5:0.5b
 ```
 
-Override it with:
+The always-on refresh machine uses this smaller default because `qwen2.5-coder:3b` can fail to load under normal memory pressure on the 8GB host. Override it with:
 
 ```bash
 CURRENT_EVENTS_OLLAMA_MODEL=qwen2.5:7b scripts/refresh-current-events-local.sh
@@ -43,7 +43,7 @@ Useful optional environment variables:
 - `TRIVIA_JAM_REPO_DIR`: repo path. Defaults to `/home/lior/projects/trivia-jam`.
 - `TRIVIA_JAM_BRANCH`: branch to refresh/push. Defaults to `main`.
 - `TRIVIA_JAM_REMOTE`: git remote. Defaults to `origin`.
-- `CURRENT_EVENTS_OLLAMA_MODEL`: Ollama model. Defaults to `qwen2.5-coder:3b`.
+- `CURRENT_EVENTS_OLLAMA_MODEL`: Ollama model for the local wrapper. Defaults to `qwen2.5:0.5b`.
 - `CURRENT_EVENTS_ARTICLE_LIMIT`: max articles sent to Ollama per run. Defaults to `4`.
 - `OLLAMA_HOST`: Ollama host URL. Defaults to `http://localhost:11434`.
 
