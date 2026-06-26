@@ -221,20 +221,71 @@
     "generatedAt": "2026-06-24T15:44:53.629Z"
   },
   {
-    "id": "current-events-dynamic-2026-06-26-1",
+    "id": "current-events-dynamic-2026-06-26-rescuers-scramble-to-find-venezuela-earthquake-survivors-and-scotus-rule",
     "category": "current-events",
     "difficulty": "easy",
-    "question": "What is the current event that is most relevant to the current news articles?",
+    "question": "Which news source reported: “Rescuers scramble to find Venezuela earthquake survivors. And, SCOTUS rules on asylum”?",
     "options": [
-      "Rescuers in Venezuela continue search for the missing after devastating earthquakes",
-      "SCOTUS rulings give Trump more power to set immigration policy",
-      "Trump works to woo struggling American farmers",
-      "Venezuela reels from earthquakes as rescuers scramble to find survivors"
+      "NPR News",
+      "BBC World",
+      "NASA Breaking News",
+      "The Verge"
     ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief",
-    "publishedAt": "2026-06-26T08:45:11.000Z",
-    "expiresAt": "2026-07-17T08:45:11.000Z",
-    "generatedAt": "2026-06-26T09:00:46.878Z"
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/26/g-s1-130361/up-first-newsletter-venezuela-earthquakes-asylum-claims-farmers",
+    "publishedAt": "2026-06-26T11:22:46.000Z",
+    "expiresAt": "2026-07-17T11:22:46.000Z",
+    "generatedAt": "2026-06-26T12:30:08.277Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-26-earthquake-is-devastating-blow-to-venezuela-at-time-of-uncertainty",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “Earthquake is devastating blow to Venezuela at time of uncertainty”?",
+    "options": [
+      "BBC World",
+      "NPR News",
+      "NASA Breaking News",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vynpw7rk4o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T02:12:07.000Z",
+    "expiresAt": "2026-07-17T02:12:07.000Z",
+    "generatedAt": "2026-06-26T12:30:08.277Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-26-king-charles-iii-will-not-live-at-buckingham-palace-after-completion-of",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “King Charles III will not live at Buckingham Palace after completion of costly, decade-long refurbishment”?",
+    "options": [
+      "PBS NewsHour",
+      "NPR News",
+      "BBC World",
+      "NASA Breaking News"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/world/king-charles-iii-will-not-live-at-buckingham-palace-after-completion-of-costly-decade-long-refurbishment",
+    "publishedAt": "2026-06-25T23:02:31.000Z",
+    "expiresAt": "2026-07-16T23:02:31.000Z",
+    "generatedAt": "2026-06-26T12:30:08.277Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-26-the-battle-for-sullivan-s-island",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which news source reported: “The Battle for Sullivan’s Island”?",
+    "options": [
+      "NASA Breaking News",
+      "NPR News",
+      "BBC World",
+      "The Verge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/the-battle-for-sullivans-island/",
+    "publishedAt": "2026-06-26T04:00:00.000Z",
+    "expiresAt": "2026-07-17T04:00:00.000Z",
+    "generatedAt": "2026-06-26T12:30:08.277Z"
   }
 ]

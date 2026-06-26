@@ -26,6 +26,38 @@ describe('static Current Events JSON refresh', () => {
     ]);
   });
 
+  it('prunes generic existing dynamic questions so bad cron output is removed', async () => {
+    const genericDynamic = {
+      id: 'current-events-dynamic-2026-06-26-1',
+      category: 'current-events' as const,
+      difficulty: 'easy' as const,
+      question: 'What is the current event that is most relevant to the current news articles?',
+      options: [
+        'Rescuers in Venezuela continue search for the missing after devastating earthquakes',
+        'SCOTUS rulings give Trump more power to set immigration policy',
+        'Trump works to woo struggling American farmers',
+        'Venezuela reels from earthquakes as rescuers scramble to find survivors',
+      ] as [string, string, string, string],
+      correctIndex: 1,
+      sourceUrl: 'https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief',
+      publishedAt: '2026-06-26T08:45:11.000Z',
+      expiresAt: '2026-07-17T08:45:11.000Z',
+      generatedAt: '2026-06-26T09:00:46.878Z',
+    };
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: new Date('2026-06-26T10:00:00.000Z'),
+      readExisting: () => [genericDynamic],
+      writeQuestions,
+      fetchArticles: async () => [],
+      generateQuestions: async () => [],
+    });
+
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
+    expect(writeQuestions).toHaveBeenCalledWith([]);
+  });
+
   it('prunes legacy static current-events questions when fresh dynamic questions exist', async () => {
     const legacyStatic: Question = {
       id: 'current-events-001',
@@ -160,6 +192,64 @@ describe('static Current Events JSON refresh', () => {
       expiresAt: '2026-07-09T09:00:00.000Z',
       generatedAt: NOW.toISOString(),
     });
+  });
+
+  it('rejects generic meta questions that are not anchored to a specific source subject', () => {
+    const result = validateStaticCurrentEventQuestion({
+      id: 'current-events-dynamic-2026-06-26-1',
+      category: 'current-events',
+      difficulty: 'easy',
+      question: 'What is the current event that is most relevant to the current news articles?',
+      options: [
+        'Rescuers in Venezuela continue search for the missing after devastating earthquakes',
+        'SCOTUS rulings give Trump more power to set immigration policy',
+        'Trump works to woo struggling American farmers',
+        'Venezuela reels from earthquakes as rescuers scramble to find survivors',
+      ],
+      correctIndex: 1,
+      sourceUrl: 'https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief',
+      publishedAt: '2026-06-26T08:45:11.000Z',
+    }, new Date('2026-06-26T09:00:46.878Z'));
+
+    expect(result).toEqual({ valid: false, reason: 'question is too generic for the source subject' });
+  });
+
+  it('filters generic generated questions and falls back to a source-backed question', async () => {
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [],
+      writeQuestions,
+      fetchArticles: async () => [{
+        title: 'SCOTUS rulings clarify election policy',
+        description: 'The morning news brief included SCOTUS rulings clarify election policy.',
+        url: 'https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief',
+        sourceName: 'NPR News',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+      generateQuestions: async () => [{
+        id: 'current-events-dynamic-2026-06-18-1',
+        category: 'current-events',
+        difficulty: 'easy',
+        question: 'What is the current event that is most relevant to the current news articles?',
+        options: [
+          'Rescuers in Venezuela continue search for the missing after devastating earthquakes',
+          'SCOTUS rulings give Trump more power to set immigration policy',
+          'Trump works to woo struggling American farmers',
+          'Venezuela reels from earthquakes as rescuers scramble to find survivors',
+        ],
+        correctIndex: 1,
+        sourceUrl: 'https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+    });
+
+    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    const written = writeQuestions.mock.calls[0][0];
+    expect(written[0].question).toBe('Which news source reported: “SCOTUS rulings clarify election policy”?');
+    expect(written[0].options[written[0].correctIndex]).toBe('NPR News');
   });
 
   it('filters generated questions whose correct answer is not supported by the source article text and falls back to a source-backed question', async () => {

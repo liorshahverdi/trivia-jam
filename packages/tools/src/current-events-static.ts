@@ -118,6 +118,9 @@ export function validateStaticCurrentEventQuestion(
   if (!candidate.question?.trim() || candidate.question.length < 20) {
     return { valid: false, reason: 'question is too short' };
   }
+  if (isGenericCurrentEventsQuestion(candidate.question)) {
+    return { valid: false, reason: 'question is too generic for the source subject' };
+  }
   if (!Array.isArray(candidate.options) || candidate.options.length !== 4) {
     return { valid: false, reason: 'must have exactly 4 options' };
   }
@@ -166,6 +169,16 @@ function isExpired(question: StaticCurrentEventQuestion, now: Date): boolean {
 
 function normalizeTextForSupport(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function isGenericCurrentEventsQuestion(question: string): boolean {
+  const normalized = normalizeTextForSupport(question);
+  return [
+    /\bcurrent event\b.*\b(current )?news articles\b/,
+    /\bmost relevant\b.*\b(current )?news\b/,
+    /\bwhat is the (main|top|current) (news story|current event|event)\b/,
+    /\bwhich (story|headline|article) is most relevant\b/,
+  ].some((pattern) => pattern.test(normalized));
 }
 
 function isQuestionSupportedBySource(question: StaticCurrentEventQuestion, articles: NewsArticle[]): boolean {
@@ -345,7 +358,7 @@ export async function fetchRssArticles({
 function buildGenerationPrompt(articles: NewsArticle[], now: Date, articleLimit = 4): string {
   const today = now.toISOString().slice(0, 10);
   const questionLimit = Math.max(1, Math.min(articleLimit, 8));
-  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
+  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The question text must name or clearly reference a concrete subject from the article title/description (for example a company, agency, mission, place, policy, product, or discovery). Do not ask generic meta-questions like "What is the current event..." or "Which headline is most relevant...".\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
 }
 
 function parseQuestionsFromJsonText(text: string): StaticCurrentEventQuestion[] {
@@ -481,7 +494,10 @@ export async function refreshCurrentEventsJson(
 
   const existing = read();
   const existingDynamic = existing.filter(isDynamicQuestion);
-  const freshExistingDynamic = existingDynamic.filter((question) => !isExpired(question, now));
+  const freshExistingDynamic = existingDynamic.filter((question) => (
+    !isExpired(question, now)
+    && validateStaticCurrentEventQuestion(question, now).valid
+  ));
   const legacyStaticQuestions = existing.filter((question) => !isDynamicQuestion(question));
 
   const articles = await fetchArticles();
