@@ -12,6 +12,12 @@ export default function HostFinalScreen({ playAgain }: Props) {
 
   const { mode, players, teamScores, coopScore, coopTarget, coopWin } = gameOverData;
   const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
+  const rankedPlayers = sortedPlayers.map((player) => {
+    const tiedCount = sortedPlayers.filter((candidate) => candidate.score === player.score).length;
+    const rank = sortedPlayers.filter((candidate) => candidate.score > player.score).length + 1;
+    return { ...player, rank, tiedCount };
+  });
+  const allCoopScoresTied = mode === 'coop' && rankedPlayers.length > 1 && rankedPlayers.every((player) => player.score === rankedPlayers[0].score);
   const mvp = sortedPlayers[0];
 
   const winningTeam =
@@ -111,38 +117,48 @@ export default function HostFinalScreen({ playAgain }: Props) {
 
       {/* Player Leaderboard */}
       <div className="w-full max-w-2xl mb-10 animate-slide-up">
-        <h2 className="text-2xl font-bold text-center mb-4">Final Standings</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">
+          {mode === 'coop' ? 'Shared Team Standings' : 'Final Standings'}
+        </h2>
+        {allCoopScoresTied && (
+          <p className="mb-4 text-center text-white/75">
+            Everyone tied on individual points in this co-op game.
+          </p>
+        )}
         <div className="space-y-2">
-          {sortedPlayers.map((player, i) => (
+          {rankedPlayers.map((player) => {
+            const showTie = mode === 'coop' && player.tiedCount > 1;
+            return (
             <div
               key={player.playerId}
               className={`flex items-center gap-4 p-4 rounded-xl ${
-                i === 0
+                player.rank === 1
                   ? 'bg-jam-yellow/10 border border-jam-yellow/30'
-                  : i === 1
+                  : player.rank === 2
                   ? 'bg-white/10 border border-white/20'
-                  : i === 2
+                  : player.rank === 3
                   ? 'bg-jam-pink/5 border border-jam-pink/20'
                   : 'bg-white/5 border border-white/10'
               }`}
             >
               <span
-                className={`text-2xl font-black w-10 text-center ${
-                  i === 0 ? 'text-jam-yellow' : i === 1 ? 'text-white/70' : i === 2 ? 'text-jam-pink' : 'text-white/40'
+                className={`text-2xl font-black w-16 text-center ${
+                  player.rank === 1 ? 'text-jam-yellow' : player.rank === 2 ? 'text-white/70' : player.rank === 3 ? 'text-jam-pink' : 'text-white/40'
                 }`}
               >
-                {i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : i + 1}
+                {showTie ? 'Tied' : player.rank === 1 ? '🥇' : player.rank === 2 ? '🥈' : player.rank === 3 ? '🥉' : player.rank}
               </span>
               <span className="text-3xl">{player.avatar}</span>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-lg">{player.name}</span>
+                  <span className="font-bold text-lg break-words">{player.name}</span>
                   {player.team && <TeamBadge team={player.team} />}
                 </div>
               </div>
               <span className="text-2xl font-black">{player.score}</span>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

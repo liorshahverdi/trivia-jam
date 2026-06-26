@@ -14,7 +14,10 @@ export default function PlayerFinalScreen() {
 
   const { mode, players, teamScores, coopScore, coopTarget, coopWin } = gameOverData;
   const myEntry = players.find((p) => p.playerId === playerId);
-  const myRank = players.findIndex((p) => p.playerId === playerId) + 1;
+  const tiedCount = myEntry ? players.filter((p) => p.score === myEntry.score).length : 0;
+  const higherScoreCount = myEntry ? players.filter((p) => p.score > myEntry.score).length : 0;
+  const myRank = higherScoreCount + 1;
+  const showCoopTie = mode === 'coop' && tiedCount > 1;
 
   // Determine if the player "won"
   let isWin = false;
@@ -90,8 +93,14 @@ export default function PlayerFinalScreen() {
         <div className="card px-8 py-6 text-center border-jam-purple bg-jam-purple/10">
           <p className="text-4xl mb-2">{myPlayer?.avatar ?? myEntry.avatar}</p>
           <p className="font-bold text-lg">{myEntry.name}</p>
-          <p className="text-white/60 text-sm mt-1">Rank</p>
-          <p className="text-4xl font-black text-jam-yellow">#{myRank}</p>
+          <p className="text-white/80 text-sm mt-1">
+            {mode === 'coop' ? 'Team Result' : 'Rank'}
+          </p>
+          {showCoopTie ? (
+            <p className="text-2xl font-black text-jam-yellow">Tied with {tiedCount} players</p>
+          ) : (
+            <p className="text-4xl font-black text-jam-yellow">#{myRank}</p>
+          )}
           <p className="text-white/80 mt-1">
             <span className="font-bold text-xl">{myEntry.score}</span> points
           </p>
@@ -100,7 +109,7 @@ export default function PlayerFinalScreen() {
 
       {/* Waiting message */}
       <div className="mt-4 text-center">
-        <p className="text-white/40 animate-pulse">
+        <p className="text-white/70 animate-pulse">
           Waiting for host...
         </p>
       </div>

@@ -14,7 +14,7 @@ export default function PlayerAvatar({ player, size = 'md', showName = true }: P
     <div className={`flex flex-col items-center gap-1 ${!player.connected ? 'opacity-40' : ''}`}>
       <span className={sizes[size]}>{player.avatar}</span>
       {showName && (
-        <span className={`${nameSizes[size]} font-medium truncate max-w-[80px]`}>{player.name}</span>
+        <span className={`${nameSizes[size]} font-medium break-words text-center max-w-[7rem] leading-tight`} title={player.name}>{player.name}</span>
       )}
     </div>
   );

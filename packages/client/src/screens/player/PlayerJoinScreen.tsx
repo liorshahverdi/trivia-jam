@@ -21,6 +21,9 @@ export default function PlayerJoinScreen({ createRoom, joinRoom }: PlayerJoinScr
     joinRoom(trimmedCode, trimmedName);
   };
 
+  const canJoin = code.trim().length === 4 && Boolean(name.trim());
+  const displayedNameLength = name.length;
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6">
       <h1 className="text-5xl font-black mb-12 bg-gradient-to-r from-jam-purple via-jam-pink to-jam-yellow bg-clip-text text-transparent">
@@ -66,15 +69,24 @@ export default function PlayerJoinScreen({ createRoom, joinRoom }: PlayerJoinScr
             type="text"
             placeholder="Your Name"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value.slice(0, 20))}
             maxLength={20}
+            aria-describedby="name-limit-hint"
             className="input-field text-center text-lg"
           />
+          <div id="name-limit-hint" className="-mt-2 text-center text-xs text-white/70">
+            <p>{displayedNameLength} / 20 characters</p>
+            <p>Names are limited to 20 characters.</p>
+          </div>
 
           <button
             onClick={handleJoin}
-            disabled={code.trim().length !== 4 || !name.trim()}
-            className="btn-primary w-full py-4 text-lg font-bold disabled:opacity-40 disabled:cursor-not-allowed"
+            disabled={!canJoin}
+            className={`btn-primary w-full py-4 text-lg font-bold transition-all ${
+              canJoin
+                ? 'ring-2 ring-jam-yellow shadow-lg shadow-jam-yellow/20'
+                : 'opacity-40 cursor-not-allowed'
+            }`}
           >
             Join
           </button>

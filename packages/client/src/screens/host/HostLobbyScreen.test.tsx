@@ -63,4 +63,28 @@ describe('HostLobbyScreen', () => {
 
     expect(screen.getByRole('alert').textContent).toContain('Teams mode needs an even number of players');
   });
+
+  it('disables teams start with an immediate explanation while the player count is odd', () => {
+    useGameStore.setState({
+      mode: 'teams',
+      players: [
+        player,
+        { ...player, id: 'p2', name: 'Bob', avatar: '🐸' },
+        { ...player, id: 'p3', name: 'Cara', avatar: '🦉' },
+      ],
+      selectedCategories: ['math'],
+    });
+
+    render(
+      <HostLobbyScreen
+        setMode={vi.fn()}
+        selectCategories={vi.fn()}
+        startGame={vi.fn()}
+      />
+    );
+
+    const startButton = screen.getByRole('button', { name: /start game/i });
+    expect(startButton.hasAttribute('disabled')).toBe(true);
+    expect(screen.getByText(/teams mode needs an even number of players/i)).toBeTruthy();
+  });
 });

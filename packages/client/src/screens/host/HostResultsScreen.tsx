@@ -1,6 +1,7 @@
 import { useGameStore } from '../../stores/gameStore';
 import ScorePopup from '../../components/ScorePopup';
 import TeamBadge from '../../components/TeamBadge';
+import { decodeHtmlEntities } from '../../utils/html';
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D'];
 
@@ -14,8 +15,8 @@ export default function HostResultsScreen() {
   return (
     <div className="min-h-screen bg-jam-dark text-white flex flex-col items-center p-8">
       {/* Question */}
-      <h2 className="text-3xl font-bold text-center mb-8 animate-slide-up max-w-4xl">
-        {currentQuestion.question}
+      <h2 className="text-3xl md:text-4xl font-black text-center mb-8 animate-slide-up max-w-4xl text-white drop-shadow-lg">
+        {decodeHtmlEntities(currentQuestion.question)}
       </h2>
 
       {/* Options with correct/wrong highlights */}
@@ -30,8 +31,8 @@ export default function HostResultsScreen() {
 
           return (
             <div key={i} className={`p-5 rounded-2xl border-2 ${border} flex items-center gap-4`}>
-              <span className="text-2xl font-black opacity-60">{OPTION_LABELS[i]}</span>
-              <span className="text-lg font-bold flex-1">{option}</span>
+              <span className="text-2xl font-black text-white/80">{OPTION_LABELS[i]}</span>
+              <span className="text-lg font-bold flex-1">{decodeHtmlEntities(option)}</span>
               {isCorrect && <span className="text-3xl">✅</span>}
               {isCoopMajority && !isCorrect && <span className="text-3xl">❌</span>}
             </div>
@@ -42,7 +43,7 @@ export default function HostResultsScreen() {
       {/* Co-op result */}
       {mode === 'coop' && coopResult && (
         <div className="animate-bounce-in text-center mb-8">
-          <p className="text-xl text-white/60 mb-2">
+          <p className="text-xl text-white/80 mb-2">
             Group voted: <span className="font-bold text-white">{OPTION_LABELS[coopResult.majorityIndex]}</span>
             {' '}({coopResult.voteCounts[coopResult.majorityIndex]} votes)
           </p>

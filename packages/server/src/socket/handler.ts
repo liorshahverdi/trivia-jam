@@ -91,7 +91,7 @@ export function setupSocketHandlers(io: Server): void {
       if (!room) return;
       const validation = canStartGame(room);
       if (!validation.ok) {
-        socket.emit(ServerEvents.ROOM_ERROR, { message: validation.message });
+        io.to(room.code).emit(ServerEvents.ROOM_ERROR, { message: validation.message });
         return;
       }
       startGameLoop(io, room);

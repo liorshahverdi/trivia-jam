@@ -61,7 +61,7 @@ export default function HostQuestionScreen() {
 
       {/* Question */}
       <div className="flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full">
-        <h1 className="text-4xl md:text-5xl font-black text-center mb-12 animate-bounce-in leading-tight">
+        <h1 className="text-4xl md:text-5xl font-black text-center mb-12 animate-bounce-in leading-tight text-white drop-shadow-lg">
           {decodeHtmlEntities(currentQuestion.question)}
         </h1>
 

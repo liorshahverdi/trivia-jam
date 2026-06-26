@@ -29,7 +29,16 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
     setMode(m);
   };
 
-  const canStart = players.length > 0 && localCategories.length > 0;
+  const connectedPlayerCount = players.filter((player) => player.connected).length;
+  const teamsHasOddPlayerCount = mode === 'teams' && connectedPlayerCount % 2 !== 0;
+  const startBlocker = players.length === 0
+    ? 'Waiting for at least one player to join.'
+    : localCategories.length === 0
+      ? 'Select at least one category to start.'
+      : teamsHasOddPlayerCount
+        ? 'Teams mode needs an even number of players. Add or remove one player before starting.'
+        : null;
+  const canStart = !startBlocker;
 
   return (
     <div className="min-h-screen bg-jam-dark text-white p-8 flex flex-col items-center">
@@ -122,11 +131,9 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
       >
         Start Game
       </button>
-      {!canStart && (
-        <p className="mt-3 text-white/50 text-sm text-center">
-          {players.length === 0
-            ? 'Waiting for at least one player to join.'
-            : 'Select at least one category to start.'}
+      {startBlocker && (
+        <p className="mt-3 text-white/70 text-sm text-center">
+          {startBlocker}
         </p>
       )}
     </div>
