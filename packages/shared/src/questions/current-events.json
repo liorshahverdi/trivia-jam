@@ -219,5 +219,22 @@
     "publishedAt": "2026-06-24T15:32:06.000Z",
     "expiresAt": "2026-07-15T15:32:06.000Z",
     "generatedAt": "2026-06-24T15:44:53.629Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-26-1",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the current event that is most relevant to the current news articles?",
+    "options": [
+      "Rescuers in Venezuela continue search for the missing after devastating earthquakes",
+      "SCOTUS rulings give Trump more power to set immigration policy",
+      "Trump works to woo struggling American farmers",
+      "Venezuela reels from earthquakes as rescuers scramble to find survivors"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/06/26/nx-s1-5870438/morning-news-brief",
+    "publishedAt": "2026-06-26T08:45:11.000Z",
+    "expiresAt": "2026-07-17T08:45:11.000Z",
+    "generatedAt": "2026-06-26T09:00:46.878Z"
   }
 ]
