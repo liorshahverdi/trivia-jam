@@ -11,6 +11,58 @@ import {
 
 const NOW = new Date('2026-06-18T12:00:00.000Z');
 
+const QUESTION_TOPICS = [
+  'reusable satellite bus module',
+  'coral reef mapping drone',
+  'carbon capture pilot plant',
+  'museum dinosaur exhibit',
+  'electric ferry route',
+  'library robotics program',
+  'quantum sensor prototype',
+  'farm irrigation platform',
+  'ocean cleanup robot',
+  'medical imaging scanner',
+  'wildlife tracking collar',
+  'campus astronomy lab',
+  'battery recycling center',
+  'AI translation tool',
+  'public transit app',
+  'volcano monitoring satellite',
+  'food safety sensor',
+  'weather balloon network',
+  'green cement formula',
+  'water quality dashboard',
+  'solar observatory camera',
+  'mars habitat simulator',
+  'forest mapping lidar',
+  'microchip packaging method',
+];
+
+function makeArticle(index: number) {
+  const topic = QUESTION_TOPICS[index - 1] ?? `science milestone ${index}`;
+  return {
+    title: `Acme Space announces ${topic}`,
+    description: `Acme Space announced ${topic} for a new public technology project.`,
+    url: `https://example.com/space-announcement-${index}`,
+    sourceName: 'Example News',
+    publishedAt: '2026-06-18T09:00:00.000Z',
+  };
+}
+
+function makeGeneratedQuestion(index: number) {
+  const topic = QUESTION_TOPICS[index - 1] ?? `science milestone ${index}`;
+  return {
+    id: `current-events-dynamic-2026-06-18-space-${index}`,
+    category: 'current-events' as const,
+    difficulty: 'medium' as const,
+    question: `Which company announced the ${topic} this week?`,
+    options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+    correctIndex: 1,
+    sourceUrl: `https://example.com/space-announcement-${index}`,
+    publishedAt: '2026-06-18T09:00:00.000Z',
+  };
+}
+
 describe('static Current Events JSON refresh', () => {
   it('uses a broad default RSS source mix for current events', () => {
     expect(DEFAULT_RSS_FEEDS.map((feed) => feed.name)).toEqual([
@@ -25,6 +77,42 @@ describe('static Current Events JSON refresh', () => {
       'Ars Technica',
       'Hacker News',
     ]);
+  });
+
+
+  it('writes at least 20 newly generated valid questions for a Current Events-only game', async () => {
+    const writeQuestions = vi.fn();
+    const articles = Array.from({ length: 20 }, (_, index) => makeArticle(index + 1));
+    const generated = Array.from({ length: 20 }, (_, index) => makeGeneratedQuestion(index + 1));
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [],
+      writeQuestions,
+      fetchArticles: async () => articles,
+      generateQuestions: async () => generated,
+    });
+
+    expect(result).toEqual({ added: 20, kept: 0, removedExpired: 0, total: 20 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    expect(writeQuestions.mock.calls[0][0]).toHaveLength(20);
+  });
+
+  it('fails closed and publishes nothing when fewer than 20 valid generated questions are available', async () => {
+    const writeQuestions = vi.fn();
+    const articles = Array.from({ length: 19 }, (_, index) => makeArticle(index + 1));
+    const generated = Array.from({ length: 19 }, (_, index) => makeGeneratedQuestion(index + 1));
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [makeGeneratedQuestion(99)],
+      writeQuestions,
+      fetchArticles: async () => articles,
+      generateQuestions: async () => generated,
+    });
+
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
+    expect(writeQuestions).toHaveBeenCalledWith([]);
   });
 
   it('prunes generic existing dynamic questions so bad cron output is removed', async () => {
@@ -76,6 +164,7 @@ describe('static Current Events JSON refresh', () => {
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
+      minDynamicQuestions: 1,
       readExisting: () => [oldDynamic],
       writeQuestions,
       fetchArticles: async () => [{
@@ -237,6 +326,7 @@ describe('static Current Events JSON refresh', () => {
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
+      minDynamicQuestions: 1,
       readExisting: () => [curatedFallback, expiredDynamic],
       writeQuestions,
       fetchArticles: async () => [{
@@ -647,7 +737,7 @@ describe('static Current Events JSON refresh', () => {
       env: expect.objectContaining({ HERMES_ACCEPT_HOOKS: '1' }),
     }));
     const args = execFileImpl.mock.calls[0]?.[1] ?? [];
-    expect(args.at(-1)).toContain('Create at most');
+    expect(args.at(-1)).toContain('Create exactly 1');
     expect(args.at(-1)).toContain('Acme Space announces reusable satellite bus');
     expect(questions).toHaveLength(1);
     expect(questions[0]).toMatchObject({

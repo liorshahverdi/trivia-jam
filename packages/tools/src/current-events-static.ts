@@ -8,6 +8,7 @@ const CURRENT_EVENTS_CATEGORY = 'current-events' as const;
 const DYNAMIC_ID_PREFIX = 'current-events-dynamic-';
 const DEFAULT_EXPIRATION_DAYS = 21;
 const DEFAULT_MAX_ARTICLE_AGE_DAYS = 45;
+const DEFAULT_MIN_DYNAMIC_QUESTIONS = 20;
 const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
 const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
 const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
@@ -75,6 +76,7 @@ export interface RefreshCurrentEventsJsonDeps {
   generateQuestions?: (articles: NewsArticle[]) => Promise<StaticCurrentEventQuestion[]>;
   readExisting?: () => Array<Question | StaticCurrentEventQuestion>;
   writeQuestions?: (questions: Array<Question | StaticCurrentEventQuestion>) => void;
+  minDynamicQuestions?: number;
   maxDynamicQuestions?: number;
 }
 
@@ -213,6 +215,12 @@ function hasUnsafeCurrentEventsSubject(text: string): boolean {
   return /\b(war|battle|battles|conflict|conflicts|congo|rwanda|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|deaths|dead|deadly|kill|kills|killed|shooting|crime|earthquake|earthquakes|heatwave|religion|bible|schools?|child marriage|sierra leone|rescuers|survivors|devastating|detention|immigrant|bankruptcy)\b/.test(normalized);
 }
 
+function isSafeArticleForTrivia(article: NewsArticle): boolean {
+  const text = [article.title, article.description ?? '', article.sourceName ?? ''].join(' ');
+  if (hasUnsafeCurrentEventsSubject(text)) return false;
+  return !/\b(review|opinion|editorial|recap|rumor|rumour|ranked|ranking|blog|lawsuit|scandal|sanction|sanctions|smuggling|epstein)\b/.test(normalizeTextForSupport(text));
+}
+
 function isQuestionSupportedBySource(question: StaticCurrentEventQuestion, articles: NewsArticle[]): boolean {
   const sourceArticle = articles.find((article) => article.url === question.sourceUrl);
   if (!sourceArticle) return false;
@@ -322,10 +330,28 @@ export async function fetchRssArticles({
   });
 }
 
-function buildGenerationPrompt(articles: NewsArticle[], now: Date, articleLimit = 4): string {
+function buildGenerationPrompt(articles: NewsArticle[], now: Date, articleLimit = 40): string {
   const today = now.toISOString().slice(0, 10);
-  const questionLimit = Math.max(1, Math.min(articleLimit, 8));
-  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The question text must name a concrete subject from the article title/description (for example a company, agency, mission, place, policy, product, or discovery). Do not use vague references like "the country", "the company", "the two countries", "this event", or "the most significant test". Do not ask generic meta-questions like "What is the current event..." or "Which headline is most relevant...".\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
+  const promptArticles = articles.filter(isSafeArticleForTrivia).slice(0, articleLimit);
+  const questionLimit = Math.max(1, Math.min(promptArticles.length, DEFAULT_MAX_DYNAMIC_QUESTIONS));
+  return `Create exactly ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.
+
+Rules:
+- Return strict JSON only: {"questions":[...]}
+- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.
+- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".
+- category must be "current-events".
+- difficulty must be easy, medium, or hard.
+- options must contain exactly four unique strings.
+- The question text must name a concrete subject from the article title/description (for example a company, agency, mission, place, policy, product, or discovery). Do not use vague references like "the country", "the company", "the two countries", "this event", or "the most significant test". Do not ask generic meta-questions like "What is the current event..." or "Which headline is most relevant...".
+- The correct answer must appear verbatim in the article title, description, or sourceName.
+- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.
+- Avoid tragedies, deaths, graphic crime, speculation, and opinion.
+- Prefer questions that will still make sense for 1-3 weeks.
+- If fewer than ${questionLimit} safe high-quality questions are possible, return fewer rather than filler; the publisher will reject undersized batches.
+
+Articles:
+${JSON.stringify(promptArticles)}`;
 }
 
 function parseQuestionsFromJsonText(text: string): StaticCurrentEventQuestion[] {
@@ -357,7 +383,7 @@ export async function generateQuestionsWithOllama(
     model = process.env.CURRENT_EVENTS_OLLAMA_MODEL ?? 'qwen2.5-coder:3b',
     ollamaUrl = process.env.OLLAMA_HOST ?? 'http://localhost:11434',
     now = new Date(),
-    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
+    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '40', 10),
     maxAttempts = parseInt(process.env.CURRENT_EVENTS_OLLAMA_MAX_ATTEMPTS ?? `${DEFAULT_OLLAMA_MAX_ATTEMPTS}`, 10),
     retryDelayMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_RETRY_DELAY_MS ?? `${DEFAULT_OLLAMA_RETRY_DELAY_MS}`, 10),
     attemptTimeoutMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_ATTEMPT_TIMEOUT_MS ?? `${DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS}`, 10),
@@ -460,7 +486,7 @@ export async function generateQuestionsWithHermes(
     provider = process.env.CURRENT_EVENTS_HERMES_PROVIDER,
     model = process.env.CURRENT_EVENTS_HERMES_MODEL,
     now = new Date(),
-    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
+    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '40', 10),
     timeoutMs = parseInt(process.env.CURRENT_EVENTS_HERMES_TIMEOUT_MS ?? `${DEFAULT_HERMES_TIMEOUT_MS}`, 10),
   }: {
     execFileImpl?: ExecFileLike;
@@ -509,6 +535,7 @@ export async function refreshCurrentEventsJson(
   const generateQuestions = deps.generateQuestions ?? ((articles) => generateQuestionsWithConfiguredProvider(articles, now));
   const read = deps.readExisting ?? (() => readExisting(CURRENT_EVENTS_CATEGORY));
   const write = deps.writeQuestions ?? ((questions) => writeCategoryQuestions(CURRENT_EVENTS_CATEGORY, questions as Question[]));
+  const minDynamicQuestions = deps.minDynamicQuestions ?? DEFAULT_MIN_DYNAMIC_QUESTIONS;
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
 
   const existing = read();
@@ -532,6 +559,16 @@ export async function refreshCurrentEventsJson(
   const { unique } = deduplicate(acceptedGenerated, []);
   const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions));
   const removedExpired = existing.length;
+
+  if (newDynamic.length < minDynamicQuestions) {
+    if (removedExpired > 0) write([]);
+    return {
+      added: 0,
+      kept: 0,
+      removedExpired,
+      total: 0,
+    };
+  }
 
   if (removedExpired > 0 || newDynamic.length > 0) {
     write(newDynamic);

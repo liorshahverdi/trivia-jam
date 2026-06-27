@@ -2,35 +2,647 @@
   {
     "id": "current-events-dynamic-2026-06-27-001",
     "category": "current-events",
-    "difficulty": "easy",
-    "question": "According to NPR News, what tick-borne illness is a potential new shot being developed to prevent?",
+    "difficulty": "medium",
+    "question": "NPR reported that drugmakers are working on a potential new shot to prevent which tick-borne illness?",
     "options": [
       "Lyme disease",
-      "COVID-19",
-      "Malaria",
-      "Measles"
+      "Osteopenia",
+      "ADHD",
+      "Geothermal energy"
     ],
     "correctIndex": 0,
     "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5859907/lyme-disease-vaccine-hesitancy-rural-hunters",
     "publishedAt": "2026-06-27T10:30:00.000Z",
     "expiresAt": "2026-07-18T10:30:00.000Z",
-    "generatedAt": "2026-06-27T10:55:41.437Z"
+    "generatedAt": "2026-06-27T11:23:16.396Z"
   },
   {
-    "id": "current-events-dynamic-2026-06-27-003",
+    "id": "current-events-dynamic-2026-06-27-002",
     "category": "current-events",
     "difficulty": "easy",
-    "question": "Which coach did NPR News say made believers out of the U.S. World Cup team?",
+    "question": "Which coach did NPR say made believers out of the U.S. World Cup team?",
     "options": [
       "Mauricio Pochettino",
-      "Gregg Berhalter",
-      "Jürgen Klopp",
-      "Carlo Ancelotti"
+      "Mark Carney",
+      "Eric Fernandez",
+      "Bill Cassidy"
     ],
     "correctIndex": 0,
     "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5872818/2026-world-cup-fifa-mauricio-pochettino-usmnt-coach",
     "publishedAt": "2026-06-27T10:00:00.000Z",
     "expiresAt": "2026-07-18T10:00:00.000Z",
-    "generatedAt": "2026-06-27T10:55:41.437Z"
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-003",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR said America’s 250th birthday has made it a busy year for people who portray which historical figure?",
+    "options": [
+      "George Washington",
+      "Mauricio Pochettino",
+      "Pete Buttigieg",
+      "Caitlin Clark"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5816415/america-250-george-washington-reenactors",
+    "publishedAt": "2026-06-27T09:00:00.000Z",
+    "expiresAt": "2026-07-18T09:00:00.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-004",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR’s food-saving article suggested putting an “Eat Me First” box in what place?",
+    "options": [
+      "your fridge",
+      "Texas",
+      "Earth orbit",
+      "Space Center Houston"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5786564/4-ways-get-creative-with-your-leftovers-save-money-on-food",
+    "publishedAt": "2026-06-27T09:00:00.000Z",
+    "expiresAt": "2026-07-18T09:00:00.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-005",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR described a World Cup beef debate involving Argentina fans pouring into which U.S. state?",
+    "options": [
+      "Texas",
+      "Louisiana",
+      "California",
+      "Indiana"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5873328/beef-about-beef-world-cup",
+    "publishedAt": "2026-06-27T07:03:18.000Z",
+    "expiresAt": "2026-07-18T07:03:18.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-006",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NPR reported that Pete Buttigieg’s family was visited by police and which agency after a false report?",
+    "options": [
+      "Child Protective Services",
+      "NASA Breaking News",
+      "European Space Agency",
+      "PBS NewsHour"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/26/nx-s1-5872821/pete-buttigieg-cps-police-swatting",
+    "publishedAt": "2026-06-27T00:26:52.000Z",
+    "expiresAt": "2026-07-18T00:26:52.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-007",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World reported that Pete Buttigieg was briefly separated from whom after a false police report?",
+    "options": [
+      "children",
+      "hunters",
+      "cookbook authors",
+      "models"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cwydx95kjx0o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-27T00:40:44.000Z",
+    "expiresAt": "2026-07-18T00:40:44.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-008",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "BBC World said international World Cup fans were frustrated by which culture in the US?",
+    "options": [
+      "tipping culture",
+      "steak culture",
+      "opera",
+      "geothermal energy"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/clyxgjykx7lo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T18:20:04.000Z",
+    "expiresAt": "2026-07-17T18:20:04.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-009",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "BBC World reported that which country is eligible to join the Eurovision competition?",
+    "options": [
+      "Canada",
+      "Argentina",
+      "Texas",
+      "Venus"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cy06yzp4r0eo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T13:41:36.000Z",
+    "expiresAt": "2026-07-17T13:41:36.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-010",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World said some analysts called the first non-stop London to which city flight a major milestone?",
+    "options": [
+      "Sydney",
+      "Beijing",
+      "Cincinnati",
+      "Leningrad"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cx2j7v51l5ko?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T23:02:15.000Z",
+    "expiresAt": "2026-07-17T23:02:15.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-011",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World described a hit South African show in which language as a worldwide hit?",
+    "options": [
+      "Zulu-language",
+      "English-language",
+      "French-language",
+      "Spanish-language"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cx2djde7v2do?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T23:02:23.000Z",
+    "expiresAt": "2026-07-17T23:02:23.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-012",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "BBC World used five charts to examine the state of which country’s economy?",
+    "options": [
+      "Canada's economy",
+      "Argentina",
+      "Texas",
+      "Venus"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c70y1y909pdo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-27T01:58:40.000Z",
+    "expiresAt": "2026-07-18T01:58:40.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-013",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World said start-ups are taking fresh approaches to which energy source under your feet?",
+    "options": [
+      "geothermal energy",
+      "memory chip",
+      "solar system",
+      "smoke"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cj3gj1n8yz8o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-06-26T10:12:42.000Z",
+    "expiresAt": "2026-07-17T10:12:42.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-014",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour reported that Apple increased prices for which two product lines?",
+    "options": [
+      "Macs and iPads",
+      "iPhones and watches",
+      "servers and routers",
+      "books and bags"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/economy/apple-increases-prices-for-macs-and-ipads-blaming-memory-chip-shortage-fueled-by-ai",
+    "publishedAt": "2026-06-26T23:50:00.000Z",
+    "expiresAt": "2026-07-17T23:50:00.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-015",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour said a new AP-NORC survey found most Americans are inundated with suspected what?",
+    "options": [
+      "scams",
+      "wildfires",
+      "steaks",
+      "tickets"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/nation/americans-are-inundated-with-suspected-scams-new-polls-show-why-few-victims-report-them",
+    "publishedAt": "2026-06-26T23:41:07.000Z",
+    "expiresAt": "2026-07-17T23:41:07.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-016",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour reported that the WNBA suspended which Phoenix player for one game?",
+    "options": [
+      "Alyssa Thomas",
+      "Caitlin Clark",
+      "Amna Nawaz",
+      "Seerat Sohi"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/nation/wnba-suspends-alyssa-thomas-for-1-game-over-hit-to-caitlin-clarks-throat",
+    "publishedAt": "2026-06-26T22:40:24.000Z",
+    "expiresAt": "2026-07-17T22:40:24.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-017",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour said controversy in the WNBA centered around superstar Caitlin Clark and which team’s Alyssa Thomas?",
+    "options": [
+      "Phoenix Mercury",
+      "Indiana",
+      "The Ringer",
+      "CET and ThinkTV"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/show/heated-games-and-rough-foul-against-caitlin-clark-spark-controversy-in-wnba",
+    "publishedAt": "2026-06-26T22:20:16.000Z",
+    "expiresAt": "2026-07-17T22:20:16.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-018",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour said the Black Opera Project celebrates the resilience and richness of which experience?",
+    "options": [
+      "Black American experience",
+      "European fashion industry",
+      "North American fire season",
+      "consumer electronics industry"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/show/black-opera-project-celebrates-resilience-and-richness-of-the-black-american-experience",
+    "publishedAt": "2026-06-26T22:15:34.000Z",
+    "expiresAt": "2026-07-17T22:15:34.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-019",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour’s live results article focused on midterm primary runoffs in which state?",
+    "options": [
+      "Louisiana",
+      "California",
+      "Texas",
+      "Indiana"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/politics/live-results-louisiana-midterm-primary-runoffs",
+    "publishedAt": "2026-06-26T19:07:49.000Z",
+    "expiresAt": "2026-07-17T19:07:49.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-020",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour reported that Newsom urged a national version of what tax?",
+    "options": [
+      "billionaires' tax",
+      "one-time 5% tax",
+      "sales tax",
+      "carbon tax"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/politics/newsom-urges-a-national-billionaires-tax-while-fighting-one-in-california",
+    "publishedAt": "2026-06-26T18:56:44.000Z",
+    "expiresAt": "2026-07-17T18:56:44.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-021",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour said the heat left Europe’s fashion industry unprepared at which event?",
+    "options": [
+      "Paris Fashion Week",
+      "Eurovision competition",
+      "World Cup",
+      "Human Lander Challenge"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/world/heat-catches-europes-fashion-industry-unprepared-as-models-face-the-sun-in-fur-and-wool",
+    "publishedAt": "2026-06-26T18:22:54.000Z",
+    "expiresAt": "2026-07-17T18:22:54.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-022",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA announced winners for the 2026 version of which student challenge?",
+    "options": [
+      "Human Lander Challenge",
+      "Swift Boost Mission",
+      "Announcement of Collaboration Opportunity",
+      "Welcome Home Ceremony"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-announces-winners-for-2026-human-lander-challenge/",
+    "publishedAt": "2026-06-26T19:44:48.000Z",
+    "expiresAt": "2026-07-17T19:44:48.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-023",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA tested a new refuel device for future missions involving what activity?",
+    "options": [
+      "in-space refueling",
+      "environmental control",
+      "planetary surface operations",
+      "opera"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/directorates/stmd/tech-demo-missions-program/cryogenic-fluid-management-cfm/nasa-tests-new-refuel-device-for-future-in-space-refueling-missions/",
+    "publishedAt": "2026-06-26T18:44:07.000Z",
+    "expiresAt": "2026-07-17T18:44:07.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-024",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA said a mission to raise the orbit of which observatory was poised for launch June 30?",
+    "options": [
+      "Swift observatory",
+      "Euclid",
+      "PACE",
+      "Hubble Space Telescope"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/missions/swift/swift-boost-mission/partners-nasa-ready-for-june-launch-of-swift-boost-mission/",
+    "publishedAt": "2026-06-26T17:16:22.000Z",
+    "expiresAt": "2026-07-17T17:16:22.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-025",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "NASA selected 41 proposals from 37 companies through which 2025 opportunity?",
+    "options": [
+      "Announcement of Collaboration Opportunity",
+      "Human Lander Challenge",
+      "Swift Boost Mission",
+      "Welcome Home Ceremony"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/news-release/nasa-identifies-more-than-40-space-technologies-for-collaboration/",
+    "publishedAt": "2026-06-26T15:37:58.000Z",
+    "expiresAt": "2026-07-17T15:37:58.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-026",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA said Euclid took a new look at the heart of which galaxy?",
+    "options": [
+      "Milky Way",
+      "Venus",
+      "Mars",
+      "Earth"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/image-article/euclid-sees-heart-of-milky-way/",
+    "publishedAt": "2026-06-26T15:21:18.000Z",
+    "expiresAt": "2026-07-17T15:21:18.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-027",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA’s “Bringing Signals to NASA” article described Eric Fernandez growing up on which coast?",
+    "options": [
+      "central California coast",
+      "North American fire season",
+      "Moon",
+      "Earth orbit"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/centers-and-facilities/kennedy/bringing-signals-to-nasa/",
+    "publishedAt": "2026-06-26T14:28:57.000Z",
+    "expiresAt": "2026-07-17T14:28:57.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-028",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA said its PACE mission is studying smoke and what else?",
+    "options": [
+      "Fires",
+      "Life support systems",
+      "White dwarf star",
+      "Memory"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/earth/nasas-pace-mission-studies-smoke-fires/",
+    "publishedAt": "2026-06-26T14:00:00.000Z",
+    "expiresAt": "2026-07-17T14:00:00.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-029",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA said the Hubble Space Telescope image features which globular cluster?",
+    "options": [
+      "NGC 6723",
+      "Donaldjohanson",
+      "Sardis",
+      "Euclid"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/missions/hubble/hubble-spies-starry-chandelier/",
+    "publishedAt": "2026-06-26T13:40:12.000Z",
+    "expiresAt": "2026-07-17T13:40:12.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-030",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA said Expedition 73 astronauts and cosmonauts gathered at which venue?",
+    "options": [
+      "Space Center Houston",
+      "Paris Fashion Week",
+      "Cincinnati",
+      "Vandenberg Air Force"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.nasa.gov/centers-and-facilities/johnson/expedition-73-crew-reflects-on-science-teamwork-and-life-in-orbit/",
+    "publishedAt": "2026-06-25T21:30:32.000Z",
+    "expiresAt": "2026-07-16T21:30:32.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-031",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "ScienceDaily reported that the Einstein Probe may have caught a black hole tearing apart what kind of star?",
+    "options": [
+      "white dwarf",
+      "globular cluster",
+      "peanut-shaped asteroid",
+      "Milky Way"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260625060222.htm",
+    "publishedAt": "2026-06-26T01:05:03.000Z",
+    "expiresAt": "2026-07-17T01:05:03.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-032",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "ScienceDaily said healthy older adults improved memory after taking what kind of pills for three weeks?",
+    "options": [
+      "placebo pills",
+      "vaccine",
+      "calcium and vitamin D",
+      "AI"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260625060159.htm",
+    "publishedAt": "2026-06-25T11:23:11.000Z",
+    "expiresAt": "2026-07-16T11:23:11.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-033",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "ScienceDaily reported that the ancient city of Sardis became what type of site?",
+    "options": [
+      "UNESCO World Heritage site",
+      "World Cup knockout stage",
+      "International Space Station",
+      "NASA Breaking News"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260625014808.htm",
+    "publishedAt": "2026-06-25T07:41:52.000Z",
+    "expiresAt": "2026-07-16T07:41:52.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-034",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "ScienceDaily said a new study suggests Earth may have been seeding which planet with life?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Moon",
+      "Milky Way"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260625014805.htm",
+    "publishedAt": "2026-06-26T03:22:17.000Z",
+    "expiresAt": "2026-07-17T03:22:17.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-035",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "ScienceDaily described which condition as silently weakening bones in millions of people?",
+    "options": [
+      "Osteopenia",
+      "Lyme disease",
+      "ADHD",
+      "gamma-ray burst"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260624025511.htm",
+    "publishedAt": "2026-06-25T04:25:26.000Z",
+    "expiresAt": "2026-07-16T04:25:26.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-036",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "ScienceDaily reported that NASA’s Lucy spacecraft studied asteroid Donaldjohanson, described as what shape?",
+    "options": [
+      "peanut-shaped",
+      "Earth-like",
+      "radically different",
+      "Zulu-language"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260624025455.htm",
+    "publishedAt": "2026-06-25T05:23:20.000Z",
+    "expiresAt": "2026-07-16T05:23:20.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-037",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "ScienceDaily said scientists found ancient brain cells that help the brain block what?",
+    "options": [
+      "distractions",
+      "smoke",
+      "scams",
+      "tips"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260624025426.htm",
+    "publishedAt": "2026-06-24T13:30:09.000Z",
+    "expiresAt": "2026-07-15T13:30:09.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-038",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "ScienceDaily said philosophers Eric Schwitzgebel and Jeremy Pober argued that consciousness could arise in many different forms of what?",
+    "options": [
+      "life",
+      "AI",
+      "opera",
+      "energy"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.sciencedaily.com/releases/2026/06/260623083146.htm",
+    "publishedAt": "2026-06-24T14:49:57.000Z",
+    "expiresAt": "2026-07-15T14:49:57.000Z",
+    "generatedAt": "2026-06-27T11:23:16.396Z"
   }
 ]
