@@ -1,223 +1,36 @@
 [
   {
-    "id": "current-events-dynamic-2026-06-18-1",
+    "id": "current-events-dynamic-2026-06-27-001",
     "category": "current-events",
     "difficulty": "easy",
-    "question": "What is the current interest rate for federal student loan borrowers if they sign up for auto pay?",
+    "question": "According to NPR News, what tick-borne illness is a potential new shot being developed to prevent?",
     "options": [
-      "1%",
-      "2%",
-      "3%",
-      "4%"
+      "Lyme disease",
+      "COVID-19",
+      "Malaria",
+      "Measles"
     ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.npr.org/2026/06/18/nx-s1-5863085/student-loan-auto-pay-discount",
-    "publishedAt": "2026-06-18T17:28:44.000Z",
-    "expiresAt": "2026-07-09T17:28:44.000Z",
-    "generatedAt": "2026-06-18T21:09:14.367Z"
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5859907/lyme-disease-vaccine-hesitancy-rural-hunters",
+    "publishedAt": "2026-06-27T10:30:00.000Z",
+    "expiresAt": "2026-07-18T10:30:00.000Z",
+    "generatedAt": "2026-06-27T10:55:41.437Z"
   },
   {
-    "id": "current-events-dynamic-2026-06-19-1",
+    "id": "current-events-dynamic-2026-06-27-003",
     "category": "current-events",
     "difficulty": "easy",
-    "question": "Which country has won the World Cup for the first time?",
+    "question": "Which coach did NPR News say made believers out of the U.S. World Cup team?",
     "options": [
-      "Mexico",
-      "France",
-      "Brazil",
-      "Germany"
+      "Mauricio Pochettino",
+      "Gregg Berhalter",
+      "Jürgen Klopp",
+      "Carlo Ancelotti"
     ],
     "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/19/g-s1-129056/mexico-becomes-first-country-to-reach-knockout-stage-of-world-cup",
-    "publishedAt": "2026-06-19T07:08:27.000Z",
-    "expiresAt": "2026-07-10T07:08:27.000Z",
-    "generatedAt": "2026-06-19T09:00:38.078Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-19-2",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "What is the name of the current mayor of Greater Manchester, who won a special election for a seat in Parliament?",
-    "options": [
-      "Andy Burnham",
-      "Jeremy Corbyn",
-      "Rishi Sunak",
-      "Theresa May"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/19/nx-s1-5864087/labour-andy-burnham-wins-special-election",
-    "publishedAt": "2026-06-19T07:48:19.000Z",
-    "expiresAt": "2026-07-10T07:48:19.000Z",
-    "generatedAt": "2026-06-19T09:00:38.078Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-22-1",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which Supreme Court ruling allows a tool to protect minority voters in 7 states?",
-    "options": [
-      "Supreme Court allows a ruling that ends a tool to protect minority voters in 7 states",
-      "Supreme Court allows a ruling that ends a tool to protect majority voters in 7 states",
-      "Supreme Court allows a ruling that ends a tool to protect women voters in 7 states",
-      "Supreme Court allows a ruling that ends a tool to protect LGBTQ+ voters in 7 states"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/22/nx-s1-5863532/supreme-court-voting-rights-act-private-right-arkansas",
-    "publishedAt": "2026-06-22T13:32:09.000Z",
-    "expiresAt": "2026-07-13T13:32:09.000Z",
-    "generatedAt": "2026-06-22T14:04:02.328Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-24-greetings-from-sweltering-switzerland",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “Greetings from sweltering Switzerland”?",
-    "options": [
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/24/nx-s1-5867606/lucerne-switzerland-world-cup-heat",
-    "publishedAt": "2026-06-24T11:55:49.000Z",
-    "expiresAt": "2026-07-15T11:55:49.000Z",
-    "generatedAt": "2026-06-24T15:32:39.982Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-24-house-gives-final-approval-to-landmark-housing-bill-aimed-at-lowering-co",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “House gives final approval to landmark housing bill aimed at lowering costs”?",
-    "options": [
-      "PBS NewsHour",
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.pbs.org/newshour/politics/house-gives-final-approval-to-landmark-housing-bill-aimed-at-lowering-costs",
-    "publishedAt": "2026-06-24T12:00:16.000Z",
-    "expiresAt": "2026-07-15T12:00:16.000Z",
-    "generatedAt": "2026-06-24T15:32:39.982Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-24-playing-the-moon-game",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “Playing the Moon Game”?",
-    "options": [
-      "NASA Breaking News",
-      "NPR News",
-      "BBC World",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/playing-the-moon-game/",
-    "publishedAt": "2026-06-24T04:01:00.000Z",
-    "expiresAt": "2026-07-15T04:01:00.000Z",
-    "generatedAt": "2026-06-24T15:32:39.982Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-24-will-texas-new-top-voting-official-be-a-disruptor-locals-are-preparing-f",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “Will Texas' new top voting official be a 'disruptor'? Locals are preparing for it”?",
-    "options": [
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/24/nx-s1-5866554/texas-secretary-of-state-schatzline",
-    "publishedAt": "2026-06-24T15:32:06.000Z",
-    "expiresAt": "2026-07-15T15:32:06.000Z",
-    "generatedAt": "2026-06-24T15:44:53.629Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-26-king-charles-iii-will-not-live-at-buckingham-palace-after-completion-of",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “King Charles III will not live at Buckingham Palace after completion of costly, decade-long refurbishment”?",
-    "options": [
-      "PBS NewsHour",
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.pbs.org/newshour/world/king-charles-iii-will-not-live-at-buckingham-palace-after-completion-of-costly-decade-long-refurbishment",
-    "publishedAt": "2026-06-25T23:02:31.000Z",
-    "expiresAt": "2026-07-16T23:02:31.000Z",
-    "generatedAt": "2026-06-26T12:30:08.277Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-27-what-would-george-washington-say-it-s-a-busy-year-for-people-who-portray",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “What would George Washington say? It's a busy year for people who portray him”?",
-    "options": [
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5816415/america-250-george-washington-reenactors",
-    "publishedAt": "2026-06-27T09:00:00.000Z",
-    "expiresAt": "2026-07-18T09:00:00.000Z",
-    "generatedAt": "2026-06-27T10:07:41.365Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-27-apple-increases-prices-for-macs-and-ipads-blaming-memory-chip-shortage-f",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “Apple increases prices for Macs and iPads, blaming memory chip shortage fueled by AI”?",
-    "options": [
-      "PBS NewsHour",
-      "NPR News",
-      "BBC World",
-      "NASA Breaking News"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.pbs.org/newshour/economy/apple-increases-prices-for-macs-and-ipads-blaming-memory-chip-shortage-fueled-by-ai",
-    "publishedAt": "2026-06-26T23:50:00.000Z",
-    "expiresAt": "2026-07-17T23:50:00.000Z",
-    "generatedAt": "2026-06-27T10:07:41.365Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-27-nasa-announces-winners-for-2026-human-lander-challenge",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “NASA Announces Winners for 2026 Human Lander Challenge”?",
-    "options": [
-      "NASA Breaking News",
-      "NPR News",
-      "BBC World",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-announces-winners-for-2026-human-lander-challenge/",
-    "publishedAt": "2026-06-26T19:44:48.000Z",
-    "expiresAt": "2026-07-17T19:44:48.000Z",
-    "generatedAt": "2026-06-27T10:07:41.365Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-06-27-canada-eligible-to-join-eurovision-competition",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which news source reported: “Canada eligible to join Eurovision competition”?",
-    "options": [
-      "BBC World",
-      "NPR News",
-      "NASA Breaking News",
-      "The Verge"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cy06yzp4r0eo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-06-26T13:41:36.000Z",
-    "expiresAt": "2026-07-17T13:41:36.000Z",
-    "generatedAt": "2026-06-27T10:15:11.141Z"
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5872818/2026-world-cup-fifa-mauricio-pochettino-usmnt-coach",
+    "publishedAt": "2026-06-27T10:00:00.000Z",
+    "expiresAt": "2026-07-18T10:00:00.000Z",
+    "generatedAt": "2026-06-27T10:55:41.437Z"
   }
 ]

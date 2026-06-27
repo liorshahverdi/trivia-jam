@@ -1,3 +1,5 @@
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import type { Difficulty, Question } from '@trivia-jam/shared';
 import { deduplicate } from './deduplicator.js';
 import { readExisting, writeQuestions as writeCategoryQuestions } from './writer.js';
@@ -10,7 +12,15 @@ const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
 const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
 const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
 const DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS = 10 * 60 * 1_000;
-const FALLBACK_SOURCE_DISTRACTORS = ['NPR News', 'BBC World', 'NASA Breaking News', 'The Verge', 'Ars Technica', 'PBS NewsHour'];
+const DEFAULT_HERMES_TIMEOUT_MS = 10 * 60 * 1_000;
+
+const execFileAsync = promisify(execFile);
+
+type ExecFileLike = (
+  file: string,
+  args: string[],
+  options: { timeout: number; maxBuffer: number; env: NodeJS.ProcessEnv },
+) => Promise<{ stdout: string; stderr?: string }>;
 
 export interface NewsArticle {
   title: string;
@@ -224,71 +234,6 @@ function hasUniqueQuestionText(question: StaticCurrentEventQuestion, accepted: S
   return !accepted.some((existing) => normalizeTextForSupport(existing.question) === text);
 }
 
-function slugifyTitle(title: string): string {
-  const slug = title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 72)
-    .replace(/-+$/g, '');
-  return slug || 'story';
-}
-
-function sourceDistractors(correctSource: string): [string, string, string, string] | null {
-  const options = [correctSource];
-  for (const source of FALLBACK_SOURCE_DISTRACTORS) {
-    if (options.map((option) => option.toLowerCase()).includes(source.toLowerCase())) continue;
-    options.push(source);
-    if (options.length === 4) break;
-  }
-
-  return options.length === 4 ? options as [string, string, string, string] : null;
-}
-
-function deterministicFallbackQuestions(articles: NewsArticle[], now: Date, limit = 4): StaticCurrentEventQuestion[] {
-  const today = now.toISOString().slice(0, 10);
-  const accepted: StaticCurrentEventQuestion[] = [];
-  const seenIds = new Set<string>();
-  const seenSources = new Set<string>();
-  const skippedHeadlinePattern = /\b(review|opinion|editorial|recap|rumor|rumour|ranked|ranking|blog|career spotlight|masculinism|bankruptcy|camp mystic|detention|immigrant|federal officials|war|battle|battles|conflict|conflicts|congo|rwanda|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|deaths|dead|deadly|kill|kills|killed|shooting|crime|earthquake|earthquakes|heatwave|religion|bible|schools?|child marriage|sierra leone|rescuers|survivors|devastating)\b/i;
-
-  for (const article of articles) {
-    if (accepted.length >= Math.max(1, limit)) break;
-    if (skippedHeadlinePattern.test(`${article.title} ${article.description ?? ''}`)) continue;
-
-    const sourceName = article.sourceName?.trim();
-    if (!sourceName) continue;
-
-    const normalizedSource = sourceName.toLowerCase();
-    if (seenSources.has(normalizedSource)) continue;
-
-    const options = sourceDistractors(sourceName);
-    if (!options) continue;
-
-    const baseId = `${DYNAMIC_ID_PREFIX}${today}-${slugifyTitle(article.title)}`;
-    let id = baseId;
-    let suffix = 2;
-    while (seenIds.has(id)) {
-      id = `${baseId}-${suffix}`;
-      suffix += 1;
-    }
-    seenIds.add(id);
-    seenSources.add(normalizedSource);
-
-    accepted.push({
-      id,
-      category: CURRENT_EVENTS_CATEGORY,
-      difficulty: 'easy',
-      question: `Which news source reported: “${article.title}”?`,
-      options,
-      correctIndex: 0,
-      sourceUrl: article.url,
-      publishedAt: article.publishedAt,
-    });
-  }
-
-  return accepted;
-}
 
 function decodeXml(text: string): string {
   return text
@@ -507,23 +452,66 @@ export async function generateQuestionsWithOllama(
   return [];
 }
 
+export async function generateQuestionsWithHermes(
+  articles: NewsArticle[],
+  {
+    execFileImpl = execFileAsync as ExecFileLike,
+    hermesCli = process.env.CURRENT_EVENTS_HERMES_CLI ?? 'hermes',
+    provider = process.env.CURRENT_EVENTS_HERMES_PROVIDER,
+    model = process.env.CURRENT_EVENTS_HERMES_MODEL,
+    now = new Date(),
+    articleLimit = parseInt(process.env.CURRENT_EVENTS_ARTICLE_LIMIT ?? '4', 10),
+    timeoutMs = parseInt(process.env.CURRENT_EVENTS_HERMES_TIMEOUT_MS ?? `${DEFAULT_HERMES_TIMEOUT_MS}`, 10),
+  }: {
+    execFileImpl?: ExecFileLike;
+    hermesCli?: string;
+    provider?: string;
+    model?: string;
+    now?: Date;
+    articleLimit?: number;
+    timeoutMs?: number;
+  } = {},
+): Promise<StaticCurrentEventQuestion[]> {
+  if (articles.length === 0) return [];
+
+  const args = ['--ignore-rules', '-t', '', '-z', buildGenerationPrompt(articles, now, articleLimit)];
+  if (provider?.trim()) args.splice(0, 0, '--provider', provider.trim());
+  if (model?.trim()) args.splice(0, 0, '-m', model.trim());
+
+  try {
+    const { stdout } = await execFileImpl(hermesCli, args, {
+      timeout: Math.max(1, Number.isFinite(timeoutMs) ? Math.floor(timeoutMs) : DEFAULT_HERMES_TIMEOUT_MS),
+      maxBuffer: 1024 * 1024,
+      env: { ...process.env, HERMES_ACCEPT_HOOKS: '1' },
+    });
+    return parseQuestionsFromJsonText(stdout);
+  } catch (error) {
+    console.warn(`[current-events-static] Hermes generation failed: ${describeError(error)}`);
+    return [];
+  }
+}
+
+async function generateQuestionsWithConfiguredProvider(
+  articles: NewsArticle[],
+  now: Date,
+): Promise<StaticCurrentEventQuestion[]> {
+  const generator = (process.env.CURRENT_EVENTS_GENERATOR ?? 'hermes').toLowerCase();
+  if (generator === 'ollama') return generateQuestionsWithOllama(articles, { now });
+  if (generator === 'none') return [];
+  return generateQuestionsWithHermes(articles, { now });
+}
+
 export async function refreshCurrentEventsJson(
   deps: RefreshCurrentEventsJsonDeps = {},
 ): Promise<RefreshCurrentEventsJsonResult> {
   const now = deps.now ?? new Date();
   const fetchArticles = deps.fetchArticles ?? fetchRssArticles;
-  const generateQuestions = deps.generateQuestions ?? ((articles) => generateQuestionsWithOllama(articles, { now }));
+  const generateQuestions = deps.generateQuestions ?? ((articles) => generateQuestionsWithConfiguredProvider(articles, now));
   const read = deps.readExisting ?? (() => readExisting(CURRENT_EVENTS_CATEGORY));
   const write = deps.writeQuestions ?? ((questions) => writeCategoryQuestions(CURRENT_EVENTS_CATEGORY, questions as Question[]));
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
 
   const existing = read();
-  const existingDynamic = existing.filter(isDynamicQuestion);
-  const freshExistingDynamic = existingDynamic.filter((question) => (
-    !isExpired(question, now)
-    && validateStaticCurrentEventQuestion(question, now).valid
-  ));
-  const legacyStaticQuestions = existing.filter((question) => !isDynamicQuestion(question));
 
   const articles = await fetchArticles();
   const generated = articles.length > 0 ? await generateQuestions(articles) : [];
@@ -540,29 +528,19 @@ export async function refreshCurrentEventsJson(
   };
 
   acceptedGenerated = acceptCandidates(generated);
-  if (acceptedGenerated.length === 0 && articles.length > 0) {
-    const fallback = deterministicFallbackQuestions(articles, now);
-    acceptedGenerated = acceptCandidates(fallback);
-    if (acceptedGenerated.length > 0) {
-      console.warn(`[current-events-static] Using ${acceptedGenerated.length} deterministic fallback Current Events question(s) after local Ollama produced no usable questions.`);
-    }
-  }
 
-  const { unique } = deduplicate(acceptedGenerated, freshExistingDynamic as Question[]);
-  const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions - freshExistingDynamic.length));
-  const dynamicQuestions = [...freshExistingDynamic, ...newDynamic];
-  const keptExisting = dynamicQuestions.length > 0 ? freshExistingDynamic : legacyStaticQuestions;
-  const merged = dynamicQuestions.length > 0 ? dynamicQuestions : legacyStaticQuestions;
-  const removedExpired = existing.length - keptExisting.length;
+  const { unique } = deduplicate(acceptedGenerated, []);
+  const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions));
+  const removedExpired = existing.length;
 
   if (removedExpired > 0 || newDynamic.length > 0) {
-    write(merged);
+    write(newDynamic);
   }
 
   return {
     added: newDynamic.length,
-    kept: keptExisting.length,
+    kept: 0,
     removedExpired,
-    total: merged.length,
+    total: newDynamic.length,
   };
 }

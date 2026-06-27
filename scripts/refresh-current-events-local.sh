@@ -7,13 +7,13 @@ REMOTE="${TRIVIA_JAM_REMOTE:-origin}"
 
 cd "$REPO_DIR"
 
-# The 0.5B local model is cheap but has produced underspecified questions such as
-# "What is the most significant test yet reached by the two countries?". Keep
-# this cron path deterministic/source-backed until a stronger local generator is
-# available and covered by stricter validation.
-export CURRENT_EVENTS_DISABLE_OLLAMA="${CURRENT_EVENTS_DISABLE_OLLAMA:-1}"
+# Use Hermes one-shot generation by default so the recurring job can use the
+# configured cloud/subscription model instead of tiny local Ollama or deterministic
+# source-name filler. If Hermes produces no validated questions, the refresh keeps
+# existing valid Current Events and commits nothing.
+export CURRENT_EVENTS_GENERATOR="${CURRENT_EVENTS_GENERATOR:-hermes}"
 
-if [[ "$CURRENT_EVENTS_DISABLE_OLLAMA" != "1" ]]; then
+if [[ "$CURRENT_EVENTS_GENERATOR" == "ollama" ]]; then
   if ! command -v ollama >/dev/null 2>&1; then
     echo "ollama is not installed or not on PATH" >&2
     exit 1
@@ -28,6 +28,11 @@ if [[ "$CURRENT_EVENTS_DISABLE_OLLAMA" != "1" ]]; then
     exit 1
   fi
   export CURRENT_EVENTS_OLLAMA_MODEL="$MODEL"
+elif [[ "$CURRENT_EVENTS_GENERATOR" == "hermes" ]]; then
+  if ! command -v hermes >/dev/null 2>&1; then
+    echo "Hermes CLI is not installed or not on PATH" >&2
+    exit 1
+  fi
 fi
 
 # Keep this worker on the latest deployed source before refreshing static data.

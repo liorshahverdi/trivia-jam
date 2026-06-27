@@ -3,6 +3,7 @@ import type { Question } from '@trivia-jam/shared';
 import {
   DEFAULT_RSS_FEEDS,
   fetchRssArticles,
+  generateQuestionsWithHermes,
   generateQuestionsWithOllama,
   refreshCurrentEventsJson,
   validateStaticCurrentEventQuestion,
@@ -58,7 +59,86 @@ describe('static Current Events JSON refresh', () => {
     expect(writeQuestions).toHaveBeenCalledWith([]);
   });
 
-  it('prunes legacy static current-events questions when fresh dynamic questions exist', async () => {
+  it('replaces existing dynamic questions with newly generated valid questions on each refresh', async () => {
+    const oldDynamic = {
+      id: 'current-events-dynamic-2026-06-17-old-space',
+      category: 'current-events' as const,
+      difficulty: 'medium' as const,
+      question: 'Which company announced an old satellite bus last week?',
+      options: ['Blue River', 'Old Space', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+      correctIndex: 1,
+      sourceUrl: 'https://example.com/old-space-announcement',
+      publishedAt: '2026-06-17T09:00:00.000Z',
+      expiresAt: '2026-07-08T09:00:00.000Z',
+      generatedAt: '2026-06-17T10:00:00.000Z',
+    };
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [oldDynamic],
+      writeQuestions,
+      fetchArticles: async () => [{
+        title: 'Acme Space announces reusable satellite bus',
+        description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+        url: 'https://example.com/space-announcement',
+        sourceName: 'Example News',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+      generateQuestions: async () => [{
+        id: 'current-events-dynamic-2026-06-18-space',
+        category: 'current-events',
+        difficulty: 'medium',
+        question: 'Which company announced a reusable satellite bus this week?',
+        options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'],
+        correctIndex: 1,
+        sourceUrl: 'https://example.com/space-announcement',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+    });
+
+    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 1, total: 1 });
+    expect(writeQuestions).toHaveBeenCalledTimes(1);
+    const written = writeQuestions.mock.calls[0][0];
+    expect(written.map((q: Question) => q.id)).toEqual([
+      'current-events-dynamic-2026-06-18-space',
+    ]);
+  });
+
+  it('removes old current-events questions when a refresh produces no valid new questions', async () => {
+    const oldDynamic = {
+      id: 'current-events-dynamic-2026-06-17-old-space',
+      category: 'current-events' as const,
+      difficulty: 'medium' as const,
+      question: 'Which company announced an old satellite bus last week?',
+      options: ['Blue River', 'Old Space', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+      correctIndex: 1,
+      sourceUrl: 'https://example.com/old-space-announcement',
+      publishedAt: '2026-06-17T09:00:00.000Z',
+      expiresAt: '2026-07-08T09:00:00.000Z',
+      generatedAt: '2026-06-17T10:00:00.000Z',
+    };
+    const writeQuestions = vi.fn();
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [oldDynamic],
+      writeQuestions,
+      fetchArticles: async () => [{
+        title: 'Acme Space announces reusable satellite bus',
+        description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+        url: 'https://example.com/space-announcement',
+        sourceName: 'Example News',
+        publishedAt: '2026-06-18T09:00:00.000Z',
+      }],
+      generateQuestions: async () => [],
+    });
+
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
+    expect(writeQuestions).toHaveBeenCalledWith([]);
+  });
+
+  it('removes legacy static and old dynamic current-events questions when no fresh generation is accepted', async () => {
     const legacyStatic: Question = {
       id: 'current-events-001',
       category: 'current-events',
@@ -89,11 +169,9 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 1, total: 1 });
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 2, total: 0 });
     expect(writeQuestions).toHaveBeenCalledTimes(1);
-    expect(writeQuestions.mock.calls[0][0].map((q: Question) => q.id)).toEqual([
-      'current-events-dynamic-2026-06-18-space',
-    ]);
+    expect(writeQuestions).toHaveBeenCalledWith([]);
   });
 
   it('validates generated questions before writing them to the static pack', () => {
@@ -253,7 +331,7 @@ describe('static Current Events JSON refresh', () => {
     expect(questions).toEqual([]);
   });
 
-  it('filters generic generated questions and falls back to a source-backed question', async () => {
+  it('filters generic generated questions without adding deterministic filler questions', async () => {
     const writeQuestions = vi.fn();
 
     const result = await refreshCurrentEventsJson({
@@ -284,14 +362,11 @@ describe('static Current Events JSON refresh', () => {
       }],
     });
 
-    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
-    expect(writeQuestions).toHaveBeenCalledTimes(1);
-    const written = writeQuestions.mock.calls[0][0];
-    expect(written[0].question).toBe('Which news source reported: “SCOTUS rulings clarify election policy”?');
-    expect(written[0].options[written[0].correctIndex]).toBe('NPR News');
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 0, total: 0 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
-  it('filters generated questions whose correct answer is not supported by the source article text and falls back to a source-backed question', async () => {
+  it('filters generated questions whose correct answer is unsupported without adding deterministic filler questions', async () => {
     const writeQuestions = vi.fn();
 
     const result = await refreshCurrentEventsJson({
@@ -317,11 +392,8 @@ describe('static Current Events JSON refresh', () => {
       }],
     });
 
-    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
-    expect(writeQuestions).toHaveBeenCalledTimes(1);
-    const written = writeQuestions.mock.calls[0][0];
-    expect(written[0].question).toBe('Which news source reported: “Skin care experts recommend 3 essentials”?');
-    expect(written[0].options[written[0].correctIndex]).toBe('Example News');
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 0, total: 0 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
   it('fetches recent articles from free RSS feeds without API keys', async () => {
@@ -514,7 +586,7 @@ describe('static Current Events JSON refresh', () => {
       method: 'POST',
       body: expect.stringContaining('qwen2.5-coder:3b'),
     }));
-    const requestInit = fetchImpl.mock.calls[0]?.[1] as RequestInit;
+    const requestInit = fetchImpl.mock.calls[0]?.[1] as unknown as RequestInit;
     const body = JSON.parse(requestInit.body as string);
     expect(body).toMatchObject({
       model: 'qwen2.5-coder:3b',
@@ -530,7 +602,81 @@ describe('static Current Events JSON refresh', () => {
     });
   });
 
-  it('creates deterministic source-backed fallback questions when local Ollama returns no usable questions', async () => {
+  it('generates questions through Hermes one-shot JSON output for cloud-backed refreshes', async () => {
+    const execFileImpl = vi.fn(async () => ({
+      stdout: JSON.stringify({
+        questions: [{
+          id: 'current-events-dynamic-2026-06-18-space',
+          category: 'current-events',
+          difficulty: 'medium',
+          question: 'Which company announced a reusable satellite bus this week?',
+          options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'],
+          correctIndex: 1,
+          sourceUrl: 'https://example.com/space-announcement',
+          publishedAt: '2026-06-18T09:00:00.000Z',
+        }],
+      }),
+    }));
+
+    const questions = await generateQuestionsWithHermes([{
+      title: 'Acme Space announces reusable satellite bus',
+      description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+      url: 'https://example.com/space-announcement',
+      sourceName: 'Example News',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+    }], {
+      execFileImpl,
+      hermesCli: 'hermes',
+      provider: 'openai-codex',
+      model: 'gpt-5.5',
+      now: NOW,
+    });
+
+    expect(execFileImpl).toHaveBeenCalledWith('hermes', expect.arrayContaining([
+      '--ignore-rules',
+      '-t',
+      '',
+      '--provider',
+      'openai-codex',
+      '-m',
+      'gpt-5.5',
+      '-z',
+    ]), expect.objectContaining({
+      timeout: expect.any(Number),
+      maxBuffer: 1024 * 1024,
+      env: expect.objectContaining({ HERMES_ACCEPT_HOOKS: '1' }),
+    }));
+    const args = execFileImpl.mock.calls[0]?.[1] ?? [];
+    expect(args.at(-1)).toContain('Create at most');
+    expect(args.at(-1)).toContain('Acme Space announces reusable satellite bus');
+    expect(questions).toHaveLength(1);
+    expect(questions[0]).toMatchObject({
+      id: 'current-events-dynamic-2026-06-18-space',
+      category: 'current-events',
+      sourceUrl: 'https://example.com/space-announcement',
+    });
+  });
+
+  it('returns no questions when Hermes one-shot generation fails', async () => {
+    const execFileImpl = vi.fn(async () => {
+      throw new Error('subscription unavailable');
+    });
+
+    const questions = await generateQuestionsWithHermes([{
+      title: 'Acme Space announces reusable satellite bus',
+      description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+      url: 'https://example.com/space-announcement',
+      sourceName: 'Example News',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+    }], {
+      execFileImpl,
+      now: NOW,
+    });
+
+    expect(questions).toEqual([]);
+  });
+
+  it('does not create deterministic fallback questions when local Ollama returns no usable questions', async () => {
     const writeQuestions = vi.fn();
 
     const result = await refreshCurrentEventsJson({
@@ -547,29 +693,28 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 0, total: 1 });
-    expect(writeQuestions).toHaveBeenCalledTimes(1);
-    const written = writeQuestions.mock.calls[0][0];
-    expect(written[0]).toMatchObject({
-      id: 'current-events-dynamic-2026-06-18-acme-space-announces-reusable-satellite-bus',
-      category: 'current-events',
-      difficulty: 'easy',
-      question: 'Which news source reported: “Acme Space announces reusable satellite bus”?',
-      options: ['Example News', 'NPR News', 'BBC World', 'NASA Breaking News'],
-      correctIndex: 0,
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 0, total: 0 });
+    expect(writeQuestions).not.toHaveBeenCalled();
+  });
+
+  it('removes existing valid questions instead of preserving them or adding deterministic fallback questions', async () => {
+    const existingDynamic = {
+      id: 'current-events-dynamic-2026-06-18-space',
+      category: 'current-events' as const,
+      difficulty: 'medium' as const,
+      question: 'Which company announced a reusable satellite bus this week?',
+      options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+      correctIndex: 1,
       sourceUrl: 'https://example.com/space-announcement',
       publishedAt: '2026-06-18T09:00:00.000Z',
       expiresAt: '2026-07-09T09:00:00.000Z',
       generatedAt: NOW.toISOString(),
-    });
-  });
-
-  it('keeps deterministic fallback questions source-diverse and skips review/opinion headlines', async () => {
+    };
     const writeQuestions = vi.fn();
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
-      readExisting: () => [],
+      readExisting: () => [existingDynamic],
       writeQuestions,
       fetchArticles: async () => [
         {
@@ -632,11 +777,7 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 2, kept: 0, removedExpired: 0, total: 2 });
-    const written = writeQuestions.mock.calls[0][0];
-    expect(written.map((question: Question) => question.sourceUrl)).toEqual([
-      'https://example.com/npr-first',
-      'https://example.com/nasa',
-    ]);
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
+    expect(writeQuestions).toHaveBeenCalledWith([]);
   });
 });
