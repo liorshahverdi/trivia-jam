@@ -2,7 +2,6 @@ import type { Category, Difficulty, Question } from '@trivia-jam/shared';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { getPool } from '../db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,35 +19,6 @@ export function clearQuestionCache(): void {
 async function loadQuestions(category: Category): Promise<Question[]> {
   if (questionCache.has(category)) return questionCache.get(category)!;
 
-  const pool = category === 'current-events' ? null : getPool();
-  if (pool) {
-    try {
-      const { rows } = await pool.query(
-        `SELECT id, category, difficulty, question, options, correct_index, expires_at
-         FROM questions
-         WHERE category = $1
-           AND (expires_at IS NULL OR expires_at > NOW())`,
-        [category]
-      );
-      const now = Date.now();
-      const questions: Question[] = rows
-        .filter(r => !r.expires_at || new Date(r.expires_at).getTime() > now)
-        .map(r => ({
-          id: r.id,
-          category: r.category as Category,
-          difficulty: r.difficulty as Difficulty,
-          question: r.question,
-          options: r.options as [string, string, string, string],
-          correctIndex: r.correct_index,
-        }));
-      questionCache.set(category, questions);
-      return questions;
-    } catch (err) {
-      console.error(`[QuestionPicker] DB query failed for ${category}, falling back to file:`, err);
-    }
-  }
-
-  // Fallback to JSON file
   try {
     const filePath = join(questionsDir, `${category}.json`);
     const data = JSON.parse(readFileSync(filePath, 'utf-8'));
@@ -59,6 +29,7 @@ async function loadQuestions(category: Category): Promise<Question[]> {
     return [];
   }
 }
+
 
 export async function selectQuestions(
   categories: Category[],

@@ -539,45 +539,54 @@ export async function refreshCurrentEventsJson(
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
 
   const existing = read();
+  const retainedExisting: StoredStaticCurrentEventQuestion[] = [];
+  for (const question of existing) {
+    if (!isDynamicQuestion(question)) continue;
+    if (isExpired(question, now)) continue;
+    const validation = validateStaticCurrentEventQuestion(question, now);
+    if (!validation.valid) continue;
+    retainedExisting.push(question as StoredStaticCurrentEventQuestion);
+  }
 
-  const articles = await fetchArticles();
-  const generated = articles.length > 0 ? await generateQuestions(articles) : [];
+  const removedExpired = existing.length - retainedExisting.length;
+  const remainingCapacity = Math.max(0, maxDynamicQuestions - retainedExisting.length);
+  const neededTopUp = Math.max(0, minDynamicQuestions - retainedExisting.length);
+
   let acceptedGenerated: StoredStaticCurrentEventQuestion[] = [];
-  const acceptCandidates = (candidates: StaticCurrentEventQuestion[]) => {
+  if (remainingCapacity > 0 && neededTopUp > 0) {
+    const articles = await fetchArticles();
+    const generated = articles.length > 0 ? await generateQuestions(articles) : [];
     const accepted: StoredStaticCurrentEventQuestion[] = [];
-    for (const question of candidates) {
+    for (const question of generated) {
       if (!validateStaticCurrentEventQuestion(question, now).valid) continue;
       if (!isQuestionSupportedBySource(question, articles)) continue;
+      if (!hasUniqueQuestionText(question, retainedExisting)) continue;
       if (!hasUniqueQuestionText(question, accepted)) continue;
       accepted.push(toStoredQuestion(question, now));
     }
-    return accepted;
-  };
+    const { unique } = deduplicate(accepted, retainedExisting);
+    acceptedGenerated = unique.slice(0, Math.min(remainingCapacity, neededTopUp));
+  }
 
-  acceptedGenerated = acceptCandidates(generated);
+  const nextQuestions = [...retainedExisting, ...acceptedGenerated].slice(0, Math.max(0, maxDynamicQuestions));
 
-  const { unique } = deduplicate(acceptedGenerated, []);
-  const newDynamic = unique.slice(0, Math.max(0, maxDynamicQuestions));
-  const removedExpired = existing.length;
-
-  if (newDynamic.length < minDynamicQuestions) {
-    if (removedExpired > 0) write([]);
+  if (nextQuestions.length < minDynamicQuestions) {
     return {
       added: 0,
-      kept: 0,
+      kept: retainedExisting.length,
       removedExpired,
-      total: 0,
+      total: retainedExisting.length,
     };
   }
 
-  if (removedExpired > 0 || newDynamic.length > 0) {
-    write(newDynamic);
+  if (removedExpired > 0 || acceptedGenerated.length > 0) {
+    write(nextQuestions);
   }
 
   return {
-    added: newDynamic.length,
-    kept: 0,
+    added: acceptedGenerated.length,
+    kept: retainedExisting.length,
     removedExpired,
-    total: newDynamic.length,
+    total: nextQuestions.length,
   };
 }

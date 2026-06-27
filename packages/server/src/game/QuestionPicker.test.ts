@@ -39,4 +39,30 @@ describe('QuestionPicker current events freshness', () => {
     expect(selected.some((q) => q.question.includes('Terminator'))).toBe(false);
     expect(mockPool.current.query).not.toHaveBeenCalled();
   });
+
+  it('serves all runtime categories from JSON files even when a database pool exists', async () => {
+    mockPool.current = {
+      query: vi.fn(async () => ({
+        rows: [
+          {
+            id: 'stale-db-math',
+            category: 'math',
+            difficulty: 'easy',
+            question: 'What stale database math question should never be served?',
+            options: ['A', 'B', 'C', 'D'],
+            correct_index: 0,
+            expires_at: null,
+          },
+        ],
+      })),
+    };
+
+    const selected = await selectQuestions(['math'], 5);
+
+    expect(selected).toHaveLength(5);
+    expect(selected.every((q) => q.category === 'math')).toBe(true);
+    expect(selected.some((q) => q.id === 'stale-db-math')).toBe(false);
+    expect(selected.some((q) => q.question.includes('stale database'))).toBe(false);
+    expect(mockPool.current.query).not.toHaveBeenCalled();
+  });
 });

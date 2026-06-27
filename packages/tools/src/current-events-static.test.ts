@@ -105,14 +105,75 @@ describe('static Current Events JSON refresh', () => {
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
-      readExisting: () => [makeGeneratedQuestion(99)],
+      readExisting: () => [],
       writeQuestions,
       fetchArticles: async () => articles,
       generateQuestions: async () => generated,
     });
 
-    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
-    expect(writeQuestions).toHaveBeenCalledWith([]);
+    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 0, total: 0 });
+    expect(writeQuestions).not.toHaveBeenCalled();
+  });
+
+  it('keeps fresh generated questions for about three weeks and only tops up what is needed', async () => {
+    const writeQuestions = vi.fn();
+    const kept = Array.from({ length: 18 }, (_, index) => ({
+      ...makeGeneratedQuestion(index + 1),
+      expiresAt: '2026-07-09T09:00:00.000Z',
+      generatedAt: '2026-06-18T10:00:00.000Z',
+    }));
+    const articles = [makeArticle(19), makeArticle(20), makeArticle(21), makeArticle(22)];
+    const generated = [makeGeneratedQuestion(19), makeGeneratedQuestion(20), makeGeneratedQuestion(21), makeGeneratedQuestion(22)];
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => kept,
+      writeQuestions,
+      fetchArticles: async () => articles,
+      generateQuestions: async (receivedArticles) => {
+        expect(receivedArticles).toHaveLength(4);
+        return generated;
+      },
+    });
+
+    expect(result).toEqual({ added: 2, kept: 18, removedExpired: 0, total: 20 });
+    const written = writeQuestions.mock.calls[0][0] as Question[];
+    expect(written).toHaveLength(20);
+    expect(written.slice(0, 18).map((q) => q.id)).toEqual(kept.map((q) => q.id));
+    expect(written.slice(18).map((q) => q.id)).toEqual([
+      'current-events-dynamic-2026-06-18-space-19',
+      'current-events-dynamic-2026-06-18-space-20',
+    ]);
+  });
+
+  it('prunes expired generated questions and replaces them with fresh generated top-up questions', async () => {
+    const writeQuestions = vi.fn();
+    const freshKept = Array.from({ length: 19 }, (_, index) => ({
+      ...makeGeneratedQuestion(index + 1),
+      expiresAt: '2026-07-09T09:00:00.000Z',
+      generatedAt: '2026-06-18T10:00:00.000Z',
+    }));
+    const expired = {
+      ...makeGeneratedQuestion(50),
+      id: 'current-events-dynamic-2026-05-20-expired',
+      publishedAt: '2026-05-20T09:00:00.000Z',
+      expiresAt: '2026-06-10T09:00:00.000Z',
+      generatedAt: '2026-05-20T10:00:00.000Z',
+    };
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [...freshKept, expired],
+      writeQuestions,
+      fetchArticles: async () => [makeArticle(20)],
+      generateQuestions: async () => [makeGeneratedQuestion(20)],
+    });
+
+    expect(result).toEqual({ added: 1, kept: 19, removedExpired: 1, total: 20 });
+    const written = writeQuestions.mock.calls[0][0] as Question[];
+    expect(written).toHaveLength(20);
+    expect(written.some((q) => q.id === expired.id)).toBe(false);
+    expect(written.at(-1)?.id).toBe('current-events-dynamic-2026-06-18-space-20');
   });
 
   it('prunes generic existing dynamic questions so bad cron output is removed', async () => {
@@ -144,10 +205,10 @@ describe('static Current Events JSON refresh', () => {
     });
 
     expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
-    expect(writeQuestions).toHaveBeenCalledWith([]);
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
-  it('replaces existing dynamic questions with newly generated valid questions on each refresh', async () => {
+  it('keeps an existing valid dynamic question when the category already meets the configured minimum', async () => {
     const oldDynamic = {
       id: 'current-events-dynamic-2026-06-17-old-space',
       category: 'current-events' as const,
@@ -186,12 +247,8 @@ describe('static Current Events JSON refresh', () => {
       }],
     });
 
-    expect(result).toEqual({ added: 1, kept: 0, removedExpired: 1, total: 1 });
-    expect(writeQuestions).toHaveBeenCalledTimes(1);
-    const written = writeQuestions.mock.calls[0][0];
-    expect(written.map((q: Question) => q.id)).toEqual([
-      'current-events-dynamic-2026-06-18-space',
-    ]);
+    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 0, total: 1 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
   it('removes old current-events questions when a refresh produces no valid new questions', async () => {
@@ -223,11 +280,11 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
-    expect(writeQuestions).toHaveBeenCalledWith([]);
+    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 0, total: 1 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
-  it('removes legacy static and old dynamic current-events questions when no fresh generation is accepted', async () => {
+  it('prunes legacy static current-events questions while retaining valid fresh generated questions', async () => {
     const legacyStatic: Question = {
       id: 'current-events-001',
       category: 'current-events',
@@ -258,9 +315,8 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 2, total: 0 });
-    expect(writeQuestions).toHaveBeenCalledTimes(1);
-    expect(writeQuestions).toHaveBeenCalledWith([]);
+    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 1, total: 1 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 
   it('validates generated questions before writing them to the static pack', () => {
@@ -867,7 +923,7 @@ describe('static Current Events JSON refresh', () => {
       generateQuestions: async () => [],
     });
 
-    expect(result).toEqual({ added: 0, kept: 0, removedExpired: 1, total: 0 });
-    expect(writeQuestions).toHaveBeenCalledWith([]);
+    expect(result).toEqual({ added: 0, kept: 1, removedExpired: 0, total: 1 });
+    expect(writeQuestions).not.toHaveBeenCalled();
   });
 });
