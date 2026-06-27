@@ -121,8 +121,14 @@ export function validateStaticCurrentEventQuestion(
   if (isGenericCurrentEventsQuestion(candidate.question)) {
     return { valid: false, reason: 'question is too generic for the source subject' };
   }
+  if (hasUnderspecifiedReference(candidate.question)) {
+    return { valid: false, reason: 'question uses an underspecified reference instead of naming the subject' };
+  }
   if (!Array.isArray(candidate.options) || candidate.options.length !== 4) {
     return { valid: false, reason: 'must have exactly 4 options' };
+  }
+  if (hasUnsafeCurrentEventsSubject([candidate.question, ...candidate.options].join(' '))) {
+    return { valid: false, reason: 'question subject is too grim or politically volatile for casual trivia' };
   }
   const normalizedOptions = candidate.options.map((option) => option.trim().toLowerCase());
   if (normalizedOptions.some((option) => option.length === 0)) {
@@ -181,6 +187,22 @@ function isGenericCurrentEventsQuestion(question: string): boolean {
   ].some((pattern) => pattern.test(normalized));
 }
 
+function hasUnderspecifiedReference(question: string): boolean {
+  const normalized = normalizeTextForSupport(question);
+  return [
+    /\bthe two (countries|companies|groups|teams|leaders|sides)\b/,
+    /\bthese two (countries|companies|groups|teams|leaders|sides)\b/,
+    /\bthe (country|company|group|team|leader|agency|official|person|organization|organisation)\b/,
+    /\bthis (country|company|group|team|leader|agency|official|person|organization|organisation)\b/,
+    /\bthe (most significant|biggest|main|major|key) (test|step|move|development|event|issue|decision)\b/,
+  ].some((pattern) => pattern.test(normalized));
+}
+
+function hasUnsafeCurrentEventsSubject(text: string): boolean {
+  const normalized = normalizeTextForSupport(text);
+  return /\b(war|battle|battles|conflict|conflicts|congo|rwanda|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|deaths|dead|deadly|kill|kills|killed|shooting|crime|earthquake|earthquakes|heatwave|religion|bible|schools?|child marriage|sierra leone|rescuers|survivors|devastating|detention|immigrant|bankruptcy)\b/.test(normalized);
+}
+
 function isQuestionSupportedBySource(question: StaticCurrentEventQuestion, articles: NewsArticle[]): boolean {
   const sourceArticle = articles.find((article) => article.url === question.sourceUrl);
   if (!sourceArticle) return false;
@@ -228,7 +250,7 @@ function deterministicFallbackQuestions(articles: NewsArticle[], now: Date, limi
   const accepted: StaticCurrentEventQuestion[] = [];
   const seenIds = new Set<string>();
   const seenSources = new Set<string>();
-  const skippedHeadlinePattern = /\b(review|opinion|editorial|recap|rumor|rumour|ranked|ranking|blog|career spotlight|masculinism|bankruptcy|camp mystic|detention|immigrant|federal officials|war|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|dead|killed|shooting|crime)\b/i;
+  const skippedHeadlinePattern = /\b(review|opinion|editorial|recap|rumor|rumour|ranked|ranking|blog|career spotlight|masculinism|bankruptcy|camp mystic|detention|immigrant|federal officials|war|battle|battles|conflict|conflicts|congo|rwanda|strike|strikes|missile|russia|ukraine|israel|iran|trump|death|deaths|dead|deadly|kill|kills|killed|shooting|crime|earthquake|earthquakes|heatwave|religion|bible|schools?|child marriage|sierra leone|rescuers|survivors|devastating)\b/i;
 
   for (const article of articles) {
     if (accepted.length >= Math.max(1, limit)) break;
@@ -358,7 +380,7 @@ export async function fetchRssArticles({
 function buildGenerationPrompt(articles: NewsArticle[], now: Date, articleLimit = 4): string {
   const today = now.toISOString().slice(0, 10);
   const questionLimit = Math.max(1, Math.min(articleLimit, 8));
-  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The question text must name or clearly reference a concrete subject from the article title/description (for example a company, agency, mission, place, policy, product, or discovery). Do not ask generic meta-questions like "What is the current event..." or "Which headline is most relevant...".\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
+  return `Create at most ${questionLimit} multiple-choice current-events trivia questions from these recent news articles, with no more than one question per article.\n\nRules:\n- Return strict JSON only: {"questions":[...]}\n- Each question must have id, category, difficulty, question, options, correctIndex, sourceUrl, publishedAt.\n- id must be unique and start with "${DYNAMIC_ID_PREFIX}${today}-".\n- category must be "current-events".\n- difficulty must be easy, medium, or hard.\n- options must contain exactly four unique strings.\n- The question text must name a concrete subject from the article title/description (for example a company, agency, mission, place, policy, product, or discovery). Do not use vague references like "the country", "the company", "the two countries", "this event", or "the most significant test". Do not ask generic meta-questions like "What is the current event..." or "Which headline is most relevant...".\n- The correct answer must appear verbatim in the article title, description, or sourceName.\n- Use only facts present in the supplied title/description/sourceName. Do not invent people, companies, products, numbers, dates, or expert names.\n- Avoid tragedies, deaths, graphic crime, speculation, and opinion.\n- Prefer questions that will still make sense for 1-3 weeks.\n\nArticles:\n${JSON.stringify(articles.slice(0, articleLimit))}`;
 }
 
 function parseQuestionsFromJsonText(text: string): StaticCurrentEventQuestion[] {
@@ -394,6 +416,7 @@ export async function generateQuestionsWithOllama(
     maxAttempts = parseInt(process.env.CURRENT_EVENTS_OLLAMA_MAX_ATTEMPTS ?? `${DEFAULT_OLLAMA_MAX_ATTEMPTS}`, 10),
     retryDelayMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_RETRY_DELAY_MS ?? `${DEFAULT_OLLAMA_RETRY_DELAY_MS}`, 10),
     attemptTimeoutMs = parseInt(process.env.CURRENT_EVENTS_OLLAMA_ATTEMPT_TIMEOUT_MS ?? `${DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS}`, 10),
+    disableOllama = process.env.CURRENT_EVENTS_DISABLE_OLLAMA === '1',
     sleep = sleepMs,
   }: {
     fetchImpl?: FetchLike;
@@ -404,9 +427,11 @@ export async function generateQuestionsWithOllama(
     maxAttempts?: number;
     retryDelayMs?: number;
     attemptTimeoutMs?: number;
+    disableOllama?: boolean;
     sleep?: (ms: number) => Promise<void>;
   } = {},
 ): Promise<StaticCurrentEventQuestion[]> {
+  if (disableOllama) return [];
   if (articles.length === 0) return [];
 
   const attempts = Math.max(1, Number.isFinite(maxAttempts) ? Math.floor(maxAttempts) : DEFAULT_OLLAMA_MAX_ATTEMPTS);

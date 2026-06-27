@@ -214,6 +214,45 @@ describe('static Current Events JSON refresh', () => {
     expect(result).toEqual({ valid: false, reason: 'question is too generic for the source subject' });
   });
 
+  it('rejects underspecified generated questions with vague references like “the two countries”', () => {
+    const result = validateStaticCurrentEventQuestion({
+      id: 'current-events-dynamic-2026-06-27-4',
+      category: 'current-events',
+      difficulty: 'easy',
+      question: 'What is the most significant test yet reached by the two countries?',
+      options: [
+        'U.S. strikes Iran in response to a drone attack on a ship',
+        'Pete Buttigieg and his kids subject to CPS, police investigation after false report',
+        '5 million have dropped ACA insurance after Trump and the GOP let prices skyrocket',
+        'Argentina fans pour into Texas',
+      ],
+      correctIndex: 0,
+      sourceUrl: 'https://www.npr.org/2026/06/27/nx-s1-5871413/us-strikes-iran',
+      publishedAt: '2026-06-27T08:00:00.000Z',
+    }, new Date('2026-06-27T09:00:00.000Z'));
+
+    expect(result).toEqual({ valid: false, reason: 'question uses an underspecified reference instead of naming the subject' });
+  });
+
+  it('honors a local-only deterministic mode so the cron job does not rely on tiny Ollama output', async () => {
+    const fetchImpl = vi.fn();
+
+    const questions = await generateQuestionsWithOllama([{ 
+      title: 'Acme Space announces reusable satellite bus',
+      description: 'Acme Space announced a reusable satellite bus for low-earth-orbit missions.',
+      url: 'https://example.com/space-announcement',
+      sourceName: 'Example News',
+      publishedAt: '2026-06-18T09:00:00.000Z',
+    }], {
+      fetchImpl: fetchImpl as any,
+      disableOllama: true,
+      now: NOW,
+    });
+
+    expect(fetchImpl).not.toHaveBeenCalled();
+    expect(questions).toEqual([]);
+  });
+
   it('filters generic generated questions and falls back to a source-backed question', async () => {
     const writeQuestions = vi.fn();
 
@@ -553,6 +592,34 @@ describe('static Current Events JSON refresh', () => {
           url: 'https://example.com/review',
           sourceName: 'Ars Technica',
           publishedAt: '2026-06-18T11:00:00.000Z',
+        },
+        {
+          title: 'Venezuela earthquakes kill 920 people as international rescue teams arrive',
+          description: 'International rescue teams arrived after devastating earthquakes.',
+          url: 'https://example.com/earthquake',
+          sourceName: 'BBC World',
+          publishedAt: '2026-06-18T11:30:00.000Z',
+        },
+        {
+          title: 'Religion row as Texas makes Bible stories required reading in schools',
+          description: 'A state education change sparked a religion row over Bible stories in schools.',
+          url: 'https://example.com/religion-row',
+          sourceName: 'BBC World',
+          publishedAt: '2026-06-18T11:45:00.000Z',
+        },
+        {
+          title: 'DR Congo takes Rwanda to international court over decades of conflict',
+          description: 'The international court filing concerns decades of conflict.',
+          url: 'https://example.com/congo-rwanda-conflict',
+          sourceName: 'BBC World',
+          publishedAt: '2026-06-18T11:50:00.000Z',
+        },
+        {
+          title: 'Four men held over child marriage in Sierra Leone appear in landmark court case',
+          description: 'A landmark court case concerns child marriage in Sierra Leone.',
+          url: 'https://example.com/child-marriage',
+          sourceName: 'BBC World',
+          publishedAt: '2026-06-18T11:55:00.000Z',
         },
         {
           title: 'NASA announces telescope milestone',
