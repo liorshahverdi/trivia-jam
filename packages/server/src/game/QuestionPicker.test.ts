@@ -1,5 +1,4 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest';
-import type { Question } from '@trivia-jam/shared';
 
 const mockPool = vi.hoisted(() => ({ current: null as any }));
 
@@ -15,55 +14,29 @@ describe('QuestionPicker current events freshness', () => {
     mockPool.current = null;
   });
 
-  it('does not serve expired dynamic current-events questions from the database', async () => {
-    const fresh: Question = {
-      id: 'fresh-current-event',
-      category: 'current-events',
-      difficulty: 'medium',
-      question: 'Which company announced a reusable satellite bus this week?',
-      options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'],
-      correctIndex: 1,
-    };
-    const expired: Question = {
-      id: 'expired-current-event',
-      category: 'current-events',
-      difficulty: 'medium',
-      question: 'Which city hosted last quarter’s climate summit?',
-      options: ['Paris', 'Tokyo', 'Nairobi', 'Toronto'],
-      correctIndex: 2,
-    };
-
+  it('serves current-events from the generated static JSON instead of stale database rows', async () => {
     mockPool.current = {
       query: vi.fn(async () => ({
         rows: [
           {
-            id: fresh.id,
-            category: fresh.category,
-            difficulty: fresh.difficulty,
-            question: fresh.question,
-            options: fresh.options,
-            correct_index: fresh.correctIndex,
+            id: 'stale-db-current-event',
+            category: 'current-events',
+            difficulty: 'medium',
+            question: 'In the 1984 movie "The Terminator", what model number is the Terminator portrayed by Arnold Schwarzenegger?',
+            options: ['T-800', 'T-1000', 'T-600', 'T-X'],
+            correct_index: 0,
             expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
-          },
-          {
-            id: expired.id,
-            category: expired.category,
-            difficulty: expired.difficulty,
-            question: expired.question,
-            options: expired.options,
-            correct_index: expired.correctIndex,
-            expires_at: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
           },
         ],
       })),
     };
 
-    const selected = await selectQuestions(['current-events'], 5);
+    const selected = await selectQuestions(['current-events'], 20);
 
-    expect(selected.map((q) => q.id)).toEqual(['fresh-current-event']);
-    expect(mockPool.current.query).toHaveBeenCalledWith(
-      expect.stringContaining('expires_at'),
-      expect.arrayContaining(['current-events'])
-    );
+    expect(selected).toHaveLength(20);
+    expect(selected.every((q) => q.category === 'current-events')).toBe(true);
+    expect(selected.some((q) => q.id === 'stale-db-current-event')).toBe(false);
+    expect(selected.some((q) => q.question.includes('Terminator'))).toBe(false);
+    expect(mockPool.current.query).not.toHaveBeenCalled();
   });
 });

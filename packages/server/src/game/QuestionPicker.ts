@@ -20,7 +20,7 @@ export function clearQuestionCache(): void {
 async function loadQuestions(category: Category): Promise<Question[]> {
   if (questionCache.has(category)) return questionCache.get(category)!;
 
-  const pool = getPool();
+  const pool = category === 'current-events' ? null : getPool();
   if (pool) {
     try {
       const { rows } = await pool.query(
