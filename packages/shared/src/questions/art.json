@@ -67,15 +67,15 @@
   {
     "id": "art-crawl-1776202749047-5",
     "category": "art",
-    "difficulty": "medium",
-    "question": "Which time signature is commonly known as \"Cut Time?\"",
+    "difficulty": "easy",
+    "question": "Which pair of colors are complementary on a traditional red-yellow-blue color wheel?",
     "options": [
-      "4/4",
-      "2/2",
-      "6/8",
-      "3/4"
+      "Blue and orange",
+      "Red and orange",
+      "Green and yellow",
+      "Purple and blue"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "art-crawl-1776202749047-6",
@@ -171,15 +171,15 @@
   {
     "id": "art-crawl-1776202749047-13",
     "category": "art",
-    "difficulty": "easy",
-    "question": "What is the world's oldest known piece of fiction?",
+    "difficulty": "medium",
+    "question": "Which Italian artist painted \"The Birth of Venus\"?",
     "options": [
-      "Papyrus of Ani",
-      "Epic of Gilgamesh",
-      "Code of Hammurabi",
-      "Rosetta Stone"
+      "Sandro Botticelli",
+      "Raphael",
+      "Caravaggio",
+      "Titian"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "art-crawl-1776202749047-14",
@@ -301,13 +301,13 @@
   {
     "id": "art-crawl-1776202749047-23",
     "category": "art",
-    "difficulty": "hard",
-    "question": "Paul Gauguin moved to which country in 1895?",
+    "difficulty": "medium",
+    "question": "Paul Gauguin spent many of his later years painting scenes on which island?",
     "options": [
       "Tahiti",
-      "France",
-      "Atuona",
-      "Lithuania"
+      "Sicily",
+      "Crete",
+      "Bali"
     ],
     "correctIndex": 0
   },
@@ -445,14 +445,14 @@
     "id": "art-crawl-1776523560766-12",
     "category": "art",
     "difficulty": "easy",
-    "question": "Who painted \"The Starry Night\"?",
+    "question": "Who painted \"The Persistence of Memory\"?",
     "options": [
-      "Edvard Munch",
+      "Salvador Dalí",
       "Pablo Picasso",
-      "Vincent van Gogh",
-      "Claude Monet"
+      "Claude Monet",
+      "Frida Kahlo"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "art-crawl-1776523560766-16",

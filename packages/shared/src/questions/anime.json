@@ -119,15 +119,15 @@
   {
     "id": "anime-crawl-1776202805048-9",
     "category": "anime",
-    "difficulty": "medium",
-    "question": "In the anime, \"Super Sonico\", what is Super Sonico's favorite food?",
+    "difficulty": "easy",
+    "question": "What French almond-based confection is featured in many anime café and bakery scenes?",
     "options": [
-      "Ice Cream",
-      "Pizza",
-      "Macroons",
-      "Chips"
+      "Macarons",
+      "Takoyaki",
+      "Onigiri",
+      "Taiyaki"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "anime-crawl-1776202805048-10",
@@ -198,14 +198,14 @@
     "id": "anime-crawl-1776202805048-15",
     "category": "anime",
     "difficulty": "medium",
-    "question": "Who voices the character \"Reigen\"  in the English dub of \"Mob Psycho 100\"?",
+    "question": "In \"Spirited Away,\" what kind of spirit is Haku revealed to be?",
     "options": [
-      "Max Mittelman",
-      "Chris Niosi",
-      "Kyle McCarley",
-      "Casey Mongillo"
+      "A river spirit",
+      "A fox spirit",
+      "A mountain spirit",
+      "A fire spirit"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "anime-crawl-1776202805048-16",

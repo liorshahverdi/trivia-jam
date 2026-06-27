@@ -16,14 +16,14 @@
     "id": "gadgets-crawl-1776202799445-1",
     "category": "gadgets",
     "difficulty": "easy",
-    "question": "What is the SI unit for resistance?",
+    "question": "Electric current is measured in which unit?",
     "options": [
-      "Ampheres",
-      "Siemens",
+      "Amperes",
       "Volts",
-      "Ohms"
+      "Ohms",
+      "Watts"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "gadgets-crawl-1776202799445-2",
@@ -54,13 +54,13 @@
   {
     "id": "gadgets-crawl-1776202799445-4",
     "category": "gadgets",
-    "difficulty": "easy",
-    "question": "What round is a classic AK-47 chambered in?",
+    "difficulty": "medium",
+    "question": "Which connector is commonly used for charging many recent smartphones and laptops?",
     "options": [
-      "7.62x39mm",
-      "7.62x51mm",
-      "5.56x45mm",
-      "5.45x39mm"
+      "USB-C",
+      "VGA",
+      "PS/2",
+      "S-Video"
     ],
     "correctIndex": 0
   },
@@ -106,15 +106,15 @@
   {
     "id": "gadgets-crawl-1776202799446-8",
     "category": "gadgets",
-    "difficulty": "medium",
-    "question": "Out of all of the NASA Space Shuttles, which 2 have been destroyed in disasters?",
+    "difficulty": "easy",
+    "question": "Which gadget is primarily used to track steps and heart rate?",
     "options": [
-      "Enterprise and Atlantis",
-      "Discovery and Endeavour",
-      "Challenger and Columbia",
-      "None of the Above"
+      "Fitness tracker",
+      "Laser printer",
+      "External hard drive",
+      "E-reader"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "gadgets-crawl-1776202799446-9",
@@ -132,15 +132,15 @@
   {
     "id": "gadgets-crawl-1776202799446-10",
     "category": "gadgets",
-    "difficulty": "hard",
-    "question": "Which round does a WW2 M1 Garand fire?",
+    "difficulty": "medium",
+    "question": "Which device is used to project a computer display onto a wall or screen?",
     "options": [
-      ".308",
-      ".30-06",
-      "7.62",
-      "7.62x51mm"
+      "Projector",
+      "Router",
+      "Scanner",
+      "Modem"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "gadgets-crawl-1776202799446-11",
@@ -288,15 +288,15 @@
   {
     "id": "gadgets-crawl-1776202799446-22",
     "category": "gadgets",
-    "difficulty": "hard",
-    "question": "Which of the following is used to measure blood pressure?",
+    "difficulty": "medium",
+    "question": "Which handheld device is commonly used to scan product barcodes?",
     "options": [
-      "Barometer",
-      "Sphygmomanometer",
-      "Ruler",
-      "Haemoerythrometer"
+      "Barcode scanner",
+      "Thermostat",
+      "Oscilloscope",
+      "Label maker"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "gadgets-crawl-1776202799446-23",
@@ -341,14 +341,14 @@
     "id": "gadgets-crawl-1776202799446-26",
     "category": "gadgets",
     "difficulty": "medium",
-    "question": "What was the first Infinity Coaster in the world and where is it located?",
+    "question": "What type of gadget converts spoken words into digital audio files?",
     "options": [
-      "Madagascar Mad Pursuit, Motiongate Dubai, UAE",
-      "The Smiler, Alton Towers, UK",
-      "Gold Rush, Slagharen, Netherlands ",
-      "Monster, Adventureland Altoona, USA"
+      "Digital voice recorder",
+      "Portable router",
+      "Graphics tablet",
+      "Barcode scanner"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "gadgets-crawl-1776202799446-27",

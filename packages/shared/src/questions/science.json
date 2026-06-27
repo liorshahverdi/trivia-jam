@@ -276,14 +276,14 @@
     "id": "science-1775426266901-vv9avc",
     "category": "science",
     "difficulty": "medium",
-    "question": "Which of these stars is the largest?",
+    "question": "Which star is closest to Earth after the Sun?",
     "options": [
-      "RW Cephei",
-      "UY Scuti",
-      "VY Canis Majoris",
-      "Betelgeuse"
+      "Proxima Centauri",
+      "Sirius",
+      "Betelgeuse",
+      "Polaris"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "science-1775426266901-yf6o35",
@@ -705,12 +705,12 @@
     "id": "science-crawl-1775435008282-6",
     "category": "science",
     "difficulty": "medium",
-    "question": "What was the category of the 2005 hurricane, Hurricane Katrina, in the Saffir-Simpson hurricane wind scale?",
+    "question": "At its peak intensity, Hurricane Katrina reached which Saffir-Simpson category?",
     "options": [
       "Category 5",
-      "Category 1",
-      "Category 4",
-      "Category 2"
+      "Category 3",
+      "Category 2",
+      "Category 4"
     ],
     "correctIndex": 0
   },
@@ -809,14 +809,14 @@
     "id": "science-crawl-1775435008282-17",
     "category": "science",
     "difficulty": "easy",
-    "question": "About what percentage of the Earth's surface is water? ",
+    "question": "What process do plants use to make food from sunlight?",
     "options": [
-      "30%",
-      "50%",
-      "70%",
-      "90%"
+      "Photosynthesis",
+      "Evaporation",
+      "Fermentation",
+      "Respiration"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775435008282-18",
@@ -848,12 +848,12 @@
     "id": "science-crawl-1775435008282-20",
     "category": "science",
     "difficulty": "easy",
-    "question": "How many planets make up our Solar System?",
+    "question": "What gas do humans breathe in to support cellular respiration?",
     "options": [
-      "8",
-      "7",
-      "9",
-      "6"
+      "Oxygen",
+      "Nitrogen",
+      "Helium",
+      "Carbon dioxide"
     ],
     "correctIndex": 0
   },
@@ -886,15 +886,15 @@
   {
     "id": "science-crawl-1775435008282-25",
     "category": "science",
-    "difficulty": "easy",
-    "question": "What is the standard atomic weight of a Plutonium nucleus?",
+    "difficulty": "medium",
+    "question": "What is the chemical symbol for plutonium?",
     "options": [
-      "94",
-      "481",
-      "244",
-      "128"
+      "Pu",
+      "Pl",
+      "Pt",
+      "Pm"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775435008282-26",
@@ -1199,12 +1199,12 @@
     "id": "science-crawl-1775435029460-4",
     "category": "science",
     "difficulty": "medium",
-    "question": "Which color cannot be produced in Roses, even through genetic alteration?",
+    "question": "Which color rose is not produced naturally by a true blue pigment?",
     "options": [
       "Blue",
-      "Black",
-      "Orange",
-      "Brown"
+      "Red",
+      "White",
+      "Yellow"
     ],
     "correctIndex": 0
   },
@@ -1237,15 +1237,15 @@
   {
     "id": "science-crawl-1775435029460-9",
     "category": "science",
-    "difficulty": "medium",
-    "question": "What is the Linnean name of the domestic apple tree?",
+    "difficulty": "hard",
+    "question": "What is the commonly used scientific name for the domesticated apple?",
     "options": [
-      "Malus americana",
-      "Pomus domestica",
-      "Appelus delectica",
-      "Malus pumila"
+      "Malus domestica",
+      "Malus pumila",
+      "Pyrus communis",
+      "Prunus persica"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775435029460-10",
@@ -1328,15 +1328,15 @@
   {
     "id": "science-crawl-1775435029460-20",
     "category": "science",
-    "difficulty": "medium",
-    "question": "How many teeth does the average adult mouth have (except for wisdom teeth)?",
+    "difficulty": "easy",
+    "question": "How many adult teeth do humans usually have, not counting wisdom teeth?",
     "options": [
-      "36",
-      "20",
       "28",
-      "32"
+      "20",
+      "32",
+      "36"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775435029460-22",
@@ -1602,12 +1602,12 @@
     "id": "science-crawl-1775435052980-22",
     "category": "science",
     "difficulty": "easy",
-    "question": "What is the powerhouse of the cell?",
+    "question": "Which organ pumps blood through the human body?",
     "options": [
-      "Mitochondria",
-      "Ribosome",
-      "Redbull",
-      "Nucleus"
+      "Heart",
+      "Liver",
+      "Lung",
+      "Kidney"
     ],
     "correctIndex": 0
   },
@@ -1771,12 +1771,12 @@
     "id": "science-crawl-1775435079074-17",
     "category": "science",
     "difficulty": "medium",
-    "question": "In Psychology, which need appears highest in the \"Maslow's hierarchy of needs\" pyramid?",
+    "question": "In Maslow's hierarchy of needs, which level is commonly placed at the top?",
     "options": [
+      "Self-actualization",
       "Esteem",
-      "Love",
       "Safety",
-      "Physiological"
+      "Physiological needs"
     ],
     "correctIndex": 0
   },
@@ -2186,15 +2186,15 @@
   {
     "id": "science-crawl-1775540526822-14",
     "category": "science",
-    "difficulty": "medium",
-    "question": "Along with Oxygen, which element is primarily responsible for the sky appearing blue?",
+    "difficulty": "easy",
+    "question": "What phenomenon makes the daytime sky appear blue?",
     "options": [
-      "Helium",
-      "Nitrogen",
-      "Carbon",
-      "Hydrogen"
+      "Rayleigh scattering",
+      "Photosynthesis",
+      "Plate tectonics",
+      "Capillary action"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775540526822-19",
@@ -2226,12 +2226,12 @@
     "id": "science-crawl-1775540585219-8",
     "category": "science",
     "difficulty": "medium",
-    "question": "What is radiation measured in?",
+    "question": "Absorbed radiation dose is measured in which SI unit?",
     "options": [
-      "Gray ",
-      "Watt",
-      "Decibel",
-      "Kelvin"
+      "Gray",
+      "Pascal",
+      "Tesla",
+      "Mole"
     ],
     "correctIndex": 0
   },
@@ -2291,14 +2291,14 @@
     "id": "science-crawl-1775540585219-29",
     "category": "science",
     "difficulty": "easy",
-    "question": "How many chromosomes are in your body cells?",
+    "question": "How many chromosomes are typically found in a human somatic cell?",
     "options": [
-      "21",
-      "22",
+      "46",
       "23",
-      "24"
+      "44",
+      "48"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775540742492-0",
@@ -2316,15 +2316,15 @@
   {
     "id": "science-crawl-1775540742492-5",
     "category": "science",
-    "difficulty": "easy",
-    "question": "What is the \"powerhouse\" of the Eukaryotic animal cell?",
+    "difficulty": "medium",
+    "question": "What is the basic unit of heredity?",
     "options": [
-      "Nucleus",
-      "Chloroplast",
-      "Mitochondria",
-      "Endoplasmic Reticulum"
+      "Gene",
+      "Cell",
+      "Atom",
+      "Neuron"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1775540742492-6",
@@ -2369,12 +2369,12 @@
     "id": "science-crawl-1775540742492-18",
     "category": "science",
     "difficulty": "easy",
-    "question": "What is the chemical makeup of water?",
+    "question": "What is the chemical formula for water?",
     "options": [
-      "H20",
-      "C12H6O2",
+      "H2O",
       "CO2",
-      "H"
+      "NaCl",
+      "O2"
     ],
     "correctIndex": 0
   },
@@ -2602,15 +2602,15 @@
   {
     "id": "science-crawl-1776523521331-4",
     "category": "science",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "question": "Folic acid is the synthetic form of which vitamin?",
     "options": [
-      "Vitamin A",
+      "Vitamin B9",
       "Vitamin C",
-      "Vitamin B",
-      "Vitamin D"
+      "Vitamin D",
+      "Vitamin K"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "science-crawl-1776523521331-6",

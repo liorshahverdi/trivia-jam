@@ -68,14 +68,14 @@
     "id": "music-1775426283649-petokh",
     "category": "music",
     "difficulty": "easy",
-    "question": "Which classical composer wrote the \"Moonlight Sonata\"?",
+    "question": "Who composed the \"Moonlight Sonata\"?",
     "options": [
-      "Chief Keef",
+      "Ludwig van Beethoven",
       "Wolfgang Amadeus Mozart",
-      "Ludvig Van Beethoven",
-      "Johannes Brahms"
+      "Johann Sebastian Bach",
+      "Franz Schubert"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "music-1775426283649-0f48fp",
@@ -717,15 +717,15 @@
   {
     "id": "music-crawl-1775435046224-6",
     "category": "music",
-    "difficulty": "hard",
-    "question": "How many members are there in the idol group \"&micro;'s\"?",
+    "difficulty": "easy",
+    "question": "Which instrument has 88 keys on a standard modern version?",
     "options": [
-      "48",
-      "9",
-      "6",
-      "3"
+      "Piano",
+      "Violin",
+      "Trumpet",
+      "Flute"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "music-crawl-1775435046224-7",
@@ -1082,14 +1082,14 @@
     "id": "music-crawl-1775435095857-8",
     "category": "music",
     "difficulty": "easy",
-    "question": "The \"British Invasion\" was a cultural phenomenon in music where British boy bands became popular in the USA in what decade?",
+    "question": "Which band is strongly associated with the British Invasion of the 1960s?",
     "options": [
-      "50's",
-      "40's",
-      "60's",
-      "30's"
+      "The Beatles",
+      "Nirvana",
+      "ABBA",
+      "Daft Punk"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "music-crawl-1775435095857-9",
@@ -1588,13 +1588,13 @@
   {
     "id": "music-crawl-1775540543925-3",
     "category": "music",
-    "difficulty": "easy",
-    "question": "What was the subject of the 2014 song \"CoCo\" by American rapper O. T. Genasis?",
+    "difficulty": "medium",
+    "question": "Which Bob Dylan song begins with the line \"How many roads must a man walk down\"?",
     "options": [
-      "Cocaine",
-      "Conan O'Brien",
-      "Cobalt(II) carbonate",
-      "Coconut cream pie"
+      "Blowin' in the Wind",
+      "Like a Rolling Stone",
+      "Mr. Tambourine Man",
+      "The Times They Are a-Changin'"
     ],
     "correctIndex": 0
   },
@@ -2316,15 +2316,15 @@
   {
     "id": "music-crawl-1776202726601-7",
     "category": "music",
-    "difficulty": "medium",
-    "question": "Who was walking like an Egyptian in 1981?",
+    "difficulty": "easy",
+    "question": "Which band had a major 1980s hit with \"Walk Like an Egyptian\"?",
     "options": [
-      "R.E.M.",
       "The Bangles",
-      "The Ocean Blue",
-      "The Connells"
+      "The Go-Go's",
+      "Blondie",
+      "Bananarama"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "music-crawl-1776202726601-9",
@@ -2473,12 +2473,12 @@
     "id": "music-crawl-1776202726601-25",
     "category": "music",
     "difficulty": "medium",
-    "question": "The 1952 musical composition 4'33\", composed by prolific American composer John Cage, is mainly comprised of what sound?",
+    "question": "John Cage's composition \"4′33″\" is famous for instructing performers to do what?",
     "options": [
-      "Silence",
-      "Farts",
-      "People talking",
-      "Cricket chirps"
+      "Remain silent",
+      "Play only percussion",
+      "Sing without words",
+      "Improvise a melody"
     ],
     "correctIndex": 0
   },
@@ -2616,14 +2616,14 @@
     "id": "music-crawl-1776523538298-11",
     "category": "music",
     "difficulty": "medium",
-    "question": "How many studio albums have the heavy metal band, 'Metallica' released in the period between 1983 and 2016?",
+    "question": "Which metal band released the album \"Master of Puppets\"?",
     "options": [
-      "7",
-      "10",
-      "9",
-      "12"
+      "Metallica",
+      "Slayer",
+      "Megadeth",
+      "Anthrax"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "music-crawl-1776523538298-13",
@@ -2668,25 +2668,25 @@
     "id": "music-crawl-1776523538298-24",
     "category": "music",
     "difficulty": "medium",
-    "question": "In the song \"The Ultimate Showdown of Ultimate Destiny,\" who is the only one to survive the battle?",
+    "question": "Which singer released the album \"Lemonade\" in 2016?",
     "options": [
-      "Batman",
-      "Mr. Rogers",
-      "Chuck Norris",
-      "Godzilla"
+      "Beyoncé",
+      "Rihanna",
+      "Adele",
+      "Lady Gaga"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "music-crawl-1776523538298-25",
     "category": "music",
-    "difficulty": "medium",
-    "question": "Iconic cartoon character Mickey Mouse made his onscreen debut in what year?",
+    "difficulty": "easy",
+    "question": "Which composer wrote \"The Four Seasons\"?",
     "options": [
-      "1928",
-      "1929",
-      "1922",
-      "1932"
+      "Antonio Vivaldi",
+      "Johann Sebastian Bach",
+      "Wolfgang Amadeus Mozart",
+      "Frédéric Chopin"
     ],
     "correctIndex": 0
   },

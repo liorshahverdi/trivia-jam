@@ -1095,14 +1095,14 @@
     "id": "history-crawl-1775435058565-8",
     "category": "history",
     "difficulty": "medium",
-    "question": "In what year was the video game company Electronic Arts founded?",
+    "question": "Which company was founded in 1982 by Trip Hawkins and became known for sports video games?",
     "options": [
-      "1999",
-      "1981",
-      "1982",
-      "2005"
+      "Electronic Arts",
+      "Activision",
+      "Nintendo",
+      "Sega"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775435058566-9",
@@ -1199,14 +1199,14 @@
     "id": "history-crawl-1775435058566-18",
     "category": "history",
     "difficulty": "medium",
-    "question": "What is the bloodiest event in United States history, in terms of casualties?",
+    "question": "Which battle is often called the bloodiest single-day battle in United States history?",
     "options": [
-      "Pearl Harbor",
-      "Battle of Antietam",
-      "September 11th",
-      "D-Day"
+      "Antietam",
+      "Gettysburg",
+      "Saratoga",
+      "Bunker Hill"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775435058566-19",
@@ -1342,14 +1342,14 @@
     "id": "history-crawl-1775435084666-3",
     "category": "history",
     "difficulty": "medium",
-    "question": "Who was the first Chancellor of a united Germany in 1871? ",
+    "question": "Who was the first chancellor of the German Empire?",
     "options": [
-      "Kaiser Wilhelm ",
-      "Otto Von Bismark",
-      "Fredrick the 2nd",
-      "Robert Koch"
+      "Otto von Bismarck",
+      "Frederick the Great",
+      "Wilhelm II",
+      "Klemens von Metternich"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775435084666-4",
@@ -1407,14 +1407,14 @@
     "id": "history-crawl-1775435084666-11",
     "category": "history",
     "difficulty": "easy",
-    "question": "Who discovered Penicillin?",
+    "question": "Which scientist is credited with discovering penicillin?",
     "options": [
+      "Alexander Fleming",
+      "Louis Pasteur",
       "Marie Curie",
-      "Alfred Nobel",
-      "Alexander Flemming",
-      "Louis Pasteur"
+      "Robert Koch"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775435084666-12",
@@ -1615,14 +1615,14 @@
     "id": "history-crawl-1775448391296-6",
     "category": "history",
     "difficulty": "easy",
-    "question": "Who was the first American in space?",
+    "question": "Who was the first American to travel into space?",
     "options": [
-      "Neil Armstrong",
+      "Alan Shepard",
       "John Glenn",
-      "Jim Lovell",
-      "Alan Shephard"
+      "Neil Armstrong",
+      "Buzz Aldrin"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775448391297-8",
@@ -1731,15 +1731,15 @@
   {
     "id": "history-crawl-1775448391297-22",
     "category": "history",
-    "difficulty": "hard",
-    "question": "Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?",
+    "difficulty": "medium",
+    "question": "In what year did the Eureka Rebellion take place in Australia?",
     "options": [
-      "India",
-      "Australia",
-      "Canada",
-      "Brazil"
+      "1854",
+      "1856",
+      "1848",
+      "1861"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775448391297-23",
@@ -1861,15 +1861,15 @@
   {
     "id": "history-crawl-1775540532706-10",
     "category": "history",
-    "difficulty": "medium",
-    "question": "What number does the Roman numeral \"D\" stand for?",
+    "difficulty": "easy",
+    "question": "Roman numerals were widely used by which ancient civilization?",
     "options": [
-      "100",
-      "1000",
-      "500",
-      "50"
+      "Rome",
+      "Greece",
+      "Egypt",
+      "Persia"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775540532706-11",
@@ -2121,15 +2121,15 @@
   {
     "id": "history-crawl-1775540590828-12",
     "category": "history",
-    "difficulty": "medium",
-    "question": "What is the oldest US state?",
+    "difficulty": "easy",
+    "question": "Which state was first to ratify the United States Constitution?",
     "options": [
-      "Rhode Island",
-      "Maine",
+      "Delaware",
       "Virginia",
-      "Delaware"
+      "Massachusetts",
+      "Pennsylvania"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775540590828-14",
@@ -2303,13 +2303,13 @@
   {
     "id": "history-crawl-1775540748088-8",
     "category": "history",
-    "difficulty": "hard",
-    "question": "Who is the creator of the soft drink, Dr. Pepper?",
+    "difficulty": "medium",
+    "question": "Which soft drink was first served in Waco, Texas, in the 1880s?",
     "options": [
-      "Charles Alderton",
-      "James Wellington",
-      "Johnson Hinsin",
-      "Boris Heviltik"
+      "Dr Pepper",
+      "Coca-Cola",
+      "Pepsi",
+      "Root Beer"
     ],
     "correctIndex": 0
   },
@@ -2408,14 +2408,14 @@
     "id": "history-crawl-1775540748088-20",
     "category": "history",
     "difficulty": "medium",
-    "question": "Which dictator killed the most people?",
+    "question": "Who was the leader of the Soviet Union during World War II?",
     "options": [
       "Joseph Stalin",
-      "Adolf Hitler",
-      "Mao Zedong",
-      "Kim Il Sung"
+      "Vladimir Lenin",
+      "Nikita Khrushchev",
+      "Leon Trotsky"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "history-crawl-1775540748088-22",

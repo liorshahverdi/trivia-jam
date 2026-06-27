@@ -275,15 +275,15 @@
   {
     "id": "animals-crawl-1776202760237-21",
     "category": "animals",
-    "difficulty": "hard",
-    "question": "Which species of Brown Bear is not extinct?",
+    "difficulty": "medium",
+    "question": "Which brown bear subspecies or population is still living today?",
     "options": [
-      "Syrian Brown Bear",
-      "California Grizzly Bear",
-      "Atlas Bear",
-      "Mexican Grizzly Bear"
+      "California grizzly",
+      "Atlas bear",
+      "Mexican grizzly",
+      "Kodiak bear"
     ],
-    "correctIndex": 0
+    "correctIndex": 3
   },
   {
     "id": "animals-crawl-1776202760237-22",

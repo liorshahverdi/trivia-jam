@@ -81,12 +81,12 @@
     "id": "general-crawl-1776202765831-6",
     "category": "general",
     "difficulty": "easy",
-    "question": "Which of the following is not the host of a program on NPR?",
+    "question": "What color do you get by mixing red and white paint?",
     "options": [
-      "Ben Shapiro",
-      "Terry Gross",
-      "Ira Glass",
-      "Peter Sagal"
+      "Pink",
+      "Purple",
+      "Orange",
+      "Brown"
     ],
     "correctIndex": 0
   },
@@ -237,14 +237,14 @@
     "id": "general-crawl-1776202765831-18",
     "category": "general",
     "difficulty": "easy",
-    "question": "What was the name of Sqiudward's bad painting in the Spongebob episode \"Artist Unknown?\"",
+    "question": "In \"SpongeBob SquarePants,\" what is Squidward's last name?",
     "options": [
-      "Squidward en Repose",
-      "Rippy Bits",
-      "Tilted Perspectives",
-      "Bold and Brash"
+      "Tentacles",
+      "Star",
+      "Cheeks",
+      "Krabs"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "general-crawl-1776202765831-19",
@@ -275,15 +275,15 @@
   {
     "id": "general-crawl-1776202765831-21",
     "category": "general",
-    "difficulty": "hard",
-    "question": "In the MMO RPG \"Realm of the Mad God\", what dungeon is widely considered to be the most difficult?",
+    "difficulty": "medium",
+    "question": "Which board game is played with a grid of lettered tiles to form words?",
     "options": [
-      "Snake Pit",
-      "The Tomb of the Acient's",
-      "The Puppet Master's Theater",
-      "The Shatter's"
+      "Scrabble",
+      "Risk",
+      "Clue",
+      "Battleship"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "general-crawl-1776202765831-22",
@@ -301,15 +301,15 @@
   {
     "id": "general-crawl-1776202765831-23",
     "category": "general",
-    "difficulty": "hard",
-    "question": "Which musician has collaborated with American producer Porter Robinson and released the 2016 song \"Shelter\"?",
+    "difficulty": "easy",
+    "question": "How many days are in a leap year?",
     "options": [
-      "Mat Zo",
-      "Madeon",
-      "deadmau5",
-      "Zedd"
+      "366",
+      "365",
+      "364",
+      "367"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "general-crawl-1776202765831-24",
@@ -366,15 +366,15 @@
   {
     "id": "general-crawl-1776202765831-28",
     "category": "general",
-    "difficulty": "easy",
-    "question": "What nuts are used in the production of marzipan?",
+    "difficulty": "medium",
+    "question": "What is the name for a word that reads the same backward and forward?",
     "options": [
-      "Peanuts",
-      "Almonds",
-      "Walnuts",
-      "Pistachios"
+      "Palindrome",
+      "Anagram",
+      "Acronym",
+      "Synonym"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "general-crawl-1776202765831-29",

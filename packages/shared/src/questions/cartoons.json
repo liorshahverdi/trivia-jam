@@ -132,15 +132,15 @@
   {
     "id": "cartoons-crawl-1776202810636-10",
     "category": "cartoons",
-    "difficulty": "medium",
-    "question": "What is Scooby-Doo's real name?",
+    "difficulty": "easy",
+    "question": "Who created \"The Powerpuff Girls\"?",
     "options": [
-      "Scooter",
-      "Scrappy",
-      "Shooby",
-      "Scoobert"
+      "Craig McCracken",
+      "Genndy Tartakovsky",
+      "Butch Hartman",
+      "Rebecca Sugar"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "cartoons-crawl-1776202810637-11",
@@ -249,13 +249,13 @@
   {
     "id": "cartoons-crawl-1776202810637-19",
     "category": "cartoons",
-    "difficulty": "easy",
-    "question": "What was the first Disney movie to use CGI?",
+    "difficulty": "medium",
+    "question": "Which Disney animated feature was an early Disney film to use computer-generated imagery in its production?",
     "options": [
       "The Black Cauldron",
-      "Tron",
-      "Toy Story",
-      "Fantasia"
+      "Snow White and the Seven Dwarfs",
+      "Cinderella",
+      "The Jungle Book"
     ],
     "correctIndex": 0
   },
@@ -327,15 +327,15 @@
   {
     "id": "cartoons-crawl-1776202810637-25",
     "category": "cartoons",
-    "difficulty": "hard",
-    "question": "In the \"Star Wars\" universe, what species is Grand Admiral Thrawn?",
+    "difficulty": "medium",
+    "question": "In the animated series \"Star Wars Rebels,\" Grand Admiral Thrawn belongs to which species?",
     "options": [
-      "Gungans",
-      "Pantorans",
+      "Chiss",
       "Twi'lek",
-      "Chiss"
+      "Zabrak",
+      "Mon Calamari"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "cartoons-crawl-1776202810637-26",

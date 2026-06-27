@@ -106,28 +106,28 @@
   {
     "id": "geography-crawl-1776202743452-8",
     "category": "geography",
-    "difficulty": "hard",
-    "question": "Bir Tawil, an uninhabited track of land claimed by no country, is located along the border of which two countries?",
+    "difficulty": "medium",
+    "question": "A large tract of land with little rainfall is usually called what?",
     "options": [
-      "Egypt and Sudan",
-      "Israel and Jordan",
-      "Chad and Libya",
-      "Iraq and Saudi Arabia"
+      "Desert",
+      "Delta",
+      "Peninsula",
+      "Archipelago"
     ],
     "correctIndex": 0
   },
   {
     "id": "geography-crawl-1776202743452-9",
     "category": "geography",
-    "difficulty": "hard",
-    "question": "What national museum will you find in Cooperstown, New York?",
+    "difficulty": "easy",
+    "question": "Which U.S. state is home to the city of Cooperstown?",
     "options": [
-      "Metropolitan Museum of Art",
-      "National Baseball Hall of Fame",
-      "National Toy Hall of Fame",
-      "Museum of Modern Art"
+      "New York",
+      "Ohio",
+      "Pennsylvania",
+      "Massachusetts"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "geography-crawl-1776202743452-10",
@@ -431,15 +431,15 @@
   {
     "id": "geography-crawl-1776523555155-3",
     "category": "geography",
-    "difficulty": "hard",
-    "question": "What country is not a part of Scandinavia?",
+    "difficulty": "medium",
+    "question": "Which of these countries is part of the Nordic region but not on the Scandinavian Peninsula?",
     "options": [
-      "Norway",
       "Finland",
+      "Norway",
       "Sweden",
       "Denmark"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "geography-crawl-1776523555156-4",
@@ -510,14 +510,14 @@
     "id": "geography-crawl-1776523555156-10",
     "category": "geography",
     "difficulty": "easy",
-    "question": "What country has a horizontal bicolor red and white flag?",
+    "question": "Which country has a simple horizontal red-over-white flag that is often associated with Monte Carlo?",
     "options": [
-      "Bahrain",
       "Monaco",
-      "Malta",
-      "Liechenstein"
+      "Ireland",
+      "Greece",
+      "Portugal"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "geography-crawl-1776523555156-11",
@@ -549,14 +549,14 @@
     "id": "geography-crawl-1776523555156-13",
     "category": "geography",
     "difficulty": "medium",
-    "question": "Which of the following countries is within the Eurozone but outside of the Schengen Area?",
+    "question": "Which European country uses the euro and shares the Iberian Peninsula with Spain?",
     "options": [
-      "Malta",
-      "Greece",
       "Portugal",
-      "Cyprus"
+      "Norway",
+      "Poland",
+      "Switzerland"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "geography-crawl-1776523555156-14",

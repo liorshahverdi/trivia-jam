@@ -67,15 +67,15 @@
   {
     "id": "mythology-crawl-1776202793864-5",
     "category": "mythology",
-    "difficulty": "medium",
-    "question": "Hera is god of...",
+    "difficulty": "easy",
+    "question": "In Greek mythology, Hera is the goddess of what?",
     "options": [
-      "Agriculture",
-      "Sea",
       "Marriage",
-      "War"
+      "Wisdom",
+      "The hunt",
+      "The sea"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "mythology-crawl-1776202793864-6",
@@ -211,14 +211,14 @@
     "id": "mythology-crawl-1776202793864-16",
     "category": "mythology",
     "difficulty": "medium",
-    "question": "In Norse Mythology, what is the name of the symbol commonly referred to as the \"Tree of Life\"?",
+    "question": "In Greek mythology, who flew too close to the sun?",
     "options": [
-      "Ymir",
-      "Yggdrasil",
-      "Tree of the Earth",
-      "Odin's Roots"
+      "Icarus",
+      "Perseus",
+      "Theseus",
+      "Orpheus"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "mythology-crawl-1776202793864-17",
@@ -276,14 +276,14 @@
     "id": "mythology-crawl-1776202793864-21",
     "category": "mythology",
     "difficulty": "medium",
-    "question": "In Norse Mythology, Baldr was killed by Loki with a magical spear made from what plant?",
+    "question": "In Norse mythology, Loki tricked Höðr into killing Baldr with a weapon made from what plant?",
     "options": [
-      "Wolf's Bane",
-      "Buckthorn",
       "Mistletoe",
-      "Hemlock"
+      "Oak",
+      "Ash",
+      "Yew"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "mythology-crawl-1776202793864-22",

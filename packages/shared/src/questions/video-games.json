@@ -3,27 +3,27 @@
     "id": "video-games-crawl-1776202782688-0",
     "category": "video-games",
     "difficulty": "hard",
-    "question": "Which souls game was not directed by Hidetaka Miyazaki?",
+    "question": "Which Souls game was not directed by Hidetaka Miyazaki?",
     "options": [
-      "Demon Souls",
+      "Dark Souls II",
+      "Demon's Souls",
       "Dark Souls",
-      "Dark Souls 2",
-      "Dark Souls 3"
+      "Dark Souls III"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "video-games-crawl-1776202782688-1",
     "category": "video-games",
-    "difficulty": "hard",
-    "question": "What was the world's first video game?",
+    "difficulty": "easy",
+    "question": "Which 1972 arcade game by Atari helped popularize video games?",
     "options": [
-      "Spacewar!",
       "Pong",
-      "Draughts",
-      "Space Travel"
+      "Tetris",
+      "Pac-Man",
+      "Space Invaders"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "video-games-crawl-1776202782688-2",
@@ -106,15 +106,15 @@
   {
     "id": "video-games-crawl-1776202782688-8",
     "category": "video-games",
-    "difficulty": "easy",
-    "question": "In \"Rainbow Six: Siege\", which of the following operators cannot breach reinforced walls?",
+    "difficulty": "medium",
+    "question": "In \"Rainbow Six Siege,\" which operator is known for using the ERC-7 cloaking device?",
     "options": [
+      "Vigil",
       "Thermite",
-      "Buck",
-      "Hibana",
-      "Maverick"
+      "Doc",
+      "Sledge"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "video-games-crawl-1776202782688-9",
@@ -171,13 +171,13 @@
   {
     "id": "video-games-crawl-1776202782688-13",
     "category": "video-games",
-    "difficulty": "easy",
-    "question": "Which Game Boy from the Game Boy series of portable video game consoles was released first?",
+    "difficulty": "medium",
+    "question": "Among these Game Boy models, which was released first?",
     "options": [
       "Game Boy Color",
-      "Game Boy Advance",
+      "Game Boy Advance SP",
       "Game Boy Micro",
-      "Game Boy Advance SP"
+      "Game Boy Advance"
     ],
     "correctIndex": 0
   },
@@ -327,15 +327,15 @@
   {
     "id": "video-games-crawl-1776202782688-25",
     "category": "video-games",
-    "difficulty": "easy",
-    "question": "Who created the indie adventure game \"Night in the Woods\"?",
+    "difficulty": "medium",
+    "question": "Which team created the adventure game \"Night in the Woods\"?",
     "options": [
-      "Ron Gilbert",
-      "Tim Schafer",
-      " Tommy Refenes",
-      "Alec Holowka"
+      "Infinite Fall",
+      "Supergiant Games",
+      "Team Cherry",
+      "Campo Santo"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "video-games-crawl-1776202782688-26",

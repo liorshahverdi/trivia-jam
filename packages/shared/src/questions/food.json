@@ -1016,15 +1016,15 @@
   {
     "id": "food-trivia-seed-33",
     "category": "food",
-    "difficulty": "easy",
-    "question": "From which country does Tabasco sauce originate?",
+    "difficulty": "medium",
+    "question": "In which U.S. state was Tabasco sauce first produced?",
     "options": [
-      "USA",
-      "Guatemala",
-      "Costa Rica",
-      "Mexico "
+      "Louisiana",
+      "Texas",
+      "New Mexico",
+      "California"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "food-trivia-seed-34",
@@ -1406,13 +1406,13 @@
   {
     "id": "food-trivia-1776523543955-13",
     "category": "food",
-    "difficulty": "hard",
-    "question": "Which country is associated with the drink tuba?",
+    "difficulty": "easy",
+    "question": "Which country is associated with the dessert halo-halo?",
     "options": [
-      "The Phillipines",
-      "Romania",
-      "Turkey",
-      "Estonia"
+      "The Philippines",
+      "Vietnam",
+      "Thailand",
+      "Malaysia"
     ],
     "correctIndex": 0
   },
@@ -1472,14 +1472,14 @@
     "id": "food-trivia-1776523543955-18",
     "category": "food",
     "difficulty": "medium",
-    "question": "Which drink, which has been illegal but is being imported once again, is made from the leaves of the wormwood plant?",
+    "question": "Which herb gives absinthe much of its distinctive bitter flavor?",
     "options": [
-      "Gin",
-      "Absinthe ",
-      "Port",
-      "Whisky"
+      "Wormwood",
+      "Basil",
+      "Rosemary",
+      "Cilantro"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "food-trivia-1776523543955-19",

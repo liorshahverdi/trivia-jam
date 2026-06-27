@@ -42,14 +42,14 @@
     "id": "tech-004",
     "category": "tech",
     "difficulty": "easy",
-    "question": "Which company created the Android operating system?",
+    "question": "Which company currently develops the Android mobile operating system?",
     "options": [
+      "Google",
       "Apple",
       "Microsoft",
-      "Google",
       "Samsung"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "tech-005",
@@ -171,15 +171,15 @@
   {
     "id": "tech-014",
     "category": "tech",
-    "difficulty": "hard",
-    "question": "What was the first commercially available personal computer?",
+    "difficulty": "medium",
+    "question": "Which machine is often cited as the first commercially available personal computer?",
     "options": [
-      "Apple I",
-      "IBM 5150",
+      "Kenbak-1",
       "Commodore PET",
-      "Altair 8800"
+      "IBM PC",
+      "Apple Macintosh"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "tech-015",
@@ -288,15 +288,15 @@
   {
     "id": "tech-crawl-1775435107056-2",
     "category": "tech",
-    "difficulty": "medium",
-    "question": "What is largely considered the precursor to the USB format?",
+    "difficulty": "easy",
+    "question": "Which older connector was commonly replaced by USB for keyboards and mice?",
     "options": [
-      "SVGA",
       "PS/2",
-      "PCIe",
-      "FireWire"
+      "HDMI",
+      "Ethernet",
+      "DisplayPort"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1775435107056-3",
@@ -328,14 +328,14 @@
     "id": "tech-crawl-1775435107056-5",
     "category": "tech",
     "difficulty": "easy",
-    "question": "What does the Prt Sc button do?",
+    "question": "On many Windows keyboards, which key copies a screenshot to the clipboard?",
     "options": [
-      "Nothing",
-      "Saves a .png file of what's on the screen in your screenshots folder in photos",
-      "Closes all windows",
-      "Captures what's on the screen and copies it to your clipboard"
+      "Print Screen",
+      "Caps Lock",
+      "Scroll Lock",
+      "Num Lock"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1775435107056-6",
@@ -354,14 +354,14 @@
     "id": "tech-crawl-1775435107056-7",
     "category": "tech",
     "difficulty": "easy",
-    "question": "What does CPU stand for?",
+    "question": "What does GPU stand for?",
     "options": [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-      "Central Processing Unit"
+      "Graphics Processing Unit",
+      "General Program Utility",
+      "Global Power Unit",
+      "Graphical Port Unit"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1775435107056-8",
@@ -562,12 +562,12 @@
     "id": "tech-crawl-1775435107056-23",
     "category": "tech",
     "difficulty": "medium",
-    "question": "Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
+    "question": "In Gordon Moore's original 1965 formulation, transistor counts were predicted to roughly double about how often?",
     "options": [
-      "Year",
-      "Four Years",
-      "Two Years",
-      "Eight Years"
+      "Every year",
+      "Every month",
+      "Every decade",
+      "Every five years"
     ],
     "correctIndex": 0
   },
@@ -704,15 +704,15 @@
   {
     "id": "tech-crawl-1775448413710-5",
     "category": "tech",
-    "difficulty": "medium",
-    "question": "Which operating system was released first?",
+    "difficulty": "easy",
+    "question": "Apple's classic Macintosh system software was known by what name?",
     "options": [
+      "Mac OS",
       "Windows",
       "Linux",
-      "Mac OS",
-      "OS/2"
+      "Solaris"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1775448413710-6",
@@ -795,15 +795,15 @@
   {
     "id": "tech-crawl-1775448413710-14",
     "category": "tech",
-    "difficulty": "hard",
-    "question": "Which of the following computer components can be built using only NAND gates?",
+    "difficulty": "medium",
+    "question": "Which logic gate outputs false only when both inputs are true?",
     "options": [
-      "CPU",
-      "RAM",
-      "ALU",
-      "Register"
+      "NAND",
+      "AND",
+      "OR",
+      "XOR"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1775448413710-15",
@@ -1575,15 +1575,15 @@
   {
     "id": "tech-crawl-1776202737849-3",
     "category": "tech",
-    "difficulty": "easy",
-    "question": "This mobile OS held the largest market share in 2012.",
+    "difficulty": "medium",
+    "question": "Which mobile operating system had the largest global smartphone market share in 2012?",
     "options": [
       "Android",
-      "BlackBerry",
-      "Symbian",
-      "iOS"
+      "iOS",
+      "BlackBerry OS",
+      "Windows Phone"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1776202737849-5",
@@ -1783,15 +1783,15 @@
   {
     "id": "tech-crawl-1776523549563-16",
     "category": "tech",
-    "difficulty": "easy",
-    "question": "What programming language was GitHub written in?",
+    "difficulty": "medium",
+    "question": "GitHub was originally built primarily with which programming language?",
     "options": [
-      "JavaScript",
+      "Ruby",
       "Python",
-      "Lua",
-      "Ruby"
+      "Java",
+      "C#"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "tech-crawl-1776523549563-20",

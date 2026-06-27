@@ -16,14 +16,14 @@
     "id": "board-games-crawl-1776202788280-1",
     "category": "board-games",
     "difficulty": "hard",
-    "question": "What is the sum of all the tiles in a standard box of Scrabble?",
+    "question": "What is the total face-value score of all tiles in a standard English Scrabble set?",
     "options": [
-      "207",
-      "197",
       "187",
-      "177"
+      "100",
+      "225",
+      "144"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "board-games-crawl-1776202788280-2",
@@ -262,15 +262,15 @@
   {
     "id": "board-games-crawl-1776202788281-20",
     "category": "board-games",
-    "difficulty": "hard",
-    "question": "Which Pokemon is #39 in the National Pokedex?",
+    "difficulty": "medium",
+    "question": "Which of these is not a resource card in the base game of Catan?",
     "options": [
-      "Pikachu",
-      "Jigglypuff",
-      "Psyduck",
-      "Fearow"
+      "Marble",
+      "Brick",
+      "Wool",
+      "Ore"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "board-games-crawl-1776202788281-21",

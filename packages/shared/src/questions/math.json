@@ -626,15 +626,15 @@
   {
     "id": "math-crawl-1775435002695-5",
     "category": "math",
-    "difficulty": "hard",
-    "question": "What is the fourth digit of &pi;?",
+    "difficulty": "medium",
+    "question": "What is the fourth digit after the decimal point in pi?",
     "options": [
-      "2",
-      "3",
+      "5",
+      "1",
       "4",
-      "1"
+      "9"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435002695-8",
@@ -665,41 +665,41 @@
   {
     "id": "math-crawl-1775435002695-19",
     "category": "math",
-    "difficulty": "easy",
-    "question": "What is the equation for the area of a sphere?",
+    "difficulty": "medium",
+    "question": "What is the surface area of a sphere with radius r?",
     "options": [
-      "(4/3)&pi;r^3",
-      "4&pi;r^2",
-      "(1/3)&pi;hr^2",
-      "&pi;r^4"
+      "4πr²",
+      "2πr",
+      "πr²",
+      "(4/3)πr³"
     ],
     "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435002695-24",
     "category": "math",
-    "difficulty": "easy",
-    "question": "Which of the following is not one of the seven Millennium Prize Problems?",
+    "difficulty": "hard",
+    "question": "Which famous unsolved problem concerns the smoothness of certain fluid-flow equations?",
     "options": [
-      "Birch and Swinnerton-Dyer Conjecture",
-      "Naviér conjecture",
-      "Riemann hypothesis",
-      "Poincaré conjecture"
+      "Navier–Stokes existence and smoothness",
+      "Twin prime conjecture",
+      "Collatz conjecture",
+      "Riemann hypothesis"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435002695-27",
     "category": "math",
-    "difficulty": "medium",
-    "question": "At what temperature does temp in &deg;C equal temp in &deg;F?",
+    "difficulty": "easy",
+    "question": "What is 12 squared?",
     "options": [
-      "+40",
-      "0",
-      "-40",
-      "+100"
+      "144",
+      "24",
+      "121",
+      "124"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435002695-29",
@@ -757,40 +757,40 @@
     "id": "math-crawl-1775435023864-11",
     "category": "math",
     "difficulty": "medium",
-    "question": "What type of function is x&sup2;+2x+1?",
+    "question": "What is the slope of the line y = 3x + 2?",
     "options": [
-      "Rational",
-      "Linear",
-      "Quadratic",
-      "Exponential"
+      "3",
+      "2",
+      "5",
+      "-3"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435023864-22",
     "category": "math",
-    "difficulty": "hard",
-    "question": "The French mathematician &Eacute;variste Galois is primarily known for his work in which?",
+    "difficulty": "medium",
+    "question": "What is the next prime number after 7?",
     "options": [
-      "Galois' Continued Fractions",
-      "Galois' Method for PDE's ",
-      "Galois Theory",
-      "Abelian Integration"
+      "11",
+      "9",
+      "10",
+      "13"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435023864-25",
     "category": "math",
     "difficulty": "medium",
-    "question": "What is the area of a circle with a diameter of 20 inches if &pi;= 3.1415?",
+    "question": "What is the area of a rectangle that is 8 units long and 5 units wide?",
     "options": [
-      "380.1215 Inches",
-      "3141.5 Inches",
-      "314.15 Inches",
-      "1256.6 Inches"
+      "40",
+      "13",
+      "26",
+      "80"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "math-crawl-1775435072442-1",
@@ -835,13 +835,13 @@
     "id": "math-crawl-1775448380074-21",
     "category": "math",
     "difficulty": "easy",
-    "question": "What type of angle is greater than 90&deg;?",
+    "question": "What do you call an angle that measures exactly 90 degrees?",
     "options": [
-      "Acute",
-      "Right",
-      "Straight",
-      "Obtuse"
+      "Right angle",
+      "Obtuse angle",
+      "Acute angle",
+      "Straight angle"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   }
 ]

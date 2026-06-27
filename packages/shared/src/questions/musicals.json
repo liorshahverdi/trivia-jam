@@ -15,15 +15,15 @@
   {
     "id": "musicals-crawl-1776202771448-1",
     "category": "musicals",
-    "difficulty": "medium",
-    "question": "What play is the quote \"Hell is other people\" from?",
+    "difficulty": "easy",
+    "question": "Which musical features the songs \"Do-Re-Mi\" and \"My Favorite Things\"?",
     "options": [
-      "The Devil and the Good Lord",
-      "The Condemned of Altona",
-      "The Flies",
-      "No Exit"
+      "The Sound of Music",
+      "Cats",
+      "Rent",
+      "Chicago"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-2",
@@ -41,13 +41,13 @@
   {
     "id": "musicals-crawl-1776202771448-3",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "Who wrote the lyrics for Leonard Bernstein's 1957 Brodway musical West Side Story?",
+    "difficulty": "easy",
+    "question": "What is the name of the Broadway district in New York City?",
     "options": [
-      "Stephen Sondheim",
-      "Himself",
-      "Oscar Hammerstein",
-      "Richard Rodgers"
+      "Broadway",
+      "Brodway",
+      "West End",
+      "Las Ramblas"
     ],
     "correctIndex": 0
   },
@@ -55,12 +55,12 @@
     "id": "musicals-crawl-1776202771448-4",
     "category": "musicals",
     "difficulty": "medium",
-    "question": "Who is the musical director for the award winning musical \"Hamilton\"?",
+    "question": "Who wrote the music and lyrics for the original Broadway musical \"Hamilton\"?",
     "options": [
-      "Alex Lacamoire",
       "Lin-Manuel Miranda",
-      "Renee Elise-Goldberry",
-      "Leslie Odom Jr."
+      "Stephen Sondheim",
+      "Andrew Lloyd Webber",
+      "Jonathan Larson"
     ],
     "correctIndex": 0
   },
@@ -80,54 +80,54 @@
   {
     "id": "musicals-crawl-1776202771448-6",
     "category": "musicals",
-    "difficulty": "easy",
-    "question": "Who wrote the play 'Angels in America'?",
+    "difficulty": "medium",
+    "question": "Which musical features the song \"Defying Gravity\"?",
     "options": [
-      "Tony Kusher",
-      "Tom Stoppard",
-      "Matthew Lopez",
-      "Anthony Neilson"
+      "Wicked",
+      "Les Misérables",
+      "Dear Evan Hansen",
+      "The Producers"
     ],
     "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-7",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "Who serves as the speaker of the prologue in Shakespeare's Romeo and Juliet?",
+    "difficulty": "medium",
+    "question": "Which musical is based on the songs of ABBA?",
     "options": [
-      "Montague",
-      "Chorus",
-      "Refrain",
-      "Capulet"
+      "Mamma Mia!",
+      "Jersey Boys",
+      "Beautiful",
+      "Rock of Ages"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-8",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "After England, more Shakespeare plays are set in this present day country than in any other.",
+    "difficulty": "medium",
+    "question": "Which musical features the character Jean Valjean?",
     "options": [
-      "United States",
-      "Greece",
-      "France",
-      "Italy"
+      "Les Misérables",
+      "The Phantom of the Opera",
+      "Evita",
+      "Company"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-9",
     "category": "musicals",
-    "difficulty": "easy",
-    "question": "In Shakespeare's play Julius Caesar, Caesar's last words were...",
+    "difficulty": "medium",
+    "question": "Which musical features the song \"Memory\"?",
     "options": [
-      "Iacta alea est!",
-      "Et tu, Brute? ",
-      "Vidi, vini, vici.",
-      "Aegri somnia vana."
+      "Cats",
+      "Annie",
+      "Grease",
+      "Cabaret"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-10",
@@ -184,41 +184,41 @@
   {
     "id": "musicals-crawl-1776202771448-14",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "Which of these plays was famously first performed posthumously after the playwright committed suicide?",
+    "difficulty": "medium",
+    "question": "Which musical is set partly at the Kit Kat Klub?",
     "options": [
-      "Hamilton",
-      "Much Ado About Nothing",
-      "The Birthday Party",
-      "4.48 Psychosis"
+      "Cabaret",
+      "Chicago",
+      "Hairspray",
+      "Newsies"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-15",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "In Macbeth, the eyes of what animals were used in the Witches' cauldron?",
+    "difficulty": "medium",
+    "question": "Which musical includes the song \"Seasons of Love\"?",
     "options": [
-      "Newts",
-      "Humans",
-      "Sharks",
-      "Squids"
+      "Rent",
+      "Wicked",
+      "The Book of Mormon",
+      "A Chorus Line"
     ],
     "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-16",
     "category": "musicals",
-    "difficulty": "hard",
-    "question": "Which Shakespeare play features the stage direction \"Enter a messenger, with two heads and a hand\"?",
+    "difficulty": "medium",
+    "question": "Which musical tells the story of Eva Perón?",
     "options": [
-      "Othello",
-      "Titus Andronicus",
-      "Macbeth",
-      "King Lear"
+      "Evita",
+      "Annie",
+      "Matilda",
+      "Waitress"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-17",
@@ -237,12 +237,12 @@
     "id": "musicals-crawl-1776202771448-18",
     "category": "musicals",
     "difficulty": "medium",
-    "question": "In which Shakespearean play will you find the suicide of Ophelia?",
+    "question": "Which musical is about newspaper boys striking in New York City?",
     "options": [
-      "Hamlet",
-      "Macbeth",
-      "Othello",
-      "King Lear"
+      "Newsies",
+      "Billy Elliot",
+      "Oliver!",
+      "The Music Man"
     ],
     "correctIndex": 0
   },
@@ -275,15 +275,15 @@
   {
     "id": "musicals-crawl-1776202771448-21",
     "category": "musicals",
-    "difficulty": "easy",
-    "question": "\"Doctor Who\" star David Tennant performed in a rendition of which Shakespearean play?",
+    "difficulty": "medium",
+    "question": "Which musical features the masked character Erik?",
     "options": [
-      "The Tempest",
-      "Hamlet",
-      "Othello",
-      "The Taming of the Shrew"
+      "The Phantom of the Opera",
+      "Sweeney Todd",
+      "Miss Saigon",
+      "Fiddler on the Roof"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-22",
@@ -301,15 +301,15 @@
   {
     "id": "musicals-crawl-1776202771448-23",
     "category": "musicals",
-    "difficulty": "easy",
-    "question": "How many plays is Shakespeare generally considered to have written?",
+    "difficulty": "medium",
+    "question": "Which musical features the song \"Tomorrow\"?",
     "options": [
-      "18",
-      "54",
-      "25",
-      "37"
+      "Annie",
+      "Fun Home",
+      "Hadestown",
+      "Spring Awakening"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-24",
@@ -354,14 +354,14 @@
     "id": "musicals-crawl-1776202771448-27",
     "category": "musicals",
     "difficulty": "medium",
-    "question": "When was the play \"Macbeth\" written?",
+    "question": "Which musical is inspired by the Orpheus and Eurydice myth?",
     "options": [
-      "1605",
-      "1606",
-      "1723",
-      "1628"
+      "Hadestown",
+      "Hamilton",
+      "Come From Away",
+      "Beetlejuice"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "id": "musicals-crawl-1776202771448-28",
@@ -380,13 +380,13 @@
     "id": "musicals-crawl-1776202771448-29",
     "category": "musicals",
     "difficulty": "medium",
-    "question": "In which Shakespeare play does the character Marcellus say, \"Something is rotten in the state of Denmark\"?",
+    "question": "Which musical features the song \"Cell Block Tango\"?",
     "options": [
-      "Macbeth",
-      "King Lear",
-      "Twelfth Night",
-      "Hamlet"
+      "Chicago",
+      "Cats",
+      "Wicked",
+      "Rent"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   }
 ]

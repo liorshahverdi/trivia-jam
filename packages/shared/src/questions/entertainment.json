@@ -185,14 +185,14 @@
     "id": "entertainment-crawl-1776202754654-14",
     "category": "entertainment",
     "difficulty": "medium",
-    "question": "Which one of these action movies are shot entirely in one take?",
+    "question": "Which film is famous for being shot in a single continuous take?",
     "options": [
-      "Ip Man 2",
-      "The Bourne Legacy",
       "Victoria",
-      "Léon: The Professional"
+      "Drive",
+      "Taken",
+      "John Wick"
     ],
-    "correctIndex": 2
+    "correctIndex": 0
   },
   {
     "id": "entertainment-crawl-1776202754654-15",
@@ -327,15 +327,15 @@
   {
     "id": "entertainment-crawl-1776202754654-25",
     "category": "entertainment",
-    "difficulty": "medium",
-    "question": "Which town is the setting for the Disney movie The Love Bug (1968)?",
+    "difficulty": "easy",
+    "question": "In \"Inside Out,\" which city does Riley move to?",
     "options": [
-      "Los Angeles",
-      "Sacramento",
-      "San Jose",
-      "San Francisco"
+      "San Francisco",
+      "Seattle",
+      "Portland",
+      "Denver"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "entertainment-crawl-1776202754654-26",
@@ -353,15 +353,15 @@
   {
     "id": "entertainment-crawl-1776202754654-27",
     "category": "entertainment",
-    "difficulty": "medium",
-    "question": "Bela Lugosi was a Hungarian-American actor best known for his starring role of what 1931 horror film?",
+    "difficulty": "easy",
+    "question": "What is the title of the 1931 Universal horror film starring Bela Lugosi as the famous vampire?",
     "options": [
-      "Dr Frankenstein",
-      "Werewolf",
-      "The Creature from the Black Lagoon",
-      "Count Dracula"
+      "Dracula",
+      "Count Dracula",
+      "Nosferatu",
+      "The Vampire Bat"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "id": "entertainment-crawl-1776202754654-28",
