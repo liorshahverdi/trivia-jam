@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Trivia Jam Architecture</title>
+<style>body{margin:0;background:#020617;color:#e2e8f0;font-family:'JetBrains Mono',ui-monospace,monospace}.wrap{max-width:1840px;margin:0 auto;padding:24px}.card{border:1px solid #1e293b;border-radius:18px;background:#0f172a;padding:18px;box-shadow:0 24px 80px rgba(0,0,0,.35)}img,svg{width:100%;height:auto}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.meta div{border:1px solid #1e293b;border-radius:12px;padding:14px;background:#111827}.meta h3{margin:0 0 8px;color:#67e8f9}.meta p{margin:0;color:#cbd5e1;font-size:13px;line-height:1.5}@media(max-width:900px){.meta{grid-template-columns:1fr}}</style></head>
+<body><div class="wrap"><div class="card"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1420" viewBox="0 0 1800 1420">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.6"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/></marker>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
+      text{font-family:'JetBrains Mono',monospace}.h1{font-size:28px;font-weight:700;fill:#e2e8f0}.h2{font-size:13px;fill:#94a3b8}.title{font-size:14px;font-weight:700}.sub{font-size:10px;fill:#cbd5e1}.item{font-size:10px;fill:#e2e8f0}.edge{font-size:10px;font-weight:600}.boundary{font-size:13px;font-weight:700}.tiny{font-size:9px;fill:#94a3b8}.legend{font-size:11px;fill:#e2e8f0}
+    </style>
+  </defs>
+  <rect width="1800" height="1420" fill="#020617"/><rect width="1800" height="1420" fill="url(#grid)" opacity=".7"/>
+  <text x="40" y="50" class="h1">Trivia Jam — AST-Grounded Architecture</text>
+  <text x="40" y="76" class="h2">479 production AST nodes / 1015 links • graphify update . --no-cluster • 2026-06-27T18:41:08.571Z</text>
+
+  <!-- Boundaries -->
+  <rect x="30" y="105" width="420" height="1120" rx="16" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-dasharray="8 6" opacity=".85"/><text x="46" y="129" class="boundary" fill="#22d3ee">Client workspace: packages/client</text>
+  <rect x="490" y="105" width="520" height="1120" rx="16" fill="none" stroke="#34d399" stroke-width="1.4" stroke-dasharray="8 6" opacity=".85"/><text x="506" y="129" class="boundary" fill="#34d399">Server workspace: packages/server</text>
+  <rect x="1045" y="105" width="335" height="1120" rx="16" fill="none" stroke="#60a5fa" stroke-width="1.4" stroke-dasharray="8 6" opacity=".85"/><text x="1061" y="129" class="boundary" fill="#60a5fa">Shared workspace: packages/shared</text>
+  <rect x="1415" y="105" width="350" height="1120" rx="16" fill="none" stroke="#c084fc" stroke-width="1.4" stroke-dasharray="8 6" opacity=".85"/><text x="1431" y="129" class="boundary" fill="#c084fc">Tools / Ops / Deploy</text>
+
+  <!-- Edges behind boxes -->
+  <path id="browser-pages" d="M 220 170 C 220 170, 220 250, 220 250" fill="none" stroke="#22d3ee" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="150" y="202" class="edge" fill="#22d3ee">loads React app</text>
+  <path id="client-socket" d="M 450 452 C 470 452, 470 445, 490 445" fill="none" stroke="#38bdf8" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="400" y="440.5" class="edge" fill="#38bdf8">Socket.IO events</text>
+  <path id="handler-room" d="M 690 445 C 690 445, 690 560, 690 560" fill="none" stroke="#34d399" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="620" y="494.5" class="edge" fill="#34d399">room mutations</text>
+  <path id="handler-loop" d="M 770 445 C 770 445, 770 560, 770 560" fill="none" stroke="#34d399" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="700" y="494.5" class="edge" fill="#34d399">start game</text>
+  <path id="loop-picker" d="M 770 705 C 770 705, 770 815, 770 815" fill="none" stroke="#34d399" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="700" y="752" class="edge" fill="#34d399">selectQuestions()</text>
+  <path id="picker-json" d="M 1010 855 C 1027.5 855, 1027.5 780, 1045 780" fill="none" stroke="#a78bfa" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="957.5" y="809.5" class="edge" fill="#a78bfa">read JSON packs</text>
+  <path id="shared-client" d="M 1045 308 C 747.5 308, 747.5 308, 450 308" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)" opacity=".9"/><text x="677.5" y="300" class="edge" fill="#60a5fa">typed events / types</text>
+  <path id="shared-server" d="M 1045 380 C 1027.5 380, 1027.5 380, 1010 380" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)" opacity=".9"/><text x="957.5" y="372" class="edge" fill="#60a5fa">typed events / types</text>
+  <path id="state-client" d="M 255 565 C 255 565, 255 680, 255 680" fill="none" stroke="#22d3ee" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="185" y="614.5" class="edge" fill="#22d3ee">restore / mutate state</text>
+  <path id="audio-client" d="M 360 565 C 360 565, 360 855, 360 855" fill="none" stroke="#22d3ee" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="290" y="702" class="edge" fill="#22d3ee">sound hooks</text>
+  <path id="tools-json" d="M 1465 522 C 1382.5 522, 1382.5 780, 1300 780" fill="none" stroke="#c084fc" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="1312.5" y="643" class="edge" fill="#c084fc">write current-events.json</text>
+  <path id="rss-tools" d="M 1580 350 C 1580 350, 1580 505, 1580 505" fill="none" stroke="#fbbf24" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="1510" y="419.5" class="edge" fill="#fbbf24">fetch articles</text>
+  <path id="gen-tools" d="M 1710 350 C 1710 350, 1710 505, 1710 505" fill="none" stroke="#fbbf24" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="1640" y="419.5" class="edge" fill="#fbbf24">generate questions</text>
+  <line id="deploy-client" x1="1595" y1="970" x2="1595" y2="930" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)" opacity=".9"/><text x="1535" y="942" class="edge" fill="#fbbf24"></text>
+  <line id="deploy-server" x1="1650" y1="970" x2="1650" y2="930" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)" opacity=".9"/><text x="1590" y="942" class="edge" fill="#fbbf24"></text>
+  <line id="legacy-disabled" x1="870" y1="1035" x2="870" y2="1135" stroke="#64748b" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)" opacity=".9"/><text x="810" y="1077" class="edge" fill="#64748b">disabled / not startup</text>
+
+  <!-- Client -->
+  <g id="gh-pages">
+<rect x="75" y="125" width="305" height="75" rx="10" fill="#0f172a"/>
+<rect x="75" y="125" width="305" height="75" rx="10" fill="rgba(120,53,15,.34)" stroke="#fbbf24" stroke-width="1.8"/>
+<text x="89" y="149" class="title" fill="#fbbf24">GitHub Pages static site</text>
+<text x="89" y="167" class="sub">public browser entrypoint</text>
+<text x="91" y="189" class="item">• Vite-built client dist/</text>
+<text x="91" y="205" class="item">• Host screen and player screen load here</text>
+</g>
+  <g id="app">
+<rect x="65" y="250" width="350" height="115" rx="10" fill="#0f172a"/>
+<rect x="65" y="250" width="350" height="115" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="79" y="274" class="title" fill="#22d3ee">App.tsx router</text>
+<text x="79" y="292" class="sub">role + phase switchboard</text>
+<text x="81" y="314" class="item">• role none → PlayerJoinScreen</text>
+<text x="81" y="330" class="item">• host phases → Host* screens</text>
+<text x="81" y="346" class="item">• player phases → Player* screens</text>
+<text x="81" y="362" class="item">• HostAudio unlocks browser audio</text>
+</g>
+  <g id="host-screens">
+<rect x="65" y="390" width="170" height="160" rx="10" fill="#0f172a"/>
+<rect x="65" y="390" width="170" height="160" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="79" y="414" class="title" fill="#22d3ee">Host screens</text>
+<text x="79" y="432" class="sub">host UX components</text>
+<text x="81" y="454" class="item">• HostLobbyScreen</text>
+<text x="81" y="470" class="item">• HostCategoryScreen</text>
+<text x="81" y="486" class="item">• HostQuestionScreen</text>
+<text x="81" y="502" class="item">• HostResultsScreen</text>
+<text x="81" y="518" class="item">• HostLeaderboard</text>
+<text x="81" y="534" class="item">• HostFinalScreen</text>
+</g>
+  <g id="player-screens">
+<rect x="245" y="390" width="170" height="160" rx="10" fill="#0f172a"/>
+<rect x="245" y="390" width="170" height="160" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="259" y="414" class="title" fill="#22d3ee">Player screens</text>
+<text x="259" y="432" class="sub">mobile/player UX</text>
+<text x="261" y="454" class="item">• PlayerJoinScreen</text>
+<text x="261" y="470" class="item">• PlayerLobbyScreen</text>
+<text x="261" y="486" class="item">• PlayerCategoryScreen</text>
+<text x="261" y="502" class="item">• PlayerAnswerScreen</text>
+<text x="261" y="518" class="item">• PlayerResultScreen</text>
+<text x="261" y="534" class="item">• PlayerFinalScreen</text>
+</g>
+  <g id="store">
+<rect x="65" y="680" width="180" height="140" rx="10" fill="#0f172a"/>
+<rect x="65" y="680" width="180" height="140" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="79" y="704" class="title" fill="#22d3ee">gameStore.ts</text>
+<text x="79" y="722" class="sub">Zustand client state</text>
+<text x="81" y="744" class="item">• role, phase, roomCode</text>
+<text x="81" y="760" class="item">• players / myPlayer</text>
+<text x="81" y="776" class="item">• question, revealData</text>
+<text x="81" y="792" class="item">• scores, votes, errors</text>
+</g>
+  <g id="socket-hook">
+<rect x="255" y="680" width="160" height="140" rx="10" fill="#0f172a"/>
+<rect x="255" y="680" width="160" height="140" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="269" y="704" class="title" fill="#22d3ee">useSocket.ts</text>
+<text x="269" y="722" class="sub">Socket.IO client adapter</text>
+<text x="271" y="744" class="item">• createRoom / joinRoom</text>
+<text x="271" y="760" class="item">• setMode / categories</text>
+<text x="271" y="776" class="item">• startGame / answer / vote</text>
+<text x="271" y="792" class="item">• auto reconnect via localStorage</text>
+</g>
+  <g id="client-components">
+<rect x="65" y="850" width="170" height="145" rx="10" fill="#0f172a"/>
+<rect x="65" y="850" width="170" height="145" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="79" y="874" class="title" fill="#22d3ee">Reusable UI</text>
+<text x="79" y="892" class="sub">component AST nodes</text>
+<text x="81" y="914" class="item">• CategoryCard</text>
+<text x="81" y="930" class="item">• PlayerAvatar</text>
+<text x="81" y="946" class="item">• ProgressBar</text>
+<text x="81" y="962" class="item">• RoomCodeDisplay</text>
+<text x="81" y="978" class="item">• ScorePopup</text>
+<text x="81" y="994" class="item">• TeamBadge</text>
+<text x="81" y="1010" class="item">• Timer</text>
+</g>
+  <g id="audio">
+<rect x="245" y="850" width="170" height="145" rx="10" fill="#0f172a"/>
+<rect x="245" y="850" width="170" height="145" rx="10" fill="rgba(8,51,68,.48)" stroke="#22d3ee" stroke-width="1.8"/>
+<text x="259" y="874" class="title" fill="#22d3ee">Audio subsystem</text>
+<text x="259" y="892" class="sub">hooks + browser audio</text>
+<text x="261" y="914" class="item">• useSoundEffects</text>
+<text x="261" y="930" class="item">• sounds.ts</text>
+<text x="261" y="946" class="item">• voiceHost.ts</text>
+<text x="261" y="962" class="item">• question / answer / countdown SFX</text>
+</g>
+
+  <!-- Server -->
+  <g id="render">
+<rect x="590" y="125" width="330" height="75" rx="10" fill="#0f172a"/>
+<rect x="590" y="125" width="330" height="75" rx="10" fill="rgba(120,53,15,.34)" stroke="#fbbf24" stroke-width="1.8"/>
+<text x="604" y="149" class="title" fill="#fbbf24">Render web service</text>
+<text x="604" y="167" class="sub">Node server deployment</text>
+<text x="606" y="189" class="item">• No runtime DB required</text>
+<text x="606" y="205" class="item">• HTTP health + Socket.IO endpoint</text>
+</g>
+  <g id="app-server">
+<rect x="555" y="250" width="400" height="115" rx="10" fill="#0f172a"/>
+<rect x="555" y="250" width="400" height="115" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="569" y="274" class="title" fill="#34d399">app.ts + index.ts + startup.ts</text>
+<text x="569" y="292" class="sub">Express + HTTP + Socket.IO bootstrap</text>
+<text x="571" y="314" class="item">• CORS: GitHub Pages + localhost</text>
+<text x="571" y="330" class="item">• GET /health</text>
+<text x="571" y="346" class="item">• setupSocketHandlers(io)</text>
+<text x="571" y="362" class="item">• startup: JSON-managed questions only</text>
+</g>
+  <g id="handler">
+<rect x="530" y="390" width="210" height="150" rx="10" fill="#0f172a"/>
+<rect x="530" y="390" width="210" height="150" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="544" y="414" class="title" fill="#34d399">socket/handler.ts</text>
+<text x="544" y="432" class="sub">ClientEvents → ServerEvents</text>
+<text x="546" y="454" class="item">• room:create / join / reconnect</text>
+<text x="546" y="470" class="item">• game:setMode / selectCategories</text>
+<text x="546" y="486" class="item">• game:start / answer / vote</text>
+<text x="546" y="502" class="item">• playAgain / disconnect</text>
+</g>
+  <g id="room-manager">
+<rect x="530" y="560" width="210" height="165" rx="10" fill="#0f172a"/>
+<rect x="530" y="560" width="210" height="165" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="544" y="584" class="title" fill="#34d399">roomManager.ts</text>
+<text x="544" y="602" class="sub">in-memory room registry</text>
+<text x="546" y="624" class="item">• Map&lt;code, Room&gt;</text>
+<text x="546" y="640" class="item">• create / join / reconnect</text>
+<text x="546" y="656" class="item">• disconnect grace timers</text>
+<text x="546" y="672" class="item">• mode + category selection</text>
+<text x="546" y="688" class="item">• canStartGame guard</text>
+<text x="546" y="704" class="item">• team assignment / reset</text>
+</g>
+  <g id="game-loop">
+<rect x="760" y="560" width="210" height="165" rx="10" fill="#0f172a"/>
+<rect x="760" y="560" width="210" height="165" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="774" y="584" class="title" fill="#34d399">gameLoop.ts</text>
+<text x="774" y="602" class="sub">phase state machine</text>
+<text x="776" y="624" class="item">• countdown → question</text>
+<text x="776" y="640" class="item">• answer/vote wait loop</text>
+<text x="776" y="656" class="item">• reveal → leaderboard</text>
+<text x="776" y="672" class="item">• game_over</text>
+<text x="776" y="688" class="item">• strips correctIndex for clients</text>
+</g>
+  <g id="question-picker">
+<rect x="625" y="815" width="260" height="120" rx="10" fill="#0f172a"/>
+<rect x="625" y="815" width="260" height="120" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="639" y="839" class="title" fill="#34d399">QuestionPicker.ts</text>
+<text x="639" y="857" class="sub">JSON-only question selection</text>
+<text x="641" y="879" class="item">• questionCache per category</text>
+<text x="641" y="895" class="item">• reads shared/src/questions/*.json</text>
+<text x="641" y="911" class="item">• difficulty filter optional</text>
+<text x="641" y="927" class="item">• shuffle + slice</text>
+</g>
+  <g id="scoring">
+<rect x="530" y="970" width="210" height="110" rx="10" fill="#0f172a"/>
+<rect x="530" y="970" width="210" height="110" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="544" y="994" class="title" fill="#34d399">ScoreCalculator.ts</text>
+<text x="544" y="1012" class="sub">points + coop target</text>
+<text x="546" y="1034" class="item">• difficulty base points</text>
+<text x="546" y="1050" class="item">• teams speed/streak bonus</text>
+<text x="546" y="1066" class="item">• coop target calculation</text>
+</g>
+  <g id="teams">
+<rect x="760" y="970" width="210" height="110" rx="10" fill="#0f172a"/>
+<rect x="760" y="970" width="210" height="110" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="774" y="994" class="title" fill="#34d399">TeamManager.ts</text>
+<text x="774" y="1012" class="sub">leaderboards + team scoring</text>
+<text x="776" y="1034" class="item">• player leaderboard</text>
+<text x="776" y="1050" class="item">• red / blue team scores</text>
+<text x="776" y="1066" class="item">• addTeamScore</text>
+</g>
+  <g id="legacy-db">
+<rect x="625" y="1125" width="260" height="70" rx="10" fill="#0f172a"/>
+<rect x="625" y="1125" width="260" height="70" rx="10" fill="rgba(51,65,85,.32)" stroke="#64748b" stroke-width="1.8"/>
+<text x="639" y="1149" class="title" fill="#64748b">Legacy DB/crawler modules</text>
+<text x="639" y="1167" class="sub">present in AST, not startup/runtime path</text>
+<text x="641" y="1189" class="item">• QuestionCrawler / db-seed / db-migrate</text>
+<text x="641" y="1205" class="item">• CurrentEventsSource DB refresh path disabled</text>
+</g>
+
+  <!-- Shared -->
+  <g id="types">
+<rect x="1085" y="185" width="255" height="160" rx="10" fill="#0f172a"/>
+<rect x="1085" y="185" width="255" height="160" rx="10" fill="rgba(30,64,175,.40)" stroke="#60a5fa" stroke-width="1.8"/>
+<text x="1099" y="209" class="title" fill="#60a5fa">types.ts</text>
+<text x="1099" y="227" class="sub">domain contracts</text>
+<text x="1101" y="249" class="item">• Difficulty / GameMode / Phase</text>
+<text x="1101" y="265" class="item">• 20 Category union</text>
+<text x="1101" y="281" class="item">• Question / QuestionForClient</text>
+<text x="1101" y="297" class="item">• Player / Room / RoomState</text>
+<text x="1101" y="313" class="item">• Reveal / Leaderboard / GameOver</text>
+</g>
+  <g id="events">
+<rect x="1085" y="375" width="255" height="135" rx="10" fill="#0f172a"/>
+<rect x="1085" y="375" width="255" height="135" rx="10" fill="rgba(30,64,175,.40)" stroke="#60a5fa" stroke-width="1.8"/>
+<text x="1099" y="399" class="title" fill="#60a5fa">events.ts</text>
+<text x="1099" y="417" class="sub">Socket event names</text>
+<text x="1101" y="439" class="item">• ClientEvents: create/join/start</text>
+<text x="1101" y="455" class="item">• answer vs vote split</text>
+<text x="1101" y="471" class="item">• ServerEvents: phase/question/reveal</text>
+<text x="1101" y="487" class="item">• leaderboard/gameOver/state/error</text>
+</g>
+  <g id="constants">
+<rect x="1085" y="540" width="255" height="115" rx="10" fill="#0f172a"/>
+<rect x="1085" y="540" width="255" height="115" rx="10" fill="rgba(30,64,175,.40)" stroke="#60a5fa" stroke-width="1.8"/>
+<text x="1099" y="564" class="title" fill="#60a5fa">constants.ts</text>
+<text x="1099" y="582" class="sub">game constants</text>
+<text x="1101" y="604" class="item">• room code length</text>
+<text x="1101" y="620" class="item">• max players</text>
+<text x="1101" y="636" class="item">• timers</text>
+<text x="1101" y="652" class="item">• questions per game</text>
+<text x="1101" y="668" class="item">• avatars / category metadata</text>
+</g>
+  <g id="question-packs">
+<rect x="1085" y="690" width="255" height="260" rx="10" fill="#0f172a"/>
+<rect x="1085" y="690" width="255" height="260" rx="10" fill="rgba(76,29,149,.48)" stroke="#a78bfa" stroke-width="1.8"/>
+<text x="1099" y="714" class="title" fill="#a78bfa">Question JSON packs</text>
+<text x="1099" y="732" class="sub">20 committed category files</text>
+<text x="1101" y="754" class="item">• animals/anime/art/board-games</text>
+<text x="1101" y="770" class="item">• cartoons/current-events</text>
+<text x="1101" y="786" class="item">• entertainment/food/gadgets</text>
+<text x="1101" y="802" class="item">• general/geography/history</text>
+<text x="1101" y="818" class="item">• math/music/musicals</text>
+<text x="1101" y="834" class="item">• mythology/science/tech</text>
+<text x="1101" y="850" class="item">• television/video-games</text>
+<text x="1101" y="866" class="item">• question-packs.test validates floor</text>
+</g>
+
+  <!-- Tools / Ops -->
+  <g id="rss">
+<rect x="1455" y="185" width="130" height="145" rx="10" fill="#0f172a"/>
+<rect x="1455" y="185" width="130" height="145" rx="10" fill="rgba(30,41,59,.55)" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="1469" y="209" class="title" fill="#94a3b8">RSS feeds</text>
+<text x="1469" y="227" class="sub">external inputs</text>
+<text x="1471" y="249" class="item">• NPR</text>
+<text x="1471" y="265" class="item">• BBC</text>
+<text x="1471" y="281" class="item">• PBS</text>
+<text x="1471" y="297" class="item">• NASA</text>
+<text x="1471" y="313" class="item">• ScienceDaily</text>
+<text x="1471" y="329" class="item">• Space.com</text>
+<text x="1471" y="345" class="item">• Smithsonian</text>
+<text x="1471" y="361" class="item">• The Verge/Ars/HN</text>
+</g>
+  <g id="generators">
+<rect x="1600" y="185" width="130" height="145" rx="10" fill="#0f172a"/>
+<rect x="1600" y="185" width="130" height="145" rx="10" fill="rgba(30,41,59,.55)" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="1614" y="209" class="title" fill="#94a3b8">Generators</text>
+<text x="1614" y="227" class="sub">bounded AI path</text>
+<text x="1616" y="249" class="item">• Hermes one-shot</text>
+<text x="1616" y="265" class="item">• Ollama fallback</text>
+<text x="1616" y="281" class="item">• OpenAI-compatible legacy</text>
+<text x="1616" y="297" class="item">• strict JSON only</text>
+</g>
+  <g id="current-events-tool">
+<rect x="1455" y="505" width="275" height="215" rx="10" fill="#0f172a"/>
+<rect x="1455" y="505" width="275" height="215" rx="10" fill="rgba(88,28,135,.42)" stroke="#c084fc" stroke-width="1.8"/>
+<text x="1469" y="529" class="title" fill="#c084fc">current-events-static.ts</text>
+<text x="1469" y="547" class="sub">Current Events JSON refresh</text>
+<text x="1471" y="569" class="item">• fetch RSS articles</text>
+<text x="1471" y="585" class="item">• filter unsafe/stale subjects</text>
+<text x="1471" y="601" class="item">• generate + validate MCQs</text>
+<text x="1471" y="617" class="item">• deduplicate</text>
+<text x="1471" y="633" class="item">• keep fresh ~21 days</text>
+<text x="1471" y="649" class="item">• top up to ≥20</text>
+<text x="1471" y="665" class="item">• write current-events.json</text>
+</g>
+  <g id="tooling">
+<rect x="1455" y="760" width="275" height="135" rx="10" fill="#0f172a"/>
+<rect x="1455" y="760" width="275" height="135" rx="10" fill="rgba(88,28,135,.42)" stroke="#c084fc" stroke-width="1.8"/>
+<text x="1469" y="784" class="title" fill="#c084fc">Question tooling</text>
+<text x="1469" y="802" class="sub">packages/tools AST components</text>
+<text x="1471" y="824" class="item">• writer.ts read/write category JSON</text>
+<text x="1471" y="840" class="item">• deduplicator.ts</text>
+<text x="1471" y="856" class="item">• sources/opentdb.ts</text>
+<text x="1471" y="872" class="item">• crawl-questions.ts</text>
+<text x="1471" y="888" class="item">• question-packs.test guardrail</text>
+</g>
+  <g id="ci-deploy">
+<rect x="1455" y="970" width="275" height="145" rx="10" fill="#0f172a"/>
+<rect x="1455" y="970" width="275" height="145" rx="10" fill="rgba(120,53,15,.34)" stroke="#fbbf24" stroke-width="1.8"/>
+<text x="1469" y="994" class="title" fill="#fbbf24">Build / deploy / ops</text>
+<text x="1469" y="1012" class="sub">workspace scripts + hosting</text>
+<text x="1471" y="1034" class="item">• npm workspaces</text>
+<text x="1471" y="1050" class="item">• Vite client build</text>
+<text x="1471" y="1066" class="item">• tsc shared/server/tools</text>
+<text x="1471" y="1082" class="item">• GitHub Actions → Pages</text>
+<text x="1471" y="1098" class="item">• Render service → Socket.IO</text>
+<text x="1471" y="1114" class="item">• local cron can refresh JSON + push</text>
+</g>
+
+  <!-- Notes and legend -->
+  <rect x="40" y="1260" width="1720" height="110" rx="12" fill="rgba(15,23,42,.92)" stroke="#334155"/>
+  <text x="65" y="1290" class="title" fill="#e2e8f0">Graph-derived notes</text>
+  <text x="65" y="1314" class="legend">• AST graph found workspace packages client/server/shared/tools, imports/calls/contains links, and the runtime Socket.IO + JSON-question path.</text>
+  <text x="65" y="1334" class="legend">• Render database/crawler files still exist in AST as legacy modules, but startup.ts and QuestionPicker.ts keep production runtime JSON-file managed.</text>
+  <text x="65" y="1354" class="legend">• Current Events freshness is an ops/tooling concern: refresh-current-events.ts updates committed JSON; gameplay reads only committed JSON.</text>
+  <text x="1260" y="1290" class="tiny">Package AST node counts</text>
+  <text x="1260" y="1310" class="tiny">client 161 • server 140 • shared 50 • tools 94</text>
+  <text x="1260" y="1330" class="tiny">scripts 3 • workspace 23 • docs 8</text>
+</svg></div><div class="meta"><div><h3>Source of truth</h3><p>Generated from Graphify AST-only output: 479 production AST nodes / 1015 links • graphify update . --no-cluster • 2026-06-27T18:41:08.571Z. No LLM extraction or clustering was used.</p></div><div><h3>Runtime architecture</h3><p>Browser client uses Socket.IO events against the Render Node service. Server state is in-memory per room. Questions are selected from committed JSON packs.</p></div><div><h3>Ops architecture</h3><p>Current Events refresh is outside gameplay: RSS + generator + validator writes current-events.json, then static hosting/server deploys consume the file.</p></div></div></div></body></html>
