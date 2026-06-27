@@ -287,5 +287,22 @@
     "publishedAt": "2026-06-26T04:00:00.000Z",
     "expiresAt": "2026-07-17T04:00:00.000Z",
     "generatedAt": "2026-06-26T12:30:08.277Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-06-27-4",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "What is the most significant test yet reached by the two countries?",
+    "options": [
+      "U. S. strikes Iran in response to a drone attack on a ship",
+      "Pete Buttigieg and his kids subject to CPS, police investigation after false report",
+      "5 million have dropped ACA insurance after Trump and the GOP let prices skyrocket",
+      "Argentina fans pour into Texas"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/06/27/nx-s1-5872954/us-strikes-iran",
+    "publishedAt": "2026-06-27T04:12:23.000Z",
+    "expiresAt": "2026-07-18T04:12:23.000Z",
+    "generatedAt": "2026-06-27T09:01:42.143Z"
   }
 ]
