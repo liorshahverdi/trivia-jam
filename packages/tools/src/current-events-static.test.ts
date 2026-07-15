@@ -36,6 +36,21 @@ const QUESTION_TOPICS = [
   'mars habitat simulator',
   'forest mapping lidar',
   'microchip packaging method',
+  'river sensor network',
+  'clean cooking stove',
+  'satellite forest mapper',
+  'museum audio guide',
+  'rail station battery hub',
+  'community lunch greenhouse',
+  'reef restoration robot',
+  'electric ambulance pilot',
+  'public art archive',
+  'soil health scanner',
+  'library language kiosk',
+  'sports safety helmet',
+  'urban cooling pavement',
+  'drought forecasting model',
+  'aquarium research vessel',
 ];
 
 function makeArticle(index: number) {
@@ -127,6 +142,7 @@ describe('static Current Events JSON refresh', () => {
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
+      targetDynamicQuestions: 20,
       readExisting: () => kept,
       writeQuestions,
       fetchArticles: async () => articles,
@@ -163,6 +179,7 @@ describe('static Current Events JSON refresh', () => {
 
     const result = await refreshCurrentEventsJson({
       now: NOW,
+      targetDynamicQuestions: 20,
       readExisting: () => [...freshKept, expired],
       writeQuestions,
       fetchArticles: async () => [makeArticle(20)],
@@ -174,6 +191,60 @@ describe('static Current Events JSON refresh', () => {
     expect(written).toHaveLength(20);
     expect(written.some((q) => q.id === expired.id)).toBe(false);
     expect(written.at(-1)?.id).toBe('current-events-dynamic-2026-06-18-space-20');
+  });
+
+  it('refreshes stale current-events before the pack drops below the playable minimum', async () => {
+    const writeQuestions = vi.fn();
+    const staleKept = Array.from({ length: 36 }, (_, index) => ({
+      ...makeGeneratedQuestion(index + 1),
+      publishedAt: '2026-06-27T09:00:00.000Z',
+      expiresAt: '2026-07-18T09:00:00.000Z',
+      generatedAt: '2026-06-27T10:00:00.000Z',
+    }));
+    const freshArticles = Array.from({ length: 40 }, (_, index) => makeArticle(index + 1));
+    const freshGenerated = Array.from({ length: 40 }, (_, index) => makeGeneratedQuestion(index + 1));
+
+    const result = await refreshCurrentEventsJson({
+      now: new Date('2026-07-14T12:00:00.000Z'),
+      readExisting: () => staleKept,
+      writeQuestions,
+      fetchArticles: async () => freshArticles,
+      generateQuestions: async (articles) => {
+        expect(articles).toHaveLength(40);
+        return freshGenerated;
+      },
+    });
+
+    expect(result).toEqual({ added: 40, kept: 0, removedExpired: 36, total: 40 });
+    const written = writeQuestions.mock.calls[0][0] as Question[];
+    expect(written).toHaveLength(40);
+    expect(written.every((q) => q.id.startsWith('current-events-dynamic-2026-06-18-space-'))).toBe(true);
+  });
+
+  it('deterministically rotates generated answers so the correct option is not always first', async () => {
+    const writeQuestions = vi.fn();
+    const articles = Array.from({ length: 20 }, (_, index) => makeArticle(index + 1));
+    const generated = Array.from({ length: 20 }, (_, index) => ({
+      ...makeGeneratedQuestion(index + 1),
+      options: ['Acme Space', 'Blue River', 'Northwind Labs', 'Vertex AI'] as [string, string, string, string],
+      correctIndex: 0,
+    }));
+
+    const result = await refreshCurrentEventsJson({
+      now: NOW,
+      targetDynamicQuestions: 20,
+      readExisting: () => [],
+      writeQuestions,
+      fetchArticles: async () => articles,
+      generateQuestions: async () => generated,
+    });
+
+    expect(result).toEqual({ added: 20, kept: 0, removedExpired: 0, total: 20 });
+    const written = writeQuestions.mock.calls[0][0] as Question[];
+    expect(new Set(written.map((q) => q.correctIndex)).size).toBeGreaterThan(1);
+    for (const question of written) {
+      expect(question.options[question.correctIndex]).toBe('Acme Space');
+    }
   });
 
   it('prunes generic existing dynamic questions so bad cron output is removed', async () => {
@@ -226,6 +297,7 @@ describe('static Current Events JSON refresh', () => {
     const result = await refreshCurrentEventsJson({
       now: NOW,
       minDynamicQuestions: 1,
+      targetDynamicQuestions: 1,
       readExisting: () => [oldDynamic],
       writeQuestions,
       fetchArticles: async () => [{
@@ -732,7 +804,7 @@ describe('static Current Events JSON refresh', () => {
       method: 'POST',
       body: expect.stringContaining('qwen2.5-coder:3b'),
     }));
-    const requestInit = fetchImpl.mock.calls[0]?.[1] as unknown as RequestInit;
+    const requestInit = (fetchImpl.mock.calls as unknown as Array<[string, RequestInit]>)[0]?.[1];
     const body = JSON.parse(requestInit.body as string);
     expect(body).toMatchObject({
       model: 'qwen2.5-coder:3b',
@@ -792,7 +864,7 @@ describe('static Current Events JSON refresh', () => {
       maxBuffer: 1024 * 1024,
       env: expect.objectContaining({ HERMES_ACCEPT_HOOKS: '1' }),
     }));
-    const args = execFileImpl.mock.calls[0]?.[1] ?? [];
+    const args = ((execFileImpl.mock.calls as unknown as Array<[string, string[]]>)[0]?.[1] ?? []);
     expect(args.at(-1)).toContain('Create exactly 1');
     expect(args.at(-1)).toContain('Acme Space announces reusable satellite bus');
     expect(questions).toHaveLength(1);

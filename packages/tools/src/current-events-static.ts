@@ -9,7 +9,10 @@ const DYNAMIC_ID_PREFIX = 'current-events-dynamic-';
 const DEFAULT_EXPIRATION_DAYS = 21;
 const DEFAULT_MAX_ARTICLE_AGE_DAYS = 45;
 const DEFAULT_MIN_DYNAMIC_QUESTIONS = 20;
+const DEFAULT_TARGET_DYNAMIC_QUESTIONS = 40;
 const DEFAULT_MAX_DYNAMIC_QUESTIONS = 80;
+const DEFAULT_MAX_RETAINED_AGE_DAYS = 10;
+const DEFAULT_REFRESH_EXPIRING_WITHIN_DAYS = 3;
 const DEFAULT_OLLAMA_MAX_ATTEMPTS = 3;
 const DEFAULT_OLLAMA_RETRY_DELAY_MS = 5_000;
 const DEFAULT_OLLAMA_ATTEMPT_TIMEOUT_MS = 10 * 60 * 1_000;
@@ -77,7 +80,10 @@ export interface RefreshCurrentEventsJsonDeps {
   readExisting?: () => Array<Question | StaticCurrentEventQuestion>;
   writeQuestions?: (questions: Array<Question | StaticCurrentEventQuestion>) => void;
   minDynamicQuestions?: number;
+  targetDynamicQuestions?: number;
   maxDynamicQuestions?: number;
+  maxRetainedAgeDays?: number;
+  refreshExpiringWithinDays?: number;
 }
 
 export interface RefreshCurrentEventsJsonResult {
@@ -96,6 +102,12 @@ function addDays(date: Date, days: number): Date {
   const next = new Date(date);
   next.setUTCDate(next.getUTCDate() + days);
   return next;
+}
+
+function dateTime(value: string | undefined): number | null {
+  if (!value) return null;
+  const time = new Date(value).getTime();
+  return Number.isNaN(time) ? null : time;
 }
 
 function isDifficulty(value: string): value is Difficulty {
@@ -172,10 +184,32 @@ export function validateStaticCurrentEventQuestion(
 
 function toStoredQuestion(candidate: StaticCurrentEventQuestion, now: Date): StoredStaticCurrentEventQuestion {
   const publishedAt = new Date(candidate.publishedAt);
+  const shuffled = rotateCorrectOption(candidate);
   return {
-    ...candidate,
+    ...shuffled,
     expiresAt: addDays(publishedAt, DEFAULT_EXPIRATION_DAYS).toISOString(),
     generatedAt: now.toISOString(),
+  };
+}
+
+function stableHash(text: string): number {
+  let hash = 0;
+  for (const char of text) {
+    hash = (hash * 31 + char.charCodeAt(0)) >>> 0;
+  }
+  return hash;
+}
+
+function rotateCorrectOption(candidate: StaticCurrentEventQuestion): StaticCurrentEventQuestion {
+  const options = [...candidate.options];
+  const shift = stableHash(candidate.id) % options.length;
+  if (shift === 0) return { ...candidate, options: options as [string, string, string, string] };
+
+  const rotated = [...options.slice(shift), ...options.slice(0, shift)] as [string, string, string, string];
+  return {
+    ...candidate,
+    options: rotated,
+    correctIndex: (candidate.correctIndex - shift + options.length) % options.length,
   };
 }
 
@@ -183,6 +217,21 @@ function isExpired(question: StaticCurrentEventQuestion, now: Date): boolean {
   if (!question.expiresAt) return false;
   const expiresAt = new Date(question.expiresAt);
   return !Number.isNaN(expiresAt.getTime()) && expiresAt.getTime() <= now.getTime();
+}
+
+function shouldPreferRetainingQuestion(
+  question: StoredStaticCurrentEventQuestion,
+  now: Date,
+  maxRetainedAgeDays: number,
+  refreshExpiringWithinDays: number,
+): boolean {
+  const publishedAt = dateTime(question.publishedAt);
+  if (publishedAt === null || publishedAt < addDays(now, -maxRetainedAgeDays).getTime()) return false;
+
+  const expiresAt = dateTime(question.expiresAt);
+  if (expiresAt !== null && expiresAt <= addDays(now, refreshExpiringWithinDays).getTime()) return false;
+
+  return true;
 }
 
 function normalizeTextForSupport(text: string): string {
@@ -537,6 +586,12 @@ export async function refreshCurrentEventsJson(
   const write = deps.writeQuestions ?? ((questions) => writeCategoryQuestions(CURRENT_EVENTS_CATEGORY, questions as Question[]));
   const minDynamicQuestions = deps.minDynamicQuestions ?? DEFAULT_MIN_DYNAMIC_QUESTIONS;
   const maxDynamicQuestions = deps.maxDynamicQuestions ?? DEFAULT_MAX_DYNAMIC_QUESTIONS;
+  const targetDynamicQuestions = Math.min(
+    maxDynamicQuestions,
+    Math.max(minDynamicQuestions, deps.targetDynamicQuestions ?? DEFAULT_TARGET_DYNAMIC_QUESTIONS),
+  );
+  const maxRetainedAgeDays = deps.maxRetainedAgeDays ?? DEFAULT_MAX_RETAINED_AGE_DAYS;
+  const refreshExpiringWithinDays = deps.refreshExpiringWithinDays ?? DEFAULT_REFRESH_EXPIRING_WITHIN_DAYS;
 
   const existing = read();
   const retainedExisting: StoredStaticCurrentEventQuestion[] = [];
@@ -548,9 +603,15 @@ export async function refreshCurrentEventsJson(
     retainedExisting.push(question as StoredStaticCurrentEventQuestion);
   }
 
-  const removedExpired = existing.length - retainedExisting.length;
-  const remainingCapacity = Math.max(0, maxDynamicQuestions - retainedExisting.length);
-  const neededTopUp = Math.max(0, minDynamicQuestions - retainedExisting.length);
+  const preferredExisting = retainedExisting.filter((question) => shouldPreferRetainingQuestion(
+    question,
+    now,
+    maxRetainedAgeDays,
+    refreshExpiringWithinDays,
+  ));
+  const staleCarryover = retainedExisting.filter((question) => !preferredExisting.includes(question));
+  const remainingCapacity = Math.max(0, maxDynamicQuestions - preferredExisting.length);
+  const neededTopUp = Math.max(0, targetDynamicQuestions - preferredExisting.length);
 
   let acceptedGenerated: StoredStaticCurrentEventQuestion[] = [];
   if (remainingCapacity > 0 && neededTopUp > 0) {
@@ -560,24 +621,40 @@ export async function refreshCurrentEventsJson(
     for (const question of generated) {
       if (!validateStaticCurrentEventQuestion(question, now).valid) continue;
       if (!isQuestionSupportedBySource(question, articles)) continue;
-      if (!hasUniqueQuestionText(question, retainedExisting)) continue;
+      if (!hasUniqueQuestionText(question, preferredExisting)) continue;
       if (!hasUniqueQuestionText(question, accepted)) continue;
       accepted.push(toStoredQuestion(question, now));
     }
-    const { unique } = deduplicate(accepted, retainedExisting);
-    acceptedGenerated = unique.slice(0, Math.min(remainingCapacity, neededTopUp));
+    const { unique } = deduplicate(accepted, preferredExisting);
+    acceptedGenerated = (unique as StoredStaticCurrentEventQuestion[]).slice(0, Math.min(remainingCapacity, neededTopUp));
   }
 
-  const nextQuestions = [...retainedExisting, ...acceptedGenerated].slice(0, Math.max(0, maxDynamicQuestions));
+  let nextQuestions: StoredStaticCurrentEventQuestion[] = retainedExisting;
+  if (acceptedGenerated.length > 0) {
+    nextQuestions = [...preferredExisting, ...acceptedGenerated];
+    if (nextQuestions.length < minDynamicQuestions) {
+      nextQuestions = [
+        ...nextQuestions,
+        ...staleCarryover.slice(0, minDynamicQuestions - nextQuestions.length),
+      ];
+    }
+  }
+  nextQuestions = nextQuestions.slice(0, Math.max(0, maxDynamicQuestions));
 
   if (nextQuestions.length < minDynamicQuestions) {
     return {
       added: 0,
       kept: retainedExisting.length,
-      removedExpired,
+      removedExpired: existing.length - retainedExisting.length,
       total: retainedExisting.length,
     };
   }
+
+  const nextExistingIds = new Set(nextQuestions
+    .filter((question) => retainedExisting.includes(question as StoredStaticCurrentEventQuestion))
+    .map((question) => question.id));
+  const keptExisting = retainedExisting.filter((question) => nextExistingIds.has(question.id)).length;
+  const removedExpired = existing.length - keptExisting;
 
   if (removedExpired > 0 || acceptedGenerated.length > 0) {
     write(nextQuestions);
@@ -585,7 +662,7 @@ export async function refreshCurrentEventsJson(
 
   return {
     added: acceptedGenerated.length,
-    kept: retainedExisting.length,
+    kept: keptExisting,
     removedExpired,
     total: nextQuestions.length,
   };

@@ -73,7 +73,8 @@ describe('committed question packs', () => {
           if (new Set(normalizedOptions).size !== 4) failures.push(`${label}: duplicate options`);
         }
 
-        if (!Number.isInteger(question.correctIndex) || question.correctIndex < 0 || question.correctIndex > 3) {
+        const correctIndex = question.correctIndex;
+        if (!Number.isInteger(correctIndex) || typeof correctIndex !== 'number' || correctIndex < 0 || correctIndex > 3) {
           failures.push(`${label}: invalid correctIndex ${String(question.correctIndex)}`);
         }
 
