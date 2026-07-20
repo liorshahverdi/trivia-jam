@@ -542,5 +542,141 @@
     "publishedAt": "2026-07-14T05:32:12.000Z",
     "expiresAt": "2026-08-04T05:32:12.000Z",
     "generatedAt": "2026-07-15T01:59:00.650Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-001",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "According to NPR News, Andy Burnham succeeds which person as the United Kingdom's prime minister?",
+    "options": [
+      "Andy Biggs",
+      "Keir Starmer",
+      "Tamás Sulyok",
+      "Jens Spahn"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/07/19/g-s1-134001/andy-burnham-new-british-prime-minister",
+    "publishedAt": "2026-07-19T16:00:00.000Z",
+    "expiresAt": "2026-08-09T16:00:00.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-002",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "What birds is an Israeli paraglider trying to save at Jerusalem's Western Wall?",
+    "options": [
+      "Swifts",
+      "K-pop",
+      "FIFA",
+      "Vikram-1"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5870684/israel-swift-birds-jerusalem",
+    "publishedAt": "2026-07-19T10:00:00.000Z",
+    "expiresAt": "2026-08-09T10:00:00.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-003",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR News says interior designers shared tricks to make what kind of home look bigger?",
+    "options": [
+      "data centers",
+      "private jets",
+      "passport control",
+      "small home"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5891817/5-clever-design-tricks-to-make-a-small-home-look-bigger",
+    "publishedAt": "2026-07-19T09:01:00.000Z",
+    "expiresAt": "2026-08-09T09:01:00.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-004",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which Cuban dissident artist and musician arrived in Miami after being released from prison?",
+    "options": [
+      "Wang Jibing",
+      "Ferran Torres",
+      "Luis Manuel Otero Alcántara",
+      "Andy Burnham"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899494/cuban-artist-exile-us",
+    "publishedAt": "2026-07-19T07:27:59.000Z",
+    "expiresAt": "2026-08-09T07:27:59.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-005",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which soccer league is working to bring in a new generation of fans as the World Cup comes to an end?",
+    "options": [
+      "Cockroach Janta Party",
+      "MLS",
+      "Fifa",
+      "Council of Europe"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899020/2026-world-cup-fifa-mls-major-league-soccer",
+    "publishedAt": "2026-07-19T07:00:00.000Z",
+    "expiresAt": "2026-08-09T07:00:00.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-006",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which team did Spain defeat to become the 2026 World Cup champion?",
+    "options": [
+      "Argentina",
+      "United Kingdom",
+      "India",
+      "Hungary"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899071/2026-world-cup-fifa-argentina-spain-final-championship",
+    "publishedAt": "2026-07-19T04:00:00.000Z",
+    "expiresAt": "2026-08-09T04:00:00.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-007",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which food delivery rider won China's top literary prize, according to BBC World?",
+    "options": [
+      "Matty Healy",
+      "Tamás Sulyok",
+      "Jens Spahn",
+      "Wang Jibing"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5ydr3xd0kvo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-20T03:53:07.000Z",
+    "expiresAt": "2026-08-10T03:53:07.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-20-008",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which member of The 1975 married model Gabbriette Bechtel in Los Angeles?",
+    "options": [
+      "Robbie Williams",
+      "Timothee Chalamet",
+      "Matty Healy",
+      "Justin Bieber"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5ywxp2d826o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-19T14:50:11.000Z",
+    "expiresAt": "2026-08-09T14:50:11.000Z",
+    "generatedAt": "2026-07-20T09:01:54.047Z"
   }
 ]
