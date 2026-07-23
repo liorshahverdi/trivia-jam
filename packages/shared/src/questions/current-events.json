@@ -255,23 +255,6 @@
     "generatedAt": "2026-07-15T01:59:00.650Z"
   },
   {
-    "id": "current-events-dynamic-2026-07-15-017",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Gibraltar began a new era with the removal of 118-year-old border controls with which country?",
-    "options": [
-      "Portugal",
-      "Italy",
-      "Spain",
-      "France"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cwydz60j3eno?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-12T23:29:06.000Z",
-    "expiresAt": "2026-08-02T23:29:06.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
     "id": "current-events-dynamic-2026-07-15-018",
     "category": "current-events",
     "difficulty": "medium",
@@ -678,5 +661,22 @@
     "publishedAt": "2026-07-19T14:50:11.000Z",
     "expiresAt": "2026-08-09T14:50:11.000Z",
     "generatedAt": "2026-07-20T09:01:54.047Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-23-001",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "According to NPR News, what did OpenAI blame a hacking event on?",
+    "options": [
+      "AI agents",
+      "another company",
+      "its AI models gone rogue",
+      "stronger AI guardrails"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/23/g-s1-135085/openai-hacking-ai-models",
+    "publishedAt": "2026-07-23T05:23:42.000Z",
+    "expiresAt": "2026-08-13T05:23:42.000Z",
+    "generatedAt": "2026-07-23T09:01:24.431Z"
   }
 ]
