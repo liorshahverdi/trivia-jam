@@ -1,532 +1,5 @@
 [
   {
-    "id": "current-events-dynamic-2026-07-15-001",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which team did Spain defeat 2-0 to advance to the World Cup final?",
-    "options": [
-      "England",
-      "Argentina",
-      "Germany",
-      "France"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.npr.org/2026/07/14/nx-s1-5893692/2026-world-cup-fifa-spain-france-semifinal",
-    "publishedAt": "2026-07-14T20:59:10.000Z",
-    "expiresAt": "2026-08-04T20:59:10.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-003",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Some international artists are skipping tours in which country because of a complicated visa process?",
-    "options": [
-      "Japan",
-      "U.S.",
-      "Canada",
-      "France"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.npr.org/2026/07/14/nx-s1-5783845/visa-process-artists-us",
-    "publishedAt": "2026-07-14T14:46:11.000Z",
-    "expiresAt": "2026-08-04T14:46:11.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-004",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "The United States planned to reinstate a blockade over which waterway?",
-    "options": [
-      "Strait of Hormuz",
-      "Suez Canal",
-      "Panama Canal",
-      "English Channel"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/07/14/g-s1-133443/up-first-newsletter-iran-strait-hormuz-maine-ice-shooting-paramount-warner-bros-merger",
-    "publishedAt": "2026-07-14T12:18:58.000Z",
-    "expiresAt": "2026-08-04T12:18:58.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-005",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which diamond giant halted work at its flagship South African mine as demand plummeted?",
-    "options": [
-      "Sotheby's",
-      "Bloomberg",
-      "Chipotle",
-      "De Beers"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cjrgr7lr1ejo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T13:22:09.000Z",
-    "expiresAt": "2026-08-04T13:22:09.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-006",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Svetlana Grković spoke to Serbian media about an ordeal involving which airline?",
-    "options": [
-      "Air France",
-      "Qantas",
-      "Ryanair",
-      "Lufthansa"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cly8yjnw822o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T19:40:23.000Z",
-    "expiresAt": "2026-08-04T19:40:23.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-007",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which dinosaur became the most expensive dinosaur ever sold?",
-    "options": [
-      "Velociraptor",
-      "Tyrannosaurus rex",
-      "Triceratops",
-      "Stegosaurus"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c0qyq800n44o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T15:37:52.000Z",
-    "expiresAt": "2026-08-04T15:37:52.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-008",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "A Singapore court ordered which news organization to pay $356,000 to ministers in a defamation case?",
-    "options": [
-      "Bloomberg",
-      "NPR News",
-      "BBC World",
-      "PBS NewsHour"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cx232p85lp5o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T11:21:48.000Z",
-    "expiresAt": "2026-08-04T11:21:48.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-009",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Australian police released unseen photos related to the search for the body of which British backpacker?",
-    "options": [
-      "Tamás Sulyok",
-      "Marko Đurić",
-      "Anil Menon",
-      "Peter Falconio"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/crlwln0gkzlo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T02:26:45.000Z",
-    "expiresAt": "2026-08-04T02:26:45.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-010",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Hungary's parliament voted to remove which president from office?",
-    "options": [
-      "Todd Blanche",
-      "Tamás Sulyok",
-      "Viktor Orbán",
-      "Kevin Warsh"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cp8r002gdevo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-13T20:39:14.000Z",
-    "expiresAt": "2026-08-03T20:39:14.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-011",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "In which park did a bison ram a grandfather, according to BBC World?",
-    "options": [
-      "Yellowstone Park",
-      "Central Park",
-      "Hyde Park",
-      "Yosemite Park"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c2dy9krpydlo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-13T17:21:21.000Z",
-    "expiresAt": "2026-08-03T17:21:21.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-012",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which U.S. burrito giant is opening its first outlet in Mexico?",
-    "options": [
-      "Taco Bell",
-      "Wendy's",
-      "Subway",
-      "Chipotle"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c0ryr89gp09o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T02:42:51.000Z",
-    "expiresAt": "2026-08-04T02:42:51.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-013",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "A new trade deal discussed by BBC World involves India and which other country?",
-    "options": [
-      "Spain",
-      "France",
-      "UK",
-      "U.S."
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c0kymrz0vkgo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T22:17:43.000Z",
-    "expiresAt": "2026-08-04T22:17:43.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-014",
-    "category": "current-events",
-    "difficulty": "hard",
-    "question": "Vusimusi \"Cat\" Matlala is due to appear at which commission in South Africa's police corruption inquiry?",
-    "options": [
-      "Supreme Court",
-      "Madlanga Commission",
-      "House Financial Services Committee",
-      "Artemis Accords"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cpq3q75y40do?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T23:13:38.000Z",
-    "expiresAt": "2026-08-04T23:13:38.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-015",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "India's cricket win described by BBC World took place at which venue?",
-    "options": [
-      "Lord's",
-      "Wimbledon",
-      "Baikonur Cosmodrome",
-      "East Rutherford"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cd0m1rjyxmmo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-14T08:12:32.000Z",
-    "expiresAt": "2026-08-04T08:12:32.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-016",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "One month after its IPO, which company's stock market debut was analyzed by BBC World?",
-    "options": [
-      "De Beers",
-      "Bloomberg",
-      "Chipotle",
-      "SpaceX"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c3wyj6e4210o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-13T11:45:25.000Z",
-    "expiresAt": "2026-08-03T11:45:25.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-018",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Horses were evacuated as a fire approached a riding centre near which city?",
-    "options": [
-      "Rome",
-      "Paris",
-      "London",
-      "Madrid"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.bbc.co.uk/news/videos/c1jy64065ylo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-13T16:28:19.000Z",
-    "expiresAt": "2026-08-03T16:28:19.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-020",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Federal Reserve Chair Kevin Warsh told the House Financial Services Committee that what would be a \"thing of the past\"?",
-    "options": [
-      "large data centers",
-      "daylight saving time",
-      "inflation",
-      "cyclosporiasis"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.pbs.org/newshour/show/news-wrap-fed-chair-warsh-pledges-inflation-will-be-thing-of-the-past",
-    "publishedAt": "2026-07-14T22:45:35.000Z",
-    "expiresAt": "2026-08-04T22:45:35.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-021",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Which Supreme Court justice testified before Congress alongside Amy Coney Barrett about security funding?",
-    "options": [
-      "Anna Kikina",
-      "Elena Kagan",
-      "Lisa Desjardins",
-      "Geoff Bennett"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.pbs.org/newshour/show/supreme-court-justices-make-case-for-more-security-funding",
-    "publishedAt": "2026-07-14T22:35:41.000Z",
-    "expiresAt": "2026-08-04T22:35:41.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-022",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Geoff Bennett discussed the World Cup with which journalist and author on \"Settle In\"?",
-    "options": [
-      "Simon Kuper",
-      "Todd Blanche",
-      "Kevin Warsh",
-      "Matt Anderson"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.pbs.org/newshour/show/simon-kuper-and-geoff-bennett-discuss-the-world-cup-on-settle-in",
-    "publishedAt": "2026-07-14T22:20:57.000Z",
-    "expiresAt": "2026-08-04T22:20:57.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-023",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Todd Blanche testified in a confirmation hearing for which office?",
-    "options": [
-      "Federal Reserve Chair",
-      "NASA Deputy Administrator",
-      "Minister of Foreign Affairs",
-      "attorney general"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.pbs.org/newshour/politics/watch-live-todd-blanche-testifies-in-confirmation-hearing-for-attorney-general",
-    "publishedAt": "2026-07-14T21:48:42.000Z",
-    "expiresAt": "2026-08-04T21:48:42.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-024",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Spain advanced to the World Cup final after a 2-0 win over which team, according to PBS NewsHour?",
-    "options": [
-      "England",
-      "Brazil",
-      "France",
-      "Argentina"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.pbs.org/newshour/nation/spain-scores-2-0-win-over-france-advancing-to-world-cup-final",
-    "publishedAt": "2026-07-14T21:27:15.000Z",
-    "expiresAt": "2026-08-04T21:27:15.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-026",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Which country is scheduled to sign the Artemis Accords at NASA Headquarters?",
-    "options": [
-      "Serbia",
-      "Spain",
-      "India",
-      "Hungary"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.nasa.gov/news-release/nasa-invites-media-to-serbia-artemis-accords-signing-ceremony/",
-    "publishedAt": "2026-07-14T21:03:29.000Z",
-    "expiresAt": "2026-08-04T21:03:29.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-027",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "NASA astronaut Anil Menon and crewmates arrived at which orbiting laboratory?",
-    "options": [
-      "Hubble Space Telescope",
-      "Baikonur Cosmodrome",
-      "Large Magellanic Cloud",
-      "International Space Station"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.nasa.gov/news-release/nasa-astronaut-anil-menon-crewmates-arrive-at-space-station/",
-    "publishedAt": "2026-07-14T18:26:02.000Z",
-    "expiresAt": "2026-08-04T18:26:02.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-028",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "NASA's Hubble Space Telescope image showed stellar nursery LH 95 in which dwarf galaxy?",
-    "options": [
-      "Omega Centauri",
-      "Andromeda Galaxy",
-      "Large Magellanic Cloud",
-      "Milky Way"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.nasa.gov/image-article/hubble-sees-crimson-cloud-and-stars/",
-    "publishedAt": "2026-07-14T18:06:33.000Z",
-    "expiresAt": "2026-08-04T18:06:33.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-029",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "NASA repainted an F-15 and an F/A-18 from which flight research center?",
-    "options": [
-      "Kennedy Space Center",
-      "Armstrong Flight Research Center",
-      "Johnson Space Center",
-      "NASA Headquarters"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.nasa.gov/image-article/nasa-jets-turn-red-white-and-blue/",
-    "publishedAt": "2026-07-14T17:13:53.000Z",
-    "expiresAt": "2026-08-04T17:13:53.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-030",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "NASA's Roman Telescope is expected to spot distant black holes that do what to stars?",
-    "options": [
-      "paint stars",
-      "launch stars",
-      "freeze stars",
-      "shred stars"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.nasa.gov/missions/roman-space-telescope/nasas-roman-telescope-will-spot-distant-black-holes-that-shred-stars/",
-    "publishedAt": "2026-07-14T14:00:00.000Z",
-    "expiresAt": "2026-08-04T14:00:00.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-031",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "NASA research could help make rides smoother for which emerging transportation industry?",
-    "options": [
-      "bullet trains",
-      "cargo ships",
-      "air taxis",
-      "submarines"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-study-points-to-smoother-air-taxi-rides/",
-    "publishedAt": "2026-07-13T21:46:11.000Z",
-    "expiresAt": "2026-08-03T21:46:11.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-032",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "NASA astronaut Anil Menon posed in a spacesuit at which NASA center in Houston?",
-    "options": [
-      "Baikonur Cosmodrome",
-      "Johnson Space Center",
-      "Armstrong Flight Research Center",
-      "NASA Headquarters"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.nasa.gov/image-article/nasa-astronaut-anil-menon/",
-    "publishedAt": "2026-07-13T15:11:16.000Z",
-    "expiresAt": "2026-08-03T15:11:16.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-033",
-    "category": "current-events",
-    "difficulty": "hard",
-    "question": "Hubble data helped locate a stellar-mass black hole in which star cluster?",
-    "options": [
-      "Omega Centauri",
-      "LH 95",
-      "Large Magellanic Cloud",
-      "Milky Way"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://science.nasa.gov/missions/hubble/nasas-hubble-discovers-first-of-star-clusters-missing-black-holes/",
-    "publishedAt": "2026-07-13T14:00:00.000Z",
-    "expiresAt": "2026-08-03T14:00:00.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-034",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which weight-loss drug was named with Wegovy in a ScienceDaily report about biological aging?",
-    "options": [
-      "Aspirin",
-      "Insulin",
-      "Penicillin",
-      "Ozempic"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.sciencedaily.com/releases/2026/07/260713084907.htm",
-    "publishedAt": "2026-07-14T09:47:41.000Z",
-    "expiresAt": "2026-08-04T09:47:41.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-15-035",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "NASA's Perseverance rover completed a marathon on which planet?",
-    "options": [
-      "Jupiter",
-      "Mercury",
-      "Mars",
-      "Venus"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.sciencedaily.com/releases/2026/07/260713084858.htm",
-    "publishedAt": "2026-07-14T05:32:12.000Z",
-    "expiresAt": "2026-08-04T05:32:12.000Z",
-    "generatedAt": "2026-07-15T01:59:00.650Z"
-  },
-  {
     "id": "current-events-dynamic-2026-07-20-001",
     "category": "current-events",
     "difficulty": "easy",
@@ -678,5 +151,532 @@
     "publishedAt": "2026-07-23T05:23:42.000Z",
     "expiresAt": "2026-08-13T05:23:42.000Z",
     "generatedAt": "2026-07-23T09:01:24.431Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-001",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "According to NPR News, how many Republican-held seats must Democrats flip to take control of the U.S. Senate?",
+    "options": [
+      "55,000 people",
+      "470%",
+      "4 seats",
+      "17 states"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/27/nx-s1-5907379/2026-midterm-election-senate-races",
+    "publishedAt": "2026-07-27T05:13:24.000Z",
+    "expiresAt": "2026-08-17T05:13:24.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-002",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Tadej Pogačar of Slovenia won which cycling race in 2026?",
+    "options": [
+      "Artemis IV",
+      "2026 Tour de France",
+      "Glasgow Games",
+      "Commonwealth gold"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/07/26/nx-s1-5908503/tadej-pogacar-tour-de-france-2026-winner-wildfires",
+    "publishedAt": "2026-07-26T18:13:30.000Z",
+    "expiresAt": "2026-08-16T18:13:30.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-003",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR News reported that ADHD looks different in which group and poses unique health risks?",
+    "options": [
+      "women",
+      "boys",
+      "kids",
+      "researchers"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/07/26/nx-s1-5821101/adhd-women-health-diagnosis-missed-treatment",
+    "publishedAt": "2026-07-26T09:00:00.000Z",
+    "expiresAt": "2026-08-16T09:00:00.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-004",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In NPR News' story about robots programmed by kids, what kinds of languages are the robots meant to help preserve?",
+    "options": [
+      "Native American languages",
+      "AI models",
+      "closed, open-source and open-weight AI",
+      "Indigenous languages"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.npr.org/2026/07/26/nx-s1-5825798/robot-speaks-endangered-native-american-languages",
+    "publishedAt": "2026-07-26T09:00:00.000Z",
+    "expiresAt": "2026-08-16T09:00:00.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-005",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NPR News said climate change is now threatening which pillar of childhood?",
+    "options": [
+      "the outdoors",
+      "childhood condition",
+      "summer break",
+      "outdoor activities"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/26/nx-s1-5900911/wildfire-smoke-fires-camp-minnesota",
+    "publishedAt": "2026-07-26T09:00:00.000Z",
+    "expiresAt": "2026-08-16T09:00:00.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-006",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In BBC World's report on India's Gen Z protesters, whose resignation was described as a rare setback for the Modi government?",
+    "options": [
+      "Defense Secretary",
+      "education minister",
+      "Fifa president",
+      "Argentinian leader"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c8dng1v72lno?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T05:59:22.000Z",
+    "expiresAt": "2026-08-17T05:59:22.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-007",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which Fifa president told critics to \"meditate, pray or watch a football match\"?",
+    "options": [
+      "Gianni Infantino",
+      "Javier Milei",
+      "Friedrich Merz",
+      "Jason Epperson"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cz0515973gpo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T08:07:28.000Z",
+    "expiresAt": "2026-08-17T08:07:28.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-008",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World reported that NYC Mayor Mamdani walked back a threat involving a warrant issued by which body?",
+    "options": [
+      "Australian court",
+      "One Nation",
+      "U.S. Senate",
+      "International Criminal Court"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5yegvd9ddeo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T00:27:58.000Z",
+    "expiresAt": "2026-08-17T00:27:58.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-009",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In BBC World's report, Australian court upheld a racial discrimination ruling against which One Nation leader?",
+    "options": [
+      "Jaismine Lamboria",
+      "Yuri Kawakami-Shotton",
+      "Pauline Hanson",
+      "Mehreen Faruqi"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cx2k5v9202wo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T06:14:06.000Z",
+    "expiresAt": "2026-08-17T06:14:06.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-010",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "BBC World said Chinese chipmaker shares surged by how much in a blockbuster stock market debut?",
+    "options": [
+      "470%",
+      "98 people",
+      "4 seats",
+      "130-foot-tall"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c9q9w3x9qn2o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T07:34:59.000Z",
+    "expiresAt": "2026-08-17T07:34:59.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-011",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "World champion Jaismine Lamboria is targeting which achievement at the Glasgow Games?",
+    "options": [
+      "2026 Tour de France",
+      "first woman boxer",
+      "CANVAS series",
+      "Commonwealth gold"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5y0m8z6de3o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-26T22:06:46.000Z",
+    "expiresAt": "2026-08-16T22:06:46.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-012",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World reported that which Cameroonian prison has its own record label?",
+    "options": [
+      "Baikonur Cosmodrome",
+      "10 Downing St.",
+      "New Bell",
+      "Tiergarten park"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/czxqlkrlj7no?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-26T00:24:30.000Z",
+    "expiresAt": "2026-08-16T00:24:30.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-013",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC World said left-wing Democrats' ability to win back working-class voters will be tested in which state?",
+    "options": [
+      "Mississippi",
+      "Michigan",
+      "South Carolina",
+      "Utah"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5y3rrd32jlo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-26T03:58:51.000Z",
+    "expiresAt": "2026-08-16T03:58:51.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-014",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Yuri Kawakami-Shotton is praised for tours at which museum in the UK Potteries region?",
+    "options": [
+      "Spode Museum",
+      "NASA’s Michoud Assembly Facility",
+      "Stennis Space Center",
+      "International Space Station"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cy7405m8ke1o?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-27T05:29:09.000Z",
+    "expiresAt": "2026-08-17T05:29:09.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-015",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The youth-led Cockroach Janta Party called off its protest after the resignation of which Indian official?",
+    "options": [
+      "Fifa president",
+      "Defense Secretary Pete Hegseth",
+      "chief prosecutor",
+      "India's education minister"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.bbc.co.uk/news/videos/cly949k3g1do?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-25T13:44:01.000Z",
+    "expiresAt": "2026-08-15T13:44:01.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-016",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour reported that Defense Secretary Pete Hegseth plans annual testing of U.S. service members' levels of what?",
+    "options": [
+      "voting machines",
+      "shell eggs",
+      "testosterone",
+      "AI models"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.pbs.org/newshour/health/as-hegseth-pursues-a-high-t-military-heres-what-to-know-about-testosterone-replacement",
+    "publishedAt": "2026-07-26T13:00:43.000Z",
+    "expiresAt": "2026-08-16T13:00:43.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-017",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour published an explainer comparing closed, open-source and open-weight versions of what technology?",
+    "options": [
+      "eye prosthetics",
+      "AI",
+      "testosterone replacement",
+      "voting machines"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.pbs.org/newshour/science/whats-the-difference-between-closed-open%e2%80%91source-and-open-weight-ai-a-researcher-explains",
+    "publishedAt": "2026-07-25T19:00:54.000Z",
+    "expiresAt": "2026-08-15T19:00:54.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-018",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour fact-checked Mullin's claim about foreign adversaries accessing what in U.S. elections?",
+    "options": [
+      "voting machines",
+      "AI models",
+      "national parks",
+      "Fire TV Channels"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/politics/fact-checking-mullins-claim-that-foreign-adversaries-can-access-voting-machines-in-u-s-elections",
+    "publishedAt": "2026-07-25T12:00:26.000Z",
+    "expiresAt": "2026-08-15T12:00:26.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-019",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour reported a Salmonella outbreak tied to which recalled food item?",
+    "options": [
+      "cake",
+      "wine",
+      "artificial eyes",
+      "eggs"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.pbs.org/newshour/health/salmonella-outbreak-tied-to-eggs-has-sickened-98-people-in-17-states-since-november-fda-says",
+    "publishedAt": "2026-07-24T23:25:12.000Z",
+    "expiresAt": "2026-08-14T23:25:12.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-020",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "PBS NewsHour said Burnham capped a busy first week as the UK's new prime minister at a part-time office in which city?",
+    "options": [
+      "New Orleans",
+      "Manchester",
+      "Bordeaux",
+      "Glasgow"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.pbs.org/newshour/world/burnham-caps-busy-first-week-as-uks-new-prime-minister-at-part-time-office-in-manchester",
+    "publishedAt": "2026-07-24T23:10:16.000Z",
+    "expiresAt": "2026-08-14T23:10:16.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-021",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "PBS NewsHour's Ocular artistry story said which prosthetics are becoming canvases for self-expression?",
+    "options": [
+      "Eye prosthetics",
+      "shell eggs",
+      "AI models",
+      "liquid hydrogen tank"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.pbs.org/newshour/show/ocular-artistry-eye-prosthetics-become-canvases-for-self-expression",
+    "publishedAt": "2026-07-24T22:30:41.000Z",
+    "expiresAt": "2026-08-14T22:30:41.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-022",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Judy Woodruff spoke with Jason Epperson about the history found at which places?",
+    "options": [
+      "space station",
+      "UK Potteries region",
+      "Spode Museum",
+      "national parks"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.pbs.org/newshour/show/jason-epperson-on-the-history-found-at-national-parks",
+    "publishedAt": "2026-07-24T22:25:06.000Z",
+    "expiresAt": "2026-08-14T22:25:06.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-023",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Democrats selected which state for their first 2028 presidential nominating contest?",
+    "options": [
+      "Indiana",
+      "Utah",
+      "South Carolina",
+      "Michigan"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.pbs.org/newshour/politics/democrats-select-south-carolina-for-their-first-2028-presidential-nominating-contest",
+    "publishedAt": "2026-07-24T21:26:57.000Z",
+    "expiresAt": "2026-08-14T21:26:57.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-024",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which NASA astronaut returned from the International Space Station after an eight-month science mission?",
+    "options": [
+      "Pyotr Dubrov",
+      "Chris Williams",
+      "Anil Menon",
+      "Anna Kikina"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.nasa.gov/news-release/nasa-astronaut-chris-williams-crewmates-return-from-space-station/",
+    "publishedAt": "2026-07-26T10:59:44.000Z",
+    "expiresAt": "2026-08-16T10:59:44.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-025",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA’s ESCAPADE spacecraft snapped a family portrait of which two objects?",
+    "options": [
+      "Earth, Moon",
+      "Earth and the Moon",
+      "visible and thermal infrared light",
+      "Mars-destined ESCAPADE"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://science.nasa.gov/image-article/centers-and-facilities/goddard/nasas-escapade-snaps-family-portrait-of-earth-moon/",
+    "publishedAt": "2026-07-24T17:47:06.000Z",
+    "expiresAt": "2026-08-14T17:47:06.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-026",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA said new crew members were welcomed aboard which orbital laboratory?",
+    "options": [
+      "Baikonur Cosmodrome",
+      "Stennis Space Center",
+      "NASA’s Michoud Assembly Facility",
+      "International Space Station"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.nasa.gov/image-article/new-crew-members-welcomed-to-international-space-station/",
+    "publishedAt": "2026-07-24T16:43:02.000Z",
+    "expiresAt": "2026-08-14T16:43:02.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-027",
+    "category": "current-events",
+    "difficulty": "hard",
+    "question": "NASA announced that Advanced Space's mission at the Moon will demonstrate rendezvous and proximity operations, autonomous navigation, and cislunar communication capabilities. What is the mission called?",
+    "options": [
+      "Artemis IV",
+      "New Glenn",
+      "CAPSTONE 02",
+      "ESCAPADE"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.nasa.gov/directorates/armd/nasa-announces-new-spacecraft-technology-demonstration-mission-at-moon/",
+    "publishedAt": "2026-07-24T16:35:46.000Z",
+    "expiresAt": "2026-08-14T16:35:46.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-028",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA announced support for testing which Blue Origin rocket to advance Artemis?",
+    "options": [
+      "Hubble",
+      "New Glenn",
+      "CAPSTONE 02",
+      "Artemis IV"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.nasa.gov/news-release/nasa-to-support-blue-origin-new-glenn-rocket-testing-advance-artemis/",
+    "publishedAt": "2026-07-24T15:30:21.000Z",
+    "expiresAt": "2026-08-14T15:30:21.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-029",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA's Hubble image featured which spiral galaxy in the constellation Virgo?",
+    "options": [
+      "NGC 4654",
+      "ESCAPADE",
+      "Artemis IV",
+      "CAPSTONE 02"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://science.nasa.gov/missions/hubble/hubble-spies-one-sided-spiral/",
+    "publishedAt": "2026-07-24T11:11:08.000Z",
+    "expiresAt": "2026-08-14T11:11:08.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-030",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "NASA Breaking News described Utah’s new solar power and battery storage facility as which project?",
+    "options": [
+      "Family Portrait of Earth, Moon",
+      "One-Sided Spiral",
+      "A Million-Panel Project",
+      "A researcher explains"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/a-million-panel-project/",
+    "publishedAt": "2026-07-24T04:01:00.000Z",
+    "expiresAt": "2026-08-14T04:01:00.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-27-031",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "NASA announced that NASA+ is now streaming on which Amazon platform?",
+    "options": [
+      "NASA Breaking News",
+      "Fire TV",
+      "Alexa+",
+      "Fire TV Channels"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.nasa.gov/news-release/look-for-nasa-now-streaming-on-amazon-fire-tv/",
+    "publishedAt": "2026-07-23T19:11:29.000Z",
+    "expiresAt": "2026-08-13T19:11:29.000Z",
+    "generatedAt": "2026-07-27T09:00:49.520Z"
   }
 ]
