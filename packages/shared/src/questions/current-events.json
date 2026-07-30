@@ -1,141 +1,5 @@
 [
   {
-    "id": "current-events-dynamic-2026-07-20-001",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "According to NPR News, Andy Burnham succeeds which person as the United Kingdom's prime minister?",
-    "options": [
-      "Andy Biggs",
-      "Keir Starmer",
-      "Tamás Sulyok",
-      "Jens Spahn"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.npr.org/2026/07/19/g-s1-134001/andy-burnham-new-british-prime-minister",
-    "publishedAt": "2026-07-19T16:00:00.000Z",
-    "expiresAt": "2026-08-09T16:00:00.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-002",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "What birds is an Israeli paraglider trying to save at Jerusalem's Western Wall?",
-    "options": [
-      "Swifts",
-      "K-pop",
-      "FIFA",
-      "Vikram-1"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5870684/israel-swift-birds-jerusalem",
-    "publishedAt": "2026-07-19T10:00:00.000Z",
-    "expiresAt": "2026-08-09T10:00:00.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-003",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "NPR News says interior designers shared tricks to make what kind of home look bigger?",
-    "options": [
-      "data centers",
-      "private jets",
-      "passport control",
-      "small home"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5891817/5-clever-design-tricks-to-make-a-small-home-look-bigger",
-    "publishedAt": "2026-07-19T09:01:00.000Z",
-    "expiresAt": "2026-08-09T09:01:00.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-004",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Which Cuban dissident artist and musician arrived in Miami after being released from prison?",
-    "options": [
-      "Wang Jibing",
-      "Ferran Torres",
-      "Luis Manuel Otero Alcántara",
-      "Andy Burnham"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899494/cuban-artist-exile-us",
-    "publishedAt": "2026-07-19T07:27:59.000Z",
-    "expiresAt": "2026-08-09T07:27:59.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-005",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which soccer league is working to bring in a new generation of fans as the World Cup comes to an end?",
-    "options": [
-      "Cockroach Janta Party",
-      "MLS",
-      "Fifa",
-      "Council of Europe"
-    ],
-    "correctIndex": 1,
-    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899020/2026-world-cup-fifa-mls-major-league-soccer",
-    "publishedAt": "2026-07-19T07:00:00.000Z",
-    "expiresAt": "2026-08-09T07:00:00.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-006",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which team did Spain defeat to become the 2026 World Cup champion?",
-    "options": [
-      "Argentina",
-      "United Kingdom",
-      "India",
-      "Hungary"
-    ],
-    "correctIndex": 0,
-    "sourceUrl": "https://www.npr.org/2026/07/19/nx-s1-5899071/2026-world-cup-fifa-argentina-spain-final-championship",
-    "publishedAt": "2026-07-19T04:00:00.000Z",
-    "expiresAt": "2026-08-09T04:00:00.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-007",
-    "category": "current-events",
-    "difficulty": "medium",
-    "question": "Which food delivery rider won China's top literary prize, according to BBC World?",
-    "options": [
-      "Matty Healy",
-      "Tamás Sulyok",
-      "Jens Spahn",
-      "Wang Jibing"
-    ],
-    "correctIndex": 3,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5ydr3xd0kvo?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-20T03:53:07.000Z",
-    "expiresAt": "2026-08-10T03:53:07.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
-    "id": "current-events-dynamic-2026-07-20-008",
-    "category": "current-events",
-    "difficulty": "easy",
-    "question": "Which member of The 1975 married model Gabbriette Bechtel in Los Angeles?",
-    "options": [
-      "Robbie Williams",
-      "Timothee Chalamet",
-      "Matty Healy",
-      "Justin Bieber"
-    ],
-    "correctIndex": 2,
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c5ywxp2d826o?at_medium=RSS&at_campaign=rss",
-    "publishedAt": "2026-07-19T14:50:11.000Z",
-    "expiresAt": "2026-08-09T14:50:11.000Z",
-    "generatedAt": "2026-07-20T09:01:54.047Z"
-  },
-  {
     "id": "current-events-dynamic-2026-07-23-001",
     "category": "current-events",
     "difficulty": "medium",
@@ -678,5 +542,141 @@
     "publishedAt": "2026-07-23T19:11:29.000Z",
     "expiresAt": "2026-08-13T19:11:29.000Z",
     "generatedAt": "2026-07-27T09:00:49.520Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-001",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In the Senate Judiciary Committee item, whose nomination was delayed after key Republicans withheld support?",
+    "options": [
+      "Anthony Fauci",
+      "Hadi Matar",
+      "Todd Blanche",
+      "Rand Paul"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/30/g-s1-136265/senate-blanche-nomination",
+    "publishedAt": "2026-07-30T05:56:51.000Z",
+    "expiresAt": "2026-08-20T05:56:51.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-002",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "The NPR article about COVID-19 origins says Dr. Anthony Fauci's pandemic diaries rekindled debate over the origins of what virus?",
+    "options": [
+      "MAVEN",
+      "SARS-CoV-2",
+      "Hezbollah",
+      "NEET"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.npr.org/2026/07/29/g-s1-136142/rand-paul-anthony-fauci-lab-leak-spillover-pandemic-origin",
+    "publishedAt": "2026-07-29T23:02:53.000Z",
+    "expiresAt": "2026-08-19T23:02:53.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-003",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Which U.S. state is on track for its worst wildfire season yet, according to NPR?",
+    "options": [
+      "Oregon",
+      "Wisconsin",
+      "California",
+      "New York"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.npr.org/2026/07/29/nx-s1-5910624/oregon-is-on-track-for-its-worst-wildfire-season-yet",
+    "publishedAt": "2026-07-29T20:28:44.000Z",
+    "expiresAt": "2026-08-19T20:28:44.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-004",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which book is described by NPR as rethinking history, colonialism, and identity?",
+    "options": [
+      "Boop! The Musical",
+      "Red Sun",
+      "The Chinese robot army",
+      "Taiwan Travelogue"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.npr.org/2026/07/29/g-s1-136110/taiwan-travelogue-rethinks-history-colonialism-and-identity",
+    "publishedAt": "2026-07-29T16:55:54.000Z",
+    "expiresAt": "2026-08-19T16:55:54.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-005",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "Which region in northern Pakistan's Hindu Kush mountains does NPR describe as bordering Afghanistan and being hard to reach?",
+    "options": [
+      "Crete",
+      "Stewart Island/Rakiura",
+      "Chitral",
+      "Gironde"
+    ],
+    "correctIndex": 2,
+    "sourceUrl": "https://www.npr.org/2026/07/29/g-s1-135641/pakistan-chitral-hindu-kush-mountains",
+    "publishedAt": "2026-07-29T14:21:07.000Z",
+    "expiresAt": "2026-08-19T14:21:07.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-006",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "In the BBC item about wildfires in southern Europe, gale-force winds on which island whipped up flames and prompted evacuations?",
+    "options": [
+      "Hindu Kush",
+      "Crete",
+      "Stewart Island/Rakiura",
+      "Rakiura"
+    ],
+    "correctIndex": 1,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/cwyjgwg8jddo?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-30T01:53:25.000Z",
+    "expiresAt": "2026-08-20T01:53:25.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-007",
+    "category": "current-events",
+    "difficulty": "medium",
+    "question": "BBC reported firefighters battling flare-ups in 40C heat in which French region?",
+    "options": [
+      "Gironde",
+      "Chitral",
+      "Valle Grande",
+      "Cape Fear"
+    ],
+    "correctIndex": 0,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c62q5we799ro?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-29T16:49:41.000Z",
+    "expiresAt": "2026-08-19T16:49:41.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
+  },
+  {
+    "id": "current-events-dynamic-2026-07-30-008",
+    "category": "current-events",
+    "difficulty": "easy",
+    "question": "Zendaya discussed working with Tom Holland at the London premiere of which film?",
+    "options": [
+      "Taiwan Travelogue",
+      "Boop! The Musical",
+      "Psyche",
+      "Spiderman: Brand New Day"
+    ],
+    "correctIndex": 3,
+    "sourceUrl": "https://www.bbc.co.uk/news/articles/c0km3d2j6mko?at_medium=RSS&at_campaign=rss",
+    "publishedAt": "2026-07-29T20:21:46.000Z",
+    "expiresAt": "2026-08-19T20:21:46.000Z",
+    "generatedAt": "2026-07-30T09:00:27.382Z"
   }
 ]
