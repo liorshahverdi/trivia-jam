@@ -10,11 +10,12 @@ export function validate(questions: Question[]): { valid: Question[]; invalid: n
       q.category &&
       q.difficulty &&
       typeof q.question === 'string' &&
-      q.question.length > 5 &&
+      q.question.trim().length >= 15 &&
       q.question.length < 500 &&
       Array.isArray(q.options) &&
       q.options.length === 4 &&
-      q.options.every((o: string) => typeof o === 'string' && o.length > 0) &&
+      q.options.every((o: string) => typeof o === 'string' && o.trim().length > 0) &&
+      new Set(q.options.map((o: string) => o.trim().toLowerCase())).size === 4 &&
       typeof q.correctIndex === 'number' &&
       q.correctIndex >= 0 &&
       q.correctIndex <= 3

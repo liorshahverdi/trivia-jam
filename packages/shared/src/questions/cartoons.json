@@ -388,5 +388,707 @@
       "Tweak"
     ],
     "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-a7jel9",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is the name of the city that The Flintstones is based in?",
+    "options": [
+      "Boulder City",
+      "Stoneville",
+      "Bedrock",
+      "Rockhampton"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-x3z2bn",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In the Pixar film, \"Toy Story\" what was the name of the child who owned the toys?",
+    "options": [
+      "Andy",
+      "Edward",
+      "Danny",
+      "Matt"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385896667-o3memb",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of these characters live in a pineapple under the sea in the cartoon \"SpongeBob SquarePants\".",
+    "options": [
+      "Mr. Krabs",
+      "Squidward Tentacles",
+      "SpongeBob SquarePants ",
+      "Patrick Star"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-2zhtt5",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who was the villain of ''The Lion King''?",
+    "options": [
+      "Vada",
+      "Jafar",
+      "Fred",
+      "Scar"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385896667-8tueuo",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a Disney cartoon character?",
+    "options": [
+      "Daffy Duck",
+      "Daisy Duck",
+      "Donald Duck",
+      "Scrooge McDuck"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385896667-sgn419",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which Teenage Mutant Ninja Turtle traditionally wears an orange bandana?",
+    "options": [
+      "Leonardo",
+      "Michelangelo",
+      "Raphael",
+      "Donatello"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-y7oljf",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is lost in Hawaiian and is also the name of a little girl in a 2002 film which features a alien named \"Stitch\"?",
+    "options": [
+      "Lilo",
+      "Lolo",
+      "Lulu",
+      "Lucy"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385896667-6qchw9",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of the following is not a Flintstones character?",
+    "options": [
+      "Rockhead Slate",
+      "The Great Gazoo",
+      "Barney Rubble",
+      "Lord Rockingham IX"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385896667-tmyzyo",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which cartoon family lives in 742 Evergreen Terrace, Springfield USA?",
+    "options": [
+      "The Griffins",
+      "The Flintstones",
+      "The Simpsons",
+      "The Hills"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-r8fyei",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is the surname of one of the male teachers in the BBC series Postman Pat?",
+    "options": [
+      "Lays",
+      "Pringle",
+      "Dorito",
+      "Walker"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-ld57xl",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What was the first Disney movie to use CGI?",
+    "options": [
+      "Fantasia",
+      "The Black Cauldron",
+      "Toy Story",
+      "Tron"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-271ews",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "The song 'Little April Shower' features in which Disney cartoon film?",
+    "options": [
+      "Pinocchio",
+      "The Jungle Book",
+      "Bambi",
+      "Cinderella"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-b7pzzq",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What is the name of the creatures that the protagonists of the webshow RWBY fight against?",
+    "options": [
+      "Grimm",
+      "Dark Ones",
+      "Reavers",
+      "Heartless"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385896667-gzkqj2",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "What type of animal is Disney's Bambi?",
+    "options": [
+      "Wolf",
+      "Deer",
+      "Elephant",
+      "Mouse"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-sv7kjy",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "In The Simpsons, which war did Seymour Skinner serve in the USA Army as a Green Beret?",
+    "options": [
+      "Vietnam War",
+      "World War 1",
+      "Cold War",
+      "World War 2"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385896667-8jrpej",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of these cartoons had a character named Heinz Doofenshmirtz?",
+    "options": [
+      "Batman: The Animated Series",
+      "Phineas & Ferb",
+      "Ben 10",
+      "Ren & Stimpy"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-fasi0k",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Butters Stotch, Pip Pirrup, and Wendy Testaburger are all characters in which long running animated TV series?",
+    "options": [
+      "The Simpsons",
+      "Bob's Burgers",
+      "Family Guy",
+      "South Park"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385896667-er1hon",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who is the only voice actor to have a speaking part in all of the Disney Pixar feature films? ",
+    "options": [
+      "Tom Hanks",
+      "Dave Foley",
+      "John Ratzenberger",
+      "Geoffrey Rush"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-j680e5",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who created the Cartoon Network series \"Adventure Time\"?",
+    "options": [
+      "J. G. Quintel",
+      "Pendleton Ward",
+      "Rebecca Sugar",
+      "Ben Bocquelet"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-86ycxv",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a catchphrase used by Rick Sanchez in the TV show \"Rick and Morty\"?",
+    "options": [
+      "Wubba-lubba-dub-dub!",
+      "Slam dunk, nothing but net!",
+      "Rikki-Tikki-Tavi, biatch!",
+      "Hit the sack, Jack!"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385896667-5pd54j",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Which of these characters from \"SpongeBob SquarePants\" is not a squid?",
+    "options": [
+      "Squidward",
+      "Squidette",
+      "Gary",
+      "Orvillie"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385896667-fbb1jj",
+    "category": "cartoons",
+    "difficulty": "easy",
+    "question": "Who voices for Ruby in the animated series RWBY?",
+    "options": [
+      "Tara Strong",
+      "Jessica Nigri",
+      "Hayden Panettiere",
+      "Lindsay Jones"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-wy9u4j",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Who created \"RWBY\"?",
+    "options": [
+      "Shane Newville",
+      "Kerry Shawcross",
+      "Monty Oum",
+      "Miles Luna"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-mokw6d",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which singer provided the voice of Metroid's Mother Brain in the animated series \"Captain N: The Game Master\"?",
+    "options": [
+      "Freddie Mercury",
+      "Janet Jackson",
+      "Joan Jett",
+      "Levi Stubbs"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-tjo8sj",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Who is the \"dumb blonde\" character in Nickelodeon's \"The Loud House\"?",
+    "options": [
+      "Luan",
+      "Luna",
+      "Lincoln",
+      "Leni"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-4dqi9h",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which episode from The Amazing World Of Gumball won the Childrens Choice Award at the British Animation Awards in 2016?",
+    "options": [
+      "The Shell",
+      "The Kids",
+      "The Limit",
+      "The Gripes"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-vsstaz",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which Hanna-Barbera cartoon character travelled with a canine companion named Beegle Beagle?",
+    "options": [
+      "Boss Gator",
+      "Wally Gator",
+      "Grape Ape",
+      "Yogi Bear"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-5mfy50",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which one of these cartoon characters is NOT voiced by Rob Paulsen?",
+    "options": [
+      "Carl Wheezer (Jimmy Neutron)",
+      "Yakko Warner (Animaniacs)",
+      "Max Tennyson (Ben 10)",
+      "The Mask (The Mask, TV Series)"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-45rzpo",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Bugs Bunny, Tony the Tiger, and other bipedal animal characters are known as what type of character?",
+    "options": [
+      "Anthrologic",
+      "Anthropomorphic",
+      "Anthrogenetic",
+      "Anthropolegic "
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385902301-i6bbyy",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which \"Toy Story\" character was voiced by Don Rickles?",
+    "options": [
+      "Hamm",
+      "Mr. Potato Head",
+      "Rex",
+      "Slinky Dog"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385902301-r4rav7",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In \"The Amazing World of Gumball\", who is the principal of Elmore Junior High?",
+    "options": [
+      "Principal Brown",
+      "Principal Small",
+      "Principal Simeon",
+      "Principal Brawn"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-93r456",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is the cartoon character, Andy Capp, known as in Germany?",
+    "options": [
+      "Helmut Schmacker",
+      "Rod Tapper",
+      "Dick Tingeler",
+      "Willi Wakker"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-plwed6",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is Dipper's real name from \"Gravity Falls\"?",
+    "options": [
+      "Mason Pines",
+      "Mable Pines",
+      "Mark Pines",
+      "Jason Pines"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-tkcb70",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What animated internet character is known to answer emails with his boxing gloves?",
+    "options": [
+      "Strong Mad",
+      "Strong Sad",
+      "Strong Bad",
+      "Strong Glad"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-tngnb6",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is Scooby-Doo's real name?",
+    "options": [
+      "Scooter",
+      "Scrappy",
+      "Scoobert",
+      "Shooby"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-2nk412",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What Cartoon Network show aired its first episode on November 4th, 2013?",
+    "options": [
+      "Regular Show",
+      "Steven Universe",
+      "The Amazing World of Gumball",
+      "Adventure Time"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385902301-fi0jbw",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In \"My Little Pony: Friendship is Magic\", which of these ponies represents the quality of honesty?",
+    "options": [
+      "Applejack",
+      "Twilight Sparkle",
+      "Rarity",
+      "Pinkie Pie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-l8lb23",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is the standard frame rate for animation?",
+    "options": [
+      "60 FPS",
+      "12 FPS",
+      "24 FPS",
+      "30 FPS"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385902301-saqdvy",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What is the name of Sid's dog in \"Toy Story\"?",
+    "options": [
+      "Scud",
+      "Buster",
+      "Mr. Jones",
+      "Whiskers"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-egsoae",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "In \"The Simpsons\", where did Homer and Marge first meet?",
+    "options": [
+      "At High School",
+      "At Church",
+      "At 742 Evergreen Terrace",
+      "At Summer Camp"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-u2d8ni",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "Which of these is not a real character in the cartoon series My Little Pony: Friendship is Magic?",
+    "options": [
+      "Rose Marene",
+      "Maud Pie",
+      "Rainbow Dash",
+      "Pinkie Pie"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-wtx9fz",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "When did the last episode of \"Futurama\" air before returning in 2023?",
+    "options": [
+      "September 4, 2013",
+      "December 25, 2010",
+      "March 28, 1999",
+      "November 4, 2021"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-1mz5k4",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What ability does Princess Sofia the First have from her amulet that allows her to breathe underwater?",
+    "options": [
+      "Mermaid Transformation",
+      "Bubble Head",
+      "Artificial Gills",
+      "Bubble Shield"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385902301-7d3xtk",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "The stop motion comedy show \"Robot Chicken\" was created by which of the following?",
+    "options": [
+      "Seth Rogen",
+      "Seth MacFarlane",
+      "Seth Rollins",
+      "Seth Green"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385902301-c4bd3r",
+    "category": "cartoons",
+    "difficulty": "medium",
+    "question": "What year was the Disney film \"A Goofy Movie\" released?",
+    "options": [
+      "1997",
+      "1999",
+      "1995",
+      "2001"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385919217-02pol4",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "What town was \"Springfield\" from \"The Simpsons\" originally named after?",
+    "options": [
+      "Springfield, Illinois",
+      "Springfield, Massachusetts",
+      "Springfield, Missouri",
+      "Springfield, Oregon"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385919217-ux4zcl",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "Benny, Brain, Fancy-Fancy, Spook and Choo-Choo were known associates of what Hanna Barbera cartoon character?",
+    "options": [
+      "Yogi Bear",
+      "Scooby-Doo",
+      "Snagglepuss",
+      "Top Cat"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cartoons-1793385919217-nx0oi3",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In \"Gravity Falls\", what does Quentin Trembley do when he is driven out from the White House?",
+    "options": [
+      "Release 1,000 captive salamanders into the white house.",
+      "Jump out the window.",
+      "Eat a salamander and jump out the window.",
+      "Leave in peace."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385919217-fas2x0",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In the 1968 Cartoon Show \"Wacky Races\" what was the name of cavemen duo who rode in The Boulder Mobile?",
+    "options": [
+      "The Slag Brothers",
+      "The Rock Brothers",
+      "The Slate Brothers",
+      "The Stone Brothers"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385919217-zdii80",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In the 1969 Cartoon show \"Dastardly and Muttley in Their Flying Machines\", which were NOT one of the lyrics in the opening theme?",
+    "options": [
+      "Jab him",
+      "Nab him",
+      "Stab him",
+      "Tab him"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385919217-tnacam",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In \"Gravity Falls\", how much does Waddles weigh when Mable wins him in \"The Time Traveler's Pig\"?",
+    "options": [
+      "30 pounds",
+      "20 pounds",
+      "15 pounds",
+      "10 pounds"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "cartoons-1793385919217-udkary",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In the web-comic Homestuck, what is the name of the game the 4 kids play?",
+    "options": [
+      "Husslie",
+      "Sburb",
+      "Homesick",
+      "Hiveswap"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cartoons-1793385919217-23oaqu",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "What was the name of Jonny's pet dog in The Adventures of Jonny Quest?",
+    "options": [
+      "Bandit",
+      "Max",
+      "Lucky",
+      "Rocky"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cartoons-1793385919217-8srkgn",
+    "category": "cartoons",
+    "difficulty": "hard",
+    "question": "In \"Rick and Morty\", from which dimension do Rick and Morty originate from?",
+    "options": [
+      "C-137",
+      "J1977",
+      "C500-a",
+      "C-136"
+    ],
+    "correctIndex": 0
   }
 ]

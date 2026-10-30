@@ -388,5 +388,96 @@
       "Trackers"
     ],
     "correctIndex": 0
+  },
+  {
+    "id": "gadgets-1793385834592-yw51jn",
+    "category": "gadgets",
+    "difficulty": "easy",
+    "question": "What is the SI unit for resistance?",
+    "options": [
+      "Siemens",
+      "Volts",
+      "Ampheres",
+      "Ohms"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-1793385851492-p4qcxe",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "Out of all of the NASA Space Shuttles, which 2 have been destroyed in disasters?",
+    "options": [
+      "Enterprise and Atlantis",
+      "Challenger and Columbia",
+      "None of the Above",
+      "Discovery and Endeavour"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "gadgets-1793385851492-x6s856",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "What was the first Infinity Coaster in the world and where is it located?",
+    "options": [
+      "Gold Rush, Slagharen, Netherlands ",
+      "Madagascar Mad Pursuit, Motiongate Dubai, UAE",
+      "The Smiler, Alton Towers, UK",
+      "Monster, Adventureland Altoona, USA"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-1793385851492-x6h8yy",
+    "category": "gadgets",
+    "difficulty": "medium",
+    "question": "When was the compact disc player first released?",
+    "options": [
+      "1982",
+      "1981",
+      "1983",
+      "1980"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "gadgets-1793385874062-54e2qq",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which of the following is the standard THX subwoofer crossover frequency?",
+    "options": [
+      "100 Hz",
+      "90 Hz",
+      "80 Hz",
+      "70 Hz"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "gadgets-1793385874062-j2r1b1",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which round does a WW2 M1 Garand fire?",
+    "options": [
+      "7.62",
+      ".308",
+      "7.62x51mm",
+      ".30-06"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "gadgets-1793385874062-55wfmd",
+    "category": "gadgets",
+    "difficulty": "hard",
+    "question": "Which of the following is used to measure blood pressure?",
+    "options": [
+      "Sphygmomanometer",
+      "Haemoerythrometer",
+      "Barometer",
+      "Ruler"
+    ],
+    "correctIndex": 0
   }
 ]

@@ -388,5 +388,1123 @@
       "Wattson"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-q0dg3a",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "M.U.G.E.N. is the name for what type of Game Engine?",
+    "options": [
+      "Fighting Game",
+      "Shooter Game",
+      "Puzzle Game",
+      "Platforming Game"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-a7el6b",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In Five Nights at Freddy's 1, how can you make Golden Freddy disappear?",
+    "options": [
+      "Shut the door",
+      "Turn on the light",
+      "Enable cameras",
+      "Do nothing"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-1e8wsk",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "League of Legends, DOTA 2, Smite and Heroes of the Storm are all part of which game genre?",
+    "options": [
+      "Real Time Strategy (RTS)",
+      "Role Playing Game (RPG)",
+      "First Person Shooter (FPS)",
+      "Multiplayer Online Battle Arena (MOBA)"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-o71mcz",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What company created and developed the game \"Overwatch\"?",
+    "options": [
+      "Gearbox Software",
+      "Hi-Rez Studios",
+      "Blizzard Entertainment",
+      "Valve"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-pqvrih",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What is Gabe Newell's favorite class in Team Fortress 2?",
+    "options": [
+      "Medic",
+      "Heavy",
+      "Pyro",
+      "Spy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-4z7p6l",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which \"Call Of Duty: Zombies\" map introduced the \"Staffs Of The Ancients\"?",
+    "options": [
+      "Nuketown",
+      "Shangri-La",
+      "Revelations",
+      "Origins"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-07b6kz",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the lore of the PAYDAY series, which criminal was arrested and then latered rescued by the PAYDAY gang?",
+    "options": [
+      "Dallas",
+      "Wolf",
+      "Chains",
+      "Hoxton"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-sg048s",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Who's the voice actor for Thrall in the Warcraft game series?",
+    "options": [
+      "Jim Carrey",
+      "Chris Metzen",
+      "Jason Derulo",
+      "Ben Affleck"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-mpiqod",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which of these is NOT the name of a rival gang in the video game Saint's Row 2?",
+    "options": [
+      "The Zin Empire",
+      "The Ronin",
+      "The Sons of Samedi",
+      "The Brotherhood"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-caaeg0",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What game mode was not in the original \"Wii Sports\"?",
+    "options": [
+      "Table Tennis",
+      "Bowling",
+      "Boxing",
+      "Baseball"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-albwl5",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In \"Mario & Sonic at the Olympic Games\", characters are split into how many types?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-8g6e17",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the Yakuza series who is the Dragon of Dojima?",
+    "options": [
+      "Kazuma Kiryu",
+      "Ryuji Goda",
+      "Sohei Dojima",
+      "Haruka Sawamura"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-m9egf5",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "How many obsidian blocks are required to build a nether portal in Minecraft?",
+    "options": [
+      "14",
+      "13",
+      "10",
+      "16"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-ehtvvj",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which psychopath(s) in Dead Rising 1 gave you the small chainsaw?",
+    "options": [
+      "The convicts",
+      "Larry the butcher",
+      "Adam the Clown",
+      "Cliff Hudson"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-hm2oxs",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which company is the one responsible for creating the strategy videogame Stellaris?",
+    "options": [
+      "Ensemble Studios",
+      "Overkill Software",
+      "Tripwire Interactive LLC",
+      "Paradox Development Studio"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-iv13w6",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What video game sparked controversy because of its hidden \"Hot Coffee\" minigame?",
+    "options": [
+      "Cooking Mama",
+      "Grand Theft Auto: San Andreas",
+      "Grand Theft Auto: Vice City",
+      "Hitman: Blood Money"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-bmt9iy",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the second-generation Pokémon games, which Pokémon can you start with?",
+    "options": [
+      "Treecko,Torchic, and Mudkip",
+      "Bulbasaur, Charmander, and Squirtle",
+      "Chikorita, Cyndaquil, and Totodile",
+      "Grassy, Firey, and Watery"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-713uwa",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which of these video game engines was made by the company Epic Games?",
+    "options": [
+      "Game Maker: Studio",
+      "Cry Engine",
+      "Unreal",
+      "Unity"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-nhok0z",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In \"Yo! Noid 2,\" The Noid can perform what special move?",
+    "options": [
+      "Pizza Throw",
+      "Dab",
+      "Spin Dash",
+      "Dodge Roll"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-9mmo0c",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "How many carbon cars are there in Burnout Paradise?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-yq1ml6",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "The Touhou Project series of games is often associated with which genre?",
+    "options": [
+      "Casual",
+      "Shoot 'em up",
+      "Strategy",
+      "FPS"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-67b5k4",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What is the name of the City in Saints Row The Third?",
+    "options": [
+      "Liberty",
+      "Steelport",
+      "Carcer",
+      "Stilwater"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-uu8d4g",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What was Frank West's job in \"Dead Rising\"?",
+    "options": [
+      "Taxi Driver",
+      "Chef",
+      "Janitor",
+      "Photojournalist"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385715923-6x5gpr",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "In the game Half-Life, which enemy is showcased as the final boss?",
+    "options": [
+      "The Gonarch",
+      "Dr. Wallace Breen",
+      "The Nihilanth",
+      "G-Man"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-txqbvf",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Who is the leader of Team Mystic in Pokémon Go?",
+    "options": [
+      "Spark",
+      "Blanche",
+      "Willow",
+      "Candela"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385715923-axspc3",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a playable character in \"Left 4 Dead\"?",
+    "options": [
+      "Bill",
+      "Louis",
+      "Nick",
+      "Zoey"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385715923-tqiu0p",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "What does Solid Snake use to hide himself with?",
+    "options": [
+      "Cardboard Box",
+      "Cardboard cut-out",
+      "Cloaking Device",
+      "Metal Crate"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385715923-ly6lgu",
+    "category": "video-games",
+    "difficulty": "easy",
+    "question": "Who stars in Brutal Legend?",
+    "options": [
+      "Kanye West",
+      "Ozzy Osbourne",
+      "Lemmy",
+      "Jack Black"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-p5bbaz",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In \"Halo 2\", what is the name of the monitor of Installation 05?",
+    "options": [
+      "031 Exuberant Witness",
+      "252 Biodis Expolsion",
+      "343 Guilty Spark",
+      "2401 Penitent Tangent"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-57nvi1",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of these game franchises were made by Namco?",
+    "options": [
+      "Tekken",
+      "Mortal Kombat",
+      "Street Fighter",
+      "Dragon Quest"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-whz1q0",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Capcom's survival horror title Dead Rising, canonically starts on what day of September 2006?",
+    "options": [
+      "September 19th",
+      "September 30th",
+      "September 14th",
+      "September 21st"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-qujdz0",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which company developed the video game \"Borderlands\"?",
+    "options": [
+      "Gearbox Software",
+      "2K Games",
+      "Activision",
+      "Rockstar Games"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-xqd474",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Forza Motorsport 6, which of these track-exclusive cars was NOT featured in the game, either originally with the game or added as DLC?",
+    "options": [
+      "Aston Martin Vulcan",
+      "McLaren P1 GTR",
+      "Ferrari FXX-K",
+      "Lotus E23"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-99k35l",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "When was Chapter 1 of the Source Engine mod \"Underhell\" released?",
+    "options": [
+      "September 12th, 2013",
+      "September 1st, 2013",
+      "March 3rd, 2011",
+      "October 2nd, 2012"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-ioizey",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Who is the half-demon character in Divinity: Original Sin 2 who you talk to to transition between acts?",
+    "options": [
+      "Meister Siva",
+      "Gawin",
+      "Exter",
+      "Malady"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-bhj1z1",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "When was the original Star Wars: Battlefront II released?",
+    "options": [
+      "October 31, 2005",
+      "November 21, 2006",
+      "September 9, 2007",
+      "December 18, 2004"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-k8xm7f",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Star Wars: Republic Commando (2005), what is the name of the squad that you play as?",
+    "options": [
+      "Delta Squad",
+      "Omega Squad",
+      "Echo Squad",
+      "Alpha Squad"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-p3946l",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "By how many minutes are you late to work in \"Half-Life\"?",
+    "options": [
+      "60",
+      "15",
+      "30",
+      "5"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385721674-i0htlq",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In what year was the first eSports competition?",
+    "options": [
+      "1990",
+      "1972",
+      "1989",
+      "2000"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-3atyv6",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Minecraft, what types of sound files are required for custom SFX to work in resource packs?",
+    "options": [
+      ".wav",
+      ".class",
+      ".mp3",
+      ".ogg"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-5laj68",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which is not a playable character in the 2005 video game Killer7?",
+    "options": [
+      "Dan Smith",
+      "Coyote Smith",
+      "Mask de Smith",
+      "Frank Smith"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-9cq2sm",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Fallout 4, which type of power armor is first encountered in the early mission \"When Freedom Calls\" in a crashed Vertibird?",
+    "options": [
+      "T-60",
+      "T-45",
+      "T-51",
+      "X-01"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-xw0i9l",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "The character Wario was first introduced in which game of the Mario video game franchise?",
+    "options": [
+      "Wario Land: Super Mario Land 3 (1994)",
+      "Super Mario Land 2: 6 Golden Coins (1992)",
+      "Super Mario Bros. 3 (1988)",
+      "Mario Party (1998)"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-996f6u",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which Crypt of the NecroDancer (2015) character has a soundtrack by Jake \"Virt\" Kaufman?",
+    "options": [
+      "Cadence",
+      "Uncle Eli",
+      "Octavian (Bard)",
+      "Nocturna"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-asne1p",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of the following is NOT an official game in Nintendo's Super Smash Bros. series?",
+    "options": [
+      "Super Smash Bros. Brawl",
+      "Super Smash Bros. for Nintendo 3DS and Wii U",
+      "Super Smash Bros. Crusade",
+      "Super Smash Bros. Melee"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385721674-iiz7d1",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What is a Tetris piece called?",
+    "options": [
+      "Tetris",
+      "Tetromino",
+      "Tetratile",
+      "Tetripiece"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-j45b5j",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of these blocks in \"Minecraft\" has the lowest blast resistance?",
+    "options": [
+      "End Stone",
+      "Wood Planks",
+      "Water",
+      "Sand"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-sv39bx",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In World of Warcraft Lore, four Old Gods created a giant and powerful creature. What was it called? ",
+    "options": [
+      "Eater of Souls",
+      "The Ancient One",
+      "Anomalous",
+      "The Lich King"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-2gfpmy",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Need for Speed: Underground, what car does Eddie drive?",
+    "options": [
+      "Acura Integra Type R",
+      "Subaru Impreza 2.5 RS",
+      "Nissan Skyline GT-R (R34)",
+      "Mazda RX-7 FD3S"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385721674-xyvslx",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "How many sets of grandmaster witcher gear are in The Witcher 3's Blood and Wine DLC?",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "5"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-27utew",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "The default playermodel of Garry's Mod is this Half Life 2 character.",
+    "options": [
+      "Isaac Kleiner",
+      "G-Man",
+      "Alyx Vance",
+      "Gordon Freeman"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-lv11a5",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Skylanders Giants, why was Zaps' Wow Pow named \"For Riley\" ?",
+    "options": [
+      "After a voice actor",
+      "As a tribute to a fan who passed away",
+      "After one of the writers of the game",
+      "As a reference to a film"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-3pkyd7",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "In Minecraft, how many items can a single piece of coal smelt when used in a furnace?",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "6"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-u3nz38",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "What is the world's first video game console?",
+    "options": [
+      "Nintendo Color TV Game",
+      "Magnavox Odyssey",
+      "Coleco Telstar",
+      "Atari 2600"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385721674-7vekcq",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Excluding their instructor, how many members of Class VII are there in the game \"Legend of Heroes: Trails of Cold Steel\"?",
+    "options": [
+      "9",
+      "10",
+      "3",
+      "6"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385721674-6wv7we",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "Which of these Counter-Strike maps is a bomb defuse scenario?",
+    "options": [
+      "747",
+      "Oilrig",
+      "Havana",
+      "Prodigy"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385721674-yu7tgt",
+    "category": "video-games",
+    "difficulty": "medium",
+    "question": "When was Club Penguin launched?",
+    "options": [
+      "October 21, 2005",
+      "November 22, 2004",
+      "October 24, 2005",
+      "March 29, 2006"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-zqd095",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What military rank is the protagonist \"Nomad\" in \"Crysis\"?",
+    "options": [
+      "First Lieutenant",
+      "First Sargent ",
+      "Captain",
+      "Staff Sargent"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-h8ao1t",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the Gamecube Version of \"Resident Evil\" what text document is open on the monitor of the computer in the Visual Data Room?",
+    "options": [
+      "Document on B.O.Ws",
+      "Text Document on Herbs",
+      "A GDC Document",
+      "Nothing"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-w93nbp",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Where are Terror Fiends more commonly found in the Nintendo game Miitopia?",
+    "options": [
+      "New Lumos",
+      "Peculia",
+      "Otherworld",
+      "The Sky Scraper"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-o4wmbu",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In which video game did Michael Fassbender star?",
+    "options": [
+      "Call of Duty: Modern Warfare",
+      "Fable 3",
+      "Assassin's Creed 3",
+      "Red Dead Redemption"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-234mjd",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the game Nuclear Throne, what organization chases the player character throughout the game?",
+    "options": [
+      "The Fishmen",
+      "The Y.V.G.G",
+      "The Bandits",
+      "The I.D.P.D"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-jf851h",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "When was the Valve Corporation founded?",
+    "options": [
+      "December 26, 1994",
+      "March 22, 1997",
+      "August 24, 1996",
+      "March 13, 1997"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-8fd1lf",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which of the Master levels in \"Super Monkey Ball\" is also used in the arcade version of the game, simply named \"Monkey Ball\"?",
+    "options": [
+      "MASTER 6 - Roll Master",
+      "MASTER 3 - Stamina Master",
+      "MASTER 9 - Bridge Master",
+      "MASTER 10 - Monkey Master"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-bqsq8n",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What was the world's first video game?",
+    "options": [
+      "Pong",
+      "Draughts",
+      "Space Travel",
+      "Spacewar!"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-okthph",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which gaming series includes \"The Diabolical Box\" and \"The Curious Village\"?",
+    "options": [
+      "Persona",
+      "Sam & Max",
+      "Professor Layton",
+      "Etrian Odyssey"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-8qoy4h",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the video game \"Metal Gear Solid\", what did Revolver Ocelot consider the greatest handgun ever made?",
+    "options": [
+      "Colt M1892",
+      "Colt Single Action Army",
+      "Colt 1851 Navy Revolver",
+      "Colt Python"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-se567s",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In \"The Binding of Isaac\", which item instantly kills Mom and Mom's Heart?",
+    "options": [
+      "Book of Shadows",
+      "Brimstone",
+      "The Bible",
+      "The Halo"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-xk4zwi",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "How many playable characters are there in Super Smash Bros. for Nintendo 3DS and Wii U?",
+    "options": [
+      "48",
+      "51",
+      "55",
+      "58"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-bzqlf9",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What is the name of the main island in PLAYERUNKNOWN'S BATTLEGROUNDS?",
+    "options": [
+      "Lastovo",
+      "Marmara",
+      "Erangel",
+      "Severny"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-lcyxxz",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which one of these is NOT an official map in Counter-Strike: Global Offensive?",
+    "options": [
+      "de_season",
+      "de_militia",
+      "de_canals",
+      "de_sugarcane"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-ywyabj",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What are the chances of being dealt a Royal Flush within Poker/Video Poker?",
+    "options": [
+      "1 in 311,875,200",
+      "1 in 649,740",
+      "1 in 763,302",
+      "1 in 499,304"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-b2wmro",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the game Warframe, what is the type of fish that is known to eat unwary natives of Cetus?",
+    "options": [
+      "Mawfish",
+      "Karkina",
+      "Sharrac",
+      "Glappid"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-cy6psc",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which of these TrackMania environments was NOT in the original game?",
+    "options": [
+      "Desert",
+      "Rally",
+      "Snow",
+      "Bay"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-9brzmk",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In \"Starbound\", what is the max HP of the monster \"Punchy\"?",
+    "options": [
+      "50,000 HP",
+      "100 HP",
+      "150,000 HP",
+      "9,000,000 HP"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-iubpbl",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the remake of \"Resident Evil 2\", which medallion does not exist?",
+    "options": [
+      "Lion Medallion",
+      "Unicorn Medallion",
+      "Dragon Medallion",
+      "Maiden Medallion"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-z75rgi",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "According to an interview with \"Super Mario Land 2\" game director Hiroji Kiyotake, what is Wario's favorite food?",
+    "options": [
+      "Garlic",
+      "Pizza",
+      "Crepes",
+      "Cheese"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-y30cwr",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which car did not appear in the 2002 Lego Game: Drome Racers?",
+    "options": [
+      "Hornet",
+      "Wasp",
+      "Raptor",
+      "Behemoth"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-vfati7",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In Hollow Knight, how many Precepts does Zote have?",
+    "options": [
+      "Sixty-Nine",
+      "Ninety-One",
+      "Fourty-Three",
+      "Fifty-Seven"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-rynwkg",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In TF2 Lore, what are the names of the Heavy's younger sisters?",
+    "options": [
+      "Yanna and Gaba",
+      "Gaba and Anna",
+      "Anna and Bronislava",
+      "Yana and Bronislava"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-7ifhrd",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which of these games was NOT developed by Markus Persson?",
+    "options": [
+      "0x10c",
+      "Wurm Online",
+      "Minecraft",
+      "Dwarf Fortress"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "video-games-1793385727330-ebxr3j",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "What device allows Tracer to manipulate her own time in the game \"Overwatch\"?",
+    "options": [
+      "Chronal Accelerator",
+      "TMD (Time Manipulation Device)",
+      "B.L.I.N.K",
+      "Spacial Displacement Manipulator"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-gvazf6",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In \"Sonic the Hedgehog 2\" for the Sega Genesis, what do you input in the sound test screen to access the secret level select?",
+    "options": [
+      "The first release date of \"Sonic the Hedgehog 2\"",
+      "The Lead Programmer's birthday",
+      "The date Sonic Team was founded",
+      "The first release date of \"Sonic the Hedgehog\""
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "video-games-1793385727330-zpv7pq",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "Which of these Pokemon is NOT exclusively female?",
+    "options": [
+      "Clefairy",
+      "Illumise",
+      "Mandibuzz",
+      "Salazzle"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "video-games-1793385727330-pl7xyy",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In the \"Pikmin\" games, which of the following pikmin colors lacks it's own \"Onion\" nest?",
+    "options": [
+      "Winged",
+      "Blue",
+      "Purple",
+      "Rock"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "video-games-1793385727330-y3iidr",
+    "category": "video-games",
+    "difficulty": "hard",
+    "question": "In Stardew Valley, what is the reward for completing all of the Bulletin Board bundles?",
+    "options": [
+      "Glittering Boulder removed",
+      "Additional Friendship points",
+      "Greenhouse",
+      "Bus is repaired"
+    ],
+    "correctIndex": 1
   }
 ]

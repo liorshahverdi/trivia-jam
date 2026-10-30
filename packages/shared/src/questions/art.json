@@ -518,5 +518,31 @@
       "1934"
     ],
     "correctIndex": 2
+  },
+  {
+    "id": "art-1793385524267-86dogn",
+    "category": "art",
+    "difficulty": "easy",
+    "question": "What is the world's oldest known piece of fiction?",
+    "options": [
+      "Papyrus of Ani",
+      "Epic of Gilgamesh",
+      "Rosetta Stone",
+      "Code of Hammurabi"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "art-1793385558018-96cpnv",
+    "category": "art",
+    "difficulty": "hard",
+    "question": "Painter Piet Mondrian (1872 - 1944) was a part of what movement?",
+    "options": [
+      "Cubism",
+      "Neoplasticism",
+      "Precisionism",
+      "Impressionism"
+    ],
+    "correctIndex": 1
   }
 ]

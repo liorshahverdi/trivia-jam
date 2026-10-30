@@ -388,5 +388,304 @@
       "3"
     ],
     "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385789512-6y34zw",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "What mytological creatures have women's faces and vultures' bodies?",
+    "options": [
+      "Lilith",
+      "Harpies",
+      "Mermaids",
+      "Nymph"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-1793385789512-r8hpd5",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "Which figure from Greek mythology traveled to the underworld to return his wife Eurydice to the land of the living?",
+    "options": [
+      "Daedalus",
+      "Perseus",
+      "Orpheus",
+      "Hercules"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385789512-6unsjz",
+    "category": "mythology",
+    "difficulty": "easy",
+    "question": "The Nike apparel and footwear brand takes it's name from the Greek goddess of what?",
+    "options": [
+      "Honor",
+      "Strength",
+      "Victory",
+      "Courage"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385800776-afznlk",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Who was the Roman god of fire?",
+    "options": [
+      "Vulcan",
+      "Mercury",
+      "Apollo",
+      "Jupiter"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-1793385800776-m38yhr",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "What is the name of the Greek god of peaceful deaths?",
+    "options": [
+      "Tartarus",
+      "Moros",
+      "Hades",
+      "Thanatos"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385800776-8v8n0l",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Which greek god/goddess tossed a golden apple with the words \"for the fairest\" into the middle of the feast of the gods?",
+    "options": [
+      "Hades",
+      "Eris",
+      "Artemis",
+      "Ares"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-1793385800776-8kb9f3",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Norse Mythology, Baldr was killed by Loki with a magical spear made from what plant?",
+    "options": [
+      "Wolf's Bane",
+      "Mistletoe",
+      "Hemlock",
+      "Buckthorn"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-1793385800776-pti4p8",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "What is the name of the Greek god of blacksmiths?",
+    "options": [
+      "Vulcan",
+      "Dyntos",
+      "Artagatus",
+      "Hephaestus"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385800776-bbwv7i",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Who is the god of war in Polynesian mythology?",
+    "options": [
+      "Kohara",
+      "Māui",
+      "'Oro",
+      "Hina"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385800776-y11bos",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "This Greek mythological figure is the god/goddess of battle strategy (among other things).",
+    "options": [
+      "Ares",
+      "Apollo",
+      "Artemis",
+      "Athena"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385800776-w7d579",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "What is the name of the first human being in Norse mythology?",
+    "options": [
+      "Ask",
+      "Asmund",
+      "Ake",
+      "Asger"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-1793385800776-msjvil",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Which of the following Mesopotamian mythological figures was NOT a deity?",
+    "options": [
+      "Enkidu",
+      "Enkimdu",
+      "Enki",
+      "Enlil"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "mythology-1793385800776-spfe2e",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "What animal did Queen Pasipahe sleep with before she gave birth to the Minotaur in Greek Mythology?",
+    "options": [
+      "Horse",
+      "Pig",
+      "Bull",
+      "Ox"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385800776-a9606c",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Who is the God Loki's son? ",
+    "options": [
+      "Hel",
+      "Odin",
+      "Fenrir ",
+      "Sigyn"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385800776-um42m2",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Neptune's greek name was...",
+    "options": [
+      "Zeus",
+      "Ares",
+      "Apollo",
+      "Poseidon"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385800776-gvgqt5",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "Hera is god of...",
+    "options": [
+      "War",
+      "Agriculture",
+      "Sea",
+      "Marriage"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385800776-h564ix",
+    "category": "mythology",
+    "difficulty": "medium",
+    "question": "In Norse Mythology, what is the name of the symbol commonly referred to as the \"Tree of Life\"?",
+    "options": [
+      "Ymir",
+      "Yggdrasil",
+      "Odin's Roots",
+      "Tree of the Earth"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-1793385817656-e2jns9",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "Which of the following is NOT a god in Norse Mythology.",
+    "options": [
+      "Tyr",
+      "Loki",
+      "Snotra",
+      "Jens"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "mythology-1793385817656-xofhc5",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "In Greek Mythology, who was the daughter of King Minos?",
+    "options": [
+      "Alana",
+      "Ariadne",
+      "Ariel",
+      "Athena"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "mythology-1793385817656-fd4l3c",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "Nidhogg is a mythical creature from what mythology?",
+    "options": [
+      "Hindu",
+      "Egyptian",
+      "Norse",
+      "Greek"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385817656-h4oet2",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "What was the punishment for Sysiphus's craftiness?",
+    "options": [
+      "Standing in a lake filled with water he could not drink.",
+      "To fell a tree that regenerated after every axe swing.",
+      "Cursed to roll a boulder up a hill for eternity.",
+      "Tied to a boulder for eternity, being pecked by birds."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385817656-hyyybm",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "According to Algonquian folklore, how does one transform into a Wendigo?",
+    "options": [
+      "Excessive mutilation of animal corpses.",
+      "Performing a ritual involving murder.",
+      "Participating in cannibalism.",
+      "Drinking the blood of many slain animals."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "mythology-1793385817656-6so6f6",
+    "category": "mythology",
+    "difficulty": "hard",
+    "question": "Who is a minor god that is protector and creator of various arts, such as cheese making and bee keeping.",
+    "options": [
+      "Aristaeus",
+      "Carme",
+      "Autonoe",
+      "Cephisso"
+    ],
+    "correctIndex": 0
   }
 ]

@@ -388,5 +388,369 @@
       "Bishop and Rook"
     ],
     "correctIndex": 3
+  },
+  {
+    "id": "board-games-1793385744303-c4q527",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "The board game Monopoly takes its street names from which real American city?",
+    "options": [
+      "Duluth, Minnesota",
+      "Atlantic City, New Jersey",
+      "Las Vegas, Nevada",
+      "Charleston, South Carolina"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385744303-1pfuhk",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "How many pieces are there on the board at the start of a game of chess?",
+    "options": [
+      "16",
+      "36",
+      "32",
+      "20"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385744303-asqkuq",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "In board games, an additional or ammended rule that applies to a certain group or place is informally known as a \"what\" rule?",
+    "options": [
+      "Change",
+      "Extra",
+      "House",
+      "Custom"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385744303-eetotb",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "What is the maximum level you can have in a single class in Dungeons and Dragons (5e)?",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "15"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385744303-e0guqr",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "How many dots are on a single die?",
+    "options": [
+      "15",
+      "24",
+      "21",
+      "18"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385744303-dn35r7",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "Which of these board games do NOT utilize standard 6-sided dice?",
+    "options": [
+      "Monopoly",
+      "The Game of Life",
+      "Risk",
+      "Snakes and Ladders"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385744303-n21oyx",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "In which year was the pen and paper RPG \"Deadlands\" released?",
+    "options": [
+      "1999",
+      "1993",
+      "1996",
+      "2003"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385744303-vny38p",
+    "category": "board-games",
+    "difficulty": "easy",
+    "question": "How many dice are used in the game of Yahtzee?",
+    "options": [
+      "Five",
+      "Four",
+      "Six",
+      "Eight"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-1793385761236-olto9u",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "About how many Slinkys were sold in their first 60 years (from 1945 to 2005)?",
+    "options": [
+      "100 Million",
+      "300 Million",
+      "450 Million",
+      "1 Billion"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385761236-j1o71o",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "Who is the main character in the VHS tape included in the board game Nightmare?",
+    "options": [
+      "The Nightmare",
+      "The Gatekeeper",
+      "The Kryptkeeper",
+      "The Monster"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385761236-v2c0yl",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "What letter is used to refer to blue mana in the card game Magic The Gathering?",
+    "options": [
+      "E",
+      "U",
+      "L",
+      "B"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385761236-vaui36",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In Yu-Gi-Oh, how does a player perform an Xyz Summon?",
+    "options": [
+      "Overlay at least 2 Monsters of the Same Level",
+      "Activate a Spell and Send Monsters to the Graveyard",
+      "Banish A Number of Monsters From Your Hand And Deck",
+      "Add the Monsters' Levels Together to Match the Xyz Monster"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-1793385761236-pr8m1b",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "What happens when you roll 3 doubles in a row in Monopoly?",
+    "options": [
+      "Get paid $200",
+      "Go to jail",
+      "Pay $200",
+      "Move to Free Parking"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385761236-odk7ot",
+    "category": "board-games",
+    "difficulty": "medium",
+    "question": "In poker, \"EV\" means what?",
+    "options": [
+      "Equity Value",
+      "Equity Variation",
+      "Expected Value",
+      "Equivalent Variation"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385772542-xj6hnw",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What Magic: The Gathering card's flavor text is just 'Ribbit.'?",
+    "options": [
+      "Spore Frog",
+      "Turn to Frog",
+      "Bloated Toad",
+      "Frogmite"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385772543-za29ou",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "In standard Monopoly, what's the rent if you land on Park Place with no houses?",
+    "options": [
+      "$35",
+      "$50",
+      "$45",
+      "$30"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-1793385772543-c3zskz",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "In Magic: The Gathering, what term for blocking was established in the Portal set?",
+    "options": [
+      "Intercepting",
+      "Blocking",
+      "Resisting",
+      "Shielding"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-1793385772543-mz7whw",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What is the sum of all the tiles in a standard box of Scrabble?",
+    "options": [
+      "177",
+      "197",
+      "207",
+      "187"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-1793385772543-4nqbdi",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which card is on the cover of the Beta rulebook of \"Magic: The Gathering\"?",
+    "options": [
+      "Elvish Archers",
+      "Island",
+      "Bog Wraith",
+      "Rock Hydra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385772543-3orpoy",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "The board game \"Ra\" was designed by which designer? ",
+    "options": [
+      "Bruno Cathala",
+      "Allison Kline",
+      "Reiner Knizia",
+      "Uwe Rosenburg"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385772543-jzpj1j",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "How many rooms are there, not including the hallways and the set of stairs, in the board game \"Clue\"?",
+    "options": [
+      "1",
+      "10",
+      "6",
+      "9"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-1793385772543-eem7wo",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What is the world's oldest board game?",
+    "options": [
+      "Chess",
+      "Checkers",
+      "Go",
+      "Senet"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-1793385772543-bz5o8q",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which character class in Dungeons and Dragons 5th edition gains it's powers from making a pact with a being of higher power?",
+    "options": [
+      "Sorceror",
+      "Cleric",
+      "Wizard",
+      "Warlock"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "board-games-1793385772543-hqu6lc",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "What do you declare in Rīchi Mahjong when you've drawn your winning tile?",
+    "options": [
+      "Kan",
+      "Ron",
+      "Tsumo",
+      "Rīchi"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "board-games-1793385772543-19ocn1",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which Pokemon is #39 in the National Pokedex?",
+    "options": [
+      "Fearow",
+      "Jigglypuff",
+      "Pikachu",
+      "Psyduck"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385772543-0imyqh",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "Which ability from the \"Magic: The Gathering\" Scars of Mirrodin expansion involves having at least three artifacts in play?",
+    "options": [
+      "Metalcraft",
+      "Imprint",
+      "Living Weapon",
+      "Affinity"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "board-games-1793385772543-yzowcd",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "The board game \"Monopoly\" is a variation of what board game?",
+    "options": [
+      "The Monopolist's Game",
+      "The Landlord's Game",
+      "Territorial Dispute",
+      "Property Feud"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "board-games-1793385772543-3k48wx",
+    "category": "board-games",
+    "difficulty": "hard",
+    "question": "The Dice Tower network of board game podcasts and videos is run by which individual?",
+    "options": [
+      "Uncle Pennybags",
+      "Borth Sampson",
+      "Tom Vasel",
+      "Jason LeVine"
+    ],
+    "correctIndex": 2
   }
 ]
