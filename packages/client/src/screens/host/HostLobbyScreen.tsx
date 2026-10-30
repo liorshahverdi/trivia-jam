@@ -1,27 +1,32 @@
-import { useState } from 'react';
 import { useGameStore } from '../../stores/gameStore';
 import RoomCodeDisplay from '../../components/RoomCodeDisplay';
 import PlayerAvatar from '../../components/PlayerAvatar';
 import CategoryCard from '../../components/CategoryCard';
-import type { Category, GameMode } from '@trivia-jam/shared';
+import { CATEGORIES, type Category, type DifficultySetting, type GameMode } from '@trivia-jam/shared';
 
-const ALL_CATEGORIES: Category[] = ['math', 'science', 'history', 'current-events', 'music', 'food', 'tech', 'geography', 'art', 'entertainment', 'animals', 'general', 'musicals', 'television', 'video-games', 'board-games', 'mythology', 'gadgets', 'anime', 'cartoons'];
+const DIFFICULTY_OPTIONS: Array<{ value: DifficultySetting; label: string; hint: string }> = [
+  { value: 'mixed', label: 'Mixed', hint: 'Ramps easy → hard' },
+  { value: 'easy', label: 'Easy', hint: 'Warm-up' },
+  { value: 'medium', label: 'Medium', hint: 'Party standard' },
+  { value: 'hard', label: 'Hard', hint: 'Trivia nerds' },
+];
 
 interface Props {
-  setMode: (mode: string) => void;
-  selectCategories: (categories: string[]) => void;
+  setMode: (mode: GameMode) => void;
+  setDifficulty: (difficulty: DifficultySetting) => void;
+  selectCategories: (categories: Category[]) => void;
   startGame: () => void;
 }
 
-export default function HostLobbyScreen({ setMode, selectCategories, startGame }: Props) {
-  const { roomCode, players, mode, selectedCategories, roomError } = useGameStore();
-  const [localCategories, setLocalCategories] = useState<Category[]>(selectedCategories);
+export default function HostLobbyScreen({ setMode, setDifficulty, selectCategories, startGame }: Props) {
+  const { roomCode, players, mode, difficulty, selectedCategories: localCategories, roomError } = useGameStore();
+  const setCategories = useGameStore((state) => state.setCategories);
 
   const toggleCategory = (cat: Category) => {
     const next = localCategories.includes(cat)
       ? localCategories.filter((c) => c !== cat)
       : [...localCategories, cat];
-    setLocalCategories(next);
+    setCategories(next); // optimistic; the server echoes the validated list
     selectCategories(next);
   };
 
@@ -31,7 +36,7 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
 
   const connectedPlayerCount = players.filter((player) => player.connected).length;
   const teamsHasOddPlayerCount = mode === 'teams' && connectedPlayerCount % 2 !== 0;
-  const startBlocker = players.length === 0
+  const startBlocker = connectedPlayerCount === 0
     ? 'Waiting for at least one player to join.'
     : localCategories.length === 0
       ? 'Select at least one category to start.'
@@ -104,11 +109,34 @@ export default function HostLobbyScreen({ setMode, selectCategories, startGame }
         </div>
       </div>
 
+      {/* Difficulty Selector */}
+      <div className="w-full max-w-2xl mb-10 animate-slide-up">
+        <h2 className="text-2xl font-bold text-center mb-4">Difficulty</h2>
+        <div className="grid grid-cols-4 gap-3" role="radiogroup" aria-label="Difficulty">
+          {DIFFICULTY_OPTIONS.map((option) => (
+            <button
+              key={option.value}
+              role="radio"
+              aria-checked={difficulty === option.value}
+              onClick={() => setDifficulty(option.value)}
+              className={`p-3 rounded-xl text-center font-bold transition-all duration-200 border-2 cursor-pointer ${
+                difficulty === option.value
+                  ? 'border-jam-yellow bg-jam-yellow/20 ring-2 ring-jam-yellow text-jam-yellow'
+                  : 'border-white/10 bg-white/5 text-white/60 hover:border-white/30'
+              }`}
+            >
+              {option.label}
+              <p className="text-xs font-normal mt-1 opacity-70">{option.hint}</p>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Category Selector */}
       <div className="w-full max-w-3xl mb-10 animate-slide-up">
         <h2 className="text-2xl font-bold text-center mb-4">Categories</h2>
         <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
-          {ALL_CATEGORIES.map((cat) => (
+          {CATEGORIES.map((cat) => (
             <CategoryCard
               key={cat}
               category={cat}

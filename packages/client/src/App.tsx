@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useGameStore } from './stores/gameStore';
 import { useSocket } from './hooks/useSocket';
 import { useSoundEffects } from './hooks/useSoundEffects';
+import StatusBanners from './components/StatusBanners';
 
 // Host screens
 import HostLobbyScreen from './screens/host/HostLobbyScreen';
@@ -45,9 +46,27 @@ function HostAudio() {
 }
 
 export default function App() {
+  return (
+    <>
+      <StatusBanners />
+      <Screens />
+    </>
+  );
+}
+
+function Screens() {
   const { role, phase } = useGameStore();
-  const { createRoom, joinRoom, setMode, selectCategories, startGame, submitAnswer, playAgain } =
-    useSocket();
+  const {
+    createRoom,
+    joinRoom,
+    setMode,
+    setDifficulty,
+    selectCategories,
+    startGame,
+    submitAnswer,
+    playAgain,
+    flagQuestion,
+  } = useSocket();
 
   if (role === 'none') {
     return <PlayerJoinScreen createRoom={createRoom} joinRoom={joinRoom} />;
@@ -63,6 +82,7 @@ export default function App() {
               return (
                 <HostLobbyScreen
                   setMode={setMode}
+                  setDifficulty={setDifficulty}
                   selectCategories={selectCategories}
                   startGame={startGame}
                 />
@@ -73,7 +93,7 @@ export default function App() {
             case 'question':
               return <HostQuestionScreen />;
             case 'reveal':
-              return <HostResultsScreen />;
+              return <HostResultsScreen onFlag={flagQuestion} />;
             case 'leaderboard':
               return <HostLeaderboard />;
             case 'game_over':
@@ -82,6 +102,7 @@ export default function App() {
               return (
                 <HostLobbyScreen
                   setMode={setMode}
+                  setDifficulty={setDifficulty}
                   selectCategories={selectCategories}
                   startGame={startGame}
                 />
@@ -103,7 +124,7 @@ export default function App() {
       return <PlayerAnswerScreen submitAnswer={submitAnswer} />;
     case 'reveal':
     case 'leaderboard':
-      return <PlayerResultScreen />;
+      return <PlayerResultScreen onFlag={flagQuestion} />;
     case 'game_over':
       return <PlayerFinalScreen />;
     default:

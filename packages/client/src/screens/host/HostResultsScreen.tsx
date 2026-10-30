@@ -2,10 +2,15 @@ import { useGameStore } from '../../stores/gameStore';
 import ScorePopup from '../../components/ScorePopup';
 import TeamBadge from '../../components/TeamBadge';
 import { decodeHtmlEntities } from '../../utils/html';
+import FlagQuestionButton from '../../components/FlagQuestionButton';
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D'];
 
-export default function HostResultsScreen() {
+interface Props {
+  onFlag?: (questionId: string, reason?: string) => void;
+}
+
+export default function HostResultsScreen({ onFlag }: Props) {
   const { currentQuestion, revealData, mode } = useGameStore();
 
   if (!currentQuestion || !revealData) return null;
@@ -44,8 +49,14 @@ export default function HostResultsScreen() {
       {mode === 'coop' && coopResult && (
         <div className="animate-bounce-in text-center mb-8">
           <p className="text-xl text-white/80 mb-2">
-            Group voted: <span className="font-bold text-white">{OPTION_LABELS[coopResult.majorityIndex]}</span>
-            {' '}({coopResult.voteCounts[coopResult.majorityIndex]} votes)
+            {coopResult.majorityIndex === -1 ? (
+              'Nobody voted this time.'
+            ) : (
+              <>
+                Group voted: <span className="font-bold text-white">{OPTION_LABELS[coopResult.majorityIndex]}</span>
+                {' '}({coopResult.voteCounts[coopResult.majorityIndex]} votes)
+              </>
+            )}
           </p>
           <ScorePopup points={coopResult.pointsEarned} correct={coopResult.correct} />
           <p className="mt-4 text-2xl font-bold text-jam-purple">
@@ -84,6 +95,12 @@ export default function HostResultsScreen() {
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {onFlag && (
+        <div className="mt-8">
+          <FlagQuestionButton questionId={currentQuestion.id} onFlag={onFlag} />
         </div>
       )}
     </div>

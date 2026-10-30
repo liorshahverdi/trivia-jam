@@ -1,8 +1,13 @@
 import { useGameStore } from '../../stores/gameStore';
 import ScorePopup from '../../components/ScorePopup';
 import TeamBadge from '../../components/TeamBadge';
+import FlagQuestionButton from '../../components/FlagQuestionButton';
 
-export default function PlayerResultScreen() {
+interface Props {
+  onFlag?: (questionId: string, reason?: string) => void;
+}
+
+export default function PlayerResultScreen({ onFlag }: Props) {
   const {
     phase,
     mode,
@@ -59,13 +64,17 @@ export default function PlayerResultScreen() {
           <div className="card px-6 py-4 text-center">
             <p className="text-white/60 text-sm mb-1">Group Vote</p>
             <p className={`text-lg font-bold ${revealData.coopResult.correct ? 'text-jam-green' : 'text-jam-red'}`}>
-              {revealData.coopResult.correct ? 'The group was right!' : 'The group was wrong!'}
+              {revealData.coopResult.majorityIndex === -1
+                ? 'Nobody voted this time!'
+                : revealData.coopResult.correct ? 'The group was right!' : 'The group was wrong!'}
             </p>
             <p className="text-white/60 text-sm mt-1">
               +{revealData.coopResult.pointsEarned} points (Total: {revealData.coopResult.newCoopScore})
             </p>
           </div>
         )}
+
+        {onFlag && <FlagQuestionButton questionId={currentQuestion.id} onFlag={onFlag} />}
       </div>
     );
   }
