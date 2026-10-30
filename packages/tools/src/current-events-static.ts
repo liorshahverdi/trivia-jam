@@ -2,7 +2,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import type { Difficulty, Question } from '@trivia-jam/shared';
 import { deduplicate } from './deduplicator.js';
-import { readExisting, writeQuestions as writeCategoryQuestions } from './writer.js';
+import { readBlocklist, readExisting, writeQuestions as writeCategoryQuestions } from './writer.js';
 
 const CURRENT_EVENTS_CATEGORY = 'current-events' as const;
 const DYNAMIC_ID_PREFIX = 'current-events-dynamic-';
@@ -84,6 +84,8 @@ export interface RefreshCurrentEventsJsonDeps {
   maxDynamicQuestions?: number;
   maxRetainedAgeDays?: number;
   refreshExpiringWithinDays?: number;
+  /** Question ids to drop (defaults to packages/shared/src/question-blocklist.json). */
+  blocklist?: ReadonlySet<string>;
 }
 
 export interface RefreshCurrentEventsJsonResult {
@@ -164,6 +166,8 @@ export function validateStaticCurrentEventQuestion(
   if (!Number.isInteger(candidate.correctIndex) || candidate.correctIndex < 0 || candidate.correctIndex > 3) {
     return { valid: false, reason: 'correctIndex must point at an option' };
   }
+  const optionProblem = findOptionQualityProblem(candidate);
+  if (optionProblem) return { valid: false, reason: optionProblem };
   if (!hasValidUrl(candidate.sourceUrl)) {
     return { valid: false, reason: 'sourceUrl must be a valid http(s) URL' };
   }
@@ -180,6 +184,72 @@ export function validateStaticCurrentEventQuestion(
   }
 
   return { valid: true };
+}
+
+const MAGNITUDE_WORDS = new Set(['thousand', 'million', 'billion', 'trillion', 'k', 'm', 'bn']);
+
+interface OptionShape {
+  numeric: boolean;
+  unit: string;
+}
+
+/** Classify an option as a number (with its unit, e.g. "%", "seat") or free text. */
+export function optionShape(option: string): OptionShape {
+  const match = option.trim().match(/^(?:about |around |over |under |nearly |more than |less than )?[-+]?[$€£]?\d[\d,.]*\s*(.*)$/i);
+  if (!match) return { numeric: false, unit: '' };
+  // "2026 Tour de France" / "10 Downing St." are names that start with a number, not quantities.
+  if (/[A-Z]/.test(match[1])) return { numeric: false, unit: '' };
+  const words = match[1].toLowerCase().replace(/percent\b/, '%').split(/\s+/).filter(Boolean);
+  while (words.length > 0 && MAGNITUDE_WORDS.has(words[0])) words.shift();
+  if (words.length > 2) return { numeric: false, unit: '' };
+  return { numeric: true, unit: words.join(' ').replace(/(?<=[a-z])s\b/g, '') };
+}
+
+function wordCount(text: string): number {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Reject options that give the answer away: mixed answer types
+ * ("55,000 people" vs "470%" vs "4 seats"), a correct answer far longer than every
+ * distractor, or a correct answer already spelled out in the question.
+ */
+export function findOptionQualityProblem(candidate: Pick<Question, 'question' | 'options' | 'correctIndex'>): string | null {
+  const shapes = candidate.options.map(optionShape);
+  const numericCount = shapes.filter((shape) => shape.numeric).length;
+  if (numericCount > 0 && numericCount < shapes.length) {
+    return 'options mix numbers and text, which gives the answer away';
+  }
+  if (numericCount === shapes.length && new Set(shapes.map((shape) => shape.unit)).size > 1) {
+    return 'numeric options use different units, which gives the answer away';
+  }
+
+  const correct = candidate.options[candidate.correctIndex] ?? '';
+  const correctWords = wordCount(correct);
+  const longestDistractor = Math.max(
+    ...candidate.options.filter((_, i) => i !== candidate.correctIndex).map(wordCount),
+  );
+  if (correctWords >= 4 && correctWords >= longestDistractor * 2) {
+    return 'correct answer is much longer than every distractor';
+  }
+
+  const normalizedCorrect = normalizeTextForSupport(correct);
+  if (normalizedCorrect.length >= 4 && ` ${normalizeTextForSupport(candidate.question)} `.includes(` ${normalizedCorrect} `)) {
+    return 'question text contains the correct answer';
+  }
+  return null;
+}
+
+/**
+ * Higher is better. Used to keep the strongest generated candidates when more
+ * pass validation than there is room for: similar-length options are harder to guess.
+ */
+export function scoreQuestionQuality(candidate: Pick<Question, 'options'>): number {
+  const lengths = candidate.options.map((option) => option.trim().length);
+  const mean = lengths.reduce((sum, n) => sum + n, 0) / lengths.length;
+  if (mean === 0) return 0;
+  const variance = lengths.reduce((sum, n) => sum + (n - mean) ** 2, 0) / lengths.length;
+  return 1 - Math.min(1, Math.sqrt(variance) / mean);
 }
 
 function toStoredQuestion(candidate: StaticCurrentEventQuestion, now: Date): StoredStaticCurrentEventQuestion {
@@ -594,9 +664,11 @@ export async function refreshCurrentEventsJson(
   const refreshExpiringWithinDays = deps.refreshExpiringWithinDays ?? DEFAULT_REFRESH_EXPIRING_WITHIN_DAYS;
 
   const existing = read();
+  const blocked = deps.blocklist ?? readBlocklist();
   const retainedExisting: StoredStaticCurrentEventQuestion[] = [];
   for (const question of existing) {
     if (!isDynamicQuestion(question)) continue;
+    if (blocked.has(question.id)) continue;
     if (isExpired(question, now)) continue;
     const validation = validateStaticCurrentEventQuestion(question, now);
     if (!validation.valid) continue;
@@ -626,7 +698,12 @@ export async function refreshCurrentEventsJson(
       accepted.push(toStoredQuestion(question, now));
     }
     const { unique } = deduplicate(accepted, preferredExisting);
-    acceptedGenerated = (unique as StoredStaticCurrentEventQuestion[]).slice(0, Math.min(remainingCapacity, neededTopUp));
+    // Over-generate, then keep the best candidates rather than the first ones.
+    acceptedGenerated = (unique as StoredStaticCurrentEventQuestion[])
+      .map((question, index) => ({ question, index, score: scoreQuestionQuality(question) }))
+      .sort((a, b) => b.score - a.score || a.index - b.index)
+      .map(({ question }) => question)
+      .slice(0, Math.min(remainingCapacity, neededTopUp));
   }
 
   let nextQuestions: StoredStaticCurrentEventQuestion[] = retainedExisting;

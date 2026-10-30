@@ -68,23 +68,19 @@ By default it uses:
   - The Verge
   - Ars Technica
   - Hacker News
-- local Ollama for question generation
+- Hermes one-shot generation by default (`CURRENT_EVENTS_GENERATOR=hermes`), with local Ollama as an opt-in fallback (`CURRENT_EVENTS_GENERATOR=ollama`)
 - no NewsAPI key
 - no OpenAI key
 
-## Optional server runtime behavior
+## Server runtime behavior
 
-If the full server is deployed with a database, `crawlAllQuestions()` can also refresh dynamic Current Events questions on startup and every 6 hours.
-
-- Dynamic Current Events questions are sourced from current news articles, converted into multiple-choice questions with an LLM, validated, and cached in the `questions` table.
-- The game picker excludes expired dynamic DB questions with `expires_at <= NOW()`.
-- Static `packages/shared/src/questions/current-events.json` remains the GitHub Pages/static fallback and is refreshed by the local always-on worker.
+The server never generates questions. It serves only the committed JSON packs, which the shared package build copies into `packages/shared/dist/questions/` (loaded via `@trivia-jam/shared/questions`). Render redeploys when a refreshed `current-events.json` lands on `main` and CI passes.
 
 ## Freshness rules
 
 - Generated candidates older than 45 days are rejected.
 - Accepted questions expire 21 days after the article `publishedAt` date.
-- Expired questions are pruned during refresh and excluded by the question picker.
+- Expired questions are pruned during refresh and excluded by the server's question picker at serve time, so a stalled refresh job can't serve stale "current" events. If every Current Events question has expired, a Current-Events-only game will not start and the host is told to add another category.
 - Legacy static Current Events fallback questions are removed once fresh generated questions exist, so multi-year-old “current events” do not stay in rotation.
 
 ## Validation rules
@@ -99,5 +95,18 @@ Generated Current Events questions are accepted only when they have:
 - a valid `correctIndex`
 - a valid HTTP(S) `sourceUrl`
 - a recent, non-future `publishedAt` timestamp
+- options that don't give the answer away:
+  - no mix of numeric and text options
+  - numeric options share a unit (`55,000 people / 470% / 4 seats` is rejected)
+  - the correct answer is not far longer than every distractor
+  - the question text does not contain the correct answer
+
+When more candidates pass validation than there is room for, they are ranked by option-length balance and the best are kept, rather than the first ones generated.
 
 This keeps generated content out of live games unless it passes deterministic checks first.
+
+## Blocklist and player reports
+
+- `packages/shared/src/question-blocklist.json` lists question ids (any category) that must never be served, each with a `reason`. The server picker skips them, and the refresh job drops them from `current-events.json`.
+- Players and hosts can tap **🚩 Report a problem with this question** on the reveal screen. Reports are logged as `[question-flag] {...}` lines and listed at `GET /flags` on the server. A question reported by two different players is skipped by that server process until restart.
+- To make a report permanent, copy the id from `/flags` into `question-blocklist.json` with a reason and push. CI runs before deploy.

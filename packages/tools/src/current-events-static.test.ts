@@ -3,6 +3,8 @@ import type { Question } from '@trivia-jam/shared';
 import {
   DEFAULT_RSS_FEEDS,
   fetchRssArticles,
+  findOptionQualityProblem,
+  scoreQuestionQuality,
   generateQuestionsWithHermes,
   generateQuestionsWithOllama,
   refreshCurrentEventsJson,
@@ -997,5 +999,98 @@ describe('static Current Events JSON refresh', () => {
 
     expect(result).toEqual({ added: 0, kept: 1, removedExpired: 0, total: 1 });
     expect(writeQuestions).not.toHaveBeenCalled();
+  });
+});
+
+describe('current-events option quality', () => {
+  const base = { question: 'How many seats must Democrats flip to take the Senate?', correctIndex: 2 };
+
+  it('rejects numeric options with mismatched units', () => {
+    expect(findOptionQualityProblem({ ...base, options: ['55,000 people', '470%', '4 seats', '17 states'] }))
+      .toMatch(/different units/);
+  });
+
+  it('accepts numeric options that share a unit, including plurals and magnitudes', () => {
+    expect(findOptionQualityProblem({ ...base, options: ['2 seats', '3 seats', '4 seats', '1 seat'] })).toBeNull();
+    expect(findOptionQualityProblem({ ...base, options: ['$4 million', '$12 million', '$1.5 billion', '$900'] })).toBeNull();
+    expect(findOptionQualityProblem({ ...base, options: ['12%', '30 percent', '45%', '8%'] })).toBeNull();
+  });
+
+  it('rejects a mix of numbers and text', () => {
+    expect(findOptionQualityProblem({ ...base, options: ['NASA', 'ESA', '4 seats', 'JAXA'] })).toMatch(/mix numbers and text/);
+  });
+
+  it('treats names that start with a number as text', () => {
+    expect(findOptionQualityProblem({
+      question: 'Which address is the UK prime minister’s office?',
+      options: ['Baikonur Cosmodrome', '10 Downing St.', 'New Bell', 'Tiergarten park'],
+      correctIndex: 1,
+    })).toBeNull();
+  });
+
+  it('rejects a correct answer much longer than every distractor', () => {
+    expect(findOptionQualityProblem({
+      question: 'What did the agency launch?',
+      options: ['Probe', 'a new deep space weather satellite', 'Rover', 'Lander'],
+      correctIndex: 1,
+    })).toMatch(/much longer/);
+  });
+
+  it('rejects questions that contain their own answer', () => {
+    expect(findOptionQualityProblem({
+      question: 'Which company, Acme Space, announced a satellite?',
+      options: ['Blue River', 'Acme Space', 'Northwind Labs', 'Vertex AI'],
+      correctIndex: 1,
+    })).toMatch(/contains the correct answer/);
+  });
+
+  it('scores balanced option lengths above lopsided ones', () => {
+    expect(scoreQuestionQuality({ options: ['Blue River', 'Acme Space', 'Northwind', 'Vertex AI'] }))
+      .toBeGreaterThan(scoreQuestionQuality({ options: ['A', 'Acme Space Exploration Corp', 'B', 'C'] }));
+  });
+});
+
+describe('refreshCurrentEventsJson quality controls', () => {
+  it('drops blocklisted questions from the retained pack', async () => {
+    const existing = Array.from({ length: 25 }, (_, i) => ({
+      ...makeGeneratedQuestion(i + 1),
+      expiresAt: '2026-07-09T09:00:00.000Z',
+      generatedAt: '2026-06-18T10:00:00.000Z',
+    }));
+    const write = vi.fn();
+    await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => existing,
+      writeQuestions: write,
+      fetchArticles: async () => [],
+      generateQuestions: async () => [],
+      blocklist: new Set([existing[0].id]),
+    });
+    const written = write.mock.calls[0][0] as Array<{ id: string }>;
+    expect(written.map((q) => q.id)).not.toContain(existing[0].id);
+    expect(written).toHaveLength(24);
+  });
+
+  it('keeps the highest-quality candidates when more pass validation than fit', async () => {
+    const articles = Array.from({ length: 30 }, (_, i) => makeArticle(i + 1));
+    const generated = articles.map((_, i) => {
+      const q = makeGeneratedQuestion(i + 1);
+      // Every other candidate has a lopsided (but still valid) option set.
+      return i % 2 === 0 ? q : { ...q, options: ['B', 'Acme Space', 'N', 'V'] as [string, string, string, string] };
+    });
+    const write = vi.fn();
+    await refreshCurrentEventsJson({
+      now: NOW,
+      readExisting: () => [],
+      writeQuestions: write,
+      fetchArticles: async () => articles,
+      generateQuestions: async () => generated,
+      minDynamicQuestions: 10,
+      targetDynamicQuestions: 15,
+      blocklist: new Set(),
+    });
+    const written = write.mock.calls[0][0] as Array<{ options: string[] }>;
+    expect(written).toHaveLength(15);
+    expect(written.every((q) => q.options.includes('Blue River'))).toBe(true);
   });
 });
