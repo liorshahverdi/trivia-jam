@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w packages/server\" \"npm run dev -w packages/client\"",
     "build": "npm run build -w packages/shared && npm run build -w packages/server && npm run build -w packages/client",
-    "crawl": "npm run crawl -w packages/tools --"
+    "crawl": "npm run crawl -w packages/tools --",
+    "test": "npm run test -w packages/server && npm run test -w packages/client && npm run test -w packages/tools",
+    "typecheck": "npm run build -w packages/shared && tsc --noEmit -p packages/server && tsc --noEmit -p packages/client && tsc --noEmit -p packages/tools"
   },
   "devDependencies": {
     "concurrently": "^9.1.0",

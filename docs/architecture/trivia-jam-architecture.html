@@ -13,7 +13,7 @@
   </defs>
   <rect width="1800" height="1420" fill="#020617"/><rect width="1800" height="1420" fill="url(#grid)" opacity=".7"/>
   <text x="40" y="50" class="h1">Trivia Jam — AST-Grounded Architecture</text>
-  <text x="40" y="76" class="h2">479 production AST nodes / 1015 links • graphify update . --no-cluster • 2026-06-27T18:41:08.571Z</text>
+  <text x="40" y="76" class="h2">623 production AST nodes / 1077 links • graphify update . --no-cluster • 2026-10-30T18:47:25.384Z</text>
 
   <!-- Boundaries -->
   <rect x="30" y="105" width="420" height="1120" rx="16" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-dasharray="8 6" opacity=".85"/><text x="46" y="129" class="boundary" fill="#22d3ee">Client workspace: packages/client</text>
@@ -37,7 +37,6 @@
   <path id="gen-tools" d="M 1710 350 C 1710 350, 1710 505, 1710 505" fill="none" stroke="#fbbf24" stroke-width="2"  marker-end="url(#arrow)" opacity=".9"/><text x="1640" y="419.5" class="edge" fill="#fbbf24">generate questions</text>
   <line id="deploy-client" x1="1595" y1="970" x2="1595" y2="930" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)" opacity=".9"/><text x="1535" y="942" class="edge" fill="#fbbf24"></text>
   <line id="deploy-server" x1="1650" y1="970" x2="1650" y2="930" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)" opacity=".9"/><text x="1590" y="942" class="edge" fill="#fbbf24"></text>
-  <line id="legacy-disabled" x1="870" y1="1035" x2="870" y2="1135" stroke="#64748b" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)" opacity=".9"/><text x="810" y="1077" class="edge" fill="#64748b">disabled / not startup</text>
 
   <!-- Client -->
   <g id="gh-pages">
@@ -100,7 +99,7 @@
 <text x="271" y="744" class="item">• createRoom / joinRoom</text>
 <text x="271" y="760" class="item">• setMode / categories</text>
 <text x="271" y="776" class="item">• startGame / answer / vote</text>
-<text x="271" y="792" class="item">• auto reconnect via localStorage</text>
+<text x="271" y="792" class="item">• token reconnect (host + player)</text>
 </g>
   <g id="client-components">
 <rect x="65" y="850" width="170" height="145" rx="10" fill="#0f172a"/>
@@ -138,22 +137,22 @@
   <g id="app-server">
 <rect x="555" y="250" width="400" height="115" rx="10" fill="#0f172a"/>
 <rect x="555" y="250" width="400" height="115" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
-<text x="569" y="274" class="title" fill="#34d399">app.ts + index.ts + startup.ts</text>
-<text x="569" y="292" class="sub">Express + HTTP + Socket.IO bootstrap</text>
+<text x="569" y="274" class="title" fill="#34d399">app.ts + index.ts</text>
+<text x="569" y="292" class="sub">Express + HTTP + typed Socket.IO</text>
 <text x="571" y="314" class="item">• CORS: GitHub Pages + localhost</text>
-<text x="571" y="330" class="item">• GET /health</text>
-<text x="571" y="346" class="item">• setupSocketHandlers(io)</text>
-<text x="571" y="362" class="item">• startup: JSON-managed questions only</text>
+<text x="571" y="330" class="item">• GET /health + GET /flags</text>
+<text x="571" y="346" class="item">• Server&lt;ClientToServer, ServerToClient&gt;</text>
+<text x="571" y="362" class="item">• setupSocketHandlers(io)</text>
 </g>
   <g id="handler">
 <rect x="530" y="390" width="210" height="150" rx="10" fill="#0f172a"/>
 <rect x="530" y="390" width="210" height="150" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
 <text x="544" y="414" class="title" fill="#34d399">socket/handler.ts</text>
 <text x="544" y="432" class="sub">ClientEvents → ServerEvents</text>
-<text x="546" y="454" class="item">• room:create / join / reconnect</text>
-<text x="546" y="470" class="item">• game:setMode / selectCategories</text>
-<text x="546" y="486" class="item">• game:start / answer / vote</text>
-<text x="546" y="502" class="item">• playAgain / disconnect</text>
+<text x="546" y="454" class="item">• payload validation, safe acks</text>
+<text x="546" y="470" class="item">• host-only lobby + start controls</text>
+<text x="546" y="486" class="item">• token reconnect (player + host)</text>
+<text x="546" y="502" class="item">• answer / vote / flag / disconnect</text>
 </g>
   <g id="room-manager">
 <rect x="530" y="560" width="210" height="165" rx="10" fill="#0f172a"/>
@@ -161,58 +160,59 @@
 <text x="544" y="584" class="title" fill="#34d399">roomManager.ts</text>
 <text x="544" y="602" class="sub">in-memory room registry</text>
 <text x="546" y="624" class="item">• Map&lt;code, Room&gt;</text>
-<text x="546" y="640" class="item">• create / join / reconnect</text>
-<text x="546" y="656" class="item">• disconnect grace timers</text>
-<text x="546" y="672" class="item">• mode + category selection</text>
-<text x="546" y="688" class="item">• canStartGame guard</text>
-<text x="546" y="704" class="item">• team assignment / reset</text>
+<text x="546" y="640" class="item">• stable ids + secret tokens</text>
+<text x="546" y="656" class="item">• player + host grace timers</text>
+<text x="546" y="672" class="item">• stale-socket guards</text>
+<text x="546" y="688" class="item">• validated mode/category/difficulty</text>
+<text x="546" y="704" class="item">• canStartGame / reset</text>
 </g>
   <g id="game-loop">
 <rect x="760" y="560" width="210" height="165" rx="10" fill="#0f172a"/>
 <rect x="760" y="560" width="210" height="165" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
 <text x="774" y="584" class="title" fill="#34d399">gameLoop.ts</text>
 <text x="774" y="602" class="sub">phase state machine</text>
-<text x="776" y="624" class="item">• countdown → question</text>
-<text x="776" y="640" class="item">• answer/vote wait loop</text>
-<text x="776" y="656" class="item">• reveal → leaderboard</text>
-<text x="776" y="672" class="item">• game_over</text>
-<text x="776" y="688" class="item">• strips correctIndex for clients</text>
+<text x="776" y="624" class="item">• injectable clock/random deps</text>
+<text x="776" y="640" class="item">• countdown → question</text>
+<text x="776" y="656" class="item">• event-driven answer wait</text>
+<text x="776" y="672" class="item">• reveal → leaderboard → game_over</text>
+<text x="776" y="688" class="item">• stopGame halts all emits</text>
 </g>
   <g id="question-picker">
 <rect x="625" y="815" width="260" height="120" rx="10" fill="#0f172a"/>
 <rect x="625" y="815" width="260" height="120" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
 <text x="639" y="839" class="title" fill="#34d399">QuestionPicker.ts</text>
-<text x="639" y="857" class="sub">JSON-only question selection</text>
-<text x="641" y="879" class="item">• questionCache per category</text>
-<text x="641" y="895" class="item">• reads shared/src/questions/*.json</text>
-<text x="641" y="911" class="item">• difficulty filter optional</text>
-<text x="641" y="927" class="item">• shuffle + slice</text>
+<text x="639" y="857" class="sub">fair JSON question selection</text>
+<text x="641" y="879" class="item">• shared/questions loader (dist)</text>
+<text x="641" y="895" class="item">• skip blocklisted/flagged/expired</text>
+<text x="641" y="911" class="item">• unseen first, difficulty tiers</text>
+<text x="641" y="927" class="item">• round-robin categories</text>
+<text x="641" y="943" class="item">• per-serve option shuffle</text>
 </g>
   <g id="scoring">
 <rect x="530" y="970" width="210" height="110" rx="10" fill="#0f172a"/>
 <rect x="530" y="970" width="210" height="110" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
-<text x="544" y="994" class="title" fill="#34d399">ScoreCalculator.ts</text>
-<text x="544" y="1012" class="sub">points + coop target</text>
-<text x="546" y="1034" class="item">• difficulty base points</text>
-<text x="546" y="1050" class="item">• teams speed/streak bonus</text>
-<text x="546" y="1066" class="item">• coop target calculation</text>
+<text x="544" y="994" class="title" fill="#34d399">Scoring + answers.ts</text>
+<text x="544" y="1012" class="sub">points + answer processing</text>
+<text x="546" y="1034" class="item">• base / speed / streak points</text>
+<text x="546" y="1050" class="item">• re-answer resets speed clock</text>
+<text x="546" y="1066" class="item">• coop: random ties, none=-1</text>
 </g>
   <g id="teams">
 <rect x="760" y="970" width="210" height="110" rx="10" fill="#0f172a"/>
 <rect x="760" y="970" width="210" height="110" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
 <text x="774" y="994" class="title" fill="#34d399">TeamManager.ts</text>
 <text x="774" y="1012" class="sub">leaderboards + team scoring</text>
-<text x="776" y="1034" class="item">• player leaderboard</text>
-<text x="776" y="1050" class="item">• red / blue team scores</text>
-<text x="776" y="1066" class="item">• addTeamScore</text>
+<text x="776" y="1034" class="item">• leaderboards + team scores</text>
+<text x="776" y="1050" class="item">• connected-only team split</text>
+<text x="776" y="1066" class="item">• late joiners → smaller team</text>
 </g>
-  <g id="legacy-db">
-<rect x="625" y="1125" width="260" height="70" rx="10" fill="#0f172a"/>
-<rect x="625" y="1125" width="260" height="70" rx="10" fill="rgba(51,65,85,.32)" stroke="#64748b" stroke-width="1.8"/>
-<text x="639" y="1149" class="title" fill="#64748b">Legacy DB/crawler modules</text>
-<text x="639" y="1167" class="sub">present in AST, not startup/runtime path</text>
-<text x="641" y="1189" class="item">• QuestionCrawler / db-seed / db-migrate</text>
-<text x="641" y="1205" class="item">• CurrentEventsSource DB refresh path disabled</text>
+  <g id="flags">
+<rect x="625" y="1110" width="260" height="90" rx="10" fill="#0f172a"/>
+<rect x="625" y="1110" width="260" height="90" rx="10" fill="rgba(6,78,59,.48)" stroke="#34d399" stroke-width="1.8"/>
+<text x="639" y="1134" class="title" fill="#34d399">questionFlags.ts</text>
+<text x="639" y="1152" class="sub">player question reports</text>
+<text x="641" y="1174" class="item">• skip after 2 reporters</text>
+<text x="641" y="1190" class="item">• GET /flags → blocklist.json</text>
 </g>
 
   <!-- Shared -->
@@ -232,10 +232,10 @@
 <rect x="1085" y="375" width="255" height="135" rx="10" fill="rgba(30,64,175,.40)" stroke="#60a5fa" stroke-width="1.8"/>
 <text x="1099" y="399" class="title" fill="#60a5fa">events.ts</text>
 <text x="1099" y="417" class="sub">Socket event names</text>
-<text x="1101" y="439" class="item">• ClientEvents: create/join/start</text>
-<text x="1101" y="455" class="item">• answer vs vote split</text>
-<text x="1101" y="471" class="item">• ServerEvents: phase/question/reveal</text>
-<text x="1101" y="487" class="item">• leaderboard/gameOver/state/error</text>
+<text x="1101" y="439" class="item">• ClientEvents / ServerEvents</text>
+<text x="1101" y="455" class="item">• typed event maps + ack shapes</text>
+<text x="1101" y="471" class="item">• host status / player status</text>
+<text x="1101" y="487" class="item">• room closed / question flag</text>
 </g>
   <g id="constants">
 <rect x="1085" y="540" width="255" height="115" rx="10" fill="#0f172a"/>
@@ -260,7 +260,7 @@
 <text x="1101" y="818" class="item">• math/music/musicals</text>
 <text x="1101" y="834" class="item">• mythology/science/tech</text>
 <text x="1101" y="850" class="item">• television/video-games</text>
-<text x="1101" y="866" class="item">• question-packs.test validates floor</text>
+<text x="1101" y="866" class="item">• question-blocklist.json</text>
 </g>
 
   <!-- Tools / Ops -->
@@ -296,7 +296,7 @@
 <text x="1471" y="569" class="item">• fetch RSS articles</text>
 <text x="1471" y="585" class="item">• filter unsafe/stale subjects</text>
 <text x="1471" y="601" class="item">• generate + validate MCQs</text>
-<text x="1471" y="617" class="item">• deduplicate</text>
+<text x="1471" y="617" class="item">• option quality gates + ranking</text>
 <text x="1471" y="633" class="item">• keep fresh ~21 days</text>
 <text x="1471" y="649" class="item">• top up to ≥20</text>
 <text x="1471" y="665" class="item">• write current-events.json</text>
@@ -320,8 +320,8 @@
 <text x="1471" y="1034" class="item">• npm workspaces</text>
 <text x="1471" y="1050" class="item">• Vite client build</text>
 <text x="1471" y="1066" class="item">• tsc shared/server/tools</text>
-<text x="1471" y="1082" class="item">• GitHub Actions → Pages</text>
-<text x="1471" y="1098" class="item">• Render service → Socket.IO</text>
+<text x="1471" y="1082" class="item">• CI tests gate Pages deploy</text>
+<text x="1471" y="1098" class="item">• Render deploys on checksPass</text>
 <text x="1471" y="1114" class="item">• local cron can refresh JSON + push</text>
 </g>
 
@@ -329,9 +329,9 @@
   <rect x="40" y="1260" width="1720" height="110" rx="12" fill="rgba(15,23,42,.92)" stroke="#334155"/>
   <text x="65" y="1290" class="title" fill="#e2e8f0">Graph-derived notes</text>
   <text x="65" y="1314" class="legend">• AST graph found workspace packages client/server/shared/tools, imports/calls/contains links, and the runtime Socket.IO + JSON-question path.</text>
-  <text x="65" y="1334" class="legend">• Render database/crawler files still exist in AST as legacy modules, but startup.ts and QuestionPicker.ts keep production runtime JSON-file managed.</text>
+  <text x="65" y="1334" class="legend">• Runtime is JSON-file managed: shared/questions copies packs into dist; legacy DB/crawler modules were removed.</text>
   <text x="65" y="1354" class="legend">• Current Events freshness is an ops/tooling concern: refresh-current-events.ts updates committed JSON; gameplay reads only committed JSON.</text>
   <text x="1260" y="1290" class="tiny">Package AST node counts</text>
-  <text x="1260" y="1310" class="tiny">client 161 • server 140 • shared 50 • tools 94</text>
-  <text x="1260" y="1330" class="tiny">scripts 3 • workspace 23 • docs 8</text>
-</svg></div><div class="meta"><div><h3>Source of truth</h3><p>Generated from Graphify AST-only output: 479 production AST nodes / 1015 links • graphify update . --no-cluster • 2026-06-27T18:41:08.571Z. No LLM extraction or clustering was used.</p></div><div><h3>Runtime architecture</h3><p>Browser client uses Socket.IO events against the Render Node service. Server state is in-memory per room. Questions are selected from committed JSON packs.</p></div><div><h3>Ops architecture</h3><p>Current Events refresh is outside gameplay: RSS + generator + validator writes current-events.json, then static hosting/server deploys consume the file.</p></div></div></div></body></html>
+  <text x="1260" y="1310" class="tiny">client 200 • server 162 • shared 88 • tools 117</text>
+  <text x="1260" y="1330" class="tiny">scripts 13 • workspace 27 • docs 9</text>
+</svg></div><div class="meta"><div><h3>Source of truth</h3><p>Generated from Graphify AST-only output: 623 production AST nodes / 1077 links • graphify update . --no-cluster • 2026-10-30T18:47:25.384Z. No LLM extraction or clustering was used.</p></div><div><h3>Runtime architecture</h3><p>Browser client uses Socket.IO events against the Render Node service. Server state is in-memory per room. Questions are selected from committed JSON packs.</p></div><div><h3>Ops architecture</h3><p>Current Events refresh is outside gameplay: RSS + generator + validator writes current-events.json, then static hosting/server deploys consume the file.</p></div></div></div></body></html>

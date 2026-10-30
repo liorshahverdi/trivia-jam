@@ -3,8 +3,13 @@ services:
     name: trivia-jam
     runtime: node
     plan: free
+    # Only deploy commits whose GitHub checks (the CI "test" job) passed.
+    autoDeployTrigger: checksPass
+    healthCheckPath: /health
     buildCommand: npm ci && npm run build -w packages/shared && npm run build -w packages/server
     startCommand: npm run start -w packages/server
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: "22"
