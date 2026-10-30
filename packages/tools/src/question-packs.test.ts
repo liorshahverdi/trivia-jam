@@ -89,4 +89,20 @@ describe('committed question packs', () => {
 
     expect(failures).toEqual([]);
   });
+
+  it('keeps the blocklist well-formed and pointing at real questions', () => {
+    const blocklist = JSON.parse(
+      readFileSync(new URL('../../shared/src/question-blocklist.json', import.meta.url), 'utf-8'),
+    ) as Array<{ id?: unknown; reason?: unknown }>;
+    const knownIds = new Set(files.flatMap((file) => loadQuestionPack(file).map((q) => q.id)));
+    const problems = blocklist.flatMap((entry, i) => [
+      ...(typeof entry.id === 'string' && entry.id ? [] : [`[${i}] missing id`]),
+      ...(typeof entry.reason === 'string' && entry.reason.trim() ? [] : [`[${i}] missing reason`]),
+      // Dynamic current-events ids legitimately disappear when the refresh job prunes them.
+      ...(typeof entry.id === 'string' && !entry.id.startsWith('current-events-dynamic-') && !knownIds.has(entry.id)
+        ? [`[${i}] unknown id ${entry.id} (remove stale entries)`]
+        : []),
+    ]);
+    expect(problems).toEqual([]);
+  });
 });

@@ -388,5 +388,304 @@
       "Ape"
     ],
     "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385591910-0rmtat",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "What do you call a baby bat?",
+    "options": [
+      "Chick",
+      "Kid",
+      "Pup",
+      "Cub"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385591910-b2qxkj",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Hippocampus is the Latin name for which marine creature?",
+    "options": [
+      "Octopus",
+      "Whale",
+      "Dolphin",
+      "Seahorse"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385591910-pqb2t5",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "Which is the national animal of India?",
+    "options": [
+      "Horse",
+      "Tiger",
+      "Lion",
+      "Camel"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385591910-11kbyh",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "What colour is the female blackbird?",
+    "options": [
+      "Black",
+      "White",
+      "Brown",
+      "Yellow"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385591910-gszfik",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "By definition, where does an abyssopelagic animal live?",
+    "options": [
+      "On top of a mountain",
+      "Inside a tree",
+      "In the desert",
+      "At the bottom of the ocean"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385591910-olf412",
+    "category": "animals",
+    "difficulty": "easy",
+    "question": "How many legs do butterflies have?",
+    "options": [
+      "2",
+      "0",
+      "6",
+      "4"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385603174-lla83p",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Which of the following is NOT a venomous snake?",
+    "options": [
+      "Black mamba",
+      "Yellow bellied sea snake",
+      "Reticulated python",
+      "Malayan Krait"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385603174-grjzwt",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the scientific name of the Common Chimpanzee?",
+    "options": [
+      "Pan paniscus",
+      "Panthera leo",
+      "Gorilla gorilla",
+      "Pan troglodytes"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385603174-q9z6sb",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What dog breed is one of the oldest breeds of dog and has flourished since before 400 BCE.",
+    "options": [
+      "Boxers",
+      "Bulldogs",
+      "Pugs",
+      "Chihuahua"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385603174-ynf8ul",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Which of the following is true when alligators are behaving territorially?",
+    "options": [
+      "They run full force at the threat",
+      "Open their jaws while making a clicking noise",
+      "Slap their tails on the ground",
+      "They bellow while showing their tail and neck"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385603174-lfz3ul",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the scientific name for the \"Polar Bear\"?",
+    "options": [
+      "Ursus Spelaeus",
+      "Polar Bear",
+      "Ursus Maritimus",
+      "Ursus Arctos"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385603174-8zbxjm",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "For what reason would a spotted hyena \"laugh\"?",
+    "options": [
+      "Aggression",
+      "Nervousness",
+      "Exhaustion",
+      "Excitement"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385603174-3qy3er",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "Which dog breed is named after a region in Croatia",
+    "options": [
+      "Pomeranian",
+      "Pekingnese",
+      "Dalmatian",
+      "Chihuahua "
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385603174-tl9nk5",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What is the name for a male bee that comes from an unfertilized egg?",
+    "options": [
+      "Worker",
+      "Drone",
+      "Soldier",
+      "Male"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385603174-5ucdlh",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What are the scales on all snakes and most lizards are made of?",
+    "options": [
+      "Ecdysis",
+      "Ankyloglossia",
+      "Epidermis",
+      "Keratin"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385603175-ull9t9",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "The dish Fugu, is made from what family of fish?",
+    "options": [
+      "Salmon",
+      "Pufferfish",
+      "Mackerel",
+      "Bass"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385603175-9j4rd4",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What color/colour is a polar bear's skin?",
+    "options": [
+      "White",
+      "Black",
+      "Green",
+      "Pink"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385603175-x46mpc",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "A carnivorous animal eats flesh, what does a nucivorous animal eat?",
+    "options": [
+      "Nothing",
+      "Nuts",
+      "Fruit",
+      "Seaweed"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385603175-kj8a5w",
+    "category": "animals",
+    "difficulty": "medium",
+    "question": "What are rhino's horn made of?",
+    "options": [
+      "Ivory",
+      "Skin",
+      "Keratin",
+      "Bone"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385620111-gij79k",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "What is the average amount of chinchillas born into a single litter?",
+    "options": [
+      "15-18",
+      "10-15",
+      "5-8",
+      "2-3"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "animals-1793385620111-3vnwsg",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Which of these animals is NOT a lizard?",
+    "options": [
+      "Green Iguana",
+      "Gila Monster",
+      "Tuatara",
+      "Komodo Dragon"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "animals-1793385620111-h8y8sx",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "To which biological phylum do all mammals, birds and reptiles belong?",
+    "options": [
+      "Echinodermata",
+      "Chordata",
+      "Placazoa",
+      "Annelida"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "animals-1793385620111-5hf24s",
+    "category": "animals",
+    "difficulty": "hard",
+    "question": "Unlike on most salamanders, this part of a newt is flat?",
+    "options": [
+      "Head",
+      "Tail",
+      "Feet",
+      "Teeth"
+    ],
+    "correctIndex": 1
   }
 ]

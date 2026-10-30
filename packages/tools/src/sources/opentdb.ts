@@ -2,14 +2,35 @@ import he from 'he';
 const { decode } = he;
 import type { Category, Difficulty, Question } from '@trivia-jam/shared';
 
-const CATEGORY_MAP: Record<string, number[]> = {
+/** OpenTDB category ids per Trivia Jam category (see https://opentdb.com/api_category.php). */
+export const CATEGORY_MAP: Partial<Record<Category, number[]>> = {
   math: [19],
-  science: [17, 18],
+  science: [17],
+  tech: [18],
   history: [23],
   music: [12],
   food: [0], // general knowledge, will filter
-  'current-events': [], // not available on OpenTDB
+  geography: [22],
+  art: [25],
+  entertainment: [11, 26], // film, celebrities
+  animals: [27],
+  general: [9],
+  musicals: [13],
+  television: [14],
+  'video-games': [15],
+  'board-games': [16],
+  mythology: [20],
+  gadgets: [30],
+  anime: [31],
+  cartoons: [32],
+  // 'current-events' is generated from news feeds, not OpenTDB.
 };
+
+/** OpenTDB rejects requests for more questions than it has, so step down. */
+const AMOUNT_STEPS = [50, 25, 10, 5];
+const RATE_LIMIT_MS = 5500;
+
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 const DIFFICULTY_MAP: Record<string, Difficulty> = {
   easy: 'easy',
@@ -42,7 +63,8 @@ function shuffleArray<T>(arr: T[]): T[] {
 
 export async function fetchFromOpenTDB(
   category: Category,
-  count: number
+  count: number,
+  difficulty?: Difficulty,
 ): Promise<Question[]> {
   const catIds = CATEGORY_MAP[category];
   if (!catIds || catIds.length === 0) return [];
@@ -53,19 +75,27 @@ export async function fetchFromOpenTDB(
     const remaining = count - questions.length;
     if (remaining <= 0) break;
 
-    // OpenTDB allows max 50 per request
-    const amount = Math.min(remaining, 50);
-    const url = catId === 0
-      ? `https://opentdb.com/api.php?amount=${amount}&type=multiple`
-      : `https://opentdb.com/api.php?amount=${amount}&category=${catId}&type=multiple`;
+    for (const step of AMOUNT_STEPS) {
+      const amount = Math.min(remaining, step);
+      const params = new URLSearchParams({ amount: String(amount), type: 'multiple' });
+      if (catId !== 0) params.set('category', String(catId));
+      if (difficulty) params.set('difficulty', difficulty);
 
-    try {
-      const res = await fetch(url);
-      const data: OpenTDBResponse = await res.json();
+      let data: OpenTDBResponse;
+      try {
+        const res = await fetch(`https://opentdb.com/api.php?${params}`);
+        data = await res.json();
+      } catch (err) {
+        console.error(`Failed to fetch from OpenTDB category ${catId}:`, err);
+        break;
+      } finally {
+        await sleep(RATE_LIMIT_MS); // OpenTDB allows one request per 5 seconds
+      }
 
+      if (data.response_code === 1 && amount > AMOUNT_STEPS[AMOUNT_STEPS.length - 1]) continue; // not enough; ask for fewer
       if (data.response_code !== 0) {
-        console.warn(`OpenTDB returned code ${data.response_code} for category ${catId}`);
-        continue;
+        console.warn(`OpenTDB returned code ${data.response_code} for category ${catId} (${difficulty ?? 'any'})`);
+        break;
       }
 
       for (const q of data.results) {
@@ -76,11 +106,8 @@ export async function fetchFromOpenTDB(
           if (!foodKeywords.some(kw => text.includes(kw))) continue;
         }
 
-        const allOptions = shuffleArray([
-          decode(q.correct_answer),
-          ...q.incorrect_answers.map(a => decode(a)),
-        ]);
-        const correctIndex = allOptions.indexOf(decode(q.correct_answer));
+        const correct = decode(q.correct_answer);
+        const allOptions = shuffleArray([correct, ...q.incorrect_answers.map(a => decode(a))]);
 
         questions.push({
           id: `${category}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -88,16 +115,10 @@ export async function fetchFromOpenTDB(
           difficulty: DIFFICULTY_MAP[q.difficulty] || 'medium',
           question: decode(q.question),
           options: allOptions as [string, string, string, string],
-          correctIndex,
+          correctIndex: allOptions.indexOf(correct),
         });
       }
-
-      // Rate limit: OpenTDB asks for 5s between requests
-      if (catIds.length > 1) {
-        await new Promise(r => setTimeout(r, 5500));
-      }
-    } catch (err) {
-      console.error(`Failed to fetch from OpenTDB category ${catId}:`, err);
+      break;
     }
   }
 

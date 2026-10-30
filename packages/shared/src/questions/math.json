@@ -843,5 +843,31 @@
       "Straight angle"
     ],
     "correctIndex": 0
+  },
+  {
+    "id": "math-1793385456525-nw4qhs",
+    "category": "math",
+    "difficulty": "easy",
+    "question": "What is the equation for the area of a sphere?",
+    "options": [
+      "(4/3)πr^3",
+      "πr^4",
+      "4πr^2",
+      "(1/3)πhr^2"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "math-1793385490466-qa8om9",
+    "category": "math",
+    "difficulty": "hard",
+    "question": "What is the fourth digit of π?",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "correctIndex": 1
   }
 ]

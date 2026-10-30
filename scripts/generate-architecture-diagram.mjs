@@ -99,7 +99,6 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   ${arrow('gen-tools',1710,350,1710,505,'generate questions','#fbbf24')}
   ${line('deploy-client',1595,970,1595,930,'','#fbbf24','4 4')}
   ${line('deploy-server',1650,970,1650,930,'','#fbbf24','4 4')}
-  ${line('legacy-disabled',870,1035,870,1135,'disabled / not startup','#64748b','6 6')}
 
   <!-- Client -->
   ${rect({id:'gh-pages',x:75,y:125,w:305,h:75,title:'GitHub Pages static site',subtitle:'public browser entrypoint',kind:'cloud',items:['Vite-built client dist/','Host screen and player screen load here']})}
@@ -107,39 +106,39 @@ const svg = `<?xml version="1.0" encoding="UTF-8"?>
   ${rect({id:'host-screens',x:65,y:390,w:170,h:160,title:'Host screens',subtitle:'host UX components',kind:'frontend',items:['HostLobbyScreen','HostCategoryScreen','HostQuestionScreen','HostResultsScreen','HostLeaderboard','HostFinalScreen']})}
   ${rect({id:'player-screens',x:245,y:390,w:170,h:160,title:'Player screens',subtitle:'mobile/player UX',kind:'frontend',items:['PlayerJoinScreen','PlayerLobbyScreen','PlayerCategoryScreen','PlayerAnswerScreen','PlayerResultScreen','PlayerFinalScreen']})}
   ${rect({id:'store',x:65,y:680,w:180,h:140,title:'gameStore.ts',subtitle:'Zustand client state',kind:'frontend',items:['role, phase, roomCode','players / myPlayer','question, revealData','scores, votes, errors']})}
-  ${rect({id:'socket-hook',x:255,y:680,w:160,h:140,title:'useSocket.ts',subtitle:'Socket.IO client adapter',kind:'frontend',items:['createRoom / joinRoom','setMode / categories','startGame / answer / vote','auto reconnect via localStorage']})}
+  ${rect({id:'socket-hook',x:255,y:680,w:160,h:140,title:'useSocket.ts',subtitle:'Socket.IO client adapter',kind:'frontend',items:['createRoom / joinRoom','setMode / categories','startGame / answer / vote','token reconnect (host + player)']})}
   ${rect({id:'client-components',x:65,y:850,w:170,h:145,title:'Reusable UI',subtitle:'component AST nodes',kind:'frontend',items:['CategoryCard','PlayerAvatar','ProgressBar','RoomCodeDisplay','ScorePopup','TeamBadge','Timer']})}
   ${rect({id:'audio',x:245,y:850,w:170,h:145,title:'Audio subsystem',subtitle:'hooks + browser audio',kind:'frontend',items:['useSoundEffects','sounds.ts','voiceHost.ts','question / answer / countdown SFX']})}
 
   <!-- Server -->
   ${rect({id:'render',x:590,y:125,w:330,h:75,title:'Render web service',subtitle:'Node server deployment',kind:'cloud',items:['No runtime DB required','HTTP health + Socket.IO endpoint']})}
-  ${rect({id:'app-server',x:555,y:250,w:400,h:115,title:'app.ts + index.ts + startup.ts',subtitle:'Express + HTTP + Socket.IO bootstrap',kind:'backend',items:['CORS: GitHub Pages + localhost','GET /health','setupSocketHandlers(io)','startup: JSON-managed questions only']})}
-  ${rect({id:'handler',x:530,y:390,w:210,h:150,title:'socket/handler.ts',subtitle:'ClientEvents → ServerEvents',kind:'backend',items:['room:create / join / reconnect','game:setMode / selectCategories','game:start / answer / vote','playAgain / disconnect']})}
-  ${rect({id:'room-manager',x:530,y:560,w:210,h:165,title:'roomManager.ts',subtitle:'in-memory room registry',kind:'backend',items:['Map<code, Room>','create / join / reconnect','disconnect grace timers','mode + category selection','canStartGame guard','team assignment / reset']})}
-  ${rect({id:'game-loop',x:760,y:560,w:210,h:165,title:'gameLoop.ts',subtitle:'phase state machine',kind:'backend',items:['countdown → question','answer/vote wait loop','reveal → leaderboard','game_over','strips correctIndex for clients']})}
-  ${rect({id:'question-picker',x:625,y:815,w:260,h:120,title:'QuestionPicker.ts',subtitle:'JSON-only question selection',kind:'backend',items:['questionCache per category','reads shared/src/questions/*.json','difficulty filter optional','shuffle + slice']})}
-  ${rect({id:'scoring',x:530,y:970,w:210,h:110,title:'ScoreCalculator.ts',subtitle:'points + coop target',kind:'backend',items:['difficulty base points','teams speed/streak bonus','coop target calculation']})}
-  ${rect({id:'teams',x:760,y:970,w:210,h:110,title:'TeamManager.ts',subtitle:'leaderboards + team scoring',kind:'backend',items:['player leaderboard','red / blue team scores','addTeamScore']})}
-  ${rect({id:'legacy-db',x:625,y:1125,w:260,h:70,title:'Legacy DB/crawler modules',subtitle:'present in AST, not startup/runtime path',kind:'disabled',items:['QuestionCrawler / db-seed / db-migrate','CurrentEventsSource DB refresh path disabled']})}
+  ${rect({id:'app-server',x:555,y:250,w:400,h:115,title:'app.ts + index.ts',subtitle:'Express + HTTP + typed Socket.IO',kind:'backend',items:['CORS: GitHub Pages + localhost','GET /health + GET /flags','Server<ClientToServer, ServerToClient>','setupSocketHandlers(io)']})}
+  ${rect({id:'handler',x:530,y:390,w:210,h:150,title:'socket/handler.ts',subtitle:'ClientEvents → ServerEvents',kind:'backend',items:['payload validation, safe acks','host-only lobby + start controls','token reconnect (player + host)','answer / vote / flag / disconnect']})}
+  ${rect({id:'room-manager',x:530,y:560,w:210,h:165,title:'roomManager.ts',subtitle:'in-memory room registry',kind:'backend',items:['Map<code, Room>','stable ids + secret tokens','player + host grace timers','stale-socket guards','validated mode/category/difficulty','canStartGame / reset']})}
+  ${rect({id:'game-loop',x:760,y:560,w:210,h:165,title:'gameLoop.ts',subtitle:'phase state machine',kind:'backend',items:['injectable clock/random deps','countdown → question','event-driven answer wait','reveal → leaderboard → game_over','stopGame halts all emits']})}
+  ${rect({id:'question-picker',x:625,y:815,w:260,h:120,title:'QuestionPicker.ts',subtitle:'fair JSON question selection',kind:'backend',items:['shared/questions loader (dist)','skip blocklisted/flagged/expired','unseen first, difficulty tiers','round-robin categories','per-serve option shuffle']})}
+  ${rect({id:'scoring',x:530,y:970,w:210,h:110,title:'Scoring + answers.ts',subtitle:'points + answer processing',kind:'backend',items:['base / speed / streak points','re-answer resets speed clock','coop: random ties, none=-1']})}
+  ${rect({id:'teams',x:760,y:970,w:210,h:110,title:'TeamManager.ts',subtitle:'leaderboards + team scoring',kind:'backend',items:['leaderboards + team scores','connected-only team split','late joiners → smaller team']})}
+  ${rect({id:'flags',x:625,y:1110,w:260,h:90,title:'questionFlags.ts',subtitle:'player question reports',kind:'backend',items:['skip after 2 reporters','GET /flags → blocklist.json']})}
 
   <!-- Shared -->
   ${rect({id:'types',x:1085,y:185,w:255,h:160,title:'types.ts',subtitle:'domain contracts',kind:'shared',items:['Difficulty / GameMode / Phase','20 Category union','Question / QuestionForClient','Player / Room / RoomState','Reveal / Leaderboard / GameOver']})}
-  ${rect({id:'events',x:1085,y:375,w:255,h:135,title:'events.ts',subtitle:'Socket event names',kind:'shared',items:['ClientEvents: create/join/start','answer vs vote split','ServerEvents: phase/question/reveal','leaderboard/gameOver/state/error']})}
+  ${rect({id:'events',x:1085,y:375,w:255,h:135,title:'events.ts',subtitle:'Socket event names',kind:'shared',items:['ClientEvents / ServerEvents','typed event maps + ack shapes','host status / player status','room closed / question flag']})}
   ${rect({id:'constants',x:1085,y:540,w:255,h:115,title:'constants.ts',subtitle:'game constants',kind:'shared',items:['room code length','max players','timers','questions per game','avatars / category metadata']})}
-  ${rect({id:'question-packs',x:1085,y:690,w:255,h:260,title:'Question JSON packs',subtitle:'20 committed category files',kind:'database',items:['animals/anime/art/board-games','cartoons/current-events','entertainment/food/gadgets','general/geography/history','math/music/musicals','mythology/science/tech','television/video-games','question-packs.test validates floor']})}
+  ${rect({id:'question-packs',x:1085,y:690,w:255,h:260,title:'Question JSON packs',subtitle:'20 committed category files',kind:'database',items:['animals/anime/art/board-games','cartoons/current-events','entertainment/food/gadgets','general/geography/history','math/music/musicals','mythology/science/tech','television/video-games','question-blocklist.json','question-packs.test validates floor']})}
 
   <!-- Tools / Ops -->
   ${rect({id:'rss',x:1455,y:185,w:130,h:145,title:'RSS feeds',subtitle:'external inputs',kind:'external',items:['NPR','BBC','PBS','NASA','ScienceDaily','Space.com','Smithsonian','The Verge/Ars/HN']})}
   ${rect({id:'generators',x:1600,y:185,w:130,h:145,title:'Generators',subtitle:'bounded AI path',kind:'external',items:['Hermes one-shot','Ollama fallback','OpenAI-compatible legacy','strict JSON only']})}
-  ${rect({id:'current-events-tool',x:1455,y:505,w:275,h:215,title:'current-events-static.ts',subtitle:'Current Events JSON refresh',kind:'tools',items:['fetch RSS articles','filter unsafe/stale subjects','generate + validate MCQs','deduplicate','keep fresh ~21 days','top up to ≥20','write current-events.json']})}
+  ${rect({id:'current-events-tool',x:1455,y:505,w:275,h:215,title:'current-events-static.ts',subtitle:'Current Events JSON refresh',kind:'tools',items:['fetch RSS articles','filter unsafe/stale subjects','generate + validate MCQs','option quality gates + ranking','keep fresh ~21 days','top up to ≥20','write current-events.json']})}
   ${rect({id:'tooling',x:1455,y:760,w:275,h:135,title:'Question tooling',subtitle:'packages/tools AST components',kind:'tools',items:['writer.ts read/write category JSON','deduplicator.ts','sources/opentdb.ts','crawl-questions.ts','question-packs.test guardrail']})}
-  ${rect({id:'ci-deploy',x:1455,y:970,w:275,h:145,title:'Build / deploy / ops',subtitle:'workspace scripts + hosting',kind:'cloud',items:['npm workspaces','Vite client build','tsc shared/server/tools','GitHub Actions → Pages','Render service → Socket.IO','local cron can refresh JSON + push']})}
+  ${rect({id:'ci-deploy',x:1455,y:970,w:275,h:145,title:'Build / deploy / ops',subtitle:'workspace scripts + hosting',kind:'cloud',items:['npm workspaces','Vite client build','tsc shared/server/tools','CI tests gate Pages deploy','Render deploys on checksPass','local cron can refresh JSON + push']})}
 
   <!-- Notes and legend -->
   <rect x="40" y="1260" width="1720" height="110" rx="12" fill="rgba(15,23,42,.92)" stroke="#334155"/>
   <text x="65" y="1290" class="title" fill="#e2e8f0">Graph-derived notes</text>
   <text x="65" y="1314" class="legend">• AST graph found workspace packages client/server/shared/tools, imports/calls/contains links, and the runtime Socket.IO + JSON-question path.</text>
-  <text x="65" y="1334" class="legend">• Render database/crawler files still exist in AST as legacy modules, but startup.ts and QuestionPicker.ts keep production runtime JSON-file managed.</text>
+  <text x="65" y="1334" class="legend">• Runtime is JSON-file managed: shared/questions copies packs into dist; legacy DB/crawler modules were removed.</text>
   <text x="65" y="1354" class="legend">• Current Events freshness is an ops/tooling concern: refresh-current-events.ts updates committed JSON; gameplay reads only committed JSON.</text>
   <text x="1260" y="1290" class="tiny">Package AST node counts</text>
   <text x="1260" y="1310" class="tiny">client ${packageCounts.client ?? 0} • server ${packageCounts.server ?? 0} • shared ${packageCounts.shared ?? 0} • tools ${packageCounts.tools ?? 0}</text>

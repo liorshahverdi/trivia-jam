@@ -8,10 +8,14 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./questions": {
+      "import": "./dist/questions/index.js",
+      "types": "./dist/questions/index.d.ts"
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/copy-question-packs.mjs",
     "dev": "tsc --watch"
   },
   "devDependencies": {

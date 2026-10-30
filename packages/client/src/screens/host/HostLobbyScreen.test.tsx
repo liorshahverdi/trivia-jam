@@ -28,6 +28,7 @@ describe('HostLobbyScreen', () => {
     render(
       <HostLobbyScreen
         setMode={vi.fn()}
+        setDifficulty={vi.fn()}
         selectCategories={vi.fn()}
         startGame={vi.fn()}
       />
@@ -40,6 +41,7 @@ describe('HostLobbyScreen', () => {
     render(
       <HostLobbyScreen
         setMode={vi.fn()}
+        setDifficulty={vi.fn()}
         selectCategories={vi.fn()}
         startGame={vi.fn()}
       />
@@ -56,6 +58,7 @@ describe('HostLobbyScreen', () => {
     render(
       <HostLobbyScreen
         setMode={vi.fn()}
+        setDifficulty={vi.fn()}
         selectCategories={vi.fn()}
         startGame={vi.fn()}
       />
@@ -78,6 +81,7 @@ describe('HostLobbyScreen', () => {
     render(
       <HostLobbyScreen
         setMode={vi.fn()}
+        setDifficulty={vi.fn()}
         selectCategories={vi.fn()}
         startGame={vi.fn()}
       />
@@ -86,5 +90,21 @@ describe('HostLobbyScreen', () => {
     const startButton = screen.getByRole('button', { name: /start game/i });
     expect(startButton.hasAttribute('disabled')).toBe(true);
     expect(screen.getByText(/teams mode needs an even number of players/i)).toBeTruthy();
+  });
+
+  it('lets the host pick a difficulty', () => {
+    const setDifficulty = vi.fn();
+    render(
+      <HostLobbyScreen
+        setMode={vi.fn()}
+        setDifficulty={setDifficulty}
+        selectCategories={vi.fn()}
+        startGame={vi.fn()}
+      />
+    );
+
+    expect(screen.getByRole('radio', { name: /^mixed/i }).getAttribute('aria-checked')).toBe('true');
+    screen.getByRole('radio', { name: /^hard/i }).click();
+    expect(setDifficulty).toHaveBeenCalledWith('hard');
   });
 });

@@ -388,5 +388,200 @@
       "Rent"
     ],
     "correctIndex": 0
+  },
+  {
+    "id": "musicals-1793385659498-f702rw",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "What is Jean ValJean's first prisoner number?",
+    "options": [
+      "32769",
+      "1729",
+      "24601",
+      "9430"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385659499-x8ermq",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "\"Doctor Who\" star David Tennant performed in a rendition of which Shakespearean play?",
+    "options": [
+      "Othello",
+      "The Taming of the Shrew",
+      "Hamlet",
+      "The Tempest"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385659499-qjjukw",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "How many plays is Shakespeare generally considered to have written?",
+    "options": [
+      "54",
+      "25",
+      "37",
+      "18"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385659499-oh1ycg",
+    "category": "musicals",
+    "difficulty": "easy",
+    "question": "Who wrote the play 'Angels in America'?",
+    "options": [
+      "Tony Kusher",
+      "Matthew Lopez",
+      "Anthony Neilson",
+      "Tom Stoppard"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "musicals-1793385676416-a8koxs",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "Who is the musical director for the award winning musical \"Hamilton\"?",
+    "options": [
+      "Leslie Odom Jr.",
+      "Alex Lacamoire",
+      "Renee Elise-Goldberry",
+      "Lin-Manuel Miranda"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-1793385676417-u1eks7",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "In which Shakespeare play does the character Marcellus say, \"Something is rotten in the state of Denmark\"?",
+    "options": [
+      "Twelfth Night",
+      "Macbeth",
+      "Hamlet",
+      "King Lear"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385676417-otymmf",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "What play is the quote \"Hell is other people\" from?",
+    "options": [
+      "The Devil and the Good Lord",
+      "No Exit",
+      "The Condemned of Altona",
+      "The Flies"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-1793385676417-z0at48",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "When was the play \"Macbeth\" written?",
+    "options": [
+      "1628",
+      "1605",
+      "1723",
+      "1606"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-1793385676417-l68tts",
+    "category": "musicals",
+    "difficulty": "medium",
+    "question": "The musical \"Dirty Rotten Scoundrels\" is set in what country?",
+    "options": [
+      "Sweden",
+      "France",
+      "Germany",
+      "USA"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-1793385693310-v4q0rd",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Which of these plays was famously first performed posthumously after the playwright committed suicide?",
+    "options": [
+      "The Birthday Party",
+      "Much Ado About Nothing",
+      "4.48 Psychosis",
+      "Hamilton"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385693310-fyo6fk",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Who wrote the lyrics for Leonard Bernstein's 1957 Brodway musical West Side Story?",
+    "options": [
+      "Himself",
+      "Oscar Hammerstein",
+      "Stephen Sondheim",
+      "Richard Rodgers"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "musicals-1793385693310-g021dd",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Who serves as the speaker of the prologue in Shakespeare's Romeo and Juliet?",
+    "options": [
+      "Montague",
+      "Chorus",
+      "Capulet",
+      "Refrain"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-1793385693310-tngf68",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "Which Shakespeare play features the stage direction \"Enter a messenger, with two heads and a hand\"?",
+    "options": [
+      "King Lear",
+      "Macbeth",
+      "Othello",
+      "Titus Andronicus"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "musicals-1793385693310-y0fjuw",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "In Macbeth, the eyes of what animals were used in the Witches' cauldron?",
+    "options": [
+      "Squids",
+      "Newts",
+      "Humans",
+      "Sharks"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "musicals-1793385693310-v07e2r",
+    "category": "musicals",
+    "difficulty": "hard",
+    "question": "After England, more Shakespeare plays are set in this present day country than in any other.",
+    "options": [
+      "France",
+      "Italy",
+      "Greece",
+      "United States"
+    ],
+    "correctIndex": 1
   }
 ]

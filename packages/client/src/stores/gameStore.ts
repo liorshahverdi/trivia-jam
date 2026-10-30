@@ -9,7 +9,8 @@ import type {
   LeaderboardEntry,
   TeamLeaderboard,
   GameOverData,
-  TeamColor,
+  DifficultySetting,
+  RoomState,
 } from '@trivia-jam/shared';
 
 export type Role = 'none' | 'host' | 'player';
@@ -28,6 +29,8 @@ interface GameState {
   phase: GamePhase;
   mode: GameMode;
   selectedCategories: Category[];
+  difficulty: DifficultySetting;
+  hostConnected: boolean;
 
   // Question
   currentQuestion: QuestionForClient | null;
@@ -59,6 +62,9 @@ interface GameState {
   setPlayers: (players: Player[]) => void;
   addPlayer: (player: Player) => void;
   removePlayer: (playerId: string) => void;
+  setPlayerConnected: (playerId: string, connected: boolean) => void;
+  setDifficulty: (difficulty: DifficultySetting) => void;
+  setHostConnected: (connected: boolean) => void;
   setPhase: (phase: GamePhase) => void;
   setMode: (mode: GameMode) => void;
   setCategories: (categories: Category[]) => void;
@@ -71,8 +77,10 @@ interface GameState {
   setCountdown: (value: number) => void;
   setCoopScore: (score: number) => void;
   setTeamScores: (scores: TeamLeaderboard) => void;
-  restoreState: (state: any) => void;
+  restoreState: (state: RoomState) => void;
   reset: () => void;
+  /** Back to the join screen, keeping connection status and showing why. */
+  leaveRoom: (message: string | null) => void;
 }
 
 const initialState = {
@@ -86,6 +94,8 @@ const initialState = {
   phase: 'lobby' as GamePhase,
   mode: 'coop' as GameMode,
   selectedCategories: [] as Category[],
+  difficulty: 'mixed' as DifficultySetting,
+  hostConnected: true,
   currentQuestion: null as QuestionForClient | null,
   questionIndex: 0,
   questionsTotal: 0,
@@ -118,6 +128,12 @@ export const useGameStore = create<GameState>((set) => ({
     })),
   removePlayer: (playerId) =>
     set((s) => ({ players: s.players.filter((p) => p.id !== playerId) })),
+  setPlayerConnected: (playerId, connected) =>
+    set((s) => ({
+      players: s.players.map((p) => (p.id === playerId ? { ...p, connected } : p)),
+    })),
+  setDifficulty: (difficulty) => set({ difficulty }),
+  setHostConnected: (hostConnected) => set({ hostConnected }),
   setPhase: (phase) => set({ phase, myAnswer: phase === 'question' ? null : undefined }),
   setMode: (mode) => set({ mode }),
   setCategories: (categories) => set({ selectedCategories: categories }),
@@ -156,11 +172,17 @@ export const useGameStore = create<GameState>((set) => ({
         phase: state.phase,
         mode: state.mode,
         selectedCategories: state.selectedCategories,
+        difficulty: state.difficulty ?? current.difficulty,
+        hostConnected: state.hostConnected ?? true,
         currentQuestion: state.currentQuestion,
         questionIndex: state.questionIndex,
+        questionsTotal: state.questionsPerGame ?? current.questionsTotal,
+        countdownValue: state.countdownValue ?? current.countdownValue,
         coopScore: state.coopScore,
         teamScores: state.teamScores,
       };
     }),
   reset: () => set(initialState),
+  leaveRoom: (message) =>
+    set((s) => ({ ...initialState, connected: s.connected, roomError: message })),
 }));

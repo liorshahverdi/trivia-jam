@@ -1,15 +1,37 @@
-import type { Room, Player, GameMode, Category, TeamColor } from '@trivia-jam/shared';
+import { randomBytes, randomUUID } from 'node:crypto';
+import type { Room, Player, GameMode, DifficultySetting } from '@trivia-jam/shared';
 import {
   ROOM_CODE_LENGTH,
   MAX_PLAYERS,
+  MAX_NAME_LENGTH,
   AVATARS,
   QUESTIONS_PER_GAME,
   RECONNECT_GRACE_SECONDS,
+  HOST_RECONNECT_GRACE_SECONDS,
+  isCategory,
+  isDifficultySetting,
 } from '@trivia-jam/shared';
 
 const rooms = new Map<string, Room>();
+/** playerId -> room code */
 const playerToRoom = new Map<string, string>();
+/** playerId -> socket id of the connection currently allowed to act as that player */
+const playerSockets = new Map<string, string>();
+/** secret reconnect token -> playerId (tokens are never broadcast) */
+const playerTokens = new Map<string, string>();
+const tokenByPlayer = new Map<string, string>();
+/** room code -> secret host reconnect token */
+const hostTokens = new Map<string, string>();
 const disconnectTimers = new Map<string, NodeJS.Timeout>();
+const hostTimers = new Map<string, NodeJS.Timeout>();
+
+function newToken(): string {
+  return randomBytes(24).toString('base64url');
+}
+
+function normalizeCode(code: unknown): string {
+  return typeof code === 'string' ? code.trim().toUpperCase() : '';
+}
 
 function generateCode(): string {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -28,15 +50,33 @@ function pickAvatar(room: Room): string {
   return AVATARS.find(a => !used.has(a)) || AVATARS[Math.floor(Math.random() * AVATARS.length)];
 }
 
-export function createRoom(hostId: string): Room {
+function clearTimer(map: Map<string, NodeJS.Timeout>, key: string): void {
+  const timer = map.get(key);
+  if (timer) clearTimeout(timer);
+  map.delete(key);
+}
+
+function forgetPlayer(playerId: string): void {
+  clearTimer(disconnectTimers, playerId);
+  playerToRoom.delete(playerId);
+  playerSockets.delete(playerId);
+  const token = tokenByPlayer.get(playerId);
+  if (token) playerTokens.delete(token);
+  tokenByPlayer.delete(playerId);
+}
+
+export function createRoom(hostSocketId: string): { room: Room; hostToken: string } {
   const code = generateCode();
   const room: Room = {
     code,
-    hostId,
+    hostId: hostSocketId,
+    hostConnected: true,
     players: [],
     phase: 'lobby',
     mode: 'coop',
     selectedCategories: [],
+    difficulty: 'mixed',
+    seenQuestionIds: [],
     currentQuestion: null,
     questionIndex: 0,
     questionsPerGame: QUESTIONS_PER_GAME,
@@ -47,79 +87,132 @@ export function createRoom(hostId: string): Room {
     countdownValue: 0,
   };
   rooms.set(code, room);
-  return room;
+  const hostToken = newToken();
+  hostTokens.set(code, hostToken);
+  return { room, hostToken };
 }
 
-export function joinRoom(code: string, playerName: string, playerId: string): { room: Room; player: Player } | null {
-  const room = rooms.get(code.toUpperCase());
-  if (!room) return null;
-  if (room.players.length >= MAX_PLAYERS) return null;
-  if (room.phase !== 'lobby') return null;
+export type JoinResult =
+  | { ok: true; room: Room; player: Player; token: string }
+  | { ok: false; error: string };
 
-  const trimmedName = playerName.trim();
+export function joinRoom(code: unknown, playerName: unknown, socketId: string): JoinResult {
+  const room = rooms.get(normalizeCode(code));
+  if (!room) return { ok: false, error: 'Room not found. Check the code and try again.' };
+  if (room.phase !== 'lobby') return { ok: false, error: 'That game has already started.' };
+  if (room.players.length >= MAX_PLAYERS) return { ok: false, error: 'That room is full.' };
+
+  const trimmedName = typeof playerName === 'string' ? playerName.trim() : '';
+  if (!trimmedName) return { ok: false, error: 'Enter a name to join.' };
+  if (trimmedName.length > MAX_NAME_LENGTH) {
+    return { ok: false, error: `Names are limited to ${MAX_NAME_LENGTH} characters.` };
+  }
   const normalizedName = trimmedName.toLocaleLowerCase();
-  if (!trimmedName) return null;
-  if (room.players.some(p => p.name.trim().toLocaleLowerCase() === normalizedName)) return null;
+  if (room.players.some(p => p.name.trim().toLocaleLowerCase() === normalizedName)) {
+    return { ok: false, error: 'That name is already taken in this room.' };
+  }
 
   const player: Player = {
-    id: playerId,
+    id: randomUUID(),
     name: trimmedName,
     avatar: pickAvatar(room),
     connected: true,
     score: 0,
     streak: 0,
   };
+  const token = newToken();
   room.players.push(player);
-  playerToRoom.set(playerId, room.code);
-  return { room, player };
+  playerToRoom.set(player.id, room.code);
+  playerSockets.set(player.id, socketId);
+  playerTokens.set(token, player.id);
+  tokenByPlayer.set(player.id, token);
+  return { ok: true, room, player, token };
 }
 
-export function reconnectPlayer(code: string, playerId: string, newSocketId: string): { room: Room; player: Player } | null {
-  const room = rooms.get(code.toUpperCase());
-  if (!room) return null;
-
+/** Resume a player seat. Requires the private token issued at join, not the public player id. */
+export function reconnectPlayer(code: unknown, token: unknown, socketId: string): { room: Room; player: Player } | null {
+  if (typeof token !== 'string') return null;
+  const playerId = playerTokens.get(token);
+  if (!playerId) return null;
+  const room = rooms.get(normalizeCode(code));
+  if (!room || playerToRoom.get(playerId) !== room.code) return null;
   const player = room.players.find(p => p.id === playerId);
   if (!player) return null;
 
-  // Update player ID to new socket so answer lookups match
-  playerToRoom.delete(playerId);
-  player.id = newSocketId;
+  clearTimer(disconnectTimers, playerId);
   player.connected = true;
-  const timer = disconnectTimers.get(playerId);
-  if (timer) {
-    clearTimeout(timer);
-    disconnectTimers.delete(playerId);
-  }
-  playerToRoom.set(newSocketId, room.code);
+  playerSockets.set(playerId, socketId);
   return { room, player };
 }
 
-export function disconnectPlayer(playerId: string): { room: Room; player: Player } | null {
-  const code = playerToRoom.get(playerId);
-  if (!code) return null;
-  const room = rooms.get(code);
-  if (!room) return null;
+/** True when this socket is the live connection for the player (guards stale tabs). */
+export function isCurrentSocket(playerId: string, socketId: string): boolean {
+  return playerSockets.get(playerId) === socketId;
+}
 
-  const player = room.players.find(p => p.id === playerId);
-  if (!player) return null;
+/**
+ * Mark a player disconnected and remove them after the grace period.
+ * Ignored when the socket is stale (the player already reconnected elsewhere).
+ */
+export function disconnectPlayer(
+  playerId: string,
+  socketId: string,
+  onRemoved: (room: Room, player: Player) => void = () => {},
+): { room: Room; player: Player } | null {
+  if (!isCurrentSocket(playerId, socketId)) return null;
+  const room = getRoomByPlayer(playerId);
+  const player = room?.players.find(p => p.id === playerId);
+  if (!room || !player) return null;
 
   player.connected = false;
-
-  const timer = setTimeout(() => {
+  playerSockets.delete(playerId);
+  clearTimer(disconnectTimers, playerId);
+  disconnectTimers.set(playerId, setTimeout(() => {
     room.players = room.players.filter(p => p.id !== playerId);
-    playerToRoom.delete(playerId);
-    disconnectTimers.delete(playerId);
-    if (room.players.length === 0 && room.hostId !== playerId) {
-      rooms.delete(room.code);
-    }
-  }, RECONNECT_GRACE_SECONDS * 1000);
+    forgetPlayer(playerId);
+    onRemoved(room, player);
+  }, RECONNECT_GRACE_SECONDS * 1000));
 
-  disconnectTimers.set(playerId, timer);
   return { room, player };
 }
 
-export function getRoom(code: string): Room | undefined {
-  return rooms.get(code.toUpperCase());
+export function reconnectHost(code: unknown, hostToken: unknown, socketId: string): Room | null {
+  const room = rooms.get(normalizeCode(code));
+  if (!room || typeof hostToken !== 'string' || hostTokens.get(room.code) !== hostToken) return null;
+  clearTimer(hostTimers, room.code);
+  room.hostId = socketId;
+  room.hostConnected = true;
+  return room;
+}
+
+/** Start the host grace period. Returns null for stale host sockets. */
+export function disconnectHost(code: string, socketId: string, onExpired: (room: Room) => void): Room | null {
+  const room = rooms.get(code);
+  if (!room || room.hostId !== socketId) return null;
+  room.hostConnected = false;
+  clearTimer(hostTimers, code);
+  hostTimers.set(code, setTimeout(() => {
+    hostTimers.delete(code);
+    onExpired(room);
+  }, HOST_RECONNECT_GRACE_SECONDS * 1000));
+  return room;
+}
+
+export function isHostSocket(room: Room, socketId: string): boolean {
+  return room.hostConnected && room.hostId === socketId;
+}
+
+export function deleteRoom(code: string): void {
+  const room = rooms.get(code);
+  if (!room) return;
+  rooms.delete(code);
+  hostTokens.delete(code);
+  clearTimer(hostTimers, code);
+  room.players.forEach(p => forgetPlayer(p.id));
+}
+
+export function getRoom(code: unknown): Room | undefined {
+  return rooms.get(normalizeCode(code));
 }
 
 export function getRoomByPlayer(playerId: string): Room | undefined {
@@ -127,29 +220,36 @@ export function getRoomByPlayer(playerId: string): Room | undefined {
   return code ? rooms.get(code) : undefined;
 }
 
-export function setMode(code: string, mode: GameMode): Room | undefined {
-  const room = rooms.get(code);
-  if (room) room.mode = mode;
-  return room;
+export function setMode(room: Room, mode: unknown): boolean {
+  if (mode !== 'coop' && mode !== 'teams') return false;
+  room.mode = mode as GameMode;
+  return true;
 }
 
-export function setCategories(code: string, categories: Category[]): Room | undefined {
-  const room = rooms.get(code);
-  if (room) room.selectedCategories = categories;
-  return room;
+export function setDifficulty(room: Room, difficulty: unknown): boolean {
+  if (!isDifficultySetting(difficulty)) return false;
+  room.difficulty = difficulty as DifficultySetting;
+  return true;
+}
+
+export function setCategories(room: Room, categories: unknown): boolean {
+  if (!Array.isArray(categories)) return false;
+  room.selectedCategories = [...new Set(categories.filter(isCategory))];
+  return true;
 }
 
 export function canStartGame(room: Room): { ok: true } | { ok: false; message: string } {
   if (room.phase !== 'lobby') {
     return { ok: false, message: 'Game has already started.' };
   }
-  if (room.players.filter(p => p.connected).length === 0) {
+  const connected = room.players.filter(p => p.connected).length;
+  if (connected === 0) {
     return { ok: false, message: 'At least one player must join before starting.' };
   }
   if (room.selectedCategories.length === 0) {
     return { ok: false, message: 'Select at least one category to start.' };
   }
-  if (room.mode === 'teams' && room.players.filter(p => p.connected).length % 2 !== 0) {
+  if (room.mode === 'teams' && connected % 2 !== 0) {
     return {
       ok: false,
       message: 'Teams mode needs an even number of players. Add or remove one player before starting.',
@@ -158,13 +258,7 @@ export function canStartGame(room: Room): { ok: true } | { ok: false; message: s
   return { ok: true };
 }
 
-export function assignTeams(room: Room): void {
-  const shuffled = [...room.players].sort(() => Math.random() - 0.5);
-  shuffled.forEach((p, i) => {
-    p.team = i % 2 === 0 ? 'red' : 'blue';
-  });
-}
-
+/** Back to the lobby. Keeps seenQuestionIds so the next game avoids repeats. */
 export function resetGame(room: Room): void {
   room.phase = 'lobby';
   room.currentQuestion = null;
@@ -173,6 +267,8 @@ export function resetGame(room: Room): void {
   room.votes = {};
   room.coopScore = 0;
   room.teamScores = { red: 0, blue: 0 };
+  room.countdownValue = 0;
+  room.questionsPerGame = QUESTIONS_PER_GAME;
   room.players.forEach(p => {
     p.score = 0;
     p.streak = 0;
@@ -180,16 +276,7 @@ export function resetGame(room: Room): void {
   });
 }
 
-export function removeHost(hostId: string): void {
-  for (const [code, room] of rooms) {
-    if (room.hostId === hostId) {
-      rooms.delete(code);
-      room.players.forEach(p => {
-        playerToRoom.delete(p.id);
-        const t = disconnectTimers.get(p.id);
-        if (t) clearTimeout(t);
-      });
-      break;
-    }
-  }
+/** Test helper: drop all rooms and timers. */
+export function clearAllRooms(): void {
+  for (const code of [...rooms.keys()]) deleteRoom(code);
 }

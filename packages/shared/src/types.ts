@@ -20,9 +20,17 @@ export interface Question {
   question: string;
   options: [string, string, string, string];
   correctIndex: number;
+  /** Current-events metadata (optional for evergreen packs). */
+  sourceUrl?: string;
+  publishedAt?: string;
+  expiresAt?: string;
+  generatedAt?: string;
 }
 
-export interface QuestionForClient extends Omit<Question, 'correctIndex'> {}
+/** Host-selected difficulty filter. `mixed` draws from every difficulty. */
+export type DifficultySetting = Difficulty | 'mixed';
+
+export type QuestionForClient = Pick<Question, 'id' | 'category' | 'difficulty' | 'question' | 'options'>;
 
 export interface Player {
   id: string;
@@ -36,11 +44,16 @@ export interface Player {
 
 export interface Room {
   code: string;
+  /** Socket id of the current host connection. */
   hostId: string;
+  hostConnected: boolean;
   players: Player[];
   phase: GamePhase;
   mode: GameMode;
   selectedCategories: Category[];
+  difficulty: DifficultySetting;
+  /** Question ids already served in this room, so "play again" avoids repeats. */
+  seenQuestionIds: string[];
   currentQuestion: Question | null;
   questionIndex: number;
   questionsPerGame: number;
@@ -75,6 +88,7 @@ export interface PlayerResult {
 }
 
 export interface CoopResult {
+  /** Index the group chose, or -1 when nobody voted. */
   majorityIndex: number;
   voteCounts: number[];
   correct: boolean;
@@ -111,12 +125,25 @@ export interface RoomState {
   phase: GamePhase;
   mode: GameMode;
   selectedCategories: Category[];
+  difficulty: DifficultySetting;
+  hostConnected: boolean;
   currentQuestion: QuestionForClient | null;
   questionIndex: number;
   questionsPerGame: number;
-  votes: Record<string, number>;
   coopScore: number;
   teamScores: Record<TeamColor, number>;
   countdownValue: number;
-  myAnswer?: number;
+}
+
+export interface QuestionPayload {
+  question: QuestionForClient;
+  index: number;
+  total: number;
+  timeSeconds: number;
+}
+
+export interface LeaderboardPayload {
+  players: LeaderboardEntry[];
+  teamScores?: TeamLeaderboard;
+  coopScore?: number;
 }
